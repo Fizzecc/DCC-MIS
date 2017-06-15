@@ -30,8 +30,6 @@ namespace DavaoChestCenter
             if (textBoxUsername.Text == "")
             {
                 textBoxUsername.Text = "Username";
-                //test
-                //bugo si ylle
             }
         }
 
