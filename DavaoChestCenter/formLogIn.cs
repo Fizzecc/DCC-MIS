@@ -95,6 +95,6 @@ namespace DavaoChestCenter
 
     public class conClass
     {
-        public static readonly string connectionString = "server=localhost;database=davao_chest_center;username=root;password=root";
+        public static readonly string connectionString = "server=192.168.56.1;database=chest;username=rlwee;password=root";
     }
 }
