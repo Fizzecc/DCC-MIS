@@ -95,7 +95,6 @@ namespace DavaoChestCenter
 
     public class conClass
     {
-        // Dapat naay port!
         public static readonly string connectionString = "Server=localhost;Port=3307;Database=chest;Uid=root;Pwd=root;";
     }
 }
