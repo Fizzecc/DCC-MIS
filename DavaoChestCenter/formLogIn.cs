@@ -48,12 +48,12 @@ namespace DavaoChestCenter
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", con))
                 {
-                    cmd.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                    cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                    com.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                    com.Parameters.AddWithValue("@password", textBoxPassword.Text);
                     
-                    using (MySqlDataReader rdr = cmd.ExecuteReader())
+                    using (MySqlDataReader rdr = com.ExecuteReader())
                     {
                         if (rdr.HasRows)
                         {
