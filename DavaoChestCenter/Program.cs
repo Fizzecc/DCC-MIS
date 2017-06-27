@@ -16,7 +16,7 @@ namespace DavaoChestCenter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formLogIn());
+            Application.Run(new Registration());
         }
     }
 }
