@@ -116,6 +116,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.formLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
