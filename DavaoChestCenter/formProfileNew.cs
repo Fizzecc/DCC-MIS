@@ -59,6 +59,7 @@ namespace DavaoChestCenter
                         {
                             rdr.Read();
                             staffid = rdr.GetInt32(0);
+                            MessageBox.Show(staffid.ToString());
                         }
                         else
                         {
@@ -67,7 +68,7 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO staffschedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end", con))
+                using(MySqlCommand com = new MySqlCommand("INSERT INTO staffschedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
@@ -114,6 +115,8 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@schedule_days", daysWorking);
                     com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStart.Value.ToString("HH:mm:ss"));
                     com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEnd.Value.ToString("HH:mm:ss"));
+
+                    com.ExecuteNonQuery();
                 }
 
                 int scheduleid = -1;
@@ -131,7 +134,7 @@ namespace DavaoChestCenter
                         }
                         else
                         {
-                            MessageBox.Show("The staff creation failed", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("no schedule for " + staffid, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                 }
@@ -140,6 +143,8 @@ namespace DavaoChestCenter
                 {
                     com.Parameters.AddWithValue("@staffid", staffid);
                     com.Parameters.AddWithValue("@schedule_id", scheduleid);
+
+                    com.ExecuteNonQuery();
                 }
                 con.Close();
             }
