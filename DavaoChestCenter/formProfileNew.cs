@@ -59,7 +59,6 @@ namespace DavaoChestCenter
                         {
                             rdr.Read();
                             staffid = rdr.GetInt32(0);
-                            MessageBox.Show(staffid.ToString());
                         }
                         else
                         {
@@ -68,60 +67,60 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO staffschedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end)", con))
+                using(MySqlCommand com = new MySqlCommand("INSERT INTO schedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
                     com.Parameters.AddWithValue("@staffid", staffid);
                     com.Parameters.AddWithValue("@clinicaddress", textBoxAddressClinic.Text);
 
-                    if (checkBoxMonday.Checked)
+                    if (checkBoxMondayStaff.Checked)
                     {
                         daysWorking += "Monday/";
                     }
 
-                    if (checkBoxTuesday.Checked)
+                    if (checkBoxTuesdayStaff.Checked)
                     {
                         daysWorking += "Tuesday/";
                     }
 
-                    if (checkBoxWednesday.Checked)
+                    if (checkBoxWednesdayStaff.Checked)
                     {
                         daysWorking += "Wednesday/";
                     }
 
-                    if (checkBoxThursday.Checked)
+                    if (checkBoxThursdayStaff.Checked)
                     {
                         daysWorking += "Thursday/";
                     }
 
-                    if (checkBoxFriday.Checked)
+                    if (checkBoxFridayStaff.Checked)
                     {
                         daysWorking += "Friday/";
                     }
 
-                    if (checkBoxSaturday.Checked)
+                    if (checkBoxSaturdayStaff.Checked)
                     {
                         daysWorking += "Saturday/";
                     }
 
-                    if (checkBoxSunday.Checked)
+                    if (checkBoxSundayStaff.Checked)
                     {
                         daysWorking += "Sunday/";
                     }
 
-                    daysWorking.TrimEnd('/');
+                    daysWorking = daysWorking.TrimEnd('/');
 
                     com.Parameters.AddWithValue("@schedule_days", daysWorking);
-                    com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStart.Value.ToString("HH:mm:ss"));
-                    com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEnd.Value.ToString("HH:mm:ss"));
+                    com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStartStaff.Value.ToString("HH:mm:ss"));
+                    com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEndStaff.Value.ToString("HH:mm:ss"));
 
                     com.ExecuteNonQuery();
                 }
 
                 int scheduleid = -1;
 
-                using(MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM staffschedule WHERE staff_id = @staff_id", con))
+                using(MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM schedule WHERE staff_id = @staff_id", con))
                 {
                     com.Parameters.AddWithValue("@staff_id", staffid);
 
