@@ -28,101 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonAppoint = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonCreate
+            // buttonProfile
             // 
-            this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonCreate.FlatAppearance.BorderSize = 0;
-            this.buttonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonCreate.ForeColor = System.Drawing.Color.White;
-            this.buttonCreate.Location = new System.Drawing.Point(12, 320);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(194, 32);
-            this.buttonCreate.TabIndex = 11;
-            this.buttonCreate.Text = "Create User";
-            this.buttonCreate.UseVisualStyleBackColor = false;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonProfile.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProfile.BackgroundImage = global::DavaoChestCenter.Properties.Resources.users;
+            this.buttonProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonProfile.FlatAppearance.BorderSize = 0;
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonProfile.Location = new System.Drawing.Point(28, 12);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(127, 172);
+            this.buttonProfile.TabIndex = 5;
+            this.buttonProfile.Text = "Profiles";
+            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonProfile.UseVisualStyleBackColor = false;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
             // 
-            // buttonUpdate
+            // button1
             // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
-            this.buttonUpdate.FlatAppearance.BorderSize = 0;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(214, 320);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(194, 32);
-            this.buttonUpdate.TabIndex = 12;
-            this.buttonUpdate.Text = "Update User";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.button1.Location = new System.Drawing.Point(198, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 139);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Diagnosis";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // buttonAppoint
+            // button2
             // 
-            this.buttonAppoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
-            this.buttonAppoint.FlatAppearance.BorderSize = 0;
-            this.buttonAppoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAppoint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonAppoint.ForeColor = System.Drawing.Color.White;
-            this.buttonAppoint.Location = new System.Drawing.Point(414, 320);
-            this.buttonAppoint.Name = "buttonAppoint";
-            this.buttonAppoint.Size = new System.Drawing.Size(194, 32);
-            this.buttonAppoint.TabIndex = 13;
-            this.buttonAppoint.Text = "Appoint User";
-            this.buttonAppoint.UseVisualStyleBackColor = false;
-            this.buttonAppoint.Click += new System.EventHandler(this.buttonAppoint_Click);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.button2.Location = new System.Drawing.Point(28, 190);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 172);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Appointments";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // button3
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(596, 302);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.button3.Location = new System.Drawing.Point(219, 198);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 172);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Services";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // formModule1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 364);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonAppoint);
-            this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonCreate);
+            this.ClientSize = new System.Drawing.Size(379, 382);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonProfile);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "formModule1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profiling and Laboratory Management System";
-            this.Load += new System.EventHandler(this.formModule1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonAppoint;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonProfile;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -138,14 +138,6 @@ namespace DavaoChestCenter
                         }
                     }
                 }
-
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO staffprofile VALUES(null, @staffid, @schedule_id)", con))
-                {
-                    com.Parameters.AddWithValue("@staffid", staffid);
-                    com.Parameters.AddWithValue("@schedule_id", scheduleid);
-
-                    com.ExecuteNonQuery();
-                }
                 con.Close();
             }
         }
