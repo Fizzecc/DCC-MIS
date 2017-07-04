@@ -91,7 +91,7 @@
             this.buttonModule3.Font = new System.Drawing.Font("Tw Cen MT", 10F);
             this.buttonModule3.Location = new System.Drawing.Point(319, 3);
             this.buttonModule3.Name = "buttonModule3";
-            this.buttonModule3.Size = new System.Drawing.Size(150, 182);
+            this.buttonModule3.Size = new System.Drawing.Size(176, 225);
             this.buttonModule3.TabIndex = 3;
             this.buttonModule3.Text = "MODULE 3 V0.1";
             this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
