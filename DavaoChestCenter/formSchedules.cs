@@ -20,7 +20,7 @@ namespace DavaoChestCenter
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE id != " + x, con))
+                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
                 {
                     MySqlDataAdapter adp = new MySqlDataAdapter(com);
                     DataTable dt = new DataTable();

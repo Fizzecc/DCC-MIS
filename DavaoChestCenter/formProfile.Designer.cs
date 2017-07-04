@@ -30,7 +30,6 @@
         {
             this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonAppoint = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +43,7 @@
             this.buttonCreate.ForeColor = System.Drawing.Color.White;
             this.buttonCreate.Location = new System.Drawing.Point(12, 320);
             this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(194, 32);
+            this.buttonCreate.Size = new System.Drawing.Size(294, 32);
             this.buttonCreate.TabIndex = 11;
             this.buttonCreate.Text = "Create User";
             this.buttonCreate.UseVisualStyleBackColor = false;
@@ -57,28 +56,13 @@
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(214, 320);
+            this.buttonUpdate.Location = new System.Drawing.Point(312, 320);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(194, 32);
+            this.buttonUpdate.Size = new System.Drawing.Size(296, 32);
             this.buttonUpdate.TabIndex = 12;
             this.buttonUpdate.Text = "Update User";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
-            // 
-            // buttonAppoint
-            // 
-            this.buttonAppoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
-            this.buttonAppoint.FlatAppearance.BorderSize = 0;
-            this.buttonAppoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAppoint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonAppoint.ForeColor = System.Drawing.Color.White;
-            this.buttonAppoint.Location = new System.Drawing.Point(414, 320);
-            this.buttonAppoint.Name = "buttonAppoint";
-            this.buttonAppoint.Size = new System.Drawing.Size(194, 32);
-            this.buttonAppoint.TabIndex = 13;
-            this.buttonAppoint.Text = "Appoint User";
-            this.buttonAppoint.UseVisualStyleBackColor = false;
-            this.buttonAppoint.Click += new System.EventHandler(this.buttonAppoint_Click);
             // 
             // dataGridView1
             // 
@@ -102,7 +86,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 364);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonAppoint);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonCreate);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -122,7 +105,6 @@
 
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonAppoint;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

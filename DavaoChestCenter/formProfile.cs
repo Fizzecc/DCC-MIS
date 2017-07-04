@@ -45,7 +45,7 @@ namespace DavaoChestCenter
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE id != " + id, con))
                 {
                     using (MySqlDataAdapter adp = new MySqlDataAdapter(com))
                     {
@@ -60,19 +60,7 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
-
-        private void buttonAppoint_Click(object sender, EventArgs e)
-        {
-            if (selectedUser != -1)
-            {
-                formAppointment appoint = new formAppointment(selectedUser, id, patientName);
-                appoint.ShowDialog();
-            } else
-            {
-                MessageBox.Show("No user selected");
-            }
-        }
-
+       
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedUser = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
