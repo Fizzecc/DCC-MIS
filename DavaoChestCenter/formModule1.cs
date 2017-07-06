@@ -31,5 +31,11 @@ namespace DavaoChestCenter
             formProfile profile = new formProfile(id, name);
             profile.ShowDialog();
         }
+
+        private void buttonAppoinment_Click(object sender, EventArgs e)
+        {
+            formAppointment appointment = new formAppointment(id, name);
+            appointment.ShowDialog();
+        }
     }
 }

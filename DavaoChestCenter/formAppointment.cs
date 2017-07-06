@@ -24,23 +24,9 @@ namespace DavaoChestCenter
             refreshAppointment();
 
             labelName.Text = y;
-
-            label3.Visible = false; dateTimePicker1.Visible = false;
-            textBoxService.Visible = false; buttonAppoint.Visible = false;
-        }
-
-        public formAppointment(int x, int y, string z)
-        {
-            InitializeComponent();
-
-            patient = x;
-            id = y;
             
-            labelName.Text = z;
-
-            refreshAppointment();
         }
-
+        
         public void refreshAppointment()
         {
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
@@ -66,30 +52,8 @@ namespace DavaoChestCenter
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO appointments VALUES(null, @date, @staff, @patient, @service)", con))
-                {
-                    com.Parameters.AddWithValue("@date", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-                    com.Parameters.AddWithValue("@staff", id);
-                    com.Parameters.AddWithValue("@patient", patient);
-                    com.Parameters.AddWithValue("@service", textBoxService.Text);
-
-                    DialogResult r = MessageBox.Show("Confirm action", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                    if (r == DialogResult.OK)
-                    {
-                        com.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cancelled");
-                    }
-
-                }
-                con.Close();
-            }
+            formRegistration registration = new formRegistration();
+            registration.ShowDialog();
         }
     }
 }

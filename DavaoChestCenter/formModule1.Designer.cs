@@ -30,7 +30,7 @@
         {
             this.buttonProfile = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAppoinment = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -67,21 +67,22 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonAppoinment
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.button2.Location = new System.Drawing.Point(28, 190);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 172);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Appointments";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonAppoinment.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAppoinment.BackgroundImage = global::DavaoChestCenter.Properties.Resources.verified_list_of_exercises_of_a_gymnast_on_a_clipboard;
+            this.buttonAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonAppoinment.FlatAppearance.BorderSize = 0;
+            this.buttonAppoinment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAppoinment.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonAppoinment.Location = new System.Drawing.Point(28, 190);
+            this.buttonAppoinment.Name = "buttonAppoinment";
+            this.buttonAppoinment.Size = new System.Drawing.Size(127, 172);
+            this.buttonAppoinment.TabIndex = 7;
+            this.buttonAppoinment.Text = "Appointments";
+            this.buttonAppoinment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAppoinment.UseVisualStyleBackColor = false;
+            this.buttonAppoinment.Click += new System.EventHandler(this.buttonAppoinment_Click);
             // 
             // button3
             // 
@@ -105,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 382);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAppoinment);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonProfile);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -122,7 +123,7 @@
         #endregion
         private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAppoinment;
         private System.Windows.Forms.Button button3;
     }
 }
