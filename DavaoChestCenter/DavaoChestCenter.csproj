@@ -71,11 +71,11 @@
     <Compile Include="formProfile.Designer.cs">
       <DependentUpon>formProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="formSchedules.cs">
+    <Compile Include="formModule3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formSchedules.Designer.cs">
-      <DependentUpon>formSchedules.cs</DependentUpon>
+    <Compile Include="formModule3.Designer.cs">
+      <DependentUpon>formModule3.cs</DependentUpon>
     </Compile>
     <Compile Include="formProfileUpdate.cs">
       <SubType>Form</SubType>
@@ -124,8 +124,8 @@
     <EmbeddedResource Include="formProfile.resx">
       <DependentUpon>formProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formSchedules.resx">
-      <DependentUpon>formSchedules.cs</DependentUpon>
+    <EmbeddedResource Include="formModule3.resx">
+      <DependentUpon>formModule3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProfileUpdate.resx">
       <DependentUpon>formProfileUpdate.cs</DependentUpon>
