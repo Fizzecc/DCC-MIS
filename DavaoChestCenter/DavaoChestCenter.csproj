@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Referral Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referral Form.Designer.cs">
+      <DependentUpon>Referral Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="formModule1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="formRegistration.resx">
       <DependentUpon>formRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referral Form.resx">
+      <DependentUpon>Referral Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
