@@ -103,6 +103,7 @@
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
             this.checkedListBox10 = new System.Windows.Forms.CheckedListBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -111,7 +112,6 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label42 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -866,6 +866,16 @@
             this.groupBox4.TabIndex = 84;
             this.groupBox4.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(23, 155);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(90, 17);
+            this.checkBox1.TabIndex = 81;
+            this.checkBox1.Text = "AB treatment;";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -937,16 +947,6 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(205, 20);
             this.dateTimePicker3.TabIndex = 77;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(23, 155);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 17);
-            this.checkBox1.TabIndex = 81;
-            this.checkBox1.Text = "AB treatment;";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label42
             // 
@@ -1113,7 +1113,6 @@
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "formRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
