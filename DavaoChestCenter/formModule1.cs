@@ -37,5 +37,11 @@ namespace DavaoChestCenter
             formAppointment appointment = new formAppointment(id, name);
             appointment.ShowDialog();
         }
+
+        private void buttonDiagnosis_Click(object sender, EventArgs e)
+        {
+            formLabResult labresult = new formLabResult();
+            labresult.ShowDialog();
+        }
     }
 }

@@ -95,11 +95,11 @@
     <Compile Include="formLogIn.Designer.cs">
       <DependentUpon>formLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="labresult.cs">
+    <Compile Include="formLabResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="labresult.Designer.cs">
-      <DependentUpon>labresult.cs</DependentUpon>
+    <Compile Include="formLabResult.Designer.cs">
+      <DependentUpon>formLabResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,8 +133,8 @@
     <EmbeddedResource Include="formProfileNew.resx">
       <DependentUpon>formProfileNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="labresult.resx">
-      <DependentUpon>labresult.cs</DependentUpon>
+    <EmbeddedResource Include="formLabResult.resx">
+      <DependentUpon>formLabResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

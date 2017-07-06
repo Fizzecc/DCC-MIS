@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DavaoChestCenter
 {
-    public partial class labresult : Form
+    public partial class formLabResult : Form
     {
-        public labresult()
+        public formLabResult()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace DavaoChestCenter
 {
-    partial class labresult
+    partial class formLabResult
     {
         /// <summary>
         /// Required designer variable.
