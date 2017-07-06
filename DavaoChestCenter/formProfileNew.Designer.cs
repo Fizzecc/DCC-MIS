@@ -231,7 +231,7 @@
             this.tab.Controls.Add(this.tabStaff);
             this.tab.Controls.Add(this.tabDoctor);
             this.tab.Font = new System.Drawing.Font("Tw Cen MT", 8F);
-            this.tab.Location = new System.Drawing.Point(15, 263);
+            this.tab.Location = new System.Drawing.Point(248, 6);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(228, 357);
@@ -558,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 624);
+            this.ClientSize = new System.Drawing.Size(480, 370);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxUsername);
