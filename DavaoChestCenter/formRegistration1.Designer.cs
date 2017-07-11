@@ -1,6 +1,6 @@
 ﻿namespace DavaoChestCenter
 {
-    partial class formRegistration
+    partial class formRegistration1
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
@@ -84,7 +86,11 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
             this.label34 = new System.Windows.Forms.Label();
             this.checkedListBox9 = new System.Windows.Forms.CheckedListBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -109,20 +115,14 @@
             this.label48 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -310,7 +310,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(592, 288);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(111, 25);
             this.textBox8.TabIndex = 34;
@@ -318,7 +318,7 @@
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(592, 246);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(111, 25);
             this.textBox9.TabIndex = 35;
@@ -326,7 +326,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(820, 202);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(111, 25);
             this.textBox10.TabIndex = 36;
@@ -334,7 +334,7 @@
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(820, 246);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(111, 25);
             this.textBox11.TabIndex = 37;
@@ -342,7 +342,7 @@
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(40, 99);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(388, 25);
             this.textBox12.TabIndex = 38;
@@ -350,7 +350,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(40, 45);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(388, 25);
             this.dateTimePicker1.TabIndex = 40;
@@ -368,7 +368,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(40, 155);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(388, 25);
             this.textBox1.TabIndex = 43;
@@ -380,7 +380,7 @@
             "Yes",
             "No"});
             this.checkedListBox2.Location = new System.Drawing.Point(579, 284);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(340, 44);
             this.checkedListBox2.TabIndex = 44;
@@ -399,7 +399,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(580, 239);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(339, 25);
             this.textBox2.TabIndex = 46;
@@ -418,7 +418,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(40, 215);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(388, 25);
             this.textBox4.TabIndex = 50;
@@ -442,7 +442,7 @@
             "Single",
             "Others"});
             this.checkedListBox3.Location = new System.Drawing.Point(592, 337);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(339, 64);
             this.checkedListBox3.TabIndex = 52;
@@ -461,7 +461,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(40, 277);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(388, 25);
             this.textBox6.TabIndex = 54;
@@ -480,7 +480,7 @@
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(580, 346);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(339, 25);
             this.textBox13.TabIndex = 56;
@@ -499,7 +499,7 @@
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(162, 318);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(39, 25);
             this.textBox14.TabIndex = 58;
@@ -536,7 +536,7 @@
             "Weight loss/ loss of Appetite",
             "Hemoptysis/ Blood Streaked Sputum"});
             this.checkedListBox4.Location = new System.Drawing.Point(40, 398);
-            this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox4.Name = "checkedListBox4";
             this.checkedListBox4.Size = new System.Drawing.Size(272, 104);
             this.checkedListBox4.TabIndex = 61;
@@ -553,12 +553,32 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(13, 1);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1757, 171);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DavaoChestCenter.Properties.Resources.login;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(167, 163);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DavaoChestCenter.Properties.Resources.login;
+            this.pictureBox1.Location = new System.Drawing.Point(1583, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // checkedListBox5
             // 
@@ -570,7 +590,7 @@
             "Fatigue",
             "Body Malaise"});
             this.checkedListBox5.Location = new System.Drawing.Point(320, 398);
-            this.checkedListBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox5.Name = "checkedListBox5";
             this.checkedListBox5.Size = new System.Drawing.Size(139, 104);
             this.checkedListBox5.TabIndex = 63;
@@ -593,7 +613,7 @@
             "Yes",
             "No"});
             this.checkedListBox6.Location = new System.Drawing.Point(73, 23);
-            this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(295, 44);
             this.checkedListBox6.TabIndex = 65;
@@ -612,7 +632,7 @@
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(475, 404);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(444, 25);
             this.textBox15.TabIndex = 67;
@@ -635,7 +655,7 @@
             "Yes",
             "No"});
             this.checkedListBox7.Location = new System.Drawing.Point(474, 455);
-            this.checkedListBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox7.Name = "checkedListBox7";
             this.checkedListBox7.Size = new System.Drawing.Size(92, 44);
             this.checkedListBox7.TabIndex = 69;
@@ -658,7 +678,7 @@
             "Yes",
             "No"});
             this.checkedListBox8.Location = new System.Drawing.Point(574, 455);
-            this.checkedListBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox8.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox8.Name = "checkedListBox8";
             this.checkedListBox8.Size = new System.Drawing.Size(89, 44);
             this.checkedListBox8.TabIndex = 71;
@@ -677,7 +697,7 @@
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(167, 84);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(28, 25);
             this.textBox16.TabIndex = 75;
@@ -696,7 +716,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(112, 129);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(256, 25);
             this.dateTimePicker2.TabIndex = 77;
@@ -736,12 +756,28 @@
             this.groupBox2.Controls.Add(this.label36);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Location = new System.Drawing.Point(972, 202);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(376, 261);
             this.groupBox2.TabIndex = 82;
             this.groupBox2.TabStop = false;
+            // 
+            // dateTimePicker6
+            // 
+            this.dateTimePicker6.Location = new System.Drawing.Point(112, 219);
+            this.dateTimePicker6.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker6.Name = "dateTimePicker6";
+            this.dateTimePicker6.Size = new System.Drawing.Size(256, 25);
+            this.dateTimePicker6.TabIndex = 81;
+            // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.Location = new System.Drawing.Point(112, 176);
+            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(256, 25);
+            this.dateTimePicker5.TabIndex = 80;
             // 
             // groupBox3
             // 
@@ -752,12 +788,28 @@
             this.groupBox3.Controls.Add(this.label39);
             this.groupBox3.Controls.Add(this.label41);
             this.groupBox3.Location = new System.Drawing.Point(1369, 208);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(383, 195);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
+            // 
+            // dateTimePicker8
+            // 
+            this.dateTimePicker8.Location = new System.Drawing.Point(127, 143);
+            this.dateTimePicker8.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker8.Name = "dateTimePicker8";
+            this.dateTimePicker8.Size = new System.Drawing.Size(234, 25);
+            this.dateTimePicker8.TabIndex = 81;
+            // 
+            // dateTimePicker7
+            // 
+            this.dateTimePicker7.Location = new System.Drawing.Point(127, 100);
+            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker7.Name = "dateTimePicker7";
+            this.dateTimePicker7.Size = new System.Drawing.Size(234, 25);
+            this.dateTimePicker7.TabIndex = 80;
             // 
             // label34
             // 
@@ -777,7 +829,7 @@
             "Yes",
             "No"});
             this.checkedListBox9.Location = new System.Drawing.Point(127, 23);
-            this.checkedListBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox9.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox9.Name = "checkedListBox9";
             this.checkedListBox9.Size = new System.Drawing.Size(234, 44);
             this.checkedListBox9.TabIndex = 65;
@@ -816,9 +868,9 @@
             this.groupBox4.Controls.Add(this.label45);
             this.groupBox4.Controls.Add(this.dateTimePicker3);
             this.groupBox4.Location = new System.Drawing.Point(972, 489);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(376, 223);
             this.groupBox4.TabIndex = 84;
             this.groupBox4.TabStop = false;
@@ -827,7 +879,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(12, 189);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(110, 23);
             this.checkBox1.TabIndex = 81;
@@ -852,7 +904,7 @@
             "Yes",
             "No"});
             this.checkedListBox10.Location = new System.Drawing.Point(97, 18);
-            this.checkedListBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox10.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox10.Name = "checkedListBox10";
             this.checkedListBox10.Size = new System.Drawing.Size(271, 44);
             this.checkedListBox10.TabIndex = 65;
@@ -860,7 +912,7 @@
             // textBox22
             // 
             this.textBox22.Location = new System.Drawing.Point(97, 149);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(271, 25);
             this.textBox22.TabIndex = 80;
@@ -879,7 +931,7 @@
             // textBox23
             // 
             this.textBox23.Location = new System.Drawing.Point(167, 74);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(28, 25);
             this.textBox23.TabIndex = 75;
@@ -909,7 +961,7 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Location = new System.Drawing.Point(97, 111);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(271, 25);
             this.dateTimePicker3.TabIndex = 77;
@@ -931,7 +983,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1368, 266);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -942,7 +994,7 @@
             // textBox21
             // 
             this.textBox21.Location = new System.Drawing.Point(820, 288);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(111, 25);
             this.textBox21.TabIndex = 87;
@@ -964,7 +1016,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1369, 363);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -986,7 +1038,7 @@
             // dateTimePicker4
             // 
             this.dateTimePicker4.Location = new System.Drawing.Point(1484, 446);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(234, 25);
             this.dateTimePicker4.TabIndex = 91;
@@ -1005,7 +1057,7 @@
             // textBox24
             // 
             this.textBox24.Location = new System.Drawing.Point(1484, 479);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(234, 25);
             this.textBox24.TabIndex = 93;
@@ -1020,26 +1072,6 @@
             this.label49.Size = new System.Drawing.Size(93, 13);
             this.label49.TabIndex = 94;
             this.label49.Text = "Doctor\'s Order:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DavaoChestCenter.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(1583, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DavaoChestCenter.Properties.Resources.login;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 163);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // groupBox5
             // 
@@ -1089,38 +1121,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Info";
             // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(112, 176);
-            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(256, 25);
-            this.dateTimePicker5.TabIndex = 80;
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(112, 219);
-            this.dateTimePicker6.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(256, 25);
-            this.dateTimePicker6.TabIndex = 81;
-            // 
-            // dateTimePicker7
-            // 
-            this.dateTimePicker7.Location = new System.Drawing.Point(127, 100);
-            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(234, 25);
-            this.dateTimePicker7.TabIndex = 80;
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.Location = new System.Drawing.Point(127, 143);
-            this.dateTimePicker8.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(234, 25);
-            this.dateTimePicker8.TabIndex = 81;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(137, 510);
@@ -1153,21 +1153,21 @@
             this.Controls.Add(this.groupBox5);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "formRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);

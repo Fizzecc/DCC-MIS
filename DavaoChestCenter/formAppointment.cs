@@ -52,7 +52,7 @@ namespace DavaoChestCenter
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            formRegistration registration = new formRegistration();
+            formRegistration1 registration = new formRegistration1();
             registration.ShowDialog();
         }
     }
