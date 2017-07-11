@@ -92,6 +92,19 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -694,11 +707,137 @@
             this.textBox12.Size = new System.Drawing.Size(173, 20);
             this.textBox12.TabIndex = 49;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(722, 403);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(641, 18);
+            this.label28.TabIndex = 50;
+            this.label28.Text = "Portion below to be filled-out by Medical Technologist/Microscopic/Xpert Technici" +
+    "an";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(722, 451);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(129, 13);
+            this.label29.TabIndex = 51;
+            this.label29.Text = "Laboratory Serial Number:";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(857, 448);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(162, 20);
+            this.textBox13.TabIndex = 52;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(1065, 451);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(82, 13);
+            this.label30.TabIndex = 53;
+            this.label30.Text = "Date Recieved:";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(1200, 448);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(162, 20);
+            this.textBox14.TabIndex = 54;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(1065, 477);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(79, 13);
+            this.label31.TabIndex = 55;
+            this.label31.Text = "Date Examined";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(1200, 474);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(162, 20);
+            this.textBox15.TabIndex = 56;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(840, 507);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(193, 102);
+            this.tableLayoutPanel3.TabIndex = 57;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(722, 625);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 13);
+            this.label32.TabIndex = 58;
+            this.label32.Text = "Performed by:";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(800, 622);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(162, 20);
+            this.textBox16.TabIndex = 59;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(1065, 625);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 13);
+            this.label33.TabIndex = 60;
+            this.label33.Text = "Date of Release:";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(1200, 622);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(162, 20);
+            this.textBox17.TabIndex = 61;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(722, 669);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(310, 13);
+            this.label34.TabIndex = 62;
+            this.label34.Text = "A separate result form for TB culture,DST and LPA will be issued";
+            // 
             // formLabResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 480);
+            this.ClientSize = new System.Drawing.Size(1438, 711);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.textBox11);
@@ -822,5 +961,18 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label34;
     }
 }
