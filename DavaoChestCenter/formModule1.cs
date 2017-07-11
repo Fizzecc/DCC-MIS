@@ -40,7 +40,7 @@ namespace DavaoChestCenter
 
         private void buttonDiagnosis_Click(object sender, EventArgs e)
         {
-            formLabResult labresult = new formLabResult();
+            formRegistration2 labresult = new formRegistration2();
             labresult.ShowDialog();
         }
     }
