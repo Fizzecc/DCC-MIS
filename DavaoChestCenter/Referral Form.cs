@@ -36,5 +36,15 @@ namespace DavaoChestCenter
         {
 
         }
+
+        private void label62_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
