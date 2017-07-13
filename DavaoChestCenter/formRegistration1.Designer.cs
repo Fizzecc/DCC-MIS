@@ -117,6 +117,7 @@
             this.label49 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonRegister = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1075,6 +1076,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.buttonRegister);
             this.groupBox5.Controls.Add(this.textBox24);
             this.groupBox5.Controls.Add(this.label42);
             this.groupBox5.Controls.Add(this.textBox3);
@@ -1130,7 +1132,22 @@
             this.textBox3.Size = new System.Drawing.Size(782, 60);
             this.textBox3.TabIndex = 95;
             // 
-            // formRegistration
+            // buttonRegister
+            // 
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonRegister.FlatAppearance.BorderSize = 0;
+            this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegister.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonRegister.ForeColor = System.Drawing.Color.White;
+            this.buttonRegister.Location = new System.Drawing.Point(1510, 525);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(208, 32);
+            this.buttonRegister.TabIndex = 96;
+            this.buttonRegister.Text = "Register";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
+            // formRegistration1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1155,9 +1172,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "formRegistration";
+            this.Name = "formRegistration1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registration";
+            this.Text = "020";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1265,5 +1282,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker8;
         private System.Windows.Forms.DateTimePicker dateTimePicker7;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button buttonRegister;
     }
 }
