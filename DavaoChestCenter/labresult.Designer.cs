@@ -77,9 +77,9 @@
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
@@ -93,7 +93,11 @@
             this.label27 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -466,6 +470,9 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.textBox13, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox14, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label28, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(203, 489);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -560,14 +567,16 @@
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             // 
-            // label21
+            // checkBox16
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 16);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(122, 13);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "If for Xpert, DST or LPA:";
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(6, 69);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox16.Size = new System.Drawing.Size(120, 17);
+            this.checkBox16.TabIndex = 2;
+            this.checkBox16.Text = "Presumptive DR-TB";
+            this.checkBox16.UseVisualStyleBackColor = true;
             // 
             // checkBox15
             // 
@@ -580,16 +589,14 @@
             this.checkBox15.Text = "Presumptive D5-TB";
             this.checkBox15.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // label21
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(6, 69);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox16.Size = new System.Drawing.Size(120, 17);
-            this.checkBox16.TabIndex = 2;
-            this.checkBox16.Text = "Presumptive DR-TB";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 16);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(122, 13);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "If for Xpert, DST or LPA:";
             // 
             // label22
             // 
@@ -703,11 +710,34 @@
             this.groupBox3.TabIndex = 50;
             this.groupBox3.TabStop = false;
             // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(3, 33);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(94, 20);
+            this.textBox13.TabIndex = 42;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(105, 3);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(94, 20);
+            this.textBox14.TabIndex = 43;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(3, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(84, 26);
+            this.label28.TabIndex = 44;
+            this.label28.Text = "Date Specimen Type Collected: ";
+            // 
             // labresult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 1053);
+            this.ClientSize = new System.Drawing.Size(712, 741);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label27);
@@ -759,6 +789,8 @@
             this.Load += new System.EventHandler(this.labresult_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -833,5 +865,8 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label28;
     }
 }
