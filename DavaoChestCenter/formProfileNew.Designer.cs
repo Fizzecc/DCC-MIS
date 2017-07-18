@@ -61,7 +61,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxAddressClinic = new System.Windows.Forms.TextBox();
             this.tabDoctor = new System.Windows.Forms.TabPage();
-            this.tabPatient = new System.Windows.Forms.TabPage();
+            this.buttonCreateDoctor = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerWorkingTimeEndDoctor = new System.Windows.Forms.DateTimePicker();
             this.checkBoxSundayDoctor = new System.Windows.Forms.CheckBox();
@@ -74,7 +74,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerWorkingTimeStartDoctor = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.buttonCreateDoctor = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tabStaff.SuspendLayout();
             this.tabDoctor.SuspendLayout();
@@ -231,9 +230,8 @@
             // 
             this.tab.Controls.Add(this.tabStaff);
             this.tab.Controls.Add(this.tabDoctor);
-            this.tab.Controls.Add(this.tabPatient);
             this.tab.Font = new System.Drawing.Font("Tw Cen MT", 8F);
-            this.tab.Location = new System.Drawing.Point(15, 263);
+            this.tab.Location = new System.Drawing.Point(248, 6);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(228, 357);
@@ -423,15 +421,20 @@
             this.tabDoctor.Text = "Doctor";
             this.tabDoctor.UseVisualStyleBackColor = true;
             // 
-            // tabPatient
+            // buttonCreateDoctor
             // 
-            this.tabPatient.Location = new System.Drawing.Point(4, 23);
-            this.tabPatient.Name = "tabPatient";
-            this.tabPatient.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPatient.Size = new System.Drawing.Size(220, 330);
-            this.tabPatient.TabIndex = 2;
-            this.tabPatient.Text = "Patient";
-            this.tabPatient.UseVisualStyleBackColor = true;
+            this.buttonCreateDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonCreateDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonCreateDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateDoctor.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonCreateDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateDoctor.Location = new System.Drawing.Point(6, 238);
+            this.buttonCreateDoctor.Name = "buttonCreateDoctor";
+            this.buttonCreateDoctor.Size = new System.Drawing.Size(208, 32);
+            this.buttonCreateDoctor.TabIndex = 39;
+            this.buttonCreateDoctor.Text = "Create Doctor";
+            this.buttonCreateDoctor.UseVisualStyleBackColor = false;
+            this.buttonCreateDoctor.Click += new System.EventHandler(this.buttonCreateDoctor_Click);
             // 
             // label13
             // 
@@ -551,26 +554,11 @@
             this.label15.TabIndex = 27;
             this.label15.Text = "Schedule Days:";
             // 
-            // buttonCreateDoctor
-            // 
-            this.buttonCreateDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonCreateDoctor.FlatAppearance.BorderSize = 0;
-            this.buttonCreateDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateDoctor.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonCreateDoctor.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateDoctor.Location = new System.Drawing.Point(6, 238);
-            this.buttonCreateDoctor.Name = "buttonCreateDoctor";
-            this.buttonCreateDoctor.Size = new System.Drawing.Size(208, 32);
-            this.buttonCreateDoctor.TabIndex = 39;
-            this.buttonCreateDoctor.Text = "Create Doctor";
-            this.buttonCreateDoctor.UseVisualStyleBackColor = false;
-            this.buttonCreateDoctor.Click += new System.EventHandler(this.buttonCreateDoctor_Click);
-            // 
             // formProfileNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 624);
+            this.ClientSize = new System.Drawing.Size(480, 370);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxUsername);
@@ -626,7 +614,6 @@
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabStaff;
         private System.Windows.Forms.TabPage tabDoctor;
-        private System.Windows.Forms.TabPage tabPatient;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeEndStaff;
         private System.Windows.Forms.CheckBox checkBoxSundayStaff;

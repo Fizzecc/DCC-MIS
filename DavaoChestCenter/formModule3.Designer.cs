@@ -1,6 +1,6 @@
 ﻿namespace DavaoChestCenter
 {
-    partial class formSchedules
+    partial class formModule3
     {
         /// <summary>
         /// Required designer variable.
@@ -37,14 +37,14 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(170, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(606, 346);
             this.dataGridView1.TabIndex = 0;
             // 
-            // formSchedules
+            // formSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -54,7 +54,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "formSchedules";
+            this.Name = "formSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedules";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

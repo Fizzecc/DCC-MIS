@@ -11,23 +11,21 @@ using MySql.Data.MySqlClient;
 
 namespace DavaoChestCenter
 {
-    public partial class formSchedules : Form
+    public partial class formModule3 : Form
     {
-        public formSchedules(int x)
+        public formModule3(int x)
         {
             InitializeComponent();
 
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedule ON users.id = schedule.staff_id", con))
                 {
                     MySqlDataAdapter adp = new MySqlDataAdapter(com);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     dataGridView1.DataSource = dt;
-
-                    dataGridView1.Columns["id"].Visible = false;
                 }
                 con.Close();
             }
