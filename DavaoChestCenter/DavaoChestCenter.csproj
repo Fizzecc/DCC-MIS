@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Referral Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referral Form.Designer.cs">
+      <DependentUpon>Referral Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="formModule1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +77,11 @@
     <Compile Include="formProfile.Designer.cs">
       <DependentUpon>formProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="formSchedules.cs">
+    <Compile Include="formModule3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formSchedules.Designer.cs">
-      <DependentUpon>formSchedules.cs</DependentUpon>
+    <Compile Include="formModule3.Designer.cs">
+      <DependentUpon>formModule3.cs</DependentUpon>
     </Compile>
     <Compile Include="formProfileUpdate.cs">
       <SubType>Form</SubType>
@@ -95,19 +101,25 @@
     <Compile Include="formLogIn.Designer.cs">
       <DependentUpon>formLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="labresult.cs">
+    <Compile Include="formRegistration2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="labresult.Designer.cs">
-      <DependentUpon>labresult.cs</DependentUpon>
+    <Compile Include="formRegistration2.Designer.cs">
+      <DependentUpon>formRegistration2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.cs">
+    <Compile Include="formRegistration1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <Compile Include="formRegistration1.Designer.cs">
+      <DependentUpon>formRegistration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testadd.Designer.cs">
+      <DependentUpon>testadd.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
@@ -124,8 +136,8 @@
     <EmbeddedResource Include="formProfile.resx">
       <DependentUpon>formProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formSchedules.resx">
-      <DependentUpon>formSchedules.cs</DependentUpon>
+    <EmbeddedResource Include="formModule3.resx">
+      <DependentUpon>formModule3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProfileUpdate.resx">
       <DependentUpon>formProfileUpdate.cs</DependentUpon>
@@ -133,8 +145,8 @@
     <EmbeddedResource Include="formProfileNew.resx">
       <DependentUpon>formProfileNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="labresult.resx">
-      <DependentUpon>labresult.cs</DependentUpon>
+    <EmbeddedResource Include="formRegistration2.resx">
+      <DependentUpon>formRegistration2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,8 +158,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <EmbeddedResource Include="formRegistration1.resx">
+      <DependentUpon>formRegistration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referral Form.resx">
+      <DependentUpon>Referral Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testadd.resx">
+      <DependentUpon>testadd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

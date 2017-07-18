@@ -34,7 +34,7 @@ namespace DavaoChestCenter
 
         private void buttonSchedules_Click(object sender, EventArgs e)
         {
-            formSchedules schedules = new formSchedules(id);
+            formModule3 schedules = new formModule3(id);
             schedules.ShowDialog();
         }
 

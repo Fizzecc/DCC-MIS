@@ -16,5 +16,10 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
