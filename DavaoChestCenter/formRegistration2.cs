@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DavaoChestCenter
 {
-    public partial class labresult : Form
+    public partial class formRegistration2 : Form
     {
-        public labresult()
+        public formRegistration2()
         {
             InitializeComponent();
         }
@@ -43,6 +43,16 @@ namespace DavaoChestCenter
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labresult_Load(object sender, EventArgs e)
         {
 
         }

@@ -91,6 +91,11 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
+
+        private void formLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class conClass
