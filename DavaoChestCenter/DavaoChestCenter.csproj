@@ -115,6 +115,12 @@
     <Compile Include="formRegistration1.Designer.cs">
       <DependentUpon>formRegistration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReferralForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferralForm1.Designer.cs">
+      <DependentUpon>ReferralForm1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Referral Form.resx">
       <DependentUpon>Referral Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferralForm1.resx">
+      <DependentUpon>ReferralForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

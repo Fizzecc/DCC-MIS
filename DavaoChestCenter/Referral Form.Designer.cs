@@ -68,31 +68,33 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.checkedListBox7 = new System.Windows.Forms.CheckedListBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.checkedListBox8 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox9 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox10 = new System.Windows.Forms.CheckedListBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.checkedListBox11 = new System.Windows.Forms.CheckedListBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.checkedListBox12 = new System.Windows.Forms.CheckedListBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.checkedListBox13 = new System.Windows.Forms.CheckedListBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.checkedListBox12 = new System.Windows.Forms.CheckedListBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.checkedListBox11 = new System.Windows.Forms.CheckedListBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.checkedListBox10 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox9 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox8 = new System.Windows.Forms.CheckedListBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.checkedListBox14 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox19 = new System.Windows.Forms.CheckedListBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.checkedListBox14 = new System.Windows.Forms.CheckedListBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox17 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox15 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox16 = new System.Windows.Forms.CheckedListBox();
             this.label42 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -108,30 +110,28 @@
             this.label28 = new System.Windows.Forms.Label();
             this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.checkedListBox15 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox17 = new System.Windows.Forms.CheckedListBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label53 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label54 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
@@ -317,7 +317,7 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(78, 106);
+            this.groupBox1.Location = new System.Drawing.Point(67, 106);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(716, 148);
             this.groupBox1.TabIndex = 47;
@@ -391,7 +391,7 @@
             // 
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Location = new System.Drawing.Point(78, 269);
+            this.groupBox2.Location = new System.Drawing.Point(67, 269);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(716, 79);
             this.groupBox2.TabIndex = 48;
@@ -405,7 +405,7 @@
             this.groupBox3.Controls.Add(this.checkedListBox2);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Location = new System.Drawing.Point(78, 354);
+            this.groupBox3.Location = new System.Drawing.Point(67, 354);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(716, 207);
             this.groupBox3.TabIndex = 49;
@@ -485,7 +485,7 @@
             // 
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Location = new System.Drawing.Point(78, 567);
+            this.groupBox4.Location = new System.Drawing.Point(68, 567);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(716, 62);
             this.groupBox4.TabIndex = 50;
@@ -513,7 +513,7 @@
             // 
             this.groupBox5.Controls.Add(this.textBox3);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Location = new System.Drawing.Point(78, 635);
+            this.groupBox5.Location = new System.Drawing.Point(68, 635);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(716, 66);
             this.groupBox5.TabIndex = 51;
@@ -540,7 +540,7 @@
             // 
             this.groupBox7.Controls.Add(this.textBox5);
             this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Location = new System.Drawing.Point(78, 707);
+            this.groupBox7.Location = new System.Drawing.Point(68, 707);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(716, 80);
             this.groupBox7.TabIndex = 53;
@@ -573,16 +573,6 @@
             this.groupBox9.TabIndex = 55;
             this.groupBox9.TabStop = false;
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(6, 16);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(222, 13);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "7. Referring Unit\'s clinical Impression:";
-            // 
             // checkedListBox7
             // 
             this.checkedListBox7.FormattingEnabled = true;
@@ -598,6 +588,16 @@
             this.checkedListBox7.Size = new System.Drawing.Size(231, 79);
             this.checkedListBox7.TabIndex = 6;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(6, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(222, 13);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "7. Referring Unit\'s clinical Impression:";
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.textBox10);
@@ -608,6 +608,13 @@
             this.groupBox10.TabIndex = 56;
             this.groupBox10.TabStop = false;
             // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(21, 32);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(470, 20);
+            this.textBox10.TabIndex = 20;
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -617,13 +624,6 @@
             this.label34.Size = new System.Drawing.Size(267, 13);
             this.label34.TabIndex = 5;
             this.label34.Text = "7a. Any treatment prescribed  by referring unit";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(21, 32);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(470, 20);
-            this.textBox10.TabIndex = 20;
             // 
             // groupBox11
             // 
@@ -670,79 +670,26 @@
             this.groupBox12.TabIndex = 58;
             this.groupBox12.TabStop = false;
             // 
-            // label36
+            // checkedListBox13
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(6, 16);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(29, 13);
-            this.label36.TabIndex = 5;
-            this.label36.Text = "8a. ";
+            this.checkedListBox13.FormattingEnabled = true;
+            this.checkedListBox13.HorizontalScrollbar = true;
+            this.checkedListBox13.Items.AddRange(new object[] {
+            "Others"});
+            this.checkedListBox13.Location = new System.Drawing.Point(433, 37);
+            this.checkedListBox13.Name = "checkedListBox13";
+            this.checkedListBox13.Size = new System.Drawing.Size(79, 19);
+            this.checkedListBox13.TabIndex = 15;
             // 
-            // checkedListBox8
+            // label39
             // 
-            this.checkedListBox8.FormattingEnabled = true;
-            this.checkedListBox8.HorizontalScrollbar = true;
-            this.checkedListBox8.Items.AddRange(new object[] {
-            "New"});
-            this.checkedListBox8.Location = new System.Drawing.Point(21, 41);
-            this.checkedListBox8.Name = "checkedListBox8";
-            this.checkedListBox8.Size = new System.Drawing.Size(53, 19);
-            this.checkedListBox8.TabIndex = 7;
-            // 
-            // checkedListBox9
-            // 
-            this.checkedListBox9.FormattingEnabled = true;
-            this.checkedListBox9.HorizontalScrollbar = true;
-            this.checkedListBox9.Items.AddRange(new object[] {
-            "Active TB"});
-            this.checkedListBox9.Location = new System.Drawing.Point(41, 16);
-            this.checkedListBox9.Name = "checkedListBox9";
-            this.checkedListBox9.Size = new System.Drawing.Size(71, 19);
-            this.checkedListBox9.TabIndex = 8;
-            // 
-            // checkedListBox10
-            // 
-            this.checkedListBox10.FormattingEnabled = true;
-            this.checkedListBox10.HorizontalScrollbar = true;
-            this.checkedListBox10.Items.AddRange(new object[] {
-            "re-treatment"});
-            this.checkedListBox10.Location = new System.Drawing.Point(80, 41);
-            this.checkedListBox10.Name = "checkedListBox10";
-            this.checkedListBox10.Size = new System.Drawing.Size(79, 19);
-            this.checkedListBox10.TabIndex = 9;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(186, 16);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(25, 13);
-            this.label37.TabIndex = 10;
-            this.label37.Text = "8b.";
-            // 
-            // checkedListBox11
-            // 
-            this.checkedListBox11.FormattingEnabled = true;
-            this.checkedListBox11.HorizontalScrollbar = true;
-            this.checkedListBox11.Items.AddRange(new object[] {
-            "Inactive TB"});
-            this.checkedListBox11.Location = new System.Drawing.Point(173, 41);
-            this.checkedListBox11.Name = "checkedListBox11";
-            this.checkedListBox11.Size = new System.Drawing.Size(79, 19);
-            this.checkedListBox11.TabIndex = 11;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(314, 16);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(25, 13);
-            this.label38.TabIndex = 12;
-            this.label38.Text = "8c.";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(430, 16);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(25, 13);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "8d.";
             // 
             // checkedListBox12
             // 
@@ -755,26 +702,79 @@
             this.checkedListBox12.Size = new System.Drawing.Size(125, 19);
             this.checkedListBox12.TabIndex = 13;
             // 
-            // label39
+            // label38
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(430, 16);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(25, 13);
-            this.label39.TabIndex = 14;
-            this.label39.Text = "8d.";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(314, 16);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(25, 13);
+            this.label38.TabIndex = 12;
+            this.label38.Text = "8c.";
             // 
-            // checkedListBox13
+            // checkedListBox11
             // 
-            this.checkedListBox13.FormattingEnabled = true;
-            this.checkedListBox13.HorizontalScrollbar = true;
-            this.checkedListBox13.Items.AddRange(new object[] {
-            "Others"});
-            this.checkedListBox13.Location = new System.Drawing.Point(433, 37);
-            this.checkedListBox13.Name = "checkedListBox13";
-            this.checkedListBox13.Size = new System.Drawing.Size(79, 19);
-            this.checkedListBox13.TabIndex = 15;
+            this.checkedListBox11.FormattingEnabled = true;
+            this.checkedListBox11.HorizontalScrollbar = true;
+            this.checkedListBox11.Items.AddRange(new object[] {
+            "Inactive TB"});
+            this.checkedListBox11.Location = new System.Drawing.Point(173, 41);
+            this.checkedListBox11.Name = "checkedListBox11";
+            this.checkedListBox11.Size = new System.Drawing.Size(79, 19);
+            this.checkedListBox11.TabIndex = 11;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(186, 16);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(25, 13);
+            this.label37.TabIndex = 10;
+            this.label37.Text = "8b.";
+            // 
+            // checkedListBox10
+            // 
+            this.checkedListBox10.FormattingEnabled = true;
+            this.checkedListBox10.HorizontalScrollbar = true;
+            this.checkedListBox10.Items.AddRange(new object[] {
+            "re-treatment"});
+            this.checkedListBox10.Location = new System.Drawing.Point(80, 41);
+            this.checkedListBox10.Name = "checkedListBox10";
+            this.checkedListBox10.Size = new System.Drawing.Size(79, 19);
+            this.checkedListBox10.TabIndex = 9;
+            // 
+            // checkedListBox9
+            // 
+            this.checkedListBox9.FormattingEnabled = true;
+            this.checkedListBox9.HorizontalScrollbar = true;
+            this.checkedListBox9.Items.AddRange(new object[] {
+            "Active TB"});
+            this.checkedListBox9.Location = new System.Drawing.Point(41, 16);
+            this.checkedListBox9.Name = "checkedListBox9";
+            this.checkedListBox9.Size = new System.Drawing.Size(71, 19);
+            this.checkedListBox9.TabIndex = 8;
+            // 
+            // checkedListBox8
+            // 
+            this.checkedListBox8.FormattingEnabled = true;
+            this.checkedListBox8.HorizontalScrollbar = true;
+            this.checkedListBox8.Items.AddRange(new object[] {
+            "New"});
+            this.checkedListBox8.Location = new System.Drawing.Point(21, 41);
+            this.checkedListBox8.Name = "checkedListBox8";
+            this.checkedListBox8.Size = new System.Drawing.Size(53, 19);
+            this.checkedListBox8.TabIndex = 7;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(6, 16);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(29, 13);
+            this.label36.TabIndex = 5;
+            this.label36.Text = "8a. ";
             // 
             // groupBox13
             // 
@@ -787,6 +787,32 @@
             this.groupBox13.Size = new System.Drawing.Size(572, 168);
             this.groupBox13.TabIndex = 59;
             this.groupBox13.TabStop = false;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(224, 43);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(49, 13);
+            this.label40.TabIndex = 11;
+            this.label40.Text = "Category";
+            // 
+            // checkedListBox14
+            // 
+            this.checkedListBox14.FormattingEnabled = true;
+            this.checkedListBox14.HorizontalScrollbar = true;
+            this.checkedListBox14.Items.AddRange(new object[] {
+            "1",
+            "1A",
+            "11",
+            "1A",
+            "start",
+            "re-start",
+            "continue"});
+            this.checkedListBox14.Location = new System.Drawing.Point(279, 43);
+            this.checkedListBox14.Name = "checkedListBox14";
+            this.checkedListBox14.Size = new System.Drawing.Size(87, 109);
+            this.checkedListBox14.TabIndex = 8;
             // 
             // checkedListBox19
             // 
@@ -811,32 +837,6 @@
             this.label43.TabIndex = 5;
             this.label43.Text = "9. TBDC Recommendations Please print additional pages if necessary)";
             // 
-            // checkedListBox14
-            // 
-            this.checkedListBox14.FormattingEnabled = true;
-            this.checkedListBox14.HorizontalScrollbar = true;
-            this.checkedListBox14.Items.AddRange(new object[] {
-            "1",
-            "1A",
-            "11",
-            "1A",
-            "start",
-            "re-start",
-            "continue"});
-            this.checkedListBox14.Location = new System.Drawing.Point(279, 43);
-            this.checkedListBox14.Name = "checkedListBox14";
-            this.checkedListBox14.Size = new System.Drawing.Size(87, 109);
-            this.checkedListBox14.TabIndex = 8;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(224, 43);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(49, 13);
-            this.label40.TabIndex = 11;
-            this.label40.Text = "Category";
-            // 
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.checkedListBox17);
@@ -848,6 +848,39 @@
             this.groupBox14.Size = new System.Drawing.Size(572, 258);
             this.groupBox14.TabIndex = 60;
             this.groupBox14.TabStop = false;
+            // 
+            // checkedListBox17
+            // 
+            this.checkedListBox17.FormattingEnabled = true;
+            this.checkedListBox17.HorizontalScrollbar = true;
+            this.checkedListBox17.Items.AddRange(new object[] {
+            "Rx Antibiotics x2 weeks",
+            "Find other cause of cough",
+            "Retrieve old films",
+            "Repeat DSSM prior to Anti TB treatment",
+            "Repeat CXR PA/ALV",
+            "Refer to PMOT for MOR Screening",
+            "Present again with patient"});
+            this.checkedListBox17.Location = new System.Drawing.Point(9, 135);
+            this.checkedListBox17.Name = "checkedListBox17";
+            this.checkedListBox17.Size = new System.Drawing.Size(229, 109);
+            this.checkedListBox17.TabIndex = 9;
+            // 
+            // checkedListBox15
+            // 
+            this.checkedListBox15.FormattingEnabled = true;
+            this.checkedListBox15.HorizontalScrollbar = true;
+            this.checkedListBox15.Items.AddRange(new object[] {
+            "Suggest SGPT/ (baseline)",
+            "Suggest CT guided biopsy",
+            "Suggest Chest CT scans with contrast media",
+            "Suggest Sputum GS/CS",
+            "Suggest Gen Xpert",
+            "Suggest consent for PICT"});
+            this.checkedListBox15.Location = new System.Drawing.Point(199, 35);
+            this.checkedListBox15.Name = "checkedListBox15";
+            this.checkedListBox15.Size = new System.Drawing.Size(256, 94);
+            this.checkedListBox15.TabIndex = 8;
             // 
             // checkedListBox16
             // 
@@ -889,7 +922,7 @@
             this.groupBox8.Controls.Add(this.label28);
             this.groupBox8.Controls.Add(this.checkedListBox4);
             this.groupBox8.Controls.Add(this.label27);
-            this.groupBox8.Location = new System.Drawing.Point(78, 793);
+            this.groupBox8.Location = new System.Drawing.Point(70, 793);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(716, 148);
             this.groupBox8.TabIndex = 61;
@@ -1019,39 +1052,6 @@
             this.label27.Text = "6a. If yes, check the anti TB drugs taken, indicate the dates, duration of drug i" +
     "ntake & treatmen";
             // 
-            // checkedListBox15
-            // 
-            this.checkedListBox15.FormattingEnabled = true;
-            this.checkedListBox15.HorizontalScrollbar = true;
-            this.checkedListBox15.Items.AddRange(new object[] {
-            "Suggest SGPT/ (baseline)",
-            "Suggest CT guided biopsy",
-            "Suggest Chest CT scans with contrast media",
-            "Suggest Sputum GS/CS",
-            "Suggest Gen Xpert",
-            "Suggest consent for PICT"});
-            this.checkedListBox15.Location = new System.Drawing.Point(199, 35);
-            this.checkedListBox15.Name = "checkedListBox15";
-            this.checkedListBox15.Size = new System.Drawing.Size(256, 94);
-            this.checkedListBox15.TabIndex = 8;
-            // 
-            // checkedListBox17
-            // 
-            this.checkedListBox17.FormattingEnabled = true;
-            this.checkedListBox17.HorizontalScrollbar = true;
-            this.checkedListBox17.Items.AddRange(new object[] {
-            "Rx Antibiotics x2 weeks",
-            "Find other cause of cough",
-            "Retrieve old films",
-            "Repeat DSSM prior to Anti TB treatment",
-            "Repeat CXR PA/ALV",
-            "Refer to PMOT for MOR Screening",
-            "Present again with patient"});
-            this.checkedListBox17.Location = new System.Drawing.Point(9, 135);
-            this.checkedListBox17.Name = "checkedListBox17";
-            this.checkedListBox17.Size = new System.Drawing.Size(229, 109);
-            this.checkedListBox17.TabIndex = 9;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label52);
@@ -1072,91 +1072,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
-            // label24
+            // label52
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(133, 13);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "10. TBDC Chairperson";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(26, 43);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(108, 13);
-            this.label41.TabIndex = 5;
-            this.label41.Text = "Dr. Marilyn U. Lim";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(40, 56);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(72, 13);
-            this.label44.TabIndex = 9;
-            this.label44.Text = "Pulmonologist";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(177, 43);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(162, 13);
-            this.label45.TabIndex = 10;
-            this.label45.Text = "Dr. Parkash T. Mansukhani";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(224, 56);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(72, 13);
-            this.label46.TabIndex = 11;
-            this.label46.Text = "Pulmonologist";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(388, 43);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(133, 13);
-            this.label47.TabIndex = 12;
-            this.label47.Text = "Dr. Iris Ruth O. Batala";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(419, 56);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(72, 13);
-            this.label48.TabIndex = 13;
-            this.label48.Text = "Pulmonologist";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(103, 81);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(141, 13);
-            this.label49.TabIndex = 14;
-            this.label49.Text = "Dr. Jessie F. Orcasistas";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(128, 94);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(72, 13);
-            this.label50.TabIndex = 15;
-            this.label50.Text = "Pulmonologist";
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(327, 94);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(72, 13);
+            this.label52.TabIndex = 17;
+            this.label52.Text = "Pulmonologist";
             // 
             // label51
             // 
@@ -1168,14 +1091,91 @@
             this.label51.TabIndex = 16;
             this.label51.Text = "Dr. Christina A. Uy";
             // 
-            // label52
+            // label50
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(327, 94);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(72, 13);
-            this.label52.TabIndex = 17;
-            this.label52.Text = "Pulmonologist";
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(128, 94);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(72, 13);
+            this.label50.TabIndex = 15;
+            this.label50.Text = "Pulmonologist";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(103, 81);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(141, 13);
+            this.label49.TabIndex = 14;
+            this.label49.Text = "Dr. Jessie F. Orcasistas";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(419, 56);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(72, 13);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "Pulmonologist";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(388, 43);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(133, 13);
+            this.label47.TabIndex = 12;
+            this.label47.Text = "Dr. Iris Ruth O. Batala";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(224, 56);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(72, 13);
+            this.label46.TabIndex = 11;
+            this.label46.Text = "Pulmonologist";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(177, 43);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(162, 13);
+            this.label45.TabIndex = 10;
+            this.label45.Text = "Dr. Parkash T. Mansukhani";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(40, 56);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(72, 13);
+            this.label44.TabIndex = 9;
+            this.label44.Text = "Pulmonologist";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(26, 43);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(108, 13);
+            this.label41.TabIndex = 5;
+            this.label41.Text = "Dr. Marilyn U. Lim";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(133, 13);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "10. TBDC Chairperson";
             // 
             // groupBox15
             // 
@@ -1188,11 +1188,62 @@
             this.groupBox15.Controls.Add(this.label61);
             this.groupBox15.Controls.Add(this.label62);
             this.groupBox15.Controls.Add(this.label63);
-            this.groupBox15.Location = new System.Drawing.Point(72, 952);
+            this.groupBox15.Location = new System.Drawing.Point(5, 952);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(796, 89);
+            this.groupBox15.Size = new System.Drawing.Size(784, 89);
             this.groupBox15.TabIndex = 63;
             this.groupBox15.TabStop = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(574, 40);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker2.TabIndex = 22;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(589, 16);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(118, 13);
+            this.label55.TabIndex = 21;
+            this.label55.Text = "14. Date Recieved:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(427, 40);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(131, 20);
+            this.textBox4.TabIndex = 20;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(437, 16);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(99, 13);
+            this.label54.TabIndex = 12;
+            this.label54.Text = "13. Referred by:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(205, 37);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(202, 16);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(160, 13);
+            this.label53.TabIndex = 10;
+            this.label53.Text = "12. Date of TBDC meeting:";
             // 
             // label61
             // 
@@ -1223,57 +1274,6 @@
             this.label63.Size = new System.Drawing.Size(128, 13);
             this.label63.TabIndex = 4;
             this.label63.Text = "11. TBDC Secretariat";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(202, 16);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(160, 13);
-            this.label53.TabIndex = 10;
-            this.label53.Text = "12. Date of TBDC meeting:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 37);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(437, 16);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(99, 13);
-            this.label54.TabIndex = 12;
-            this.label54.Text = "13. Referred by:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(427, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 20);
-            this.textBox4.TabIndex = 20;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(589, 16);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(118, 13);
-            this.label55.TabIndex = 21;
-            this.label55.Text = "14. Date Recieved:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(574, 40);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(198, 20);
-            this.dateTimePicker2.TabIndex = 22;
             // 
             // label56
             // 
@@ -1383,7 +1383,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(1428, 38);
+            this.label70.Location = new System.Drawing.Point(1428, 39);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(59, 13);
             this.label70.TabIndex = 75;
