@@ -58,8 +58,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePickerWorkingTimeStartStaff = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxAddressClinic = new System.Windows.Forms.TextBox();
             this.tabDoctor = new System.Windows.Forms.TabPage();
             this.buttonCreateDoctor = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,9 +72,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerWorkingTimeStartDoctor = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
+            this.tabPatient = new System.Windows.Forms.TabPage();
+            this.buttonCreatePatient = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tabStaff.SuspendLayout();
             this.tabDoctor.SuspendLayout();
+            this.tabPatient.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxNameFirst
@@ -184,9 +185,9 @@
             this.buttonCreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateStaff.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonCreateStaff.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateStaff.Location = new System.Drawing.Point(6, 290);
+            this.buttonCreateStaff.Location = new System.Drawing.Point(6, 238);
             this.buttonCreateStaff.Name = "buttonCreateStaff";
-            this.buttonCreateStaff.Size = new System.Drawing.Size(208, 32);
+            this.buttonCreateStaff.Size = new System.Drawing.Size(208, 33);
             this.buttonCreateStaff.TabIndex = 10;
             this.buttonCreateStaff.Text = "Create Staff";
             this.buttonCreateStaff.UseVisualStyleBackColor = false;
@@ -230,6 +231,7 @@
             // 
             this.tab.Controls.Add(this.tabStaff);
             this.tab.Controls.Add(this.tabDoctor);
+            this.tab.Controls.Add(this.tabPatient);
             this.tab.Font = new System.Drawing.Font("Tw Cen MT", 8F);
             this.tab.Location = new System.Drawing.Point(248, 6);
             this.tab.Name = "tab";
@@ -251,8 +253,6 @@
             this.tabStaff.Controls.Add(this.label11);
             this.tabStaff.Controls.Add(this.dateTimePickerWorkingTimeStartStaff);
             this.tabStaff.Controls.Add(this.label9);
-            this.tabStaff.Controls.Add(this.label8);
-            this.tabStaff.Controls.Add(this.textBoxAddressClinic);
             this.tabStaff.Controls.Add(this.buttonCreateStaff);
             this.tabStaff.Location = new System.Drawing.Point(4, 23);
             this.tabStaff.Name = "tabStaff";
@@ -266,7 +266,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.label12.Location = new System.Drawing.Point(2, 241);
+            this.label12.Location = new System.Drawing.Point(2, 189);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(128, 19);
             this.label12.TabIndex = 26;
@@ -276,7 +276,7 @@
             // 
             this.dateTimePickerWorkingTimeEndStaff.Font = new System.Drawing.Font("Tw Cen MT", 9F);
             this.dateTimePickerWorkingTimeEndStaff.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerWorkingTimeEndStaff.Location = new System.Drawing.Point(6, 263);
+            this.dateTimePickerWorkingTimeEndStaff.Location = new System.Drawing.Point(6, 211);
             this.dateTimePickerWorkingTimeEndStaff.Name = "dateTimePickerWorkingTimeEndStaff";
             this.dateTimePickerWorkingTimeEndStaff.Size = new System.Drawing.Size(208, 21);
             this.dateTimePickerWorkingTimeEndStaff.TabIndex = 25;
@@ -284,7 +284,7 @@
             // checkBoxSundayStaff
             // 
             this.checkBoxSundayStaff.AutoSize = true;
-            this.checkBoxSundayStaff.Location = new System.Drawing.Point(115, 101);
+            this.checkBoxSundayStaff.Location = new System.Drawing.Point(115, 49);
             this.checkBoxSundayStaff.Name = "checkBoxSundayStaff";
             this.checkBoxSundayStaff.Size = new System.Drawing.Size(60, 18);
             this.checkBoxSundayStaff.TabIndex = 24;
@@ -294,7 +294,7 @@
             // checkBoxSaturdayStaff
             // 
             this.checkBoxSaturdayStaff.AutoSize = true;
-            this.checkBoxSaturdayStaff.Location = new System.Drawing.Point(115, 77);
+            this.checkBoxSaturdayStaff.Location = new System.Drawing.Point(115, 25);
             this.checkBoxSaturdayStaff.Name = "checkBoxSaturdayStaff";
             this.checkBoxSaturdayStaff.Size = new System.Drawing.Size(68, 18);
             this.checkBoxSaturdayStaff.TabIndex = 23;
@@ -304,7 +304,7 @@
             // checkBoxFridayStaff
             // 
             this.checkBoxFridayStaff.AutoSize = true;
-            this.checkBoxFridayStaff.Location = new System.Drawing.Point(10, 174);
+            this.checkBoxFridayStaff.Location = new System.Drawing.Point(10, 122);
             this.checkBoxFridayStaff.Name = "checkBoxFridayStaff";
             this.checkBoxFridayStaff.Size = new System.Drawing.Size(55, 18);
             this.checkBoxFridayStaff.TabIndex = 22;
@@ -314,7 +314,7 @@
             // checkBoxThursdayStaff
             // 
             this.checkBoxThursdayStaff.AutoSize = true;
-            this.checkBoxThursdayStaff.Location = new System.Drawing.Point(10, 150);
+            this.checkBoxThursdayStaff.Location = new System.Drawing.Point(10, 98);
             this.checkBoxThursdayStaff.Name = "checkBoxThursdayStaff";
             this.checkBoxThursdayStaff.Size = new System.Drawing.Size(67, 18);
             this.checkBoxThursdayStaff.TabIndex = 21;
@@ -324,7 +324,7 @@
             // checkBoxWednesdayStaff
             // 
             this.checkBoxWednesdayStaff.AutoSize = true;
-            this.checkBoxWednesdayStaff.Location = new System.Drawing.Point(10, 126);
+            this.checkBoxWednesdayStaff.Location = new System.Drawing.Point(10, 74);
             this.checkBoxWednesdayStaff.Name = "checkBoxWednesdayStaff";
             this.checkBoxWednesdayStaff.Size = new System.Drawing.Size(82, 18);
             this.checkBoxWednesdayStaff.TabIndex = 20;
@@ -334,7 +334,7 @@
             // checkBoxTuesdayStaff
             // 
             this.checkBoxTuesdayStaff.AutoSize = true;
-            this.checkBoxTuesdayStaff.Location = new System.Drawing.Point(10, 101);
+            this.checkBoxTuesdayStaff.Location = new System.Drawing.Point(10, 49);
             this.checkBoxTuesdayStaff.Name = "checkBoxTuesdayStaff";
             this.checkBoxTuesdayStaff.Size = new System.Drawing.Size(64, 18);
             this.checkBoxTuesdayStaff.TabIndex = 19;
@@ -344,7 +344,7 @@
             // checkBoxMondayStaff
             // 
             this.checkBoxMondayStaff.AutoSize = true;
-            this.checkBoxMondayStaff.Location = new System.Drawing.Point(10, 77);
+            this.checkBoxMondayStaff.Location = new System.Drawing.Point(10, 25);
             this.checkBoxMondayStaff.Name = "checkBoxMondayStaff";
             this.checkBoxMondayStaff.Size = new System.Drawing.Size(63, 18);
             this.checkBoxMondayStaff.TabIndex = 18;
@@ -355,7 +355,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.label11.Location = new System.Drawing.Point(3, 195);
+            this.label11.Location = new System.Drawing.Point(3, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(135, 19);
             this.label11.TabIndex = 17;
@@ -365,7 +365,7 @@
             // 
             this.dateTimePickerWorkingTimeStartStaff.Font = new System.Drawing.Font("Tw Cen MT", 9F);
             this.dateTimePickerWorkingTimeStartStaff.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerWorkingTimeStartStaff.Location = new System.Drawing.Point(6, 217);
+            this.dateTimePickerWorkingTimeStartStaff.Location = new System.Drawing.Point(6, 165);
             this.dateTimePickerWorkingTimeStartStaff.Name = "dateTimePickerWorkingTimeStartStaff";
             this.dateTimePickerWorkingTimeStartStaff.Size = new System.Drawing.Size(208, 21);
             this.dateTimePickerWorkingTimeStartStaff.TabIndex = 16;
@@ -374,29 +374,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.label9.Location = new System.Drawing.Point(3, 55);
+            this.label9.Location = new System.Drawing.Point(3, 3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 19);
             this.label9.TabIndex = 15;
             this.label9.Text = "Schedule Days:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.label8.Location = new System.Drawing.Point(3, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 19);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Clinic Address:";
-            // 
-            // textBoxAddressClinic
-            // 
-            this.textBoxAddressClinic.Location = new System.Drawing.Point(6, 25);
-            this.textBoxAddressClinic.Multiline = true;
-            this.textBoxAddressClinic.Name = "textBoxAddressClinic";
-            this.textBoxAddressClinic.Size = new System.Drawing.Size(208, 27);
-            this.textBoxAddressClinic.TabIndex = 12;
             // 
             // tabDoctor
             // 
@@ -554,6 +536,32 @@
             this.label15.TabIndex = 27;
             this.label15.Text = "Schedule Days:";
             // 
+            // tabPatient
+            // 
+            this.tabPatient.Controls.Add(this.buttonCreatePatient);
+            this.tabPatient.Location = new System.Drawing.Point(4, 23);
+            this.tabPatient.Name = "tabPatient";
+            this.tabPatient.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPatient.Size = new System.Drawing.Size(220, 330);
+            this.tabPatient.TabIndex = 2;
+            this.tabPatient.Text = "Patient";
+            this.tabPatient.UseVisualStyleBackColor = true;
+            // 
+            // buttonCreatePatient
+            // 
+            this.buttonCreatePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonCreatePatient.FlatAppearance.BorderSize = 0;
+            this.buttonCreatePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreatePatient.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonCreatePatient.ForeColor = System.Drawing.Color.White;
+            this.buttonCreatePatient.Location = new System.Drawing.Point(6, 90);
+            this.buttonCreatePatient.Name = "buttonCreatePatient";
+            this.buttonCreatePatient.Size = new System.Drawing.Size(208, 159);
+            this.buttonCreatePatient.TabIndex = 40;
+            this.buttonCreatePatient.Text = "Create Patient";
+            this.buttonCreatePatient.UseVisualStyleBackColor = false;
+            this.buttonCreatePatient.Click += new System.EventHandler(this.buttonCreatePatient_Click);
+            // 
             // formProfileNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -588,6 +596,7 @@
             this.tabStaff.PerformLayout();
             this.tabDoctor.ResumeLayout(false);
             this.tabDoctor.PerformLayout();
+            this.tabPatient.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,8 +635,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeStartStaff;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxAddressClinic;
         private System.Windows.Forms.Button buttonCreateDoctor;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeEndDoctor;
@@ -641,5 +648,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeStartDoctor;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPatient;
+        private System.Windows.Forms.Button buttonCreatePatient;
     }
 }

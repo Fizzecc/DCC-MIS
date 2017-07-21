@@ -15,6 +15,7 @@ namespace DavaoChestCenter
     {
         int id = -1; int selectedUser = -1; string patientName = "";
         string name = "";
+
         public formProfile(int x, string y)
         {
             InitializeComponent();

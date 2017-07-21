@@ -14,10 +14,12 @@ namespace DavaoChestCenter
     {
         int id = -1;
         string name = "";
+
         public formModule1()
         {
             InitializeComponent();
         }
+
         public formModule1(int x, string y)
         {
             InitializeComponent();

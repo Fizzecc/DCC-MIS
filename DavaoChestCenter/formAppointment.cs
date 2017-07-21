@@ -13,7 +13,8 @@ namespace DavaoChestCenter
 {
     public partial class formAppointment : Form
     {
-        int id = -1; int patient = -1;
+        //int id = -1;
+        int patient = -1;
 
         public formAppointment(int x, string y)
         {
@@ -24,7 +25,6 @@ namespace DavaoChestCenter
             refreshAppointment();
 
             labelName.Text = y;
-            
         }
         
         public void refreshAppointment()
