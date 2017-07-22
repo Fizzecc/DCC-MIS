@@ -40,10 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonPatientNew = new System.Windows.Forms.Button();
+            this.buttonProductNew = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.buttonProductNew = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedules)).BeginInit();
@@ -196,10 +196,27 @@
             this.buttonPatientNew.Name = "buttonPatientNew";
             this.buttonPatientNew.Size = new System.Drawing.Size(91, 172);
             this.buttonPatientNew.TabIndex = 5;
-            this.buttonPatientNew.Text = "Create New Patient";
+            this.buttonPatientNew.Text = "Encode New Patient";
             this.buttonPatientNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPatientNew.UseVisualStyleBackColor = false;
             this.buttonPatientNew.Click += new System.EventHandler(this.buttonPatientNew_Click);
+            // 
+            // buttonProductNew
+            // 
+            this.buttonProductNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProductNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
+            this.buttonProductNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonProductNew.FlatAppearance.BorderSize = 0;
+            this.buttonProductNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProductNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonProductNew.Location = new System.Drawing.Point(100, 3);
+            this.buttonProductNew.Name = "buttonProductNew";
+            this.buttonProductNew.Size = new System.Drawing.Size(91, 172);
+            this.buttonProductNew.TabIndex = 6;
+            this.buttonProductNew.Text = "Encode Product";
+            this.buttonProductNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonProductNew.UseVisualStyleBackColor = false;
+            this.buttonProductNew.Click += new System.EventHandler(this.buttonProductNew_Click);
             // 
             // label5
             // 
@@ -233,23 +250,6 @@
             this.buttonRefresh.Text = "Refresh Tables";
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            // 
-            // buttonProductNew
-            // 
-            this.buttonProductNew.BackColor = System.Drawing.Color.Transparent;
-            this.buttonProductNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.buttonProductNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonProductNew.FlatAppearance.BorderSize = 0;
-            this.buttonProductNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProductNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonProductNew.Location = new System.Drawing.Point(100, 3);
-            this.buttonProductNew.Name = "buttonProductNew";
-            this.buttonProductNew.Size = new System.Drawing.Size(91, 172);
-            this.buttonProductNew.TabIndex = 6;
-            this.buttonProductNew.Text = "Encode Product";
-            this.buttonProductNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonProductNew.UseVisualStyleBackColor = false;
-            this.buttonProductNew.Click += new System.EventHandler(this.buttonProductNew_Click);
             // 
             // formMenu
             // 

@@ -45,7 +45,7 @@
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(294, 32);
             this.buttonCreate.TabIndex = 11;
-            this.buttonCreate.Text = "Create User";
+            this.buttonCreate.Text = "Create Profile";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
@@ -60,7 +60,7 @@
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(296, 32);
             this.buttonUpdate.TabIndex = 12;
-            this.buttonUpdate.Text = "Update User";
+            this.buttonUpdate.Text = "Update Profile";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 

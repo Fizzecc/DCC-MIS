@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.buttonCreateStaff = new System.Windows.Forms.Button();
+            this.buttonEncodeStaff = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.dateTimePickerWorkingTimeStartStaff = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.tabDoctor = new System.Windows.Forms.TabPage();
-            this.buttonCreateDoctor = new System.Windows.Forms.Button();
+            this.buttonEncodeDoctor = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerWorkingTimeEndDoctor = new System.Windows.Forms.DateTimePicker();
             this.checkBoxSundayDoctor = new System.Windows.Forms.CheckBox();
@@ -73,7 +73,7 @@
             this.dateTimePickerWorkingTimeStartDoctor = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPatient = new System.Windows.Forms.TabPage();
-            this.buttonCreatePatient = new System.Windows.Forms.Button();
+            this.buttonEncodePatient = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tabStaff.SuspendLayout();
             this.tabDoctor.SuspendLayout();
@@ -178,20 +178,20 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "____________________________";
             // 
-            // buttonCreateStaff
+            // buttonEncodeStaff
             // 
-            this.buttonCreateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonCreateStaff.FlatAppearance.BorderSize = 0;
-            this.buttonCreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateStaff.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonCreateStaff.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateStaff.Location = new System.Drawing.Point(6, 238);
-            this.buttonCreateStaff.Name = "buttonCreateStaff";
-            this.buttonCreateStaff.Size = new System.Drawing.Size(208, 33);
-            this.buttonCreateStaff.TabIndex = 10;
-            this.buttonCreateStaff.Text = "Create Staff";
-            this.buttonCreateStaff.UseVisualStyleBackColor = false;
-            this.buttonCreateStaff.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonEncodeStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonEncodeStaff.FlatAppearance.BorderSize = 0;
+            this.buttonEncodeStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEncodeStaff.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonEncodeStaff.ForeColor = System.Drawing.Color.White;
+            this.buttonEncodeStaff.Location = new System.Drawing.Point(6, 238);
+            this.buttonEncodeStaff.Name = "buttonEncodeStaff";
+            this.buttonEncodeStaff.Size = new System.Drawing.Size(208, 33);
+            this.buttonEncodeStaff.TabIndex = 10;
+            this.buttonEncodeStaff.Text = "Encode Staff";
+            this.buttonEncodeStaff.UseVisualStyleBackColor = false;
+            this.buttonEncodeStaff.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label6
             // 
@@ -253,7 +253,7 @@
             this.tabStaff.Controls.Add(this.label11);
             this.tabStaff.Controls.Add(this.dateTimePickerWorkingTimeStartStaff);
             this.tabStaff.Controls.Add(this.label9);
-            this.tabStaff.Controls.Add(this.buttonCreateStaff);
+            this.tabStaff.Controls.Add(this.buttonEncodeStaff);
             this.tabStaff.Location = new System.Drawing.Point(4, 23);
             this.tabStaff.Name = "tabStaff";
             this.tabStaff.Padding = new System.Windows.Forms.Padding(3);
@@ -382,7 +382,7 @@
             // 
             // tabDoctor
             // 
-            this.tabDoctor.Controls.Add(this.buttonCreateDoctor);
+            this.tabDoctor.Controls.Add(this.buttonEncodeDoctor);
             this.tabDoctor.Controls.Add(this.label13);
             this.tabDoctor.Controls.Add(this.dateTimePickerWorkingTimeEndDoctor);
             this.tabDoctor.Controls.Add(this.checkBoxSundayDoctor);
@@ -403,20 +403,20 @@
             this.tabDoctor.Text = "Doctor";
             this.tabDoctor.UseVisualStyleBackColor = true;
             // 
-            // buttonCreateDoctor
+            // buttonEncodeDoctor
             // 
-            this.buttonCreateDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonCreateDoctor.FlatAppearance.BorderSize = 0;
-            this.buttonCreateDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateDoctor.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonCreateDoctor.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateDoctor.Location = new System.Drawing.Point(6, 238);
-            this.buttonCreateDoctor.Name = "buttonCreateDoctor";
-            this.buttonCreateDoctor.Size = new System.Drawing.Size(208, 32);
-            this.buttonCreateDoctor.TabIndex = 39;
-            this.buttonCreateDoctor.Text = "Create Doctor";
-            this.buttonCreateDoctor.UseVisualStyleBackColor = false;
-            this.buttonCreateDoctor.Click += new System.EventHandler(this.buttonCreateDoctor_Click);
+            this.buttonEncodeDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonEncodeDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonEncodeDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEncodeDoctor.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonEncodeDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonEncodeDoctor.Location = new System.Drawing.Point(6, 238);
+            this.buttonEncodeDoctor.Name = "buttonEncodeDoctor";
+            this.buttonEncodeDoctor.Size = new System.Drawing.Size(208, 32);
+            this.buttonEncodeDoctor.TabIndex = 39;
+            this.buttonEncodeDoctor.Text = "Encode Doctor";
+            this.buttonEncodeDoctor.UseVisualStyleBackColor = false;
+            this.buttonEncodeDoctor.Click += new System.EventHandler(this.buttonCreateDoctor_Click);
             // 
             // label13
             // 
@@ -538,7 +538,7 @@
             // 
             // tabPatient
             // 
-            this.tabPatient.Controls.Add(this.buttonCreatePatient);
+            this.tabPatient.Controls.Add(this.buttonEncodePatient);
             this.tabPatient.Location = new System.Drawing.Point(4, 23);
             this.tabPatient.Name = "tabPatient";
             this.tabPatient.Padding = new System.Windows.Forms.Padding(3);
@@ -547,20 +547,20 @@
             this.tabPatient.Text = "Patient";
             this.tabPatient.UseVisualStyleBackColor = true;
             // 
-            // buttonCreatePatient
+            // buttonEncodePatient
             // 
-            this.buttonCreatePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonCreatePatient.FlatAppearance.BorderSize = 0;
-            this.buttonCreatePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreatePatient.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonCreatePatient.ForeColor = System.Drawing.Color.White;
-            this.buttonCreatePatient.Location = new System.Drawing.Point(6, 90);
-            this.buttonCreatePatient.Name = "buttonCreatePatient";
-            this.buttonCreatePatient.Size = new System.Drawing.Size(208, 159);
-            this.buttonCreatePatient.TabIndex = 40;
-            this.buttonCreatePatient.Text = "Create Patient";
-            this.buttonCreatePatient.UseVisualStyleBackColor = false;
-            this.buttonCreatePatient.Click += new System.EventHandler(this.buttonCreatePatient_Click);
+            this.buttonEncodePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonEncodePatient.FlatAppearance.BorderSize = 0;
+            this.buttonEncodePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEncodePatient.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonEncodePatient.ForeColor = System.Drawing.Color.White;
+            this.buttonEncodePatient.Location = new System.Drawing.Point(6, 90);
+            this.buttonEncodePatient.Name = "buttonEncodePatient";
+            this.buttonEncodePatient.Size = new System.Drawing.Size(208, 159);
+            this.buttonEncodePatient.TabIndex = 40;
+            this.buttonEncodePatient.Text = "Encode Patient";
+            this.buttonEncodePatient.UseVisualStyleBackColor = false;
+            this.buttonEncodePatient.Click += new System.EventHandler(this.buttonCreatePatient_Click);
             // 
             // formProfileNew
             // 
@@ -615,7 +615,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button buttonCreateStaff;
+        private System.Windows.Forms.Button buttonEncodeStaff;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
@@ -635,7 +635,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeStartStaff;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buttonCreateDoctor;
+        private System.Windows.Forms.Button buttonEncodeDoctor;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeEndDoctor;
         private System.Windows.Forms.CheckBox checkBoxSundayDoctor;
@@ -649,6 +649,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerWorkingTimeStartDoctor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tabPatient;
-        private System.Windows.Forms.Button buttonCreatePatient;
+        private System.Windows.Forms.Button buttonEncodePatient;
     }
 }

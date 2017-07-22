@@ -31,7 +31,7 @@
             this.buttonProductNew = new System.Windows.Forms.Button();
             this.dataGridViewProduct = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonServiceNew = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.dataGridViewService = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,22 +77,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Supplies";
             // 
-            // button1
+            // buttonServiceNew
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.button1.Location = new System.Drawing.Point(94, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 148);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add New Service";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonServiceNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonServiceNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
+            this.buttonServiceNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonServiceNew.FlatAppearance.BorderSize = 0;
+            this.buttonServiceNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonServiceNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonServiceNew.Location = new System.Drawing.Point(94, 340);
+            this.buttonServiceNew.Name = "buttonServiceNew";
+            this.buttonServiceNew.Size = new System.Drawing.Size(76, 148);
+            this.buttonServiceNew.TabIndex = 12;
+            this.buttonServiceNew.Text = "Add New Service";
+            this.buttonServiceNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonServiceNew.UseVisualStyleBackColor = false;
+            this.buttonServiceNew.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonRefresh
             // 
@@ -141,7 +141,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewProduct);
             this.Controls.Add(this.buttonProductNew);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonServiceNew);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Button buttonProductNew;
         private System.Windows.Forms.DataGridView dataGridViewProduct;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonServiceNew;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridView dataGridViewService;
         private System.Windows.Forms.Label label2;
