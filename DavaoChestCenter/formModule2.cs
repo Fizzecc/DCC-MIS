@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace DavaoChestCenter
+{
+    public partial class formModule2 : Form
+    {
+        public formModule2()
+        {
+            InitializeComponent();
+
+            refreshTable();
+        }
+
+        public void refreshTable()
+        {
+            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (MySqlCommand com = new MySqlCommand("SELECT * FROM products", con))
+                {
+                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewProduct.DataSource = dt;
+                }
+
+                using (MySqlCommand com = new MySqlCommand("SELECT * FROM services", con))
+                {
+                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewService.DataSource = dt;
+                }
+                con.Close();
+            }
+        }
+
+        private void buttonProductNew_Click(object sender, EventArgs e)
+        {
+            formProductNew product = new formProductNew();
+            product.ShowDialog();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            refreshTable();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formServiceAdd service = new formServiceAdd();
+            service.ShowDialog();
+        }
+    }
+}

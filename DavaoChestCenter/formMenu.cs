@@ -27,6 +27,11 @@ namespace DavaoChestCenter
 
             labelName.Text = name + "!";
 
+            refreshTable();
+        }
+
+        public void refreshTable()
+        {
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
@@ -38,7 +43,7 @@ namespace DavaoChestCenter
                     dataGridViewAppointments.DataSource = dt;
                 }
 
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM schedules", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
                 {
                     MySqlDataAdapter adp = new MySqlDataAdapter(com);
                     DataTable dt = new DataTable();
@@ -71,6 +76,23 @@ namespace DavaoChestCenter
         {
             formProfileNew patient = new formProfileNew(true);
             patient.ShowDialog();
+        }
+
+        private void buttonModule2_Click(object sender, EventArgs e)
+        {
+            formModule2 module2 = new formModule2();
+            module2.ShowDialog();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            refreshTable();
+        }
+
+        private void buttonProductNew_Click(object sender, EventArgs e)
+        {
+            formProductNew product = new formProductNew();
+            product.ShowDialog();
         }
     }
 }

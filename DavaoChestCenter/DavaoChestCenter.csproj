@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formModule2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formModule2.Designer.cs">
+      <DependentUpon>formModule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formProductNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProductNew.Designer.cs">
+      <DependentUpon>formProductNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formServiceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formServiceAdd.Designer.cs">
+      <DependentUpon>formServiceAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Referral Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +154,12 @@
     <EmbeddedResource Include="formModule1.resx">
       <DependentUpon>formModule1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formModule2.resx">
+      <DependentUpon>formModule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProductNew.resx">
+      <DependentUpon>formProductNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formProfile.resx">
       <DependentUpon>formProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formRegistration2.resx">
       <DependentUpon>formRegistration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formServiceAdd.resx">
+      <DependentUpon>formServiceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
