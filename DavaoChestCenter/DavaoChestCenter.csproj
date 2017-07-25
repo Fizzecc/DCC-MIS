@@ -68,6 +68,12 @@
     <Compile Include="formProductNew.Designer.cs">
       <DependentUpon>formProductNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegistration.Designer.cs">
+      <DependentUpon>formRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="formServiceAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formLaboratory.resx">
       <DependentUpon>formLaboratory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegistration.resx">
+      <DependentUpon>formRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formServiceAdd.resx">
       <DependentUpon>formServiceAdd.cs</DependentUpon>
