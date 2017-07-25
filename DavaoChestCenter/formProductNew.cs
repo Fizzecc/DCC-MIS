@@ -23,14 +23,12 @@ namespace DavaoChestCenter
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type, @item_quantity, @expiry_date)", con))
+                using (MySqlCommand com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type)", con))
                 {
                     try
                     {
                         com.Parameters.AddWithValue("@item_name", textBoxProductName.Text);
                         com.Parameters.AddWithValue("@item_type", textBoxProductType.Text);
-                        com.Parameters.AddWithValue("@item_quantity", int.Parse(textBoxProductQuantity.Text));
-                        com.Parameters.AddWithValue("@expiry_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
 
                         DialogResult r = MessageBox.Show("Encode product", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 

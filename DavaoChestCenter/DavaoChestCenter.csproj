@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formInventoryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInventoryNew.Designer.cs">
+      <DependentUpon>formInventoryNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="formModule2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,11 +128,11 @@
     <Compile Include="formLogIn.Designer.cs">
       <DependentUpon>formLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="formRegistration2.cs">
+    <Compile Include="formLaboratory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formRegistration2.Designer.cs">
-      <DependentUpon>formRegistration2.cs</DependentUpon>
+    <Compile Include="formLaboratory.Designer.cs">
+      <DependentUpon>formLaboratory.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInventoryNew.resx">
+      <DependentUpon>formInventoryNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
@@ -172,8 +181,8 @@
     <EmbeddedResource Include="formProfileNew.resx">
       <DependentUpon>formProfileNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formRegistration2.resx">
-      <DependentUpon>formRegistration2.cs</DependentUpon>
+    <EmbeddedResource Include="formLaboratory.resx">
+      <DependentUpon>formLaboratory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formServiceAdd.resx">
       <DependentUpon>formServiceAdd.cs</DependentUpon>

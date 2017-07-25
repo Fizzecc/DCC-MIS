@@ -23,7 +23,7 @@ namespace DavaoChestCenter
         } 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            formRegistration2 two = new formRegistration2();
+            formLaboratory two = new formLaboratory();
             two.ShowDialog();
         }
     }

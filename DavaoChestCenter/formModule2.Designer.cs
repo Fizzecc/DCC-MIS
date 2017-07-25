@@ -35,6 +35,7 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.dataGridViewService = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonInventoryNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewService)).BeginInit();
             this.SuspendLayout();
@@ -73,9 +74,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.Size = new System.Drawing.Size(67, 19);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Supplies";
+            this.label1.Text = "Inventory";
             // 
             // buttonServiceNew
             // 
@@ -130,6 +131,23 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Services";
             // 
+            // buttonInventoryNew
+            // 
+            this.buttonInventoryNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonInventoryNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.verified_list_of_exercises_of_a_gymnast_on_a_clipboard;
+            this.buttonInventoryNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonInventoryNew.FlatAppearance.BorderSize = 0;
+            this.buttonInventoryNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInventoryNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonInventoryNew.Location = new System.Drawing.Point(176, 358);
+            this.buttonInventoryNew.Name = "buttonInventoryNew";
+            this.buttonInventoryNew.Size = new System.Drawing.Size(79, 130);
+            this.buttonInventoryNew.TabIndex = 26;
+            this.buttonInventoryNew.Text = "Product -> Inventory";
+            this.buttonInventoryNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonInventoryNew.UseVisualStyleBackColor = false;
+            this.buttonInventoryNew.Click += new System.EventHandler(this.buttonInventoryNew_Click);
+            // 
             // formModule2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -142,6 +160,7 @@
             this.Controls.Add(this.dataGridViewProduct);
             this.Controls.Add(this.buttonProductNew);
             this.Controls.Add(this.buttonServiceNew);
+            this.Controls.Add(this.buttonInventoryNew);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -165,5 +184,6 @@
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridView dataGridViewService;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonInventoryNew;
     }
 }

@@ -25,7 +25,7 @@ namespace DavaoChestCenter
             using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM products", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT item_name, product_details, product_quantity, expiry_date FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id", con))
                 {
                     MySqlDataAdapter adp = new MySqlDataAdapter(com);
                     DataTable dt = new DataTable();
@@ -33,7 +33,7 @@ namespace DavaoChestCenter
                     dataGridViewProduct.DataSource = dt;
                 }
 
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM services", con))
+                using (MySqlCommand com = new MySqlCommand("SELECT service_name, item_name, service_type, service_details FROM services INNER JOIN products ON services.product_id = products.prod_id", con))
                 {
                     MySqlDataAdapter adp = new MySqlDataAdapter(com);
                     DataTable dt = new DataTable();
@@ -59,6 +59,12 @@ namespace DavaoChestCenter
         {
             formServiceAdd service = new formServiceAdd();
             service.ShowDialog();
+        }
+
+        private void buttonInventoryNew_Click(object sender, EventArgs e)
+        {
+            formInventoryNew inventory = new formInventoryNew();
+            inventory.ShowDialog();
         }
     }
 }
