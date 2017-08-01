@@ -22,21 +22,21 @@ namespace DavaoChestCenter
 
         public void refreshTable()
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT item_name, product_details, product_quantity, expiry_date FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id", con))
+                using (var com = new MySqlCommand("SELECT item_name, product_details, product_quantity, expiry_date FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id", con))
                 {
-                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
-                    DataTable dt = new DataTable();
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewProduct.DataSource = dt;
                 }
 
-                using (MySqlCommand com = new MySqlCommand("SELECT service_name, item_name, service_type, service_details FROM services INNER JOIN products ON services.product_id = products.prod_id", con))
+                using (var com = new MySqlCommand("SELECT service_name, item_name, service_type, service_details FROM services INNER JOIN products ON services.product_id = products.prod_id", con))
                 {
-                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
-                    DataTable dt = new DataTable();
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewService.DataSource = dt;
                 }
@@ -46,7 +46,7 @@ namespace DavaoChestCenter
 
         private void buttonProductNew_Click(object sender, EventArgs e)
         {
-            formProductNew product = new formProductNew();
+            var product = new formProductNew();
             product.ShowDialog();
         }
 
@@ -57,13 +57,13 @@ namespace DavaoChestCenter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formServiceAdd service = new formServiceAdd();
+            var service = new formServiceAdd();
             service.ShowDialog();
         }
 
         private void buttonInventoryNew_Click(object sender, EventArgs e)
         {
-            formInventoryNew inventory = new formInventoryNew();
+            var inventory = new formInventoryNew();
             inventory.ShowDialog();
         }
     }

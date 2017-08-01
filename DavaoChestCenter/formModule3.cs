@@ -17,13 +17,13 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
 
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
+                using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
                 {
-                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
-                    DataTable dt = new DataTable();
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridView1.DataSource = dt;
                 }

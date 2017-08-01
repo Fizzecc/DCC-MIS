@@ -32,21 +32,21 @@ namespace DavaoChestCenter
 
         public void refreshTable()
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                using (var com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
                 {
-                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
-                    DataTable dt = new DataTable();
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewAppointments.DataSource = dt;
                 }
 
-                using (MySqlCommand com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
+                using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
                 {
-                    MySqlDataAdapter adp = new MySqlDataAdapter(com);
-                    DataTable dt = new DataTable();
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewSchedules.DataSource = dt;
                 }
@@ -62,25 +62,25 @@ namespace DavaoChestCenter
 
         private void buttonSchedules_Click(object sender, EventArgs e)
         {
-            formModule3 module3 = new formModule3(id);
+            var module3 = new formModule3(id);
             module3.ShowDialog();
         }
 
         private void buttonModule1_Click(object sender, EventArgs e)
         {
-            formModule1 module1 = new formModule1(id, name);
+            var module1 = new formModule1(id, name);
             module1.ShowDialog();
         }
 
         private void buttonPatientNew_Click(object sender, EventArgs e)
         {
-            formProfileNew patient = new formProfileNew(true);
+            var patient = new formProfileNew(true);
             patient.ShowDialog();
         }
 
         private void buttonModule2_Click(object sender, EventArgs e)
         {
-            formModule2 module2 = new formModule2();
+            var module2 = new formModule2();
             module2.ShowDialog();
         }
 
@@ -91,7 +91,7 @@ namespace DavaoChestCenter
 
         private void buttonProductNew_Click(object sender, EventArgs e)
         {
-            formProductNew product = new formProductNew();
+            var product = new formProductNew();
             product.ShowDialog();
         }
     }

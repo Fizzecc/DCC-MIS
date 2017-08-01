@@ -30,19 +30,19 @@ namespace DavaoChestCenter
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            formProfile profile = new formProfile(id, name);
+            var profile = new formProfile(id, name);
             profile.ShowDialog();
         }
 
         private void buttonAppoinment_Click(object sender, EventArgs e)
         {
-            formAppointment appointment = new formAppointment(id, name);
+            var appointment = new formAppointments(id);
             appointment.ShowDialog();
         }
 
         private void buttonDiagnosis_Click(object sender, EventArgs e)
         {
-            formLaboratory labresult = new formLaboratory();
+            var labresult = new formLaboratory();
             labresult.ShowDialog();
         }
     }

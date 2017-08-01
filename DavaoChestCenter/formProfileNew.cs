@@ -30,10 +30,10 @@ namespace DavaoChestCenter
         
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using(var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
@@ -58,12 +58,12 @@ namespace DavaoChestCenter
 
                 int staffid = -1;
 
-                using(MySqlCommand com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
+                using(var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
 
-                    using (MySqlDataReader rdr = com.ExecuteReader())
+                    using (var rdr = com.ExecuteReader())
                     {
                         if (rdr.HasRows)
                         {
@@ -77,7 +77,7 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
+                using(var com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
@@ -129,7 +129,7 @@ namespace DavaoChestCenter
 
                 int scheduleid = -1;
 
-                using(MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
+                using(var com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
                 {
                     com.Parameters.AddWithValue("@staff_id", staffid);
 
@@ -152,10 +152,10 @@ namespace DavaoChestCenter
 
         private void buttonCreateDoctor_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
@@ -180,7 +180,7 @@ namespace DavaoChestCenter
 
                 int staffid = -1;
 
-                using (MySqlCommand com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
+                using (var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
@@ -199,7 +199,7 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
+                using (var com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
@@ -251,7 +251,7 @@ namespace DavaoChestCenter
 
                 int scheduleid = -1;
 
-                using (MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
+                using (var com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
                 {
                     com.Parameters.AddWithValue("@staff_id", staffid);
 
@@ -274,10 +274,10 @@ namespace DavaoChestCenter
 
         private void buttonCreatePatient_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);

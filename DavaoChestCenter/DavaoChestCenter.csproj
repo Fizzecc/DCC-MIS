@@ -92,11 +92,11 @@
     <Compile Include="formModule1.Designer.cs">
       <DependentUpon>formModule1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAppointment.cs">
+    <Compile Include="formAppointments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAppointment.Designer.cs">
-      <DependentUpon>formAppointment.cs</DependentUpon>
+    <Compile Include="formAppointments.Designer.cs">
+      <DependentUpon>formAppointments.cs</DependentUpon>
     </Compile>
     <Compile Include="formMenu.cs">
       <SubType>Form</SubType>
@@ -154,8 +154,8 @@
     <Compile Include="ReferralForm1.Designer.cs">
       <DependentUpon>ReferralForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="formAppointment.resx">
-      <DependentUpon>formAppointment.cs</DependentUpon>
+    <EmbeddedResource Include="formAppointments.resx">
+      <DependentUpon>formAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formInventoryNew.resx">
       <DependentUpon>formInventoryNew.cs</DependentUpon>

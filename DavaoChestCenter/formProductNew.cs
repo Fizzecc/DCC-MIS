@@ -20,10 +20,10 @@ namespace DavaoChestCenter
 
         private void buttonProductEncode_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type)", con))
+                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type)", con))
                 {
                     try
                     {

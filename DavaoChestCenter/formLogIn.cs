@@ -45,15 +45,15 @@ namespace DavaoChestCenter
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", con))
+                using (var com = new MySqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
                     
-                    using (MySqlDataReader rdr = com.ExecuteReader())
+                    using (var rdr = com.ExecuteReader())
                     {
                         if (rdr.HasRows)
                         {
@@ -73,8 +73,6 @@ namespace DavaoChestCenter
                             else if (type.Equals("Patient"))
                             {
                                 MessageBox.Show("You're a patient");
-                                formAppointment appoint = new formAppointment(id, firstname + " " + lastname);
-                                appoint.ShowDialog();
                             }
                             else
                             {

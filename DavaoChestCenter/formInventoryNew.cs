@@ -23,12 +23,12 @@ namespace DavaoChestCenter
 
         private void gatherProducts()
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM products", con))
+                using (var com = new MySqlCommand("SELECT * FROM products", con))
                 {
-                    using (MySqlDataReader rdr = com.ExecuteReader())
+                    using (var rdr = com.ExecuteReader())
                     {
                         while (rdr.HasRows)
                         {
@@ -53,10 +53,10 @@ namespace DavaoChestCenter
 
         private void buttonInventoryEncode_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @product_details, @product_quantity, @expiry_date)", con))
+                using (var com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @product_details, @product_quantity, @expiry_date)", con))
                 {
                     com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
                     com.Parameters.AddWithValue("@product_details", textBoxProductDetails.Text);
