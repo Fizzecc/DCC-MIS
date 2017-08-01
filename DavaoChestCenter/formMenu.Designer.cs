@@ -41,6 +41,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonPatientNew = new System.Windows.Forms.Button();
             this.buttonProductNew = new System.Windows.Forms.Button();
+            this.buttonAppointment = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -151,9 +152,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 19);
+            this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Patients (dapat appointments)";
+            this.label2.Text = "Appointments";
             // 
             // label3
             // 
@@ -178,6 +179,7 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.buttonPatientNew);
             this.flowLayoutPanel2.Controls.Add(this.buttonProductNew);
+            this.flowLayoutPanel2.Controls.Add(this.buttonAppointment);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 51);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -217,6 +219,23 @@
             this.buttonProductNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonProductNew.UseVisualStyleBackColor = false;
             this.buttonProductNew.Click += new System.EventHandler(this.buttonProductNew_Click);
+            // 
+            // buttonAppointment
+            // 
+            this.buttonAppointment.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAppointment.BackgroundImage = global::DavaoChestCenter.Properties.Resources.verified_list_of_exercises_of_a_gymnast_on_a_clipboard;
+            this.buttonAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonAppointment.FlatAppearance.BorderSize = 0;
+            this.buttonAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAppointment.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonAppointment.Location = new System.Drawing.Point(197, 3);
+            this.buttonAppointment.Name = "buttonAppointment";
+            this.buttonAppointment.Size = new System.Drawing.Size(107, 172);
+            this.buttonAppointment.TabIndex = 8;
+            this.buttonAppointment.Text = "Appointments";
+            this.buttonAppointment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAppointment.UseVisualStyleBackColor = false;
+            this.buttonAppointment.Click += new System.EventHandler(this.buttonAppointment_Click);
             // 
             // label5
             // 
@@ -302,5 +321,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonProductNew;
+        private System.Windows.Forms.Button buttonAppointment;
     }
 }

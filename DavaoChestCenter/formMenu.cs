@@ -35,7 +35,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                using (var com = new MySqlCommand("SELECT * FROM appointmentv", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -93,6 +93,13 @@ namespace DavaoChestCenter
         {
             var product = new formProductNew();
             product.ShowDialog();
+        }
+
+        private void buttonAppointment_Click(object sender, EventArgs e)
+        {
+            var appointment = new formAppointments(id);
+            appointment.ShowDialog();
+
         }
     }
 }
