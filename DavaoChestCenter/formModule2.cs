@@ -26,7 +26,7 @@ namespace DavaoChestCenter
 
         public void renew()
         {
-            notifExpiry();
+            //notifExpiry();
 
             notifMinimum();
 
@@ -64,7 +64,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT prod_id FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE transactions.quantity > products.minrequired AND transactions.status = 'Normal'", con))
+                using (var com = new MySqlCommand("SELECT prod_id FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE transactions.quantity >= products.minrequired AND transactions.status = 'Normal'", con))
                 {
                     using (var rdr = com.ExecuteReader())
                     {
@@ -102,54 +102,34 @@ namespace DavaoChestCenter
                         }
                     }
 
+                    string command;
                     if (idProductMinimumAchievedCount == 0)
                     {
-                        string command = "SELECT item_name, item_type, minrequired FROM products";
-
-                        for (int i = 0; i < idProductMinimumAchievedCount; i++)
-                        {
-                            command += "prod_id != '" + idProductMinimumAchieved[i] + "' AND ";
-                        }
-
-                        command = command.TrimEnd(' '); command = command.TrimEnd('D'); command = command.TrimEnd('N'); command = command.TrimEnd('A');
-
-                        MessageBox.Show(command);
-
-                        using (var com2 = new MySqlCommand(command, con))
-                        {
-                            var adp = new MySqlDataAdapter(com2);
-                            var dt = new DataTable();
-                            adp.Fill(dt);
-                            dataGridViewRequired.DataSource = dt;
-                        }
-                        if (!formOpenedOnce)
-                        {
-                            MessageBox.Show("There are products that are out of stock!");
-                        }
+                        command = "SELECT item_name, item_type, minrequired FROM products";
                     }
                     else
                     {
-                        string command = "SELECT item_name, item_type, minrequired FROM products WHERE";
+                        command = "SELECT item_name, item_type, minrequired FROM products WHERE";
 
                         for (int i = 0; i < idProductMinimumAchievedCount; i++)
                         {
                             command += " prod_id != '" + idProductMinimumAchieved[i] + "' AND ";
                         }
-
                         command = command.TrimEnd(' '); command = command.TrimEnd('D'); command = command.TrimEnd('N'); command = command.TrimEnd('A');
+                    }
 
-                        using (var com2 = new MySqlCommand(command, con))
-                        {
-                            var adp = new MySqlDataAdapter(com2);
-                            var dt = new DataTable();
-                            adp.Fill(dt);
-                            dataGridViewRequired.DataSource = dt;
-                        }
+                    using (var com2 = new MySqlCommand(command, con))
+                    {
+                        var adp = new MySqlDataAdapter(com2);
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewRequired.DataSource = dt;
+                    }
 
-                        if (!formOpenedOnce)
-                        {
-                            MessageBox.Show("There are products that are out of stock!");
-                        }
+                    if (dataGridViewRequired.Rows.Count.ToString() != "0")
+                    {
+                        formStockIn stockin = new formStockIn();
+                        stockin.ShowDialog();
                     }
                 }
                 con.Close();
@@ -158,6 +138,7 @@ namespace DavaoChestCenter
 
         public void notifExpiry()
         {
+            /*
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
@@ -188,6 +169,7 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+            */
         }
 
         private void buttonProductNew_Click(object sender, EventArgs e)

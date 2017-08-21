@@ -14,13 +14,25 @@ namespace DavaoChestCenter
     public partial class formTransactionNew : Form
     {
         Dictionary<int, string> products = new Dictionary<int, string>();
+        bool galingsaotherform = false;
+        public formStockIn referenceToMain { get; set; }
 
         public formTransactionNew()
         {
             InitializeComponent();
             gatherProducts();
         }
+        
+        public formTransactionNew(string x, int y)
+        {
+            InitializeComponent();
+            gatherProducts();
 
+            comboBoxProducts.Text = x;
+            textBoxProductQuantity.Text = y.ToString();
+            galingsaotherform = true;
+        }
+        
         private void gatherProducts()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
@@ -68,6 +80,17 @@ namespace DavaoChestCenter
                     if (r == DialogResult.OK)
                     {
                         com.ExecuteNonQuery();
+                        if (!(referenceToMain == null))
+                        {
+                            referenceToMain.refreshTable();
+                        }
+
+                        if (galingsaotherform)
+                        {
+                            formInventoryNew inventory = new formInventoryNew();
+                            inventory.ShowDialog();
+                            referenceToMain.refreshTable();
+                        }
                     }
                     else
                     {

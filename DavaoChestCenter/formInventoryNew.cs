@@ -76,8 +76,15 @@ namespace DavaoChestCenter
                 con.Close();
             }
             refreshTable();
-            
-            referenceToMain.renew();
+
+            if (referenceToMain != null)
+            {
+                referenceToMain.renew();
+            }
+            else
+            {
+                Dispose();
+            }
         }
         
     }

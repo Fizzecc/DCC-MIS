@@ -27,6 +27,46 @@ namespace DavaoChestCenter
                 this.tab.SelectedTab = tabPatient;
             }
         }
+
+        private Boolean validate()
+        {
+            if (textBoxNameFirst.Text.Equals(""))
+            {
+                MessageBox.Show("First name is not valid");
+                return false;
+            }
+            else if (textBoxNameMiddle.Text.Equals(""))
+            {
+                MessageBox.Show("Middle name is not valid");
+                return false;
+            }
+            else if (textBoxNameLast.Text.Equals(""))
+            {
+                MessageBox.Show("Last name is not valid");
+                return false;
+            }
+            else if (comboBoxSex.Text.Equals(""))
+            {
+                MessageBox.Show("Sex is not valid");
+                return false;
+            }
+            else if (textBoxUsername.Text.Equals(""))
+            {
+                MessageBox.Show("Username is not valid");
+                return false;
+            }
+            else if (textBoxPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Password is not valid");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
         
         private void buttonLogin_Click(object sender, EventArgs e)
         {

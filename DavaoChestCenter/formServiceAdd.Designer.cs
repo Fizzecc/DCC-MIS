@@ -114,7 +114,7 @@
             this.buttonServiceCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonServiceCreate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonServiceCreate.ForeColor = System.Drawing.Color.White;
-            this.buttonServiceCreate.Location = new System.Drawing.Point(16, 136);
+            this.buttonServiceCreate.Location = new System.Drawing.Point(16, 166);
             this.buttonServiceCreate.Name = "buttonServiceCreate";
             this.buttonServiceCreate.Size = new System.Drawing.Size(320, 33);
             this.buttonServiceCreate.TabIndex = 28;
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 174);
+            this.ClientSize = new System.Drawing.Size(354, 211);
             this.Controls.Add(this.buttonServiceCreate);
             this.Controls.Add(this.comboBoxItems);
             this.Controls.Add(this.label4);
