@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.buttonProductEncode = new System.Windows.Forms.Button();
+            this.textBoxProductMinimum = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxProductType
@@ -41,7 +43,7 @@
             this.textBoxProductType.Multiline = true;
             this.textBoxProductType.Name = "textBoxProductType";
             this.textBoxProductType.Size = new System.Drawing.Size(203, 27);
-            this.textBoxProductType.TabIndex = 14;
+            this.textBoxProductType.TabIndex = 1;
             // 
             // label1
             // 
@@ -67,7 +69,7 @@
             this.textBoxProductName.Multiline = true;
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(203, 27);
-            this.textBoxProductName.TabIndex = 13;
+            this.textBoxProductName.TabIndex = 0;
             // 
             // buttonProductEncode
             // 
@@ -76,19 +78,38 @@
             this.buttonProductEncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProductEncode.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonProductEncode.ForeColor = System.Drawing.Color.White;
-            this.buttonProductEncode.Location = new System.Drawing.Point(16, 72);
+            this.buttonProductEncode.Location = new System.Drawing.Point(16, 105);
             this.buttonProductEncode.Name = "buttonProductEncode";
             this.buttonProductEncode.Size = new System.Drawing.Size(320, 33);
-            this.buttonProductEncode.TabIndex = 21;
+            this.buttonProductEncode.TabIndex = 3;
             this.buttonProductEncode.Text = "Encode Product";
             this.buttonProductEncode.UseVisualStyleBackColor = false;
             this.buttonProductEncode.Click += new System.EventHandler(this.buttonProductEncode_Click);
+            // 
+            // textBoxProductMinimum
+            // 
+            this.textBoxProductMinimum.Location = new System.Drawing.Point(133, 72);
+            this.textBoxProductMinimum.Multiline = true;
+            this.textBoxProductMinimum.Name = "textBoxProductMinimum";
+            this.textBoxProductMinimum.Size = new System.Drawing.Size(203, 27);
+            this.textBoxProductMinimum.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Minimum #:";
             // 
             // formProductNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 116);
+            this.ClientSize = new System.Drawing.Size(354, 143);
+            this.Controls.Add(this.textBoxProductMinimum);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonProductEncode);
             this.Controls.Add(this.textBoxProductType);
             this.Controls.Add(this.label1);
@@ -113,5 +134,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.Button buttonProductEncode;
+        private System.Windows.Forms.TextBox textBoxProductMinimum;
+        private System.Windows.Forms.Label label3;
     }
 }

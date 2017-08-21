@@ -16,15 +16,5 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
         }
-        
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        } 
-        private void buttonRegister_Click(object sender, EventArgs e)
-        {
-            formLaboratory two = new formLaboratory();
-            two.ShowDialog();
-        }
     }
 }

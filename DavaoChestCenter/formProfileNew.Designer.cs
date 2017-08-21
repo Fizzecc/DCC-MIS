@@ -85,7 +85,7 @@
             this.textBoxNameFirst.Location = new System.Drawing.Point(116, 6);
             this.textBoxNameFirst.Multiline = true;
             this.textBoxNameFirst.Name = "textBoxNameFirst";
-            this.textBoxNameFirst.Size = new System.Drawing.Size(127, 27);
+            this.textBoxNameFirst.Size = new System.Drawing.Size(212, 27);
             this.textBoxNameFirst.TabIndex = 0;
             // 
             // label2
@@ -111,7 +111,7 @@
             this.textBoxNameLast.Location = new System.Drawing.Point(116, 72);
             this.textBoxNameLast.Multiline = true;
             this.textBoxNameLast.Name = "textBoxNameLast";
-            this.textBoxNameLast.Size = new System.Drawing.Size(127, 27);
+            this.textBoxNameLast.Size = new System.Drawing.Size(212, 27);
             this.textBoxNameLast.TabIndex = 2;
             // 
             // dateTimePickerDateBirth
@@ -119,7 +119,7 @@
             this.dateTimePickerDateBirth.Font = new System.Drawing.Font("Tw Cen MT", 9F);
             this.dateTimePickerDateBirth.Location = new System.Drawing.Point(116, 105);
             this.dateTimePickerDateBirth.Name = "dateTimePickerDateBirth";
-            this.dateTimePickerDateBirth.Size = new System.Drawing.Size(127, 21);
+            this.dateTimePickerDateBirth.Size = new System.Drawing.Size(212, 21);
             this.dateTimePickerDateBirth.TabIndex = 3;
             // 
             // textBoxNameMiddle
@@ -127,7 +127,7 @@
             this.textBoxNameMiddle.Location = new System.Drawing.Point(116, 39);
             this.textBoxNameMiddle.Multiline = true;
             this.textBoxNameMiddle.Name = "textBoxNameMiddle";
-            this.textBoxNameMiddle.Size = new System.Drawing.Size(127, 27);
+            this.textBoxNameMiddle.Size = new System.Drawing.Size(212, 27);
             this.textBoxNameMiddle.TabIndex = 1;
             // 
             // comboBoxSex
@@ -139,7 +139,7 @@
             "Female"});
             this.comboBoxSex.Location = new System.Drawing.Point(116, 132);
             this.comboBoxSex.Name = "comboBoxSex";
-            this.comboBoxSex.Size = new System.Drawing.Size(127, 27);
+            this.comboBoxSex.Size = new System.Drawing.Size(212, 27);
             this.comboBoxSex.TabIndex = 4;
             // 
             // label3
@@ -207,7 +207,7 @@
             this.textBoxUsername.Location = new System.Drawing.Point(115, 197);
             this.textBoxUsername.Multiline = true;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(127, 27);
+            this.textBoxUsername.Size = new System.Drawing.Size(212, 27);
             this.textBoxUsername.TabIndex = 44;
             // 
             // textBoxPassword
@@ -215,7 +215,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(115, 230);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(127, 27);
+            this.textBoxPassword.Size = new System.Drawing.Size(212, 27);
             this.textBoxPassword.TabIndex = 46;
             // 
             // label7
@@ -233,7 +233,7 @@
             this.tab.Controls.Add(this.tabDoctor);
             this.tab.Controls.Add(this.tabPatient);
             this.tab.Font = new System.Drawing.Font("Tw Cen MT", 8F);
-            this.tab.Location = new System.Drawing.Point(248, 6);
+            this.tab.Location = new System.Drawing.Point(334, 6);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(228, 357);
@@ -566,7 +566,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 370);
+            this.ClientSize = new System.Drawing.Size(568, 370);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxUsername);

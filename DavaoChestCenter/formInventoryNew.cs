@@ -13,32 +13,53 @@ namespace DavaoChestCenter
 {
     public partial class formInventoryNew : Form
     {
-        Dictionary<int, string> products = new Dictionary<int, string>();
+        public formModule2 referenceToMain { get; set; }
 
         public formInventoryNew()
         {
             InitializeComponent();
-            gatherProducts();
+
+            refreshTable();
         }
 
-        private void gatherProducts()
+        public void refreshTable()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM products", con))
+                using (var com = new MySqlCommand("SELECT * FROM transactions RIGHT JOIN products ON transactions.product_id = products.prod_id WHERE processed = 'No'", con))
                 {
-                    using (var rdr = com.ExecuteReader())
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewPending.DataSource = dt;
+                }
+                con.Close();
+            }
+        }
+
+        private void buttonProcess_Click(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM transactions RIGHT JOIN products ON transactions.product_id = products.prod_id WHERE processed = 'No'", con))
+                {
+                    using (MySqlDataReader rdr = com.ExecuteReader())
                     {
                         while (rdr.HasRows)
                         {
                             if (rdr.Read())
                             {
-                                products.Add(rdr.GetInt32(0), rdr.GetString(1));
-
-                                comboBoxProducts.DataSource = new BindingSource(products, null);
-                                comboBoxProducts.DisplayMember = "Value";
-                                comboBoxProducts.ValueMember = "Key";
+                                using (var con2 = new MySqlConnection(conClass.connectionString))
+                                {
+                                    con2.Open();
+                                    using (var add = new MySqlCommand("INSERT INTO inventory VALUES(null, '" + rdr.GetInt32(1) + "', '" + rdr.GetInt32(0) + "')", con2))
+                                    {
+                                        add.ExecuteNonQuery();
+                                    }
+                                    con2.Close();
+                                }
                             }
                             else
                             {
@@ -46,36 +67,18 @@ namespace DavaoChestCenter
                             }
                         }
                     }
-                }
-                con.Close();
-            }
-        }
-
-        private void buttonInventoryEncode_Click(object sender, EventArgs e)
-        {
-            using (var con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (var com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @product_details, @product_quantity, @expiry_date)", con))
-                {
-                    com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
-                    com.Parameters.AddWithValue("@product_details", textBoxProductDetails.Text);
-                    com.Parameters.AddWithValue("@product_quantity", textBoxProductQuantity.Text);
-                    com.Parameters.AddWithValue("@expiry_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
-
-                    DialogResult r = MessageBox.Show("Encode product to inventory?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                    if (r == DialogResult.OK)
+                    
+                    using (var upd = new MySqlCommand("UPDATE transactions SET processed='Yes' WHERE processed='No'", con))
                     {
-                        com.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cancelled");
+                        upd.ExecuteNonQuery();
                     }
                 }
                 con.Close();
             }
+            refreshTable();
+            
+            referenceToMain.renew();
         }
+        
     }
 }

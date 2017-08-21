@@ -13,6 +13,8 @@ namespace DavaoChestCenter
 {
     public partial class formProductNew : Form
     {
+        public formModule2 referenceToMain { get; set; }
+
         public formProductNew()
         {
             InitializeComponent();
@@ -23,12 +25,13 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type)", con))
+                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type, @minrequired)", con))
                 {
                     try
                     {
                         com.Parameters.AddWithValue("@item_name", textBoxProductName.Text);
                         com.Parameters.AddWithValue("@item_type", textBoxProductType.Text);
+                        com.Parameters.AddWithValue("@minrequired", int.Parse(textBoxProductMinimum.Text));
 
                         DialogResult r = MessageBox.Show("Encode product", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -48,6 +51,7 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+            referenceToMain.renew();
         }
     }
 }
