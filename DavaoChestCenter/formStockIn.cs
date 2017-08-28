@@ -13,6 +13,8 @@ namespace DavaoChestCenter
 {
     public partial class formStockIn : Form
     {
+        public formModule2 referenceToMain { get; set; }
+
         public formStockIn()
         {
             InitializeComponent();

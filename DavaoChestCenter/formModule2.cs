@@ -13,21 +13,15 @@ namespace DavaoChestCenter
 {
     public partial class formModule2 : Form
     {
-        bool formOpenedOnce = false;
-
         public formModule2()
         {
             InitializeComponent();
 
             renew();
-
-            formOpenedOnce = true;
         }
 
         public void renew()
         {
-            //notifExpiry();
-
             notifMinimum();
 
             refreshTable();
@@ -43,7 +37,7 @@ namespace DavaoChestCenter
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
-                    dataGridViewProduct.DataSource = dt;
+                    dataGridViewInventory.DataSource = dt;
                 }
 
                 using (var com = new MySqlCommand("SELECT item_name, item_type FROM products", con))
@@ -51,7 +45,7 @@ namespace DavaoChestCenter
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
-                    dataGridViewService.DataSource = dt;
+                    dataGridViewProduct.DataSource = dt;
                 }
                 con.Close();
             }
@@ -129,47 +123,12 @@ namespace DavaoChestCenter
                     if (dataGridViewRequired.Rows.Count.ToString() != "0")
                     {
                         formStockIn stockin = new formStockIn();
+                        stockin.referenceToMain = this;
                         stockin.ShowDialog();
                     }
                 }
                 con.Close();
             }
-        }
-
-        public void notifExpiry()
-        {
-            /*
-            using (var con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE expiry_date >= NOW() AND expiry_date <= DATE_ADD(DATE(NOW()), INTERVAL 7 DAY) GROUP BY transaction_id", con))
-                {
-                    using (var rdr = com.ExecuteReader())
-                    {
-                        while (rdr.HasRows)
-                        {
-                            if (rdr.Read())
-                            {
-                                if (!formOpenedOnce)
-                                {
-                                    MessageBox.Show(rdr.GetString(1) + " will expire at " + rdr.GetString(11));
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                using (var com2 = new MySqlCommand("UPDATE transactions SET status = 'Expired' WHERE expiry_date <= NOW()", con))
-                {
-                    com2.ExecuteNonQuery();
-                }
-                con.Close();
-            }
-            */
         }
 
         private void buttonProductNew_Click(object sender, EventArgs e)
@@ -181,7 +140,7 @@ namespace DavaoChestCenter
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            refreshTable();
+            renew();
         }
 
         private void button1_Click(object sender, EventArgs e)

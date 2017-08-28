@@ -13,6 +13,8 @@ namespace DavaoChestCenter
 {
     public partial class formMenu : Form
     {
+        public Form form;
+
         public formLogIn referenceToMain { get; set; }
 
         int id = -1;
@@ -22,33 +24,33 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
 
+            flowLayoutPanelModule1.Visible = false;
+
             id = x;
             name = y;
 
-            labelName.Text = name + "!";
-
-            refreshTable();
+            autoExpire();
         }
 
-        public void refreshTable()
+        public void autoExpire()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM appointmentv", con))
+                using (var com = new MySqlCommand("SELECT * FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE expiry_date >= NOW() AND expiry_date <= DATE_ADD(DATE(NOW()), INTERVAL 7 DAY) GROUP BY transaction_id", con))
                 {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewAppointments.DataSource = dt;
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.HasRows)
+                        {
+                            MessageBox.Show("There are items that will expire a week from now!", "Notifications", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
 
-                using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
+                using (var com2 = new MySqlCommand("UPDATE transactions SET status = 'Expired' WHERE expiry_date <= NOW()", con))
                 {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewSchedules.DataSource = dt;
+                    com2.ExecuteNonQuery();
                 }
                 con.Close();
             }
@@ -60,35 +62,12 @@ namespace DavaoChestCenter
             Dispose();
         }
 
-        private void buttonSchedules_Click(object sender, EventArgs e)
-        {
-            var module3 = new formModule3(id);
-            module3.ShowDialog();
-        }
-
-        private void buttonModule1_Click(object sender, EventArgs e)
-        {
-            var module1 = new formModule1(id, name);
-            module1.ShowDialog();
-        }
-
         private void buttonPatientNew_Click(object sender, EventArgs e)
         {
             var patient = new formProfileNew(true);
             patient.ShowDialog();
         }
-
-        private void buttonModule2_Click(object sender, EventArgs e)
-        {
-            var module2 = new formModule2();
-            module2.ShowDialog();
-        }
-
-        private void buttonRefresh_Click(object sender, EventArgs e)
-        {
-            refreshTable();
-        }
-
+        
         private void buttonProductNew_Click(object sender, EventArgs e)
         {
             var product = new formProductNew();
@@ -100,6 +79,56 @@ namespace DavaoChestCenter
             var appointment = new formAppointments(id);
             appointment.ShowDialog();
 
+        }
+
+        private void buttonModule2_Click_1(object sender, EventArgs e)
+        {
+            formModule2 module2 = new formModule2();
+            showForm(module2);
+        }
+
+        private void buttonModule1_Click(object sender, EventArgs e)
+        {
+            if (!flowLayoutPanelModule1.Visible)
+            {
+                flowLayoutPanelModule1.Visible = true;
+            }
+            else
+            {
+                flowLayoutPanelModule1.Visible = false;
+            }
+        }
+
+        public void showForm(Form x)
+        {
+            if (form != null)
+            {
+                form.Dispose();
+
+                form = x;
+                form.TopLevel = false;
+                panelForm.Controls.Add(form);
+                form.Show();
+            }
+            else
+            {
+                form = x;
+                form.TopLevel = false;
+                panelForm.Controls.Add(form);
+                form.Show();
+            }
+        }
+
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            formProfile profile = new formProfile(id, name);
+            showForm(profile);
+        }
+
+        private void buttonDashboard_Click(object sender, EventArgs e)
+        {
+            formDashboard dashboard = new formDashboard(id);
+            showForm(dashboard);
         }
     }
 }

@@ -41,7 +41,7 @@
             this.buttonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonCreate.ForeColor = System.Drawing.Color.White;
-            this.buttonCreate.Location = new System.Drawing.Point(12, 320);
+            this.buttonCreate.Location = new System.Drawing.Point(12, 907);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(294, 32);
             this.buttonCreate.TabIndex = 11;
@@ -56,7 +56,7 @@
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(312, 320);
+            this.buttonUpdate.Location = new System.Drawing.Point(312, 907);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(296, 32);
             this.buttonUpdate.TabIndex = 12;
@@ -76,7 +76,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(596, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(1390, 889);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -84,12 +84,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 364);
+            this.ClientSize = new System.Drawing.Size(1414, 951);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonCreate);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "formProfile";

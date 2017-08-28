@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace DavaoChestCenter
 {
-    public partial class formModule3 : Form
+    public partial class formDashboard : Form
     {
-        public formModule3(int x)
+        public formDashboard(int x)
         {
             InitializeComponent();
 
@@ -25,8 +25,17 @@ namespace DavaoChestCenter
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
-                    dataGridView1.DataSource = dt;
+                    dataGridViewSchedule.DataSource = dt;
                 }
+
+                using (var com = new MySqlCommand("SELECT item_name, item_type, quantity, status, expiry_date FROM products INNER JOIN inventory ON products.prod_id = inventory.product_id inner JOIN transactions ON transactions.product_id = products.prod_id GROUP BY transactions.id ORDER BY expiry_date", con))
+                {
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
+                }
+
                 con.Close();
             }
         }
