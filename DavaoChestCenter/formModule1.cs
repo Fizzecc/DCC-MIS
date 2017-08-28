@@ -36,7 +36,7 @@ namespace DavaoChestCenter
 
         private void buttonAppoinment_Click(object sender, EventArgs e)
         {
-            var appointment = new formAppointments(id);
+            var appointment = new formAppointment(id);
             appointment.ShowDialog();
         }
 

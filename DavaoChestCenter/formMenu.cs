@@ -76,14 +76,14 @@ namespace DavaoChestCenter
 
         private void buttonAppointment_Click(object sender, EventArgs e)
         {
-            var appointment = new formAppointments(id);
+            var appointment = new formAppointment(id);
             appointment.ShowDialog();
 
         }
 
         private void buttonModule2_Click_1(object sender, EventArgs e)
         {
-            formModule2 module2 = new formModule2();
+            var module2 = new formModule2();
             showForm(module2);
         }
 
@@ -121,14 +121,20 @@ namespace DavaoChestCenter
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            formProfile profile = new formProfile(id, name);
+            var profile = new formProfile(id, name);
             showForm(profile);
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
-            formDashboard dashboard = new formDashboard(id);
+            var dashboard = new formDashboard(id);
             showForm(dashboard);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var appointment = new formAppointment(id);
+            showForm(appointment);
         }
     }
 }
