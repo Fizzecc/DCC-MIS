@@ -56,6 +56,7 @@
             // 
             // comboBoxProducts
             // 
+            this.comboBoxProducts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProducts.FormattingEnabled = true;
             this.comboBoxProducts.Location = new System.Drawing.Point(129, 12);
             this.comboBoxProducts.Name = "comboBoxProducts";
@@ -107,6 +108,7 @@
             // 
             // comboBoxProductStatus
             // 
+            this.comboBoxProductStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProductStatus.FormattingEnabled = true;
             this.comboBoxProductStatus.Items.AddRange(new object[] {
             "Normal",
@@ -117,7 +119,6 @@
             this.comboBoxProductStatus.Name = "comboBoxProductStatus";
             this.comboBoxProductStatus.Size = new System.Drawing.Size(217, 27);
             this.comboBoxProductStatus.TabIndex = 45;
-            this.comboBoxProductStatus.Text = "Normal";
             // 
             // label1
             // 

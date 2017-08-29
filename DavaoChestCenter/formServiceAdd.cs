@@ -119,6 +119,8 @@ namespace DavaoChestCenter
                     {
                         var combo = new ComboBox(); var text = new TextBox();
                         combo.Size = new Size(220, 27); text.Size = new Size(41, 27);
+                        combo.DropDownStyle = ComboBoxStyle.DropDownList;
+
 
                         combo.Name = "comboBox " + i; text.Name = "textBox " + i;
 
@@ -172,8 +174,6 @@ namespace DavaoChestCenter
                                 }
 
                                 otherProductsQuantityContainer = otherProductsQuantityContainer.TrimEnd('/');
-
-                                MessageBox.Show(otherProductsQuantityContainer);
                             }
                             catch
                             {
