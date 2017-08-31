@@ -18,12 +18,62 @@ namespace DavaoChestCenter
             InitializeComponent();
         }
 
+        public formProfileNew(Boolean x)
+        {
+            InitializeComponent();
+
+            if (x)
+            {
+                this.tab.SelectedTab = tabPatient;
+            }
+        }
+
+        private Boolean validate()
+        {
+            if (textBoxNameFirst.Text.Equals(""))
+            {
+                MessageBox.Show("First name is not valid");
+                return false;
+            }
+            else if (textBoxNameMiddle.Text.Equals(""))
+            {
+                MessageBox.Show("Middle name is not valid");
+                return false;
+            }
+            else if (textBoxNameLast.Text.Equals(""))
+            {
+                MessageBox.Show("Last name is not valid");
+                return false;
+            }
+            else if (comboBoxSex.Text.Equals(""))
+            {
+                MessageBox.Show("Sex is not valid");
+                return false;
+            }
+            else if (textBoxUsername.Text.Equals(""))
+            {
+                MessageBox.Show("Username is not valid");
+                return false;
+            }
+            else if (textBoxPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Password is not valid");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+        
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using(var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
@@ -48,12 +98,12 @@ namespace DavaoChestCenter
 
                 int staffid = -1;
 
-                using(MySqlCommand com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
+                using(var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
 
-                    using (MySqlDataReader rdr = com.ExecuteReader())
+                    using (var rdr = com.ExecuteReader())
                     {
                         if (rdr.HasRows)
                         {
@@ -67,12 +117,11 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using(MySqlCommand com = new MySqlCommand("INSERT INTO schedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end)", con))
+                using(var com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
                     com.Parameters.AddWithValue("@staffid", staffid);
-                    com.Parameters.AddWithValue("@clinicaddress", textBoxAddressClinic.Text);
 
                     if (checkBoxMondayStaff.Checked)
                     {
@@ -120,7 +169,7 @@ namespace DavaoChestCenter
 
                 int scheduleid = -1;
 
-                using(MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM schedule WHERE staff_id = @staff_id", con))
+                using(var com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
                 {
                     com.Parameters.AddWithValue("@staff_id", staffid);
 
@@ -143,10 +192,10 @@ namespace DavaoChestCenter
 
         private void buttonCreateDoctor_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
@@ -171,7 +220,7 @@ namespace DavaoChestCenter
 
                 int staffid = -1;
 
-                using (MySqlCommand com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
+                using (var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
@@ -190,12 +239,11 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using (MySqlCommand com = new MySqlCommand("INSERT INTO schedule VALUES(null, @staffid, @clinicaddress, @schedule_days, @working_time_start, @working_time_end)", con))
+                using (var com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
                 {
                     string daysWorking = "";
 
                     com.Parameters.AddWithValue("@staffid", staffid);
-                    com.Parameters.AddWithValue("@clinicaddress", "null");
 
                     if (checkBoxMondayDoctor.Checked)
                     {
@@ -243,7 +291,7 @@ namespace DavaoChestCenter
 
                 int scheduleid = -1;
 
-                using (MySqlCommand com = new MySqlCommand("SELECT schedule_id FROM schedule WHERE staff_id = @staff_id", con))
+                using (var com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
                 {
                     com.Parameters.AddWithValue("@staff_id", staffid);
 
@@ -258,6 +306,37 @@ namespace DavaoChestCenter
                         {
                             MessageBox.Show("no schedule for " + staffid, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
+                    }
+                }
+                con.Close();
+            }
+        }
+
+        private void buttonCreatePatient_Click(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                {
+                    com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
+                    com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
+                    com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
+                    com.Parameters.AddWithValue("@birthdate", dateTimePickerDateBirth.Value.ToString("yyyy-MM-dd"));
+                    com.Parameters.AddWithValue("@sex", comboBoxSex.Text);
+                    com.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                    com.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                    com.Parameters.AddWithValue("@type", "Patient");
+
+                    DialogResult r = MessageBox.Show("Create new patient", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                    if (r == DialogResult.OK)
+                    {
+                        com.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled");
                     }
                 }
                 con.Close();

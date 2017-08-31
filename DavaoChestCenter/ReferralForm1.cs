@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace DavaoChestCenter
 {
-    public partial class formRegistration2 : Form
+    public partial class ReferralForm1 : Form
     {
-        public formRegistration2()
+        public ReferralForm1()
         {
             InitializeComponent();
         }
-        
-        private void label11_Click(object sender, EventArgs e)
+
+        private void ReferralForm1_Load(object sender, EventArgs e)
         {
 
-        } 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            formLaboratory two = new formLaboratory();
-            two.ShowDialog();
+
         }
     }
 }

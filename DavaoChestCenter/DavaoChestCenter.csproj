@@ -33,7 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formInventoryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInventoryNew.Designer.cs">
+      <DependentUpon>formInventoryNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formStockIn.Designer.cs">
+      <DependentUpon>formStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTransactionNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransactionNew.Designer.cs">
+      <DependentUpon>formTransactionNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formModule2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formModule2.Designer.cs">
+      <DependentUpon>formModule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formProductNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProductNew.Designer.cs">
+      <DependentUpon>formProductNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRegistration1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegistration1.Designer.cs">
+      <DependentUpon>formRegistration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formServiceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formServiceAdd.Designer.cs">
+      <DependentUpon>formServiceAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Referral Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +122,11 @@
     <Compile Include="formProfile.Designer.cs">
       <DependentUpon>formProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="formModule3.cs">
+    <Compile Include="formDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formModule3.Designer.cs">
-      <DependentUpon>formModule3.cs</DependentUpon>
+    <Compile Include="formDashboard.Designer.cs">
+      <DependentUpon>formDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="formProfileUpdate.cs">
       <SubType>Form</SubType>
@@ -101,28 +146,37 @@
     <Compile Include="formLogIn.Designer.cs">
       <DependentUpon>formLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="formLaboratory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLaboratory.Designer.cs">
+      <DependentUpon>formLaboratory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="formRegistration2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formRegistration2.Designer.cs">
       <DependentUpon>formRegistration2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="formRegistration1.cs">
+    <Compile Include="ReferralForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formRegistration1.Designer.cs">
-      <DependentUpon>formRegistration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="testadd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testadd.Designer.cs">
-      <DependentUpon>testadd.cs</DependentUpon>
+    <Compile Include="ReferralForm1.Designer.cs">
+      <DependentUpon>ReferralForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInventoryNew.resx">
+      <DependentUpon>formInventoryNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStockIn.resx">
+      <DependentUpon>formStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransactionNew.resx">
+      <DependentUpon>formTransactionNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
@@ -133,11 +187,17 @@
     <EmbeddedResource Include="formModule1.resx">
       <DependentUpon>formModule1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formModule2.resx">
+      <DependentUpon>formModule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProductNew.resx">
+      <DependentUpon>formProductNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formProfile.resx">
       <DependentUpon>formProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formModule3.resx">
-      <DependentUpon>formModule3.cs</DependentUpon>
+    <EmbeddedResource Include="formDashboard.resx">
+      <DependentUpon>formDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProfileUpdate.resx">
       <DependentUpon>formProfileUpdate.cs</DependentUpon>
@@ -145,8 +205,14 @@
     <EmbeddedResource Include="formProfileNew.resx">
       <DependentUpon>formProfileNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formRegistration2.resx">
-      <DependentUpon>formRegistration2.cs</DependentUpon>
+    <EmbeddedResource Include="formLaboratory.resx">
+      <DependentUpon>formLaboratory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegistration1.resx">
+      <DependentUpon>formRegistration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formServiceAdd.resx">
+      <DependentUpon>formServiceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,15 +224,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="formRegistration1.resx">
-      <DependentUpon>formRegistration1.cs</DependentUpon>
+    <EmbeddedResource Include="formRegistration2.resx">
+      <DependentUpon>formRegistration2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Referral Form.resx">
       <DependentUpon>Referral Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testadd.resx">
-      <DependentUpon>testadd.cs</DependentUpon>
+    <EmbeddedResource Include="ReferralForm1.resx">
+      <DependentUpon>ReferralForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

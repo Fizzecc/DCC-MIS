@@ -13,37 +13,79 @@ namespace DavaoChestCenter
 {
     public partial class formAppointment : Form
     {
-        int id = -1; int patient = -1;
+        Dictionary<int, string> services = new Dictionary<int, string>();
 
-        public formAppointment(int x, string y)
+        int id = -1; int selectedUser = -1; int selectedAppointment = -1;
+
+        public formAppointment(int x)
         {
             InitializeComponent();
 
-            patient = x;
+            id = x;
 
-            refreshAppointment();
+            refreshTables();
 
-            labelName.Text = y;
-            
+            gatherServices();
         }
         
-        public void refreshAppointment()
+        public void refreshTables()
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM appointments WHERE patient = @patient", con))
+                using (var com = new MySqlCommand("SELECT * FROM appointmentv", con))
                 {
-                    com.Parameters.AddWithValue("@patient", patient);
-
-                    using (MySqlDataAdapter adp = new MySqlDataAdapter(com))
+                    using (var adp = new MySqlDataAdapter(com))
                     {
-                        DataTable dt = new DataTable();
+                        var dt = new DataTable();
                         adp.Fill(dt);
-                        dataGridView1.DataSource = dt;
+                        dataGridViewAppointments.DataSource = dt;
                         dt.Dispose();
 
-                        dataGridView1.Columns["id"].Visible = false;
+                        dataGridViewAppointments.Columns["id"].Visible = false;
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewPatients.DataSource = dt;
+                        dt.Dispose();
+                        
+                        dataGridViewPatients.Columns["id"].Visible = false;
+                    }
+                }
+                con.Close();
+            }
+        }
+
+        private void gatherServices()
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM services", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        while (rdr.HasRows)
+                        {
+                            if (rdr.Read())
+                            {
+                                services.Add(rdr.GetInt32(0), rdr.GetString(3));
+
+                                comboBoxServices.DataSource = new BindingSource(services, null);
+                                comboBoxServices.DisplayMember = "Value";
+                                comboBoxServices.ValueMember = "Key";
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
                     }
                 }
                 con.Close();
@@ -52,8 +94,88 @@ namespace DavaoChestCenter
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            formRegistration1 registration = new formRegistration1();
-            registration.ShowDialog();
+            if (selectedUser != -1)
+            {
+                using (var con = new MySqlConnection(conClass.connectionString))
+                {
+                    con.Open();
+                    using (var com = new MySqlCommand("INSERT INTO appointments VALUES(null, @date, @staff_id, @patient_id, @service_id, @done)", con))
+                    {
+                        com.Parameters.AddWithValue("@date", dateTimePickerAppointment.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@staff_id", id);
+                        com.Parameters.AddWithValue("@patient_id", selectedUser);
+                        com.Parameters.AddWithValue("@service_id", ((KeyValuePair<int, string>)comboBoxServices.SelectedItem).Key);
+                        com.Parameters.AddWithValue("@done", "False");
+
+                        DialogResult r = MessageBox.Show("Appoint patient", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                        if (r == DialogResult.OK)
+                        {
+                            com.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cancelled");
+                        }
+
+                        selectedUser = -1;
+                    }
+                    con.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have not selected any user yet!");
+            }
+            refreshTables();
+        }
+
+        private void dataGridViewPatients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedUser = int.Parse(dataGridViewPatients.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+            MessageBox.Show("You have selected " + dataGridViewPatients.Rows[e.RowIndex].Cells[1].FormattedValue.ToString() + " for appointment");
+        }
+
+        private void dataGridViewAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedAppointment = int.Parse(dataGridViewAppointments.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+            MessageBox.Show("You have selected the appointment of " + dataGridViewAppointments.Rows[e.RowIndex].Cells[2].FormattedValue.ToString());
+        }
+
+        private void buttonDone_Click(object sender, EventArgs e)
+        {
+            if (selectedAppointment != -1)
+            {
+                using (var con = new MySqlConnection(conClass.connectionString))
+                {
+                    con.Open();
+                    using (var com = new MySqlCommand("UPDATE appointments SET done = 'True' WHERE id = @id", con))
+                    {
+                        com.Parameters.AddWithValue("@id", selectedAppointment);
+
+                        DialogResult r = MessageBox.Show("Mark appointment as done?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                        if (r == DialogResult.OK)
+                        {
+                            com.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cancelled");
+                        }
+
+                        selectedAppointment = -1;
+                    }
+                    con.Close();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have not selected any appointment yet!");
+            }
+            refreshTables();
         }
     }
+
 }

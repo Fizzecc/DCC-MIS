@@ -15,6 +15,7 @@ namespace DavaoChestCenter
     {
         int id = -1; int selectedUser = -1; string patientName = "";
         string name = "";
+
         public formProfile(int x, string y)
         {
             InitializeComponent();
@@ -25,13 +26,13 @@ namespace DavaoChestCenter
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            formProfileNew profile = new formProfileNew();
+            var profile = new formProfileNew();
             profile.ShowDialog();
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            formProfileUpdate update = new formProfileUpdate();
+            var update = new formProfileUpdate();
             update.ShowDialog();
         }
 
@@ -42,14 +43,14 @@ namespace DavaoChestCenter
 
         public void refreshPatients()
         {
-            using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
+            using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand("SELECT * FROM users WHERE id != " + id, con))
+                using (var com = new MySqlCommand("SELECT * FROM users WHERE id != " + id, con))
                 {
-                    using (MySqlDataAdapter adp = new MySqlDataAdapter(com))
+                    using (var adp = new MySqlDataAdapter(com))
                     {
-                        DataTable dt = new DataTable();
+                        var dt = new DataTable();
                         adp.Fill(dt);
                         dataGridView1.DataSource = dt;
                         dt.Dispose();

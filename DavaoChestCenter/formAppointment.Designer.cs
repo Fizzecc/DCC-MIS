@@ -28,47 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewAppointments = new System.Windows.Forms.DataGridView();
+            this.dateTimePickerAppointment = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonAppoint = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
-            this.textBoxService = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxServices = new System.Windows.Forms.ComboBox();
+            this.buttonDone = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAppointments
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(327, 242);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridViewAppointments.AllowUserToAddRows = false;
+            this.dataGridViewAppointments.AllowUserToDeleteRows = false;
+            this.dataGridViewAppointments.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAppointments.Location = new System.Drawing.Point(12, 32);
+            this.dataGridViewAppointments.Name = "dataGridViewAppointments";
+            this.dataGridViewAppointments.ReadOnly = true;
+            this.dataGridViewAppointments.RowHeadersVisible = false;
+            this.dataGridViewAppointments.RowTemplate.Height = 24;
+            this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(697, 804);
+            this.dataGridViewAppointments.TabIndex = 15;
+            this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
             // 
-            // dateTimePicker1
+            // dateTimePickerAppointment
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Tw Cen MT", 9F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(107, 271);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(230, 21);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePickerAppointment.Font = new System.Drawing.Font("Tw Cen MT", 9F);
+            this.dateTimePickerAppointment.Location = new System.Drawing.Point(849, 842);
+            this.dateTimePickerAppointment.Name = "dateTimePickerAppointment";
+            this.dateTimePickerAppointment.Size = new System.Drawing.Size(207, 21);
+            this.dateTimePickerAppointment.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 271);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(715, 842);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(128, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Appointment Date:";
             // 
@@ -79,10 +82,9 @@
             this.buttonAppoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAppoint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonAppoint.ForeColor = System.Drawing.Color.White;
-            this.buttonAppoint.Location = new System.Drawing.Point(243, 295);
-            this.buttonAppoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAppoint.Location = new System.Drawing.Point(1214, 842);
             this.buttonAppoint.Name = "buttonAppoint";
-            this.buttonAppoint.Size = new System.Drawing.Size(93, 26);
+            this.buttonAppoint.Size = new System.Drawing.Size(172, 57);
             this.buttonAppoint.TabIndex = 18;
             this.buttonAppoint.Text = "Appoint";
             this.buttonAppoint.UseVisualStyleBackColor = false;
@@ -91,39 +93,91 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(7, 7);
-            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelName.Location = new System.Drawing.Point(9, 10);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(35, 13);
+            this.labelName.Size = new System.Drawing.Size(94, 19);
             this.labelName.TabIndex = 20;
-            this.labelName.Text = "Name";
+            this.labelName.Text = "Appointments";
             // 
-            // textBoxService
+            // dataGridViewPatients
             // 
-            this.textBoxService.Location = new System.Drawing.Point(11, 295);
-            this.textBoxService.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxService.Multiline = true;
-            this.textBoxService.Name = "textBoxService";
-            this.textBoxService.Size = new System.Drawing.Size(228, 27);
-            this.textBoxService.TabIndex = 19;
-            this.textBoxService.Text = "hmm";
+            this.dataGridViewPatients.AllowUserToAddRows = false;
+            this.dataGridViewPatients.AllowUserToDeleteRows = false;
+            this.dataGridViewPatients.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPatients.Location = new System.Drawing.Point(715, 32);
+            this.dataGridViewPatients.Name = "dataGridViewPatients";
+            this.dataGridViewPatients.ReadOnly = true;
+            this.dataGridViewPatients.RowHeadersVisible = false;
+            this.dataGridViewPatients.RowTemplate.Height = 24;
+            this.dataGridViewPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewPatients.Size = new System.Drawing.Size(671, 804);
+            this.dataGridViewPatients.TabIndex = 21;
+            this.dataGridViewPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatients_CellClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(711, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 19);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Patients";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(715, 872);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 19);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Service Required:";
+            // 
+            // comboBoxServices
+            // 
+            this.comboBoxServices.FormattingEnabled = true;
+            this.comboBoxServices.Location = new System.Drawing.Point(849, 872);
+            this.comboBoxServices.Name = "comboBoxServices";
+            this.comboBoxServices.Size = new System.Drawing.Size(207, 27);
+            this.comboBoxServices.TabIndex = 28;
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonDone.FlatAppearance.BorderSize = 0;
+            this.buttonDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDone.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonDone.ForeColor = System.Drawing.Color.White;
+            this.buttonDone.Location = new System.Drawing.Point(12, 842);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(172, 57);
+            this.buttonDone.TabIndex = 29;
+            this.buttonDone.Text = "Mark as Done";
+            this.buttonDone.UseVisualStyleBackColor = false;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // formAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 330);
+            this.ClientSize = new System.Drawing.Size(1398, 912);
+            this.Controls.Add(this.buttonDone);
+            this.Controls.Add(this.comboBoxServices);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewPatients);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.textBoxService);
             this.Controls.Add(this.buttonAppoint);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.dateTimePickerAppointment);
+            this.Controls.Add(this.dataGridViewAppointments);
+            this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Appointment";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Appointments";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,11 +185,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridViewAppointments;
+        private System.Windows.Forms.DateTimePicker dateTimePickerAppointment;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonAppoint;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBoxService;
+        private System.Windows.Forms.DataGridView dataGridViewPatients;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxServices;
+        private System.Windows.Forms.Button buttonDone;
     }
 }

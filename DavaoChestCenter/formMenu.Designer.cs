@@ -28,102 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonDashboard = new System.Windows.Forms.Button();
             this.buttonModule1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanelModule1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonModule2 = new System.Windows.Forms.Button();
-            this.buttonModule3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelForm = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
+            this.flowLayoutPanelMenu.SuspendLayout();
+            this.flowLayoutPanelModule1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // panelMenu
             // 
-            this.flowLayoutPanel1.Controls.Add(this.buttonModule1);
-            this.flowLayoutPanel1.Controls.Add(this.buttonModule2);
-            this.flowLayoutPanel1.Controls.Add(this.buttonModule3);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 31);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(521, 257);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.panelMenu.Controls.Add(this.flowLayoutPanelMenu);
+            this.panelMenu.Controls.Add(this.label2);
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(258, 951);
+            this.panelMenu.TabIndex = 23;
+            // 
+            // flowLayoutPanelMenu
+            // 
+            this.flowLayoutPanelMenu.BackColor = System.Drawing.Color.DimGray;
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonDashboard);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonModule1);
+            this.flowLayoutPanelMenu.Controls.Add(this.flowLayoutPanelModule1);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonModule2);
+            this.flowLayoutPanelMenu.Location = new System.Drawing.Point(0, 59);
+            this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(258, 892);
+            this.flowLayoutPanelMenu.TabIndex = 25;
+            // 
+            // buttonDashboard
+            // 
+            this.buttonDashboard.BackColor = System.Drawing.Color.DimGray;
+            this.buttonDashboard.FlatAppearance.BorderSize = 0;
+            this.buttonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonDashboard.Location = new System.Drawing.Point(3, 3);
+            this.buttonDashboard.Name = "buttonDashboard";
+            this.buttonDashboard.Size = new System.Drawing.Size(252, 29);
+            this.buttonDashboard.TabIndex = 4;
+            this.buttonDashboard.Text = "Dashboard";
+            this.buttonDashboard.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDashboard.UseVisualStyleBackColor = false;
+            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // buttonModule1
             // 
-            this.buttonModule1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonModule1.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.buttonModule1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonModule1.BackColor = System.Drawing.Color.DimGray;
             this.buttonModule1.FlatAppearance.BorderSize = 0;
             this.buttonModule1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModule1.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonModule1.Location = new System.Drawing.Point(3, 3);
+            this.buttonModule1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonModule1.Location = new System.Drawing.Point(3, 38);
             this.buttonModule1.Name = "buttonModule1";
-            this.buttonModule1.Size = new System.Drawing.Size(152, 225);
-            this.buttonModule1.TabIndex = 4;
-            this.buttonModule1.Text = "MODULE 1 V0.1\r\n";
-            this.buttonModule1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonModule1.Size = new System.Drawing.Size(252, 29);
+            this.buttonModule1.TabIndex = 0;
+            this.buttonModule1.Text = "Profiling and Laboratory";
+            this.buttonModule1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonModule1.UseVisualStyleBackColor = false;
             this.buttonModule1.Click += new System.EventHandler(this.buttonModule1_Click);
             // 
+            // flowLayoutPanelModule1
+            // 
+            this.flowLayoutPanelModule1.Controls.Add(this.buttonProfile);
+            this.flowLayoutPanelModule1.Controls.Add(this.button1);
+            this.flowLayoutPanelModule1.Controls.Add(this.button2);
+            this.flowLayoutPanelModule1.Location = new System.Drawing.Point(3, 73);
+            this.flowLayoutPanelModule1.Name = "flowLayoutPanelModule1";
+            this.flowLayoutPanelModule1.Size = new System.Drawing.Size(252, 103);
+            this.flowLayoutPanelModule1.TabIndex = 3;
+            // 
+            // buttonProfile
+            // 
+            this.buttonProfile.BackColor = System.Drawing.Color.DimGray;
+            this.buttonProfile.FlatAppearance.BorderSize = 0;
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonProfile.Location = new System.Drawing.Point(3, 3);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(252, 29);
+            this.buttonProfile.TabIndex = 1;
+            this.buttonProfile.Text = "Profiles";
+            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProfile.UseVisualStyleBackColor = false;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Location = new System.Drawing.Point(3, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Diagnosis";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.Location = new System.Drawing.Point(3, 73);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(252, 29);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Appointments";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // buttonModule2
             // 
-            this.buttonModule2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonModule2.BackgroundImage = global::DavaoChestCenter.Properties.Resources.verified_list_of_exercises_of_a_gymnast_on_a_clipboard;
-            this.buttonModule2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonModule2.BackColor = System.Drawing.Color.DimGray;
             this.buttonModule2.FlatAppearance.BorderSize = 0;
             this.buttonModule2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModule2.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonModule2.Location = new System.Drawing.Point(161, 3);
+            this.buttonModule2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonModule2.Location = new System.Drawing.Point(3, 182);
             this.buttonModule2.Name = "buttonModule2";
-            this.buttonModule2.Size = new System.Drawing.Size(152, 225);
-            this.buttonModule2.TabIndex = 5;
-            this.buttonModule2.Text = "MODULE 2\r\n";
-            this.buttonModule2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonModule2.Size = new System.Drawing.Size(252, 29);
+            this.buttonModule2.TabIndex = 1;
+            this.buttonModule2.Text = "Inventory Management";
+            this.buttonModule2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonModule2.UseVisualStyleBackColor = false;
+            this.buttonModule2.Click += new System.EventHandler(this.buttonModule2_Click_1);
             // 
-            // buttonModule3
+            // label2
             // 
-            this.buttonModule3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonModule3.BackgroundImage = global::DavaoChestCenter.Properties.Resources.users;
-            this.buttonModule3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonModule3.FlatAppearance.BorderSize = 0;
-            this.buttonModule3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModule3.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonModule3.Location = new System.Drawing.Point(319, 3);
-            this.buttonModule3.Name = "buttonModule3";
-            this.buttonModule3.Size = new System.Drawing.Size(176, 225);
-            this.buttonModule3.TabIndex = 3;
-            this.buttonModule3.Text = "MODULE 3 V0.1";
-            this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonModule3.UseVisualStyleBackColor = false;
-            this.buttonModule3.Click += new System.EventHandler(this.buttonSchedules_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(13, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 38);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Davao Chest Center \r\nManagement Information System";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // panelForm
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Current User:";
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(98, 9);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(158, 19);
-            this.labelName.TabIndex = 2;
-            this.labelName.Text = "FIRSTNAME LASTNAME";
+            this.panelForm.Location = new System.Drawing.Point(257, 0);
+            this.panelForm.Name = "panelForm";
+            this.panelForm.Size = new System.Drawing.Size(1414, 951);
+            this.panelForm.TabIndex = 24;
             // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 300);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1671, 951);
+            this.Controls.Add(this.panelForm);
+            this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -132,19 +199,25 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMenu_FormClosing);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
+            this.flowLayoutPanelMenu.ResumeLayout(false);
+            this.flowLayoutPanelModule1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button buttonModule3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenu;
         private System.Windows.Forms.Button buttonModule1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelModule1;
+        private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Button buttonModule2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelForm;
+        private System.Windows.Forms.Button buttonDashboard;
     }
 }

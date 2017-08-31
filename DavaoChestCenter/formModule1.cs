@@ -14,10 +14,12 @@ namespace DavaoChestCenter
     {
         int id = -1;
         string name = "";
+
         public formModule1()
         {
             InitializeComponent();
         }
+
         public formModule1(int x, string y)
         {
             InitializeComponent();
@@ -28,19 +30,19 @@ namespace DavaoChestCenter
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            formProfile profile = new formProfile(id, name);
+            var profile = new formProfile(id, name);
             profile.ShowDialog();
         }
 
         private void buttonAppoinment_Click(object sender, EventArgs e)
         {
-            formAppointment appointment = new formAppointment(id, name);
+            var appointment = new formAppointment(id);
             appointment.ShowDialog();
         }
 
         private void buttonDiagnosis_Click(object sender, EventArgs e)
         {
-            formRegistration2 labresult = new formRegistration2();
+            var labresult = new formLaboratory();
             labresult.ShowDialog();
         }
     }
