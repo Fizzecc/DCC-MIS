@@ -75,7 +75,7 @@ namespace DavaoChestCenter
                             var adp = new MySqlDataAdapter(com2);
                             var dt = new DataTable();
                             adp.Fill(dt);
-                            dataGridViewRequired.DataSource = dt;
+                            dataGridViewInventory.DataSource = dt;
                         }
                     }
                     else
@@ -94,7 +94,7 @@ namespace DavaoChestCenter
                             var adp = new MySqlDataAdapter(com2);
                             var dt = new DataTable();
                             adp.Fill(dt);
-                            dataGridViewRequired.DataSource = dt;
+                            dataGridViewInventory.DataSource = dt;
                         }
                     }
                 }
@@ -104,7 +104,7 @@ namespace DavaoChestCenter
 
         private void dataGridViewRequired_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formTransactionNew transaction = new formTransactionNew(dataGridViewRequired.Rows[e.RowIndex].Cells["item_name"].Value.ToString(), int.Parse(dataGridViewRequired.Rows[e.RowIndex].Cells["minrequired"].Value.ToString()));
+            formTransactionNew transaction = new formTransactionNew(dataGridViewInventory.Rows[e.RowIndex].Cells["item_name"].Value.ToString(), int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["minrequired"].Value.ToString()));
             transaction.referenceToMain = this;
             transaction.ShowDialog();
         }

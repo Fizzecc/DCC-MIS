@@ -39,6 +39,7 @@
             this.buttonInventoryNew = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewRequired = new System.Windows.Forms.DataGridView();
+            this.buttonStockOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequired)).BeginInit();
@@ -189,11 +190,28 @@
             this.dataGridViewRequired.Size = new System.Drawing.Size(538, 300);
             this.dataGridViewRequired.TabIndex = 30;
             // 
+            // buttonStockOut
+            // 
+            this.buttonStockOut.BackColor = System.Drawing.Color.Transparent;
+            this.buttonStockOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonStockOut.FlatAppearance.BorderSize = 0;
+            this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonStockOut.Location = new System.Drawing.Point(344, 842);
+            this.buttonStockOut.Name = "buttonStockOut";
+            this.buttonStockOut.Size = new System.Drawing.Size(77, 97);
+            this.buttonStockOut.TabIndex = 32;
+            this.buttonStockOut.Text = "Perform Stockout";
+            this.buttonStockOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStockOut.UseVisualStyleBackColor = false;
+            this.buttonStockOut.Click += new System.EventHandler(this.buttonStockOut_Click);
+            // 
             // formModule2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1414, 951);
+            this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewRequired);
             this.Controls.Add(this.buttonInventoryNew);
@@ -233,5 +251,6 @@
         private System.Windows.Forms.Button buttonInventoryNew;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewRequired;
+        private System.Windows.Forms.Button buttonStockOut;
     }
 }

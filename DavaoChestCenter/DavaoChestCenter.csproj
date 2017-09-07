@@ -62,6 +62,18 @@
     <Compile Include="formStockIn.Designer.cs">
       <DependentUpon>formStockIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="formStockOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formStockOut.Designer.cs">
+      <DependentUpon>formStockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTransactionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransactionEdit.Designer.cs">
+      <DependentUpon>formTransactionEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="formTransactionNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formStockIn.resx">
       <DependentUpon>formStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStockOut.resx">
+      <DependentUpon>formStockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransactionEdit.resx">
+      <DependentUpon>formTransactionEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTransactionNew.resx">
       <DependentUpon>formTransactionNew.cs</DependentUpon>
