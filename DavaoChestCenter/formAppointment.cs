@@ -176,6 +176,12 @@ namespace DavaoChestCenter
             }
             refreshTables();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formRegistration3 reg = new formRegistration3();
+            reg.Show();
+        }
     }
 
 }
