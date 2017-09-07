@@ -55,7 +55,7 @@
             this.dataGridViewAppointments.RowHeadersVisible = false;
             this.dataGridViewAppointments.RowTemplate.Height = 24;
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAppointments.Size = new System.Drawing.Size(697, 614);
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(697, 804);
             this.dataGridViewAppointments.TabIndex = 15;
             this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
             // 
@@ -159,11 +159,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(558, 659);
+            this.button1.Location = new System.Drawing.Point(568, 852);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 39);
             this.button1.TabIndex = 30;
-            this.button1.Text = "Add Appointments";
+            this.button1.Text = "Patient Shortcut";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1398, 912);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.comboBoxServices);
