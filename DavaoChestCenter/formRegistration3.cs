@@ -28,7 +28,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", txtfname.Text);
                     com.Parameters.AddWithValue("@middlename", txtmname.Text);
@@ -36,8 +36,6 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@username", txtUser.Text);
                     com.Parameters.AddWithValue("@password", txtPass.Text);
                     com.Parameters.AddWithValue("@birthdate", dateTimePickerDate.Value.ToString("yyyy-MM-dd"));
-                    com.Parameters.AddWithValue("@sex", txtGender.Text);
-                    com.Parameters.AddWithValue("@type", txtType.Text);
 
                     DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
