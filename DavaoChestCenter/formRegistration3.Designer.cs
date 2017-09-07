@@ -41,6 +41,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +131,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(120, 201);
+            this.btnAdd.Location = new System.Drawing.Point(103, 233);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 10;
@@ -150,11 +155,57 @@
             this.dateTimePickerDate.Size = new System.Drawing.Size(162, 20);
             this.dateTimePickerDate.TabIndex = 12;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(184, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtGender
+            // 
+            this.txtGender.Location = new System.Drawing.Point(97, 181);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(162, 20);
+            this.txtGender.TabIndex = 14;
+            // 
+            // txtType
+            // 
+            this.txtType.Location = new System.Drawing.Point(97, 207);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(162, 20);
+            this.txtType.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(49, 183);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Gender:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(60, 210);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Type:";
+            // 
             // formRegistration3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 278);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtType);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePickerDate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAdd);
@@ -191,5 +242,10 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
