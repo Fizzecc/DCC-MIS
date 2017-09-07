@@ -161,5 +161,11 @@ namespace DavaoChestCenter
             inventory.referenceToMain = this;
             inventory.ShowDialog();
         }
+
+        private void buttonStockOut_Click(object sender, EventArgs e)
+        {
+            var stockout = new formStockOut();
+            stockout.ShowDialog();
+        }
     }
 }
