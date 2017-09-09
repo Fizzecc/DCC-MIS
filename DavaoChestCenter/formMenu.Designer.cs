@@ -172,7 +172,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(13, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 38);
+            this.label2.Size = new System.Drawing.Size(346, 56);
             this.label2.TabIndex = 24;
             this.label2.Text = "Davao Chest Center \r\nManagement Information System";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@
             // 
             // formMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1671, 951);
             this.Controls.Add(this.panelForm);
