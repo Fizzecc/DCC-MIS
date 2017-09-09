@@ -28,26 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
+            this.flowLayoutPanelWorkers = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.AllowUserToAddRows = false;
-            this.dataGridViewSchedule.AllowUserToDeleteRows = false;
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(770, 67);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.ReadOnly = true;
-            this.dataGridViewSchedule.RowHeadersVisible = false;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(616, 346);
-            this.dataGridViewSchedule.TabIndex = 0;
             // 
             // label1
             // 
@@ -61,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(766, 45);
+            this.label2.Location = new System.Drawing.Point(706, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 2;
@@ -76,7 +65,7 @@
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
             this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(748, 346);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(688, 346);
             this.dataGridViewInventory.TabIndex = 3;
             // 
             // label3
@@ -88,11 +77,32 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Inventory";
             // 
+            // flowLayoutPanelWorkers
+            // 
+            this.flowLayoutPanelWorkers.Location = new System.Drawing.Point(710, 67);
+            this.flowLayoutPanelWorkers.Name = "flowLayoutPanelWorkers";
+            this.flowLayoutPanelWorkers.Size = new System.Drawing.Size(676, 346);
+            this.flowLayoutPanelWorkers.TabIndex = 5;
+            // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.AllowUserToAddRows = false;
+            this.dataGridViewSchedule.AllowUserToDeleteRows = false;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(710, 67);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.ReadOnly = true;
+            this.dataGridViewSchedule.RowHeadersVisible = false;
+            this.dataGridViewSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(676, 346);
+            this.dataGridViewSchedule.TabIndex = 0;
+            // 
             // formDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 912);
+            this.Controls.Add(this.flowLayoutPanelWorkers);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.label2);
@@ -105,19 +115,19 @@
             this.Name = "formDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboad";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewSchedule;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewInventory;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelWorkers;
+        private System.Windows.Forms.DataGridView dataGridViewSchedule;
     }
 }
