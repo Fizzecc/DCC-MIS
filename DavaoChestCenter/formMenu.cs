@@ -89,7 +89,7 @@ namespace DavaoChestCenter
 
         private void buttonModule1_Click(object sender, EventArgs e)
         {
-            if (!flowLayoutPanelModule1.Visible)
+              if (!flowLayoutPanelModule1.Visible)
             {
                 flowLayoutPanelModule1.Visible = true;
             }
