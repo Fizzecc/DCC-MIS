@@ -157,7 +157,14 @@ namespace DavaoChestCenter
 
                         if (r == DialogResult.OK)
                         {
-                            com.ExecuteNonQuery();
+                            if (updateQuantity())
+                            {
+                                //.ExecuteNonQuery();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Items are out of stock for this to continue");
+                            }
                         }
                         else
                         {
@@ -175,6 +182,212 @@ namespace DavaoChestCenter
                 MessageBox.Show("You have not selected any appointment yet!");
             }
             refreshTables();
+        }
+
+        public Boolean updateQuantity()
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                int serviceid = -1;
+
+                using (var com = new MySqlCommand("SELECT service_id FROM appointments WHERE id = @id", con))
+                {
+                    com.Parameters.AddWithValue("@id", selectedAppointment);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.HasRows)
+                        {
+                            rdr.Read();
+
+                            serviceid = rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                int product_id = -1, product_quantity = -1;
+                string other_products_id = "", other_products_quantity = "";
+
+                using (var com = new MySqlCommand("SELECT product_id, product_quantity, other_products_id, other_products_quantity FROM services WHERE service_id = @id", con))
+                {
+                    com.Parameters.AddWithValue("@id", serviceid);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.HasRows)
+                        {
+                            rdr.Read();
+
+                            product_id = rdr.GetInt32(0);
+                            product_quantity = rdr.GetInt32(1);
+
+                            other_products_id = rdr.GetString(2);
+                            other_products_quantity = rdr.GetString(3);
+                        }
+                    }
+                }
+                Boolean mainChecker = true;
+
+                int mainquantity = -1; int mainselectedproduct = -1; int finalquantity = -1; int selectedProduct = -1;
+
+                using (var com = new MySqlCommand("SELECT id, product_id, quantity FROM transactions WHERE product_id = @id AND status = 'Normal' AND processed = 'Yes'", con))
+                {
+                    com.Parameters.AddWithValue("@id", product_id);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.HasRows)
+                        {
+                            rdr.Read();
+
+                            mainselectedproduct = rdr.GetInt32(0);
+
+                            mainquantity = rdr.GetInt32(2);
+
+                            finalquantity = mainquantity - product_quantity;
+
+                            rdr.Close();
+
+                            if (finalquantity >= 0)
+                            {
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Product ID: " + product_id + " is required to continue");
+                                mainChecker = false;
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Product ID:" + selectedProduct + " There is no stock");
+                        }
+                    }
+                }
+
+                if (mainChecker)
+                {
+                    string[] other_products = other_products_id.Split('/');
+                    string[] products_quantity = other_products_quantity.Split('/');
+
+                    int count = 0;
+
+                    Boolean checker = true;
+
+                    foreach (string x in other_products)
+                    {
+                        using (var com = new MySqlCommand("SELECT id, product_id, quantity FROM transactions WHERE product_id = @id AND status = 'Normal' AND processed = 'Yes'", con))
+                        {
+                            com.Parameters.AddWithValue("@id", x);
+
+                            int selectedOtherProduct = -1;
+
+                            using (var rdr = com.ExecuteReader())
+                            {
+                                if (rdr.HasRows)
+                                {
+                                    rdr.Read();
+
+                                    selectedOtherProduct = rdr.GetInt32(0);
+
+                                    int quantity = rdr.GetInt32(2);
+
+                                    int final = quantity - int.Parse(products_quantity[count]);
+
+                                    count++;
+
+                                    rdr.Close();
+
+                                    if (!(final >= 0))
+                                    {
+                                        MessageBox.Show("Product ID: " + x + " is required to continue");
+                                        checker = false;
+                                        return false;
+                                    }
+                                }
+                                else
+                                {
+                                    checker = false;
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+
+                    count = 0;
+                    
+                    if (checker)
+                    {
+                        using (var comfinal = new MySqlCommand("UPDATE transactions SET quantity = @quantity WHERE id = @id", con))
+                        {
+                            comfinal.Parameters.AddWithValue("@quantity", finalquantity);
+                            comfinal.Parameters.AddWithValue("@id", mainselectedproduct);
+                            comfinal.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Main Transaction ID: " + mainselectedproduct + " final quantity is " + finalquantity.ToString());
+
+                        foreach (string x in other_products)
+                        {
+                            using (var com = new MySqlCommand("SELECT id, product_id, quantity FROM transactions WHERE product_id = @id AND status = 'Normal' AND processed = 'Yes'", con))
+                            {
+                                com.Parameters.AddWithValue("@id", x);
+
+                                int selectedOtherProduct = -1;
+
+                                using (var rdr = com.ExecuteReader())
+                                {
+                                    if (rdr.HasRows)
+                                    {
+                                        rdr.Read();
+
+                                        selectedOtherProduct = rdr.GetInt32(0);
+
+                                        int quantity = rdr.GetInt32(2);
+
+                                        int final = quantity - int.Parse(products_quantity[count]);
+
+                                        count++;
+
+                                        rdr.Close();
+
+                                        MessageBox.Show("Product ID: " + x + " Transaction ID: " + selectedOtherProduct + " final quantity is " + final.ToString());
+
+                                        if (final >= 0)
+                                        {
+                                            using (var com2 = new MySqlCommand("UPDATE transactions SET quantity = @quantity WHERE id = @id", con))
+                                            {
+                                                com2.Parameters.AddWithValue("@quantity", final);
+                                                com2.Parameters.AddWithValue("@id", selectedOtherProduct);
+                                                com2.ExecuteNonQuery();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("no");
+                                            checker = false;
+                                            return false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Fatal error");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("More items are required to continue");
+                        return false;
+                    }
+                }
+                con.Close();
+                return true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

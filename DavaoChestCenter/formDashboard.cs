@@ -62,7 +62,7 @@ namespace DavaoChestCenter
                         flag = true;
                 }
 
-                if (!flag)
+                if (flag)
                 {
                     var label = new Label();
 

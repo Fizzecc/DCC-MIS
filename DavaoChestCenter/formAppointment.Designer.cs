@@ -64,7 +64,7 @@
             this.dateTimePickerAppointment.Font = new System.Drawing.Font("Tw Cen MT", 9F);
             this.dateTimePickerAppointment.Location = new System.Drawing.Point(845, 550);
             this.dateTimePickerAppointment.Name = "dateTimePickerAppointment";
-            this.dateTimePickerAppointment.Size = new System.Drawing.Size(207, 27);
+            this.dateTimePickerAppointment.Size = new System.Drawing.Size(207, 21);
             this.dateTimePickerAppointment.TabIndex = 16;
             // 
             // label3
@@ -72,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(711, 550);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 28);
+            this.label3.Size = new System.Drawing.Size(128, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Appointment Date:";
             // 
@@ -83,7 +83,7 @@
             this.buttonAppoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAppoint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonAppoint.ForeColor = System.Drawing.Color.White;
-            this.buttonAppoint.Location = new System.Drawing.Point(1210, 550);
+            this.buttonAppoint.Location = new System.Drawing.Point(1214, 550);
             this.buttonAppoint.Name = "buttonAppoint";
             this.buttonAppoint.Size = new System.Drawing.Size(172, 57);
             this.buttonAppoint.TabIndex = 18;
@@ -96,7 +96,7 @@
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(9, 10);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(142, 28);
+            this.labelName.Size = new System.Drawing.Size(94, 19);
             this.labelName.TabIndex = 20;
             this.labelName.Text = "Appointments";
             // 
@@ -121,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(711, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 28);
+            this.label1.Size = new System.Drawing.Size(57, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Patients";
             // 
@@ -130,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(711, 580);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 28);
+            this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 23;
             this.label2.Text = "Service Required:";
             // 
@@ -139,7 +139,7 @@
             this.comboBoxServices.FormattingEnabled = true;
             this.comboBoxServices.Location = new System.Drawing.Point(845, 580);
             this.comboBoxServices.Name = "comboBoxServices";
-            this.comboBoxServices.Size = new System.Drawing.Size(207, 36);
+            this.comboBoxServices.Size = new System.Drawing.Size(207, 27);
             this.comboBoxServices.TabIndex = 28;
             // 
             // buttonDone
@@ -149,7 +149,7 @@
             this.buttonDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDone.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonDone.ForeColor = System.Drawing.Color.White;
-            this.buttonDone.Location = new System.Drawing.Point(8, 550);
+            this.buttonDone.Location = new System.Drawing.Point(13, 550);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(172, 57);
             this.buttonDone.TabIndex = 29;
@@ -169,7 +169,7 @@
             // 
             // formAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 628);
             this.Controls.Add(this.button1);
