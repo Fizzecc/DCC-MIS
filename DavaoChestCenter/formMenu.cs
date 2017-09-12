@@ -136,5 +136,10 @@ namespace DavaoChestCenter
             var appointment = new formAppointment(id);
             showForm(appointment);
         }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

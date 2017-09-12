@@ -184,6 +184,12 @@
     <Compile Include="ReferralForm1.Designer.cs">
       <DependentUpon>ReferralForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Testing1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing1.Designer.cs">
+      <DependentUpon>Testing1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReferralForm1.resx">
       <DependentUpon>ReferralForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing1.resx">
+      <DependentUpon>Testing1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

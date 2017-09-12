@@ -183,12 +183,13 @@
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(1414, 951);
             this.panelForm.TabIndex = 24;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1671, 951);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -217,7 +218,7 @@
         private System.Windows.Forms.Button buttonModule2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Button buttonDashboard;
+        public System.Windows.Forms.Panel panelForm;
     }
 }

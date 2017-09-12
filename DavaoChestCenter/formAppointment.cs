@@ -13,6 +13,7 @@ namespace DavaoChestCenter
 {
     public partial class formAppointment : Form
     {
+        public Form form;
         Dictionary<int, string> services = new Dictionary<int, string>();
 
         int id = -1; int selectedUser = -1; int selectedAppointment = -1;
@@ -177,10 +178,44 @@ namespace DavaoChestCenter
             refreshTables();
         }
 
+        /*public void showForm(Form x)
+        {
+            if (form != null)
+            {
+                form.Dispose();
+
+                form = x;
+                form.TopLevel = false;
+                panelForm.Controls.Add(form);
+                form.Show();
+            }
+            else
+            {
+                form = x;
+                form.TopLevel = false;
+                panelForm.Controls.Add(form);
+                form.Show();
+            }
+        }*/
+
         private void button1_Click(object sender, EventArgs e)
         {
             formRegistration3 reg = new formRegistration3();
             reg.Show();
+
+            /*var appointment = new formAppointment(id);
+            showForm(appointment);*/
+        }
+
+        private void dataGridViewAppointments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form test = new Testing1();
+            test.Show();
         }
     }
 

@@ -39,6 +39,7 @@
             this.comboBoxServices = new System.Windows.Forms.ComboBox();
             this.buttonDone = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             this.dataGridViewAppointments.Size = new System.Drawing.Size(697, 614);
             this.dataGridViewAppointments.TabIndex = 15;
             this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
+            this.dataGridViewAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellContentClick);
             // 
             // dateTimePickerAppointment
             // 
@@ -167,11 +169,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(411, 659);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(141, 53);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Experimental \r\n(don\'t open)";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // formAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.comboBoxServices);
@@ -208,5 +221,6 @@
         private System.Windows.Forms.ComboBox comboBoxServices;
         private System.Windows.Forms.Button buttonDone;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
