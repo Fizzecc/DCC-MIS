@@ -166,7 +166,7 @@
         private System.Windows.Forms.TextBox textBoxProductQuantity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateExpiry;
-        private System.Windows.Forms.ComboBox comboBoxProductStatus;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox comboBoxProductStatus;
     }
 }

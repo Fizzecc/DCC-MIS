@@ -152,6 +152,7 @@ namespace DavaoChestCenter
         private void buttonInventoryNew_Click(object sender, EventArgs e)
         {
             var transaction = new formTransactionNew();
+            transaction.comboBoxProductStatus.Text = "Normal";
             transaction.ShowDialog();
         }
 

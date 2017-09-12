@@ -52,6 +52,12 @@ namespace DavaoChestCenter
                 {
                     com2.ExecuteNonQuery();
                 }
+
+                using (var com3 = new MySqlCommand("UPDATE transactions SET status = 'Expired' WHERE quantity = '0'", con))
+                {
+                    com3.ExecuteNonQuery();
+                }
+
                 con.Close();
             }
         }

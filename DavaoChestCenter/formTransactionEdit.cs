@@ -21,6 +21,8 @@ namespace DavaoChestCenter
             selectedProduct = x;
 
             label1.Text = y;
+
+            comboBoxProductStatus.Text = "Damaged";
         }
 
         private void buttonInventoryEncode_Click(object sender, EventArgs e)

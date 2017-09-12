@@ -262,7 +262,7 @@ namespace DavaoChestCenter
                         }
                         else
                         {
-                            MessageBox.Show("Product ID:" + selectedProduct + " There is no stock");
+                            MessageBox.Show("Product ID: " + product_id + " There is no stock");
                         }
                     }
                 }
