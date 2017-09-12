@@ -18,6 +18,7 @@ namespace DavaoChestCenter
         public formProductNew()
         {
             InitializeComponent();
+            comboBoxDoseType.Text = "mg";
         }
 
         private void buttonProductEncode_Click(object sender, EventArgs e)
@@ -25,13 +26,13 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @item_name, @item_type, @minrequired)", con))
+                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @generic_name, @dose, @minimum_quantity)", con))
                 {
                     try
                     {
-                        com.Parameters.AddWithValue("@item_name", textBoxProductName.Text);
-                        com.Parameters.AddWithValue("@item_type", textBoxProductType.Text);
-                        com.Parameters.AddWithValue("@minrequired", int.Parse(textBoxProductMinimum.Text));
+                        com.Parameters.AddWithValue("@generic_name", textBoxProductName.Text);
+                        com.Parameters.AddWithValue("@dose", int.Parse(textBoxProductDose.Text) + "/" + comboBoxDoseType.Text);
+                        com.Parameters.AddWithValue("@minimum_quantity", int.Parse(textBoxProductMinimum.Text));
 
                         DialogResult r = MessageBox.Show("Encode product", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 

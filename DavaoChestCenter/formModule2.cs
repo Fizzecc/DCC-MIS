@@ -22,7 +22,7 @@ namespace DavaoChestCenter
 
         public void renew()
         {
-            notifMinimum();
+            //notifMinimum();
 
             refreshTable();
         }
@@ -32,7 +32,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT item_name, item_type, quantity, status, expiry_date FROM products INNER JOIN inventory ON products.prod_id = inventory.product_id inner JOIN transactions ON transactions.product_id = products.prod_id GROUP BY transactions.id ORDER BY expiry_date", con))
+                using (var com = new MySqlCommand("SELECT * FROM inventory", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -40,7 +40,7 @@ namespace DavaoChestCenter
                     dataGridViewInventory.DataSource = dt;
                 }
 
-                using (var com = new MySqlCommand("SELECT item_name, item_type FROM products", con))
+                using (var com = new MySqlCommand("SELECT * FROM products", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -148,25 +148,17 @@ namespace DavaoChestCenter
             var service = new formServiceAdd();
             service.ShowDialog();
         }
-
-        private void buttonInventoryNew_Click(object sender, EventArgs e)
-        {
-            var transaction = new formTransactionNew();
-            transaction.comboBoxProductStatus.Text = "Normal";
-            transaction.ShowDialog();
-        }
-
-        private void buttonInventoryNew_Click_1(object sender, EventArgs e)
-        {
-            var inventory = new formInventoryNew();
-            inventory.referenceToMain = this;
-            inventory.ShowDialog();
-        }
-
+        
         private void buttonStockOut_Click(object sender, EventArgs e)
         {
             var stockout = new formStockOut();
             stockout.ShowDialog();
+        }
+
+        private void buttonTransactionNew_Click(object sender, EventArgs e)
+        {
+            var transaction = new formTransactionNew();
+            transaction.ShowDialog();
         }
     }
 }

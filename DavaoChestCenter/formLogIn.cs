@@ -48,7 +48,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM users WHERE username = @username AND password = @password", con))
+                using (var com = new MySqlCommand("SELECT * FROM staff WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
@@ -61,23 +61,11 @@ namespace DavaoChestCenter
                             int id = rdr.GetInt32(0);
                             string firstname = rdr.GetString(1);
                             string lastname = rdr.GetString(3);
-                            string type = rdr.GetString(8);
-
-                            if (type.Equals("Doctor") || type.Equals("Staff"))
-                            {
-                                formMenu menu = new formMenu(id, (firstname + " " + lastname));
-                                menu.referenceToMain = this;
-                                menu.Show();
-                                Hide();
-                            }
-                            else if (type.Equals("Patient"))
-                            {
-                                MessageBox.Show("You're a patient");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Invalid type");
-                            }
+                            
+                            formMenu menu = new formMenu(id, (firstname + " " + lastname));
+                            menu.referenceToMain = this;
+                            menu.Show();
+                            Hide();
                             
                         }
                         else

@@ -50,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formInventoryNew.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formInventoryNew.Designer.cs">
-      <DependentUpon>formInventoryNew.cs</DependentUpon>
-    </Compile>
     <Compile Include="formRegistration3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </Compile>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formInventoryNew.resx">
-      <DependentUpon>formInventoryNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formRegistration3.resx">
       <DependentUpon>formRegistration3.cs</DependentUpon>

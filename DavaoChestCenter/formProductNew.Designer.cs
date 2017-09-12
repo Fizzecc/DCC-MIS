@@ -28,47 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxProductType = new System.Windows.Forms.TextBox();
+            this.textBoxProductDose = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.buttonProductEncode = new System.Windows.Forms.Button();
             this.textBoxProductMinimum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxDoseType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // textBoxProductType
+            // textBoxProductDose
             // 
-            this.textBoxProductType.Location = new System.Drawing.Point(133, 39);
-            this.textBoxProductType.Multiline = true;
-            this.textBoxProductType.Name = "textBoxProductType";
-            this.textBoxProductType.Size = new System.Drawing.Size(203, 27);
-            this.textBoxProductType.TabIndex = 1;
+            this.textBoxProductDose.Location = new System.Drawing.Point(118, 39);
+            this.textBoxProductDose.Multiline = true;
+            this.textBoxProductDose.Name = "textBoxProductDose";
+            this.textBoxProductDose.Size = new System.Drawing.Size(90, 27);
+            this.textBoxProductDose.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 19);
+            this.label1.Size = new System.Drawing.Size(105, 19);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Product Name:";
+            this.label1.Text = "Generic Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Product Type:";
+            this.label2.Text = "Dose:";
             // 
             // textBoxProductName
             // 
-            this.textBoxProductName.Location = new System.Drawing.Point(133, 6);
+            this.textBoxProductName.Location = new System.Drawing.Point(118, 6);
             this.textBoxProductName.Multiline = true;
             this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(203, 27);
+            this.textBoxProductName.Size = new System.Drawing.Size(158, 27);
             this.textBoxProductName.TabIndex = 0;
             // 
             // buttonProductEncode
@@ -80,7 +81,7 @@
             this.buttonProductEncode.ForeColor = System.Drawing.Color.White;
             this.buttonProductEncode.Location = new System.Drawing.Point(16, 105);
             this.buttonProductEncode.Name = "buttonProductEncode";
-            this.buttonProductEncode.Size = new System.Drawing.Size(320, 33);
+            this.buttonProductEncode.Size = new System.Drawing.Size(260, 33);
             this.buttonProductEncode.TabIndex = 3;
             this.buttonProductEncode.Text = "Encode Product";
             this.buttonProductEncode.UseVisualStyleBackColor = false;
@@ -88,10 +89,10 @@
             // 
             // textBoxProductMinimum
             // 
-            this.textBoxProductMinimum.Location = new System.Drawing.Point(133, 72);
+            this.textBoxProductMinimum.Location = new System.Drawing.Point(118, 72);
             this.textBoxProductMinimum.Multiline = true;
             this.textBoxProductMinimum.Name = "textBoxProductMinimum";
-            this.textBoxProductMinimum.Size = new System.Drawing.Size(203, 27);
+            this.textBoxProductMinimum.Size = new System.Drawing.Size(158, 27);
             this.textBoxProductMinimum.TabIndex = 2;
             // 
             // label3
@@ -103,15 +104,30 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Minimum #:";
             // 
+            // comboBoxDoseType
+            // 
+            this.comboBoxDoseType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDoseType.FormattingEnabled = true;
+            this.comboBoxDoseType.Items.AddRange(new object[] {
+            "mg",
+            "mL",
+            "g",
+            "L"});
+            this.comboBoxDoseType.Location = new System.Drawing.Point(214, 39);
+            this.comboBoxDoseType.Name = "comboBoxDoseType";
+            this.comboBoxDoseType.Size = new System.Drawing.Size(62, 27);
+            this.comboBoxDoseType.TabIndex = 28;
+            // 
             // formProductNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 143);
+            this.ClientSize = new System.Drawing.Size(288, 143);
+            this.Controls.Add(this.comboBoxDoseType);
             this.Controls.Add(this.textBoxProductMinimum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonProductEncode);
-            this.Controls.Add(this.textBoxProductType);
+            this.Controls.Add(this.textBoxProductDose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxProductName);
@@ -129,12 +145,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxProductType;
+        private System.Windows.Forms.TextBox textBoxProductDose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.Button buttonProductEncode;
         private System.Windows.Forms.TextBox textBoxProductMinimum;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxDoseType;
     }
 }

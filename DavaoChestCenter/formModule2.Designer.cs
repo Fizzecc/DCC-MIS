@@ -36,7 +36,6 @@
             this.dataGridViewProduct = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTransactionNew = new System.Windows.Forms.Button();
-            this.buttonInventoryNew = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewRequired = new System.Windows.Forms.DataGridView();
             this.buttonStockOut = new System.Windows.Forms.Button();
@@ -151,23 +150,7 @@
             this.buttonTransactionNew.Text = "Encode Transaction";
             this.buttonTransactionNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonTransactionNew.UseVisualStyleBackColor = false;
-            this.buttonTransactionNew.Click += new System.EventHandler(this.buttonInventoryNew_Click);
-            // 
-            // buttonInventoryNew
-            // 
-            this.buttonInventoryNew.BackColor = System.Drawing.Color.Transparent;
-            this.buttonInventoryNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonInventoryNew.FlatAppearance.BorderSize = 0;
-            this.buttonInventoryNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInventoryNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonInventoryNew.Location = new System.Drawing.Point(261, 842);
-            this.buttonInventoryNew.Name = "buttonInventoryNew";
-            this.buttonInventoryNew.Size = new System.Drawing.Size(77, 97);
-            this.buttonInventoryNew.TabIndex = 27;
-            this.buttonInventoryNew.Text = "Process Pending Transactions";
-            this.buttonInventoryNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonInventoryNew.UseVisualStyleBackColor = false;
-            this.buttonInventoryNew.Click += new System.EventHandler(this.buttonInventoryNew_Click_1);
+            this.buttonTransactionNew.Click += new System.EventHandler(this.buttonTransactionNew_Click);
             // 
             // label3
             // 
@@ -197,7 +180,7 @@
             this.buttonStockOut.FlatAppearance.BorderSize = 0;
             this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonStockOut.Location = new System.Drawing.Point(344, 842);
+            this.buttonStockOut.Location = new System.Drawing.Point(261, 842);
             this.buttonStockOut.Name = "buttonStockOut";
             this.buttonStockOut.Size = new System.Drawing.Size(77, 97);
             this.buttonStockOut.TabIndex = 32;
@@ -214,7 +197,6 @@
             this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewRequired);
-            this.Controls.Add(this.buttonInventoryNew);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewProduct);
             this.Controls.Add(this.buttonRefresh);
@@ -248,7 +230,6 @@
         private System.Windows.Forms.DataGridView dataGridViewProduct;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTransactionNew;
-        private System.Windows.Forms.Button buttonInventoryNew;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewRequired;
         private System.Windows.Forms.Button buttonStockOut;

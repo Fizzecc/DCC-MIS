@@ -33,10 +33,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxProductQuantity = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerDateExpiry = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxProductStatus = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxNameBrand = new System.Windows.Forms.TextBox();
+            this.comboBoxDoseType = new System.Windows.Forms.ComboBox();
+            this.textBoxProductDose = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonInventoryEncode
@@ -46,9 +49,9 @@
             this.buttonInventoryEncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInventoryEncode.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonInventoryEncode.ForeColor = System.Drawing.Color.White;
-            this.buttonInventoryEncode.Location = new System.Drawing.Point(12, 138);
+            this.buttonInventoryEncode.Location = new System.Drawing.Point(9, 173);
             this.buttonInventoryEncode.Name = "buttonInventoryEncode";
-            this.buttonInventoryEncode.Size = new System.Drawing.Size(334, 33);
+            this.buttonInventoryEncode.Size = new System.Drawing.Size(337, 33);
             this.buttonInventoryEncode.TabIndex = 37;
             this.buttonInventoryEncode.Text = "Encode Transaction";
             this.buttonInventoryEncode.UseVisualStyleBackColor = false;
@@ -61,12 +64,12 @@
             this.comboBoxProducts.Location = new System.Drawing.Point(129, 12);
             this.comboBoxProducts.Name = "comboBoxProducts";
             this.comboBoxProducts.Size = new System.Drawing.Size(217, 27);
-            this.comboBoxProducts.TabIndex = 36;
+            this.comboBoxProducts.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 15);
+            this.label4.Location = new System.Drawing.Point(5, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 19);
             this.label4.TabIndex = 35;
@@ -75,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 108);
+            this.label3.Location = new System.Drawing.Point(5, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 43;
@@ -83,63 +86,91 @@
             // 
             // textBoxProductQuantity
             // 
-            this.textBoxProductQuantity.Location = new System.Drawing.Point(129, 76);
+            this.textBoxProductQuantity.Location = new System.Drawing.Point(129, 78);
             this.textBoxProductQuantity.Multiline = true;
             this.textBoxProductQuantity.Name = "textBoxProductQuantity";
             this.textBoxProductQuantity.Size = new System.Drawing.Size(217, 27);
-            this.textBoxProductQuantity.TabIndex = 39;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 19);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Product Status:";
+            this.textBoxProductQuantity.TabIndex = 2;
             // 
             // dateTimePickerDateExpiry
             // 
             this.dateTimePickerDateExpiry.Font = new System.Drawing.Font("Tw Cen MT", 9F);
-            this.dateTimePickerDateExpiry.Location = new System.Drawing.Point(129, 108);
+            this.dateTimePickerDateExpiry.Location = new System.Drawing.Point(129, 144);
             this.dateTimePickerDateExpiry.Name = "dateTimePickerDateExpiry";
             this.dateTimePickerDateExpiry.Size = new System.Drawing.Size(217, 21);
-            this.dateTimePickerDateExpiry.TabIndex = 44;
-            // 
-            // comboBoxProductStatus
-            // 
-            this.comboBoxProductStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxProductStatus.FormattingEnabled = true;
-            this.comboBoxProductStatus.Items.AddRange(new object[] {
-            "Normal",
-            "Returned",
-            "Damaged",
-            "Expired"});
-            this.comboBoxProductStatus.Location = new System.Drawing.Point(129, 43);
-            this.comboBoxProductStatus.Name = "comboBoxProductStatus";
-            this.comboBoxProductStatus.Size = new System.Drawing.Size(217, 27);
-            this.comboBoxProductStatus.TabIndex = 45;
+            this.dateTimePickerDateExpiry.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 79);
+            this.label1.Location = new System.Drawing.Point(5, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 19);
             this.label1.TabIndex = 46;
             this.label1.Text = "Product Quantity:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 19);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Brand Name:";
+            // 
+            // textBoxNameBrand
+            // 
+            this.textBoxNameBrand.Location = new System.Drawing.Point(129, 45);
+            this.textBoxNameBrand.Multiline = true;
+            this.textBoxNameBrand.Name = "textBoxNameBrand";
+            this.textBoxNameBrand.Size = new System.Drawing.Size(217, 27);
+            this.textBoxNameBrand.TabIndex = 1;
+            // 
+            // comboBoxDoseType
+            // 
+            this.comboBoxDoseType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDoseType.FormattingEnabled = true;
+            this.comboBoxDoseType.Items.AddRange(new object[] {
+            "mg",
+            "mL",
+            "g",
+            "L"});
+            this.comboBoxDoseType.Location = new System.Drawing.Point(284, 111);
+            this.comboBoxDoseType.Name = "comboBoxDoseType";
+            this.comboBoxDoseType.Size = new System.Drawing.Size(62, 27);
+            this.comboBoxDoseType.TabIndex = 4;
+            // 
+            // textBoxProductDose
+            // 
+            this.textBoxProductDose.Location = new System.Drawing.Point(142, 111);
+            this.textBoxProductDose.Multiline = true;
+            this.textBoxProductDose.Name = "textBoxProductDose";
+            this.textBoxProductDose.Size = new System.Drawing.Size(136, 27);
+            this.textBoxProductDose.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 19);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Dosage Remaining:";
+            // 
             // formTransactionNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 183);
+            this.ClientSize = new System.Drawing.Size(358, 218);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBoxDoseType);
+            this.Controls.Add(this.textBoxProductDose);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxNameBrand);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxProductStatus);
             this.Controls.Add(this.dateTimePickerDateExpiry);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxProductQuantity);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonInventoryEncode);
             this.Controls.Add(this.comboBoxProducts);
             this.Controls.Add(this.label4);
@@ -164,9 +195,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxProductQuantity;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateExpiry;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox comboBoxProductStatus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxNameBrand;
+        private System.Windows.Forms.ComboBox comboBoxDoseType;
+        private System.Windows.Forms.TextBox textBoxProductDose;
+        private System.Windows.Forms.Label label5;
     }
 }

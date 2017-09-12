@@ -14,7 +14,6 @@ namespace DavaoChestCenter
     public partial class formTransactionNew : Form
     {
         Dictionary<int, string> products = new Dictionary<int, string>();
-        bool galingsaotherform = false;
         public formStockIn referenceToMain { get; set; }
 
         public formTransactionNew()
@@ -30,7 +29,6 @@ namespace DavaoChestCenter
 
             comboBoxProducts.Text = x;
             textBoxProductQuantity.Text = y.ToString();
-            galingsaotherform = true;
         }
         
         private void gatherProducts()
@@ -68,33 +66,23 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO transactions VALUES(null, @product_id, @quantity, @status, @expiry_date, 'No')", con))
+
+                for (int i = 0; i < int.Parse(textBoxProductQuantity.Text); i++)
                 {
-                    com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
-                    com.Parameters.AddWithValue("@status", comboBoxProductStatus.Text);
-                    com.Parameters.AddWithValue("@quantity", textBoxProductQuantity.Text);
-                    com.Parameters.AddWithValue("@expiry_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
-
-                    DialogResult r = MessageBox.Show("Encode transaction?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                    if (r == DialogResult.OK)
+                    using (var com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @brand_name, @dosage_remaining, @expiration_date)", con))
                     {
+                        com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
+                        com.Parameters.AddWithValue("@brand_name", textBoxNameBrand.Text);
+                        com.Parameters.AddWithValue("@dosage_remaining", int.Parse(textBoxProductDose.Text) + "/" + comboBoxDoseType.Text);
+                        com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
+                        
                         com.ExecuteNonQuery();
+
                         if (!(referenceToMain == null))
                         {
                             referenceToMain.refreshTable();
                         }
-
-                        if (galingsaotherform)
-                        {
-                            formInventoryNew inventory = new formInventoryNew();
-                            inventory.ShowDialog();
-                            referenceToMain.refreshTable();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cancelled");
+                        
                     }
                 }
                 con.Close();

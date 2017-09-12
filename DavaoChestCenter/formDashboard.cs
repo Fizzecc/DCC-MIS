@@ -17,7 +17,7 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
 
-            refreshTable();
+            //refreshTable();
 
             showSchedule();
         }

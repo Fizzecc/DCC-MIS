@@ -46,7 +46,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM users WHERE id != " + id, con))
+                using (var com = new MySqlCommand("SELECT * FROM staff WHERE id != " + id, con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {

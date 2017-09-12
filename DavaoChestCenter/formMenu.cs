@@ -29,7 +29,7 @@ namespace DavaoChestCenter
             id = x;
             name = y;
 
-            autoExpire();
+            //autoExpire();
         }
 
         public void autoExpire()
