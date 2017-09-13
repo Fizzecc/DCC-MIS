@@ -214,7 +214,7 @@ namespace DavaoChestCenter
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form test = new Testing1();
+            Form test = new formRegistration();
             test.Show();
         }
     }

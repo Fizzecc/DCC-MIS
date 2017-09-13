@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace DavaoChestCenter
 {
-    public partial class Testing1 : Form
+    public partial class formRegistration : Form
     {
-        public Testing1()
+        public formRegistration()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace DavaoChestCenter
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            using (var con = new MySqlConnection(conClass.connectionString))
+            /*using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
                 using (var com = new MySqlCommand("SELECT * FROM users", con))
@@ -41,12 +41,12 @@ namespace DavaoChestCenter
                     }
                 }
                 con.Close();
-            }
+            }*/
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtfname.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+            /*txtfname.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             txtmname.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
             txtlname.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
             txtUser.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
@@ -54,6 +54,13 @@ namespace DavaoChestCenter
             txtBirth.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
             txtsex.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
             txtType.Text = dataGridView1.Rows[e.RowIndex].Cells[8].FormattedValue.ToString();
+            */
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "hey";
+            txtName2.Text = "baby";
         }
     }
 }

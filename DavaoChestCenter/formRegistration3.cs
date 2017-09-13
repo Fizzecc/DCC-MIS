@@ -28,12 +28,10 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_name, @patient_age, @patient_gender, @patient_status, @occupation1, @contact_num1, @appointmentDate, @refPhys, @contPerson, @cp_rel, @cp_addr, @treatmentPartner, @weight, @pulmonary, @occupation2, @pharmacist, @civil_status, @philHealth_member, @contact_num2, @extra_pulmonary, @diabetic, @smoker, @num_months1, @smoke_date, @smoke_start, @smoke_stopped, @prev_treatment, @num_months2, @treat_date, @treat_medicine, @AB_treatment, @alcoholic_drinker, @alcohol_start, @alcohol_stop, @lab_result, @sputum_result, @chest_date)", con))
+                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_name, @patient_age, @patient_gender, @patient_status, @occupation1, @contact_num1, @appointmentDate, @refPhys, @contPerson, @cp_rel, @cp_addr, @treatmentPartner, @weight, @pulmonary, @occupation2, @pharmacist, @civil_status, @philHealth_member, @contact_num2, @extra_pulmonary, @diabetic, @smoker, @num_months1, @smoke_start, @smoke_stopped, @prev_treatment, @num_months2, @treat_date, @treat_medicine, @AB_treatment, @alcoholic_drinker, @alcohol_start, @alcohol_stop, @lab_result, @sputum_result, @chest_date)", con))
                 {
                     com.Parameters.AddWithValue("@patient_name", txtName.Text);
                     com.Parameters.AddWithValue("@patient_age", txtAge.Text);
-                    com.Parameters.AddWithValue("@patient_gender", txtGender.Text);
-                    com.Parameters.AddWithValue("@patient_status", txtStatus.Text);
                     com.Parameters.AddWithValue("@occupation1", txtOccupation.Text);
                     com.Parameters.AddWithValue("@contact_num1", txtContact.Text);
                     com.Parameters.AddWithValue("@appointmentDate", dateTimePickerDateApp.Value.ToString("yyyy-MM-dd"));
@@ -43,17 +41,16 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@cp_addr", txtCPaddress.Text);
                     com.Parameters.AddWithValue("@treatmentPartner", txtTpartner.Text);
                     com.Parameters.AddWithValue("@weight", txtWeight.Text);
-                    com.Parameters.AddWithValue("@pulmonary", txtPulmonary.Text);
+                    com.Parameters.AddWithValue("@pulmonary", txtPulm.Text);
                     com.Parameters.AddWithValue("@occupation2", txtOccupation2.Text);
                     com.Parameters.AddWithValue("@pharmacist", txtPharmacist.Text);
-                    com.Parameters.AddWithValue("@civil_status", txtCivStatus.Text);
-                    com.Parameters.AddWithValue("@philHealth_member", txtPhilHealth.Text);
-                    com.Parameters.AddWithValue("@contact_num2", txtContnum.Text);
+                    com.Parameters.AddWithValue("@civil_status", txtCivStat.Text);
+                    com.Parameters.AddWithValue("@philHealth_member", txtCivStat.Text);
+                    com.Parameters.AddWithValue("@contact_num2", txtContact2.Text);
                     com.Parameters.AddWithValue("@extra_pulmonary", txtPulm.Text);
                     com.Parameters.AddWithValue("@diabetic", txtDiabetic.Text);
                     com.Parameters.AddWithValue("@smoker", txtSmoker.Text);
-                    com.Parameters.AddWithValue("@num_months1", txtSMKmonths.Text);
-                    com.Parameters.AddWithValue("@smoke_date", datePickerSMKdate.Value.ToString("yyyy-MM-dd"));
+                    com.Parameters.AddWithValue("@num_months1", txtNum_months.Text);
                     com.Parameters.AddWithValue("@smoke_start", dateTimeSMKstart.Value.ToString("yyyy-MM-dd"));
                     com.Parameters.AddWithValue("@smoke_stopped", dateTimeSMKstop.Value.ToString("yyyy-MM-dd"));
                     com.Parameters.AddWithValue("@prev_treatment", txtPrevTreat.Text);
@@ -67,12 +64,32 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@lab_result", txtLabResult.Text);
                     com.Parameters.AddWithValue("@sputum_result", txtSputum.Text);
                     com.Parameters.AddWithValue("@chest_date", dateTimeChestDate.Value.ToString("yyyy-MM-dd"));
+                    
+                   if (radButtonMale.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_gender", radButtonMale.Text);
+                    }
+
+                   if (radButtonFemale.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_gender", radButtonFemale.Text);
+                    }
+
+                   if (radButtonSingle.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_status", radButtonSingle.Text);
+                    }
+
+                   if (radButtonMarried.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_status", radButtonMarried.Text);
+                    }
 
                     DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     if (r == DialogResult.OK)
                     {
-                        com.ExecuteNonQuery();
+                       com.ExecuteNonQuery();
                     }
                     else
                     {
@@ -98,8 +115,6 @@ namespace DavaoChestCenter
         {
             txtName.Text = "Crumb";
             txtAge.Text = "12";
-            txtGender.Text = "Male";
-            txtStatus.Text = "Single";
             txtOccupation.Text = "Davao";
             txtContact.Text = "09772";
             txtPhys.Text = "Mr. Todd";
@@ -108,16 +123,16 @@ namespace DavaoChestCenter
             txtCPaddress.Text = "House";
             txtTpartner.Text = "Bro";
             txtWeight.Text = "65";
-            txtPulmonary.Text = "Pimple";
+            txtPulm.Text = "Pimple";
             txtOccupation2.Text = "Home";
             txtPharmacist.Text = "Here";
-            txtCivStatus.Text = "Single";
+            txtCivStat.Text = "Single";
             txtPhilHealth.Text = "Yes";
-            txtContnum.Text = "5552471";
+            txtContact2.Text = "5552471";
             txtPulm.Text = "Dimple";
             txtDiabetic.Text = "Yes";
             txtSmoker.Text = "No";
-            txtSMKmonths.Text = "5";
+            txtNum_months.Text = "5";
             txtPrevTreat.Text = "6";
             txtPrevMonths.Text = "3";
             txtTreatMeds.Text = "Paracetamol";
@@ -133,8 +148,6 @@ namespace DavaoChestCenter
         {
             txtName.Text = "";
             txtAge.Text = "";
-            txtGender.Text = "";
-            txtStatus.Text = "";
             txtOccupation.Text = "";
             txtContact.Text = "";
             txtPhys.Text = "";
@@ -143,16 +156,16 @@ namespace DavaoChestCenter
             txtCPaddress.Text = "";
             txtTpartner.Text = "";
             txtWeight.Text = "";
-            txtPulmonary.Text = "";
+            txtPulm.Text = "";
             txtOccupation2.Text = "";
             txtPharmacist.Text = "";
-            txtCivStatus.Text = "";
+            txtCivStat.Text = "";
             txtPhilHealth.Text = "";
-            txtContnum.Text = "";
+            txtContact2.Text = "";
             txtPulm.Text = "";
             txtDiabetic.Text = "";
             txtSmoker.Text = "";
-            txtSMKmonths.Text = "";
+            txtNum_months.Text = "";
             txtPrevTreat.Text = "";
             txtPrevMonths.Text = "";
             txtTreatMeds.Text = "";
@@ -160,6 +173,16 @@ namespace DavaoChestCenter
             txtAlcoholic.Text = "";
             txtLabResult.Text = "";
             txtSputum.Text = "";
+        }
+
+        private void dateTimeChestDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
