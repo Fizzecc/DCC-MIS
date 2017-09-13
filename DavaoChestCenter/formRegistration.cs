@@ -59,8 +59,77 @@ namespace DavaoChestCenter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtName.Text = "hey";
-            txtName2.Text = "baby";
+            
+        }
+
+        private void formRegistration_Load(object sender, EventArgs e)
+        {
+            txtTimesSmoke.Enabled = false;
+            dateTimeSMKstart.Enabled = false;
+            dateTimeSMKstop.Enabled = false;
+            dateTimeTBTreat.Enabled = false;
+            checkBoxAB.Enabled = false;
+            checkBoxTB.Enabled = false;
+            txtMedicines.Enabled = false;
+            dateTimeDRNKstart.Enabled = false;
+            dateTimeDRNKstop.Enabled = false;
+            txtMonths.Enabled = false;
+        }
+
+        private void radButtonSmokeYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radButtonSmokeYes.Checked)
+            {
+                txtTimesSmoke.Enabled = true;
+                dateTimeSMKstart.Enabled = true;
+                dateTimeSMKstop.Enabled = true;
+            }
+
+            if (radButtonSmokeNo.Checked)
+            {
+                txtTimesSmoke.Enabled = false;
+                dateTimeSMKstart.Enabled = false;
+                dateTimeSMKstop.Enabled = false;
+            }
+        }
+
+        private void radButtonSmokeNo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radButtonTBYes.Checked)
+            {
+                dateTimeTBTreat.Enabled = true;
+                checkBoxAB.Enabled = true;
+                checkBoxTB.Enabled = true;
+                txtMonths.Enabled = true;
+            }
+
+            if (radButtonTBNo.Checked)
+            {
+                dateTimeTBTreat.Enabled = false;
+                checkBoxAB.Enabled = false;
+                checkBoxTB.Enabled = false;
+                txtMonths.Enabled = false;
+            }
+        }
+
+        private void radButtonAlcoholicYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radButtonAlcoholicYes.Checked)
+            {
+                dateTimeDRNKstart.Enabled = true;
+                dateTimeDRNKstop.Enabled = true;
+            }
+
+            if (radButtonAlcohlicNo.Checked)
+            {
+                dateTimeDRNKstart.Enabled = false;
+                dateTimeDRNKstop.Enabled = false;
+            }
         }
     }
 }
