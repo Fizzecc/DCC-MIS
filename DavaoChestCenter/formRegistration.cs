@@ -59,7 +59,154 @@ namespace DavaoChestCenter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @blank)", con))
+                {
+                    com.Parameters.AddWithValue("@patient_Lname", txtFname.Text);
+                    com.Parameters.AddWithValue("@patient_Fname", txtFname.Text);
+                    com.Parameters.AddWithValue("@patient_Mname", txtMname.Text);
+                    com.Parameters.AddWithValue("@appointmentDate", dateTimeAppDate.Value.ToString("yyyy-MM-dd"));
+                    com.Parameters.AddWithValue("@age", txtAge.Text);
+                    com.Parameters.AddWithValue("@address", txtAddress.Text);
+                    com.Parameters.AddWithValue("@contact_num1", txtContact.Text);
+                    com.Parameters.AddWithValue("@ref_Phys", txtPhys.Text);
+                    com.Parameters.AddWithValue("@occupation", txtOccupation.Text);
+                    com.Parameters.AddWithValue("@CPLname", txtCPLname.Text);
+                    com.Parameters.AddWithValue("@CPFname", txtCPFname.Text);
+                    com.Parameters.AddWithValue("@CPMname", txtCPMname.Text);
+                    com.Parameters.AddWithValue("@CPrelation", txtCPrel.Text);
+                    com.Parameters.AddWithValue("@CPcontact", txtCPContact.Text);
+                    com.Parameters.AddWithValue("@CPaddress", txtCPAddress.Text);
+                    com.Parameters.AddWithValue("@treatment_partner", txtTreatment.Text);
+                    com.Parameters.AddWithValue("@weight", txtWeight.Text);
+                    com.Parameters.AddWithValue("@contact_num2", txtTcontact.Text);
+                    com.Parameters.AddWithValue("@pulmonaries", txtPulm.Text);
+                    com.Parameters.AddWithValue("@extra_pulmonaries", txtEpulm.Text);
+
+                    //alcohol
+                    if (radButtonAlcoholicYes.Checked)
+                    {
+                        com.Parameters.AddWithValue("@alcoholic", radButtonAlcoholicYes.Text);
+                        com.Parameters.AddWithValue("@alcoholic_start", dateTimeDRNKstart.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@alcoholic_stop", dateTimeDRNKstop.Value.ToString("yyyy-MM-dd"));
+                    }
+
+                    if (radButtonAlcohlicNo.Checked)
+                    {
+                        com.Parameters.AddWithValue("@alcoholic", radButtonAlcohlicNo.Text);
+                        com.Parameters.AddWithValue("@alcoholic_start", "");
+                        com.Parameters.AddWithValue("@alcoholic_stop", "");
+                    }
+
+                    //TB
+                    if (radButtonTBYes.Checked)
+                    {
+                        com.Parameters.AddWithValue("@prev_tb", radButtonTBYes.Text);
+                        com.Parameters.AddWithValue("@tb_months", txtMonths.Text);
+                        com.Parameters.AddWithValue("@tb_date", dateTimeTBTreat.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@medicines", txtMedicines.Text);
+                        if (checkBoxAB.Checked)
+                        {
+                            com.Parameters.AddWithValue("@medicine_under", checkBoxAB.Text);
+                        }
+                        if (checkBoxTB.Checked)
+                        {
+                            com.Parameters.AddWithValue("@medicine_under", checkBoxTB.Text);
+                        }
+                    }
+
+                    if (radButtonTBNo.Checked)
+                    {
+                        com.Parameters.AddWithValue("@prev_tb", radButtonTBNo.Text);
+                        com.Parameters.AddWithValue("@tb_months", "");
+                        com.Parameters.AddWithValue("@tb_date", "");
+                        com.Parameters.AddWithValue("@medicines", "");
+                        com.Parameters.AddWithValue("@medicine_under", "");
+                    }
+
+                    //Smoke
+
+                    if (radButtonSmokeYes.Checked)
+                    {
+                        com.Parameters.AddWithValue("@smoke", radButtonSmokeYes.Text);
+                        com.Parameters.AddWithValue("@smoke_day", txtTimesSmoke.Text);
+                        com.Parameters.AddWithValue("@start_smoking", dateTimeSMKstart.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@stop_smoking", dateTimeSMKstop.Value.ToString("yyyy-MM-dd"));
+                    }
+
+                    if (radButtonSmokeNo.Checked)
+                    {
+                        com.Parameters.AddWithValue("@smoke", "radButtonSmokeNo.Text");
+                        com.Parameters.AddWithValue("@smoke_day", "");
+                        com.Parameters.AddWithValue("@start_smoking", "");
+                        com.Parameters.AddWithValue("@stop_smoking", "");
+                    }
+
+                    //Diabetic
+
+                    if (radButtonDiabYes.Checked)
+                    {
+                        com.Parameters.AddWithValue("@diabetic", radButtonDiabYes.Text);
+                    }
+
+                    if (radButtonDiabNo.Checked)
+                    {
+                        com.Parameters.AddWithValue("@diabetic", radButtonDiabNo.Text);
+                    }
+
+                    //Hyper
+
+                    if (radButtonHyperYes.Checked)
+                    {
+                        com.Parameters.AddWithValue("@hypertensive", radButtonHyperYes.Text);
+                    }
+
+                    if (radButtonHyperNo.Checked)
+                    {
+                        com.Parameters.AddWithValue("@hypertensive", radButtonHyperNo.Text);
+                    }
+
+                    //Gender
+
+                    if (radButtonMale.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_gender", radButtonMale.Text);
+                    }
+
+                    if (radButtonFemale.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_gender", radButtonFemale.Text);
+                    }
+
+                    //Status
+
+                    if (radButtonSingle.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_status", radButtonSingle.Text);
+                    }
+
+                    if (radButtonMarried.Checked)
+                    {
+                        com.Parameters.AddWithValue("@patient_status", radButtonMarried.Text);
+                    }
+
+                    com.Parameters.AddWithValue("@blank", "");
+
+                    DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                    if (r == DialogResult.OK)
+                    {
+                        com.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled");
+                    }
+                }
+                con.Close();
+            }
         }
 
         private void formRegistration_Load(object sender, EventArgs e)
@@ -130,6 +277,29 @@ namespace DavaoChestCenter
                 dateTimeDRNKstart.Enabled = false;
                 dateTimeDRNKstop.Enabled = false;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtLname.Text = "Crumb";
+            txtFname.Text = "Christian";
+            txtMname.Text = "Emmanuel";
+            txtAge.Text = "19";
+            txtAddress.Text = "Davao";
+            txtContact.Text = "5552471";
+            txtPhys.Text = "What";
+            txtOccupation.Text = "Programmer";
+            txtCPLname.Text = "Cruise";
+            txtCPFname.Text = "Thomas";
+            txtCPMname.Text = "Daniel";
+            txtCPrel.Text = "Father";
+            txtCPContact.Text = "1337";
+            txtCPAddress.Text = "USSR Soviet Russia";
+            txtTreatment.Text = "Dr. Effren Salvado";
+            txtWeight.Text = "65";
+            txtTcontact.Text = "2673";
+            txtPulm.Text = "Cough";
+            txtEpulm.Text = "Pimples";
         }
     }
 }

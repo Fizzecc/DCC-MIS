@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxServices = new System.Windows.Forms.ComboBox();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
@@ -159,33 +158,26 @@
             this.buttonDone.UseVisualStyleBackColor = false;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(558, 659);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 39);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Add Appointments";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 659);
+            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(535, 652);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 53);
+            this.button2.Size = new System.Drawing.Size(174, 53);
             this.button2.TabIndex = 31;
-            this.button2.Text = "Experimental \r\n(don\'t open)";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Create Appointment";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // formAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1225, 741);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.comboBoxServices);
             this.Controls.Add(this.label2);
@@ -220,7 +212,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxServices;
         private System.Windows.Forms.Button buttonDone;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
 }

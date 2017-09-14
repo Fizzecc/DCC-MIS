@@ -33,7 +33,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimeAppDate = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +51,7 @@
             this.txtMname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtOccupation = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -131,7 +131,8 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtPulm = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOccupation = new System.Windows.Forms.TextBox();
+            this.btnFill = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -215,23 +216,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Form";
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(491, 484);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSubmit.Location = new System.Drawing.Point(491, 484);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(103, 37);
+            this.btnSubmit.TabIndex = 2;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtOccupation);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.txtAge);
             this.groupBox1.Controls.Add(this.label34);
@@ -239,7 +240,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtContact);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtOccupation);
+            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.txtMname);
@@ -418,14 +419,14 @@
             this.label8.TabIndex = 123;
             this.label8.Text = "Address:";
             // 
-            // txtOccupation
+            // txtAddress
             // 
-            this.txtOccupation.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOccupation.Location = new System.Drawing.Point(22, 126);
-            this.txtOccupation.Multiline = true;
-            this.txtOccupation.Name = "txtOccupation";
-            this.txtOccupation.Size = new System.Drawing.Size(232, 61);
-            this.txtOccupation.TabIndex = 124;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(22, 126);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(232, 61);
+            this.txtAddress.TabIndex = 124;
             // 
             // label9
             // 
@@ -1254,20 +1255,35 @@
             this.label35.TabIndex = 131;
             this.label35.Text = "Occupation:";
             // 
-            // textBox1
+            // txtOccupation
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(421, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 22);
-            this.textBox1.TabIndex = 132;
+            this.txtOccupation.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOccupation.Location = new System.Drawing.Point(421, 127);
+            this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.Size = new System.Drawing.Size(117, 22);
+            this.txtOccupation.TabIndex = 132;
+            // 
+            // btnFill
+            // 
+            this.btnFill.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnFill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFill.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFill.Location = new System.Drawing.Point(355, 484);
+            this.btnFill.Name = "btnFill";
+            this.btnFill.Size = new System.Drawing.Size(130, 37);
+            this.btnFill.TabIndex = 3;
+            this.btnFill.Text = "Auto-Fill";
+            this.btnFill.UseVisualStyleBackColor = false;
+            this.btnFill.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // formRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 526);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFill);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "formRegistration";
@@ -1311,7 +1327,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.DateTimePicker dateTimeAppDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1328,7 +1344,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtOccupation;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPhys;
@@ -1408,7 +1424,8 @@
         private System.Windows.Forms.RadioButton radButtonDiabYes;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtPulm;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOccupation;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button btnFill;
     }
 }
