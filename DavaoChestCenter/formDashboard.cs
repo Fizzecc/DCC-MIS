@@ -17,7 +17,7 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
 
-            //refreshTable();
+            refreshTable();
 
             showSchedule();
         }
@@ -26,16 +26,16 @@ namespace DavaoChestCenter
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
-                con.Open();
+                con.Open();/*
                 using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewSchedule.DataSource = dt;
-                }
+                }*/
 
-                using (var com = new MySqlCommand("SELECT item_name, item_type, quantity, status, expiry_date FROM products INNER JOIN inventory ON products.prod_id = inventory.product_id inner JOIN transactions ON transactions.product_id = products.prod_id GROUP BY transactions.id ORDER BY expiry_date", con))
+                using (var com = new MySqlCommand("SELECT generic_name, brand_name, dosage_remaining, expiration_date FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -71,6 +71,24 @@ namespace DavaoChestCenter
                     label.Size = new Size(600, 20);
 
                     flowLayoutPanelWorkers.Controls.Add(label);
+                }
+            }
+        }
+
+        private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
+        {
+            string commandstring = "";
+            if (checkBoxCascade.Checked) commandstring = "SELECT generic_name, brand_name, dose, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id GROUP BY brand_name HAVING count > 1";
+            else commandstring = "SELECT generic_name, brand_name, dosage_remaining, expiration_date FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                using (var com = new MySqlCommand(commandstring, con))
+                {
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
                 }
             }
         }

@@ -23,80 +23,15 @@ namespace DavaoChestCenter
 
         public void refreshTable()
         {
-            int idProductMinimumAchievedCount = 0;
-
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT prod_id FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE transactions.quantity >= products.minrequired AND transactions.status = 'Normal'", con))
+                using (var com = new MySqlCommand("SELECT generic_name, dose, COUNT(*) count, minimum_quantity FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY generic_name HAVING count < minimum_quantity", con))
                 {
-                    using (var rdr = com.ExecuteReader())
-                    {
-                        while (rdr.HasRows)
-                        {
-                            if (rdr.Read())
-                            {
-                                idProductMinimumAchievedCount++;
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-
-                    int[] idProductMinimumAchieved = new int[idProductMinimumAchievedCount];
-
-                    using (var rdr2 = com.ExecuteReader())
-                    {
-                        int count = 0;
-
-                        while (rdr2.HasRows)
-                        {
-                            if (rdr2.Read())
-                            {
-                                idProductMinimumAchieved[count] = rdr2.GetInt32(0);
-
-                                count++;
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-
-                    if (idProductMinimumAchievedCount == 0)
-                    {
-                        string command = "SELECT item_name, item_type, minrequired FROM products";
-
-                        using (var com2 = new MySqlCommand(command, con))
-                        {
-                            var adp = new MySqlDataAdapter(com2);
-                            var dt = new DataTable();
-                            adp.Fill(dt);
-                            dataGridViewInventory.DataSource = dt;
-                        }
-                    }
-                    else
-                    {
-                        string command = "SELECT item_name, item_type, minrequired FROM products WHERE";
-
-                        for (int i = 0; i < idProductMinimumAchievedCount; i++)
-                        {
-                            command += " prod_id != '" + idProductMinimumAchieved[i] + "' AND ";
-                        }
-
-                        command = command.TrimEnd(' '); command = command.TrimEnd('D'); command = command.TrimEnd('N'); command = command.TrimEnd('A');
-
-                        using (var com2 = new MySqlCommand(command, con))
-                        {
-                            var adp = new MySqlDataAdapter(com2);
-                            var dt = new DataTable();
-                            adp.Fill(dt);
-                            dataGridViewInventory.DataSource = dt;
-                        }
-                    }
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
                 }
                 con.Close();
             }
@@ -104,7 +39,7 @@ namespace DavaoChestCenter
 
         private void dataGridViewRequired_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formTransactionNew transaction = new formTransactionNew(dataGridViewInventory.Rows[e.RowIndex].Cells["item_name"].Value.ToString(), int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["minrequired"].Value.ToString()));
+            formTransactionNew transaction = new formTransactionNew(dataGridViewInventory.Rows[e.RowIndex].Cells["generic_name"].Value.ToString(), dataGridViewInventory.Rows[e.RowIndex].Cells["dose"].Value.ToString(), int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["minimum_quantity"].Value.ToString()));
             transaction.referenceToMain = this;
             transaction.ShowDialog();
         }

@@ -13,19 +13,10 @@ namespace DavaoChestCenter
 {
     public partial class formProfileNew : Form
     {
+        public formProfile referenceToMain { get; set; }
         public formProfileNew()
         {
             InitializeComponent();
-        }
-
-        public formProfileNew(Boolean x)
-        {
-            InitializeComponent();
-
-            if (x)
-            {
-                this.tab.SelectedTab = tabPatient;
-            }
         }
 
         private Boolean validate()
@@ -43,11 +34,6 @@ namespace DavaoChestCenter
             else if (textBoxNameLast.Text.Equals(""))
             {
                 MessageBox.Show("Last name is not valid");
-                return false;
-            }
-            else if (comboBoxSex.Text.Equals(""))
-            {
-                MessageBox.Show("Sex is not valid");
                 return false;
             }
             else if (textBoxUsername.Text.Equals(""))
@@ -73,22 +59,20 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using(var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
+                using(var com = new MySqlCommand("INSERT INTO staff VALUES(null, @firstname, @middlename, @lastname, @username, @password)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
                     com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
-                    com.Parameters.AddWithValue("@birthdate", dateTimePickerDateBirth.Value.ToString("yyyy-MM-dd"));
-                    com.Parameters.AddWithValue("@sex", comboBoxSex.Text);
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
-                    com.Parameters.AddWithValue("@type", "Staff");
 
                     DialogResult r = MessageBox.Show("Create new staff", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-                    if (r == DialogResult.OK)
+                    if (r == DialogResult.OK && validate())
                     {
                         com.ExecuteNonQuery();
+                        referenceToMain.refreshTables();
                     }
                     else
                     {
@@ -98,7 +82,7 @@ namespace DavaoChestCenter
 
                 int staffid = -1;
 
-                using(var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
+                using(var com = new MySqlCommand("SELECT id FROM staff WHERE username = @username AND password = @password", con))
                 {
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
@@ -123,37 +107,37 @@ namespace DavaoChestCenter
 
                     com.Parameters.AddWithValue("@staffid", staffid);
 
-                    if (checkBoxMondayStaff.Checked)
+                    if (checkBoxMonday.Checked)
                     {
                         daysWorking += "Monday/";
                     }
 
-                    if (checkBoxTuesdayStaff.Checked)
+                    if (checkBoxTuesday.Checked)
                     {
                         daysWorking += "Tuesday/";
                     }
 
-                    if (checkBoxWednesdayStaff.Checked)
+                    if (checkBoxWednesday.Checked)
                     {
                         daysWorking += "Wednesday/";
                     }
 
-                    if (checkBoxThursdayStaff.Checked)
+                    if (checkBoxThursday.Checked)
                     {
                         daysWorking += "Thursday/";
                     }
 
-                    if (checkBoxFridayStaff.Checked)
+                    if (checkBoxFriday.Checked)
                     {
                         daysWorking += "Friday/";
                     }
 
-                    if (checkBoxSaturdayStaff.Checked)
+                    if (checkBoxSaturday.Checked)
                     {
                         daysWorking += "Saturday/";
                     }
 
-                    if (checkBoxSundayStaff.Checked)
+                    if (checkBoxSunday.Checked)
                     {
                         daysWorking += "Sunday/";
                     }
@@ -161,8 +145,8 @@ namespace DavaoChestCenter
                     daysWorking = daysWorking.TrimEnd('/');
 
                     com.Parameters.AddWithValue("@schedule_days", daysWorking);
-                    com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStartStaff.Value.ToString("HH:mm:ss"));
-                    com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEndStaff.Value.ToString("HH:mm:ss"));
+                    com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStart.Value.ToString("HH:mm:ss"));
+                    com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEnd.Value.ToString("HH:mm:ss"));
 
                     com.ExecuteNonQuery();
                 }
@@ -184,159 +168,6 @@ namespace DavaoChestCenter
                         {
                             MessageBox.Show("no schedule for " + staffid, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-                    }
-                }
-                con.Close();
-            }
-        }
-
-        private void buttonCreateDoctor_Click(object sender, EventArgs e)
-        {
-            using (var con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
-                {
-                    com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
-                    com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
-                    com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
-                    com.Parameters.AddWithValue("@birthdate", dateTimePickerDateBirth.Value.ToString("yyyy-MM-dd"));
-                    com.Parameters.AddWithValue("@sex", comboBoxSex.Text);
-                    com.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                    com.Parameters.AddWithValue("@password", textBoxPassword.Text);
-                    com.Parameters.AddWithValue("@type", "Doctor");
-
-                    DialogResult r = MessageBox.Show("Create new staff", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                    if (r == DialogResult.OK)
-                    {
-                        com.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cancelled");
-                    }
-                }
-
-                int staffid = -1;
-
-                using (var com = new MySqlCommand("SELECT id FROM users WHERE username = @username AND password = @password", con))
-                {
-                    com.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                    com.Parameters.AddWithValue("@password", textBoxPassword.Text);
-
-                    using (MySqlDataReader rdr = com.ExecuteReader())
-                    {
-                        if (rdr.HasRows)
-                        {
-                            rdr.Read();
-                            staffid = rdr.GetInt32(0);
-                        }
-                        else
-                        {
-                            MessageBox.Show("The staff creation failed", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        }
-                    }
-                }
-
-                using (var com = new MySqlCommand("INSERT INTO schedules VALUES(null, @staffid, @schedule_days, @working_time_start, @working_time_end)", con))
-                {
-                    string daysWorking = "";
-
-                    com.Parameters.AddWithValue("@staffid", staffid);
-
-                    if (checkBoxMondayDoctor.Checked)
-                    {
-                        daysWorking += "Monday/";
-                    }
-
-                    if (checkBoxTuesdayDoctor.Checked)
-                    {
-                        daysWorking += "Tuesday/";
-                    }
-
-                    if (checkBoxWednesdayDoctor.Checked)
-                    {
-                        daysWorking += "Wednesday/";
-                    }
-
-                    if (checkBoxThursdayDoctor.Checked)
-                    {
-                        daysWorking += "Thursday/";
-                    }
-
-                    if (checkBoxFridayDoctor.Checked)
-                    {
-                        daysWorking += "Friday/";
-                    }
-
-                    if (checkBoxSaturdayDoctor.Checked)
-                    {
-                        daysWorking += "Saturday/";
-                    }
-
-                    if (checkBoxSundayDoctor.Checked)
-                    {
-                        daysWorking += "Sunday/";
-                    }
-
-                    daysWorking = daysWorking.TrimEnd('/');
-
-                    com.Parameters.AddWithValue("@schedule_days", daysWorking);
-                    com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStartDoctor.Value.ToString("HH:mm:ss"));
-                    com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEndDoctor.Value.ToString("HH:mm:ss"));
-
-                    com.ExecuteNonQuery();
-                }
-
-                int scheduleid = -1;
-
-                using (var com = new MySqlCommand("SELECT schedule_id FROM schedules WHERE staff_id = @staff_id", con))
-                {
-                    com.Parameters.AddWithValue("@staff_id", staffid);
-
-                    using (MySqlDataReader rdr = com.ExecuteReader())
-                    {
-                        if (rdr.HasRows)
-                        {
-                            rdr.Read();
-                            scheduleid = rdr.GetInt32(0);
-                        }
-                        else
-                        {
-                            MessageBox.Show("no schedule for " + staffid, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        }
-                    }
-                }
-                con.Close();
-            }
-        }
-
-        private void buttonCreatePatient_Click(object sender, EventArgs e)
-        {
-            using (var con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (var com = new MySqlCommand("INSERT INTO users VALUES(null, @firstname, @middlename, @lastname, @username, @password, @birthdate, @sex, @type)", con))
-                {
-                    com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
-                    com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
-                    com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
-                    com.Parameters.AddWithValue("@birthdate", dateTimePickerDateBirth.Value.ToString("yyyy-MM-dd"));
-                    com.Parameters.AddWithValue("@sex", comboBoxSex.Text);
-                    com.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                    com.Parameters.AddWithValue("@password", textBoxPassword.Text);
-                    com.Parameters.AddWithValue("@type", "Patient");
-
-                    DialogResult r = MessageBox.Show("Create new patient", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                    if (r == DialogResult.OK)
-                    {
-                        com.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cancelled");
                     }
                 }
                 con.Close();

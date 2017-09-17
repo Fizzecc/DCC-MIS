@@ -33,7 +33,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM appointmentv", con))
+                using (var com = new MySqlCommand("SELECT * FROM appointments", con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {

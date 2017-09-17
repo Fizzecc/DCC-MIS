@@ -68,12 +68,6 @@ namespace DavaoChestCenter
             Dispose();
         }
 
-        private void buttonPatientNew_Click(object sender, EventArgs e)
-        {
-            var patient = new formProfileNew(true);
-            patient.ShowDialog();
-        }
-        
         private void buttonProductNew_Click(object sender, EventArgs e)
         {
             var product = new formProductNew();

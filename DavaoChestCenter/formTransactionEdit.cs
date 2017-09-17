@@ -14,6 +14,7 @@ namespace DavaoChestCenter
     public partial class formTransactionEdit : Form
     {
         int selectedProduct = -1;
+
         public formTransactionEdit(int x, string y)
         {
             InitializeComponent();

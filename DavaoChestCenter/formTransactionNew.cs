@@ -14,6 +14,8 @@ namespace DavaoChestCenter
     public partial class formTransactionNew : Form
     {
         Dictionary<int, string> products = new Dictionary<int, string>();
+
+        public formModule2 referenceToMenu { get; set; }
         public formStockIn referenceToMain { get; set; }
 
         public formTransactionNew()
@@ -22,13 +24,18 @@ namespace DavaoChestCenter
             gatherProducts();
         }
         
-        public formTransactionNew(string x, int y)
+        public formTransactionNew(string x, string y, int z)
         {
             InitializeComponent();
             gatherProducts();
 
-            comboBoxProducts.Text = x;
-            textBoxProductQuantity.Text = y.ToString();
+            string[] split = y.Split('/');
+
+            textBoxProductDose.Text = split[0];
+            comboBoxDoseType.Text = split[1];
+
+            comboBoxProducts.Text = x; comboBoxProducts.Enabled = false;
+            textBoxProductQuantity.Text = z.ToString();
         }
         
         private void gatherProducts()
@@ -69,7 +76,7 @@ namespace DavaoChestCenter
 
                 for (int i = 0; i < int.Parse(textBoxProductQuantity.Text); i++)
                 {
-                    using (var com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @brand_name, @dosage_remaining, @expiration_date)", con))
+                    using (var com = new MySqlCommand("INSERT INTO inventory VALUES(null, @product_id, @brand_name, @dosage_remaining, @expiration_date, 'Normal')", con))
                     {
                         com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
                         com.Parameters.AddWithValue("@brand_name", textBoxNameBrand.Text);
@@ -81,6 +88,11 @@ namespace DavaoChestCenter
                         if (!(referenceToMain == null))
                         {
                             referenceToMain.refreshTable();
+                        }
+
+                        if(!(referenceToMenu == null))
+                        {
+                            referenceToMenu.refreshTable();
                         }
                         
                     }

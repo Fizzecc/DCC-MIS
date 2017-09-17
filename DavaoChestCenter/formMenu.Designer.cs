@@ -39,6 +39,7 @@
             this.buttonModule2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.buttonModule3 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.flowLayoutPanelModule1.SuspendLayout();
@@ -61,6 +62,7 @@
             this.flowLayoutPanelMenu.Controls.Add(this.buttonModule1);
             this.flowLayoutPanelMenu.Controls.Add(this.flowLayoutPanelModule1);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonModule2);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonModule3);
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(0, 59);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
             this.flowLayoutPanelMenu.Size = new System.Drawing.Size(258, 892);
@@ -172,7 +174,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(13, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 56);
+            this.label2.Size = new System.Drawing.Size(233, 38);
             this.label2.TabIndex = 24;
             this.label2.Text = "Davao Chest Center \r\nManagement Information System";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,9 +186,23 @@
             this.panelForm.Size = new System.Drawing.Size(1414, 951);
             this.panelForm.TabIndex = 24;
             // 
+            // buttonModule3
+            // 
+            this.buttonModule3.BackColor = System.Drawing.Color.DimGray;
+            this.buttonModule3.FlatAppearance.BorderSize = 0;
+            this.buttonModule3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModule3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonModule3.Location = new System.Drawing.Point(3, 217);
+            this.buttonModule3.Name = "buttonModule3";
+            this.buttonModule3.Size = new System.Drawing.Size(252, 29);
+            this.buttonModule3.TabIndex = 5;
+            this.buttonModule3.Text = "Staff Attendance";
+            this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonModule3.UseVisualStyleBackColor = false;
+            // 
             // formMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1671, 951);
             this.Controls.Add(this.panelForm);
@@ -219,5 +235,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Button buttonDashboard;
+        private System.Windows.Forms.Button buttonModule3;
     }
 }

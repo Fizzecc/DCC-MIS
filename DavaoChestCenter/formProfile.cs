@@ -27,6 +27,7 @@ namespace DavaoChestCenter
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             var profile = new formProfileNew();
+            profile.referenceToMain = this;
             profile.ShowDialog();
         }
 
@@ -38,10 +39,10 @@ namespace DavaoChestCenter
 
         private void formModule1_Load(object sender, EventArgs e)
         {
-            refreshPatients();
+            refreshTables();
         }
 
-        public void refreshPatients()
+        public void refreshTables()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {

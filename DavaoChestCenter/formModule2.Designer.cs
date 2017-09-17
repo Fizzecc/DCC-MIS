@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewRequired = new System.Windows.Forms.DataGridView();
             this.buttonStockOut = new System.Windows.Forms.Button();
+            this.checkBoxCascade = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequired)).BeginInit();
@@ -189,11 +190,23 @@
             this.buttonStockOut.UseVisualStyleBackColor = false;
             this.buttonStockOut.Click += new System.EventHandler(this.buttonStockOut_Click);
             // 
+            // checkBoxCascade
+            // 
+            this.checkBoxCascade.AutoSize = true;
+            this.checkBoxCascade.Location = new System.Drawing.Point(163, 793);
+            this.checkBoxCascade.Name = "checkBoxCascade";
+            this.checkBoxCascade.Size = new System.Drawing.Size(120, 23);
+            this.checkBoxCascade.TabIndex = 33;
+            this.checkBoxCascade.Text = "Cascade View";
+            this.checkBoxCascade.UseVisualStyleBackColor = true;
+            this.checkBoxCascade.CheckedChanged += new System.EventHandler(this.checkBoxCascade_CheckedChanged);
+            // 
             // formModule2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1414, 951);
+            this.Controls.Add(this.checkBoxCascade);
             this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewRequired);
@@ -233,5 +246,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewRequired;
         private System.Windows.Forms.Button buttonStockOut;
+        private System.Windows.Forms.CheckBox checkBoxCascade;
     }
 }

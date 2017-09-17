@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanelWorkers = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
+            this.checkBoxCascade = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
@@ -68,13 +69,13 @@
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
             this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(688, 346);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(688, 478);
             this.dataGridViewInventory.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 45);
+            this.label3.Location = new System.Drawing.Point(12, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
@@ -84,7 +85,7 @@
             // 
             this.flowLayoutPanelWorkers.Location = new System.Drawing.Point(710, 67);
             this.flowLayoutPanelWorkers.Name = "flowLayoutPanelWorkers";
-            this.flowLayoutPanelWorkers.Size = new System.Drawing.Size(676, 346);
+            this.flowLayoutPanelWorkers.Size = new System.Drawing.Size(676, 478);
             this.flowLayoutPanelWorkers.TabIndex = 5;
             // 
             // dataGridViewSchedule
@@ -100,11 +101,23 @@
             this.dataGridViewSchedule.Size = new System.Drawing.Size(676, 346);
             this.dataGridViewSchedule.TabIndex = 0;
             // 
+            // checkBoxCascade
+            // 
+            this.checkBoxCascade.AutoSize = true;
+            this.checkBoxCascade.Location = new System.Drawing.Point(85, 38);
+            this.checkBoxCascade.Name = "checkBoxCascade";
+            this.checkBoxCascade.Size = new System.Drawing.Size(120, 23);
+            this.checkBoxCascade.TabIndex = 34;
+            this.checkBoxCascade.Text = "Cascade View";
+            this.checkBoxCascade.UseVisualStyleBackColor = true;
+            this.checkBoxCascade.CheckedChanged += new System.EventHandler(this.checkBoxCascade_CheckedChanged);
+            // 
             // formDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 912);
+            this.Controls.Add(this.checkBoxCascade);
             this.Controls.Add(this.flowLayoutPanelWorkers);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewInventory);
@@ -132,5 +145,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelWorkers;
         private System.Windows.Forms.DataGridView dataGridViewSchedule;
+        private System.Windows.Forms.CheckBox checkBoxCascade;
     }
 }
