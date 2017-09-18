@@ -45,19 +45,6 @@ namespace DavaoChestCenter
                         dataGridViewAppointments.Columns["id"].Visible = false;
                     }
                 }
-
-                using (var com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
-                {
-                    using (var adp = new MySqlDataAdapter(com))
-                    {
-                        var dt = new DataTable();
-                        adp.Fill(dt);
-                        dataGridViewPatients.DataSource = dt;
-                        dt.Dispose();
-                        
-                        dataGridViewPatients.Columns["id"].Visible = false;
-                    }
-                }
                 con.Close();
             }
         }
