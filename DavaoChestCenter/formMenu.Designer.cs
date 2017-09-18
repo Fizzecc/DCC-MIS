@@ -37,9 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonModule2 = new System.Windows.Forms.Button();
+            this.buttonModule3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelForm = new System.Windows.Forms.Panel();
-            this.buttonModule3 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.flowLayoutPanelModule1.SuspendLayout();
@@ -168,6 +168,20 @@
             this.buttonModule2.UseVisualStyleBackColor = false;
             this.buttonModule2.Click += new System.EventHandler(this.buttonModule2_Click_1);
             // 
+            // buttonModule3
+            // 
+            this.buttonModule3.BackColor = System.Drawing.Color.DimGray;
+            this.buttonModule3.FlatAppearance.BorderSize = 0;
+            this.buttonModule3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModule3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonModule3.Location = new System.Drawing.Point(3, 217);
+            this.buttonModule3.Name = "buttonModule3";
+            this.buttonModule3.Size = new System.Drawing.Size(252, 29);
+            this.buttonModule3.TabIndex = 5;
+            this.buttonModule3.Text = "Staff Attendance";
+            this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonModule3.UseVisualStyleBackColor = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -184,29 +198,15 @@
             // 
             this.panelForm.Location = new System.Drawing.Point(257, 0);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1414, 951);
+            this.panelForm.Size = new System.Drawing.Size(1329, 862);
             this.panelForm.TabIndex = 24;
             this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
-            // 
-            // buttonModule3
-            // 
-            this.buttonModule3.BackColor = System.Drawing.Color.DimGray;
-            this.buttonModule3.FlatAppearance.BorderSize = 0;
-            this.buttonModule3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModule3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonModule3.Location = new System.Drawing.Point(3, 217);
-            this.buttonModule3.Name = "buttonModule3";
-            this.buttonModule3.Size = new System.Drawing.Size(252, 29);
-            this.buttonModule3.TabIndex = 5;
-            this.buttonModule3.Text = "Staff Attendance";
-            this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonModule3.UseVisualStyleBackColor = false;
             // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);

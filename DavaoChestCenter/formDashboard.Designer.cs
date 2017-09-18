@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(706, 45);
+            this.label2.Location = new System.Drawing.Point(649, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
             this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(688, 478);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(631, 478);
             this.dataGridViewInventory.TabIndex = 3;
             // 
             // label3
@@ -83,9 +83,9 @@
             // 
             // flowLayoutPanelWorkers
             // 
-            this.flowLayoutPanelWorkers.Location = new System.Drawing.Point(710, 67);
+            this.flowLayoutPanelWorkers.Location = new System.Drawing.Point(653, 67);
             this.flowLayoutPanelWorkers.Name = "flowLayoutPanelWorkers";
-            this.flowLayoutPanelWorkers.Size = new System.Drawing.Size(676, 478);
+            this.flowLayoutPanelWorkers.Size = new System.Drawing.Size(664, 478);
             this.flowLayoutPanelWorkers.TabIndex = 5;
             // 
             // dataGridViewSchedule
@@ -98,7 +98,7 @@
             this.dataGridViewSchedule.ReadOnly = true;
             this.dataGridViewSchedule.RowHeadersVisible = false;
             this.dataGridViewSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(676, 346);
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(607, 346);
             this.dataGridViewSchedule.TabIndex = 0;
             // 
             // checkBoxCascade
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 912);
+            this.ClientSize = new System.Drawing.Size(1329, 862);
             this.Controls.Add(this.checkBoxCascade);
             this.Controls.Add(this.flowLayoutPanelWorkers);
             this.Controls.Add(this.label3);

@@ -53,7 +53,7 @@
             this.buttonProductNew.FlatAppearance.BorderSize = 0;
             this.buttonProductNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProductNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonProductNew.Location = new System.Drawing.Point(12, 791);
+            this.buttonProductNew.Location = new System.Drawing.Point(12, 702);
             this.buttonProductNew.Name = "buttonProductNew";
             this.buttonProductNew.Size = new System.Drawing.Size(76, 148);
             this.buttonProductNew.TabIndex = 5;
@@ -71,7 +71,7 @@
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
             this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(846, 755);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(835, 666);
             this.dataGridViewInventory.TabIndex = 6;
             // 
             // label1
@@ -91,7 +91,7 @@
             this.buttonServiceNew.FlatAppearance.BorderSize = 0;
             this.buttonServiceNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonServiceNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonServiceNew.Location = new System.Drawing.Point(94, 791);
+            this.buttonServiceNew.Location = new System.Drawing.Point(94, 702);
             this.buttonServiceNew.Name = "buttonServiceNew";
             this.buttonServiceNew.Size = new System.Drawing.Size(76, 148);
             this.buttonServiceNew.TabIndex = 12;
@@ -107,7 +107,7 @@
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            this.buttonRefresh.Location = new System.Drawing.Point(12, 791);
+            this.buttonRefresh.Location = new System.Drawing.Point(12, 702);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(145, 25);
             this.buttonRefresh.TabIndex = 23;
@@ -124,7 +124,7 @@
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.ReadOnly = true;
             this.dataGridViewProduct.RowHeadersVisible = false;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(538, 430);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(453, 430);
             this.dataGridViewProduct.TabIndex = 24;
             // 
             // label2
@@ -144,7 +144,7 @@
             this.buttonTransactionNew.FlatAppearance.BorderSize = 0;
             this.buttonTransactionNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTransactionNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonTransactionNew.Location = new System.Drawing.Point(176, 809);
+            this.buttonTransactionNew.Location = new System.Drawing.Point(176, 720);
             this.buttonTransactionNew.Name = "buttonTransactionNew";
             this.buttonTransactionNew.Size = new System.Drawing.Size(79, 130);
             this.buttonTransactionNew.TabIndex = 26;
@@ -171,7 +171,7 @@
             this.dataGridViewRequired.Name = "dataGridViewRequired";
             this.dataGridViewRequired.ReadOnly = true;
             this.dataGridViewRequired.RowHeadersVisible = false;
-            this.dataGridViewRequired.Size = new System.Drawing.Size(538, 300);
+            this.dataGridViewRequired.Size = new System.Drawing.Size(453, 300);
             this.dataGridViewRequired.TabIndex = 30;
             // 
             // buttonStockOut
@@ -181,7 +181,7 @@
             this.buttonStockOut.FlatAppearance.BorderSize = 0;
             this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonStockOut.Location = new System.Drawing.Point(261, 842);
+            this.buttonStockOut.Location = new System.Drawing.Point(261, 753);
             this.buttonStockOut.Name = "buttonStockOut";
             this.buttonStockOut.Size = new System.Drawing.Size(77, 97);
             this.buttonStockOut.TabIndex = 32;
@@ -193,7 +193,7 @@
             // checkBoxCascade
             // 
             this.checkBoxCascade.AutoSize = true;
-            this.checkBoxCascade.Location = new System.Drawing.Point(163, 793);
+            this.checkBoxCascade.Location = new System.Drawing.Point(163, 704);
             this.checkBoxCascade.Name = "checkBoxCascade";
             this.checkBoxCascade.Size = new System.Drawing.Size(120, 23);
             this.checkBoxCascade.TabIndex = 33;
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1414, 951);
+            this.ClientSize = new System.Drawing.Size(1329, 862);
             this.Controls.Add(this.checkBoxCascade);
             this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label3);

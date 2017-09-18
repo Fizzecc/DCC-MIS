@@ -25,7 +25,7 @@ namespace DavaoChestCenter
 
             refreshTables();
 
-            gatherServices();
+            //gatherServices();
         }
         
         public void refreshTables()
@@ -48,7 +48,7 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
-
+        /*
         private void gatherServices()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
@@ -376,10 +376,15 @@ namespace DavaoChestCenter
                 return true;
             }
         }
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
-            formRegistration3 reg = new formRegistration3();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            formRegistration reg = new formRegistration();
             reg.Show();
         }
     }
