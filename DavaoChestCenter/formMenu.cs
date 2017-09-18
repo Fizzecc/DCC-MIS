@@ -89,7 +89,7 @@ namespace DavaoChestCenter
 
         private void buttonModule1_Click(object sender, EventArgs e)
         {
-            if (!flowLayoutPanelModule1.Visible)
+              if (!flowLayoutPanelModule1.Visible)
             {
                 flowLayoutPanelModule1.Visible = true;
             }
@@ -135,6 +135,17 @@ namespace DavaoChestCenter
         {
             var appointment = new formAppointment(id);
             showForm(appointment);
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form test = new Diagnosis1();
+            test.Show();
         }
     }
 }

@@ -136,6 +136,7 @@
             this.button1.Text = "Diagnosis";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -185,6 +186,7 @@
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(1414, 951);
             this.panelForm.TabIndex = 24;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // buttonModule3
             // 
@@ -204,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1671, 951);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -233,8 +235,8 @@
         private System.Windows.Forms.Button buttonModule2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Button buttonDashboard;
         private System.Windows.Forms.Button buttonModule3;
+        public System.Windows.Forms.Panel panelForm;
     }
 }

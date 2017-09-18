@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Diagnosis2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosis2.Designer.cs">
+      <DependentUpon>Diagnosis2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInventoryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInventoryNew.Designer.cs">
+      <DependentUpon>formInventoryNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRegistration3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,21 @@
     <Compile Include="ReferralForm1.Designer.cs">
       <DependentUpon>ReferralForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegistration.Designer.cs">
+      <DependentUpon>formRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosis1.Designer.cs">
+      <DependentUpon>Diagnosis1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Diagnosis2.resx">
+      <DependentUpon>Diagnosis2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReferralForm1.resx">
       <DependentUpon>ReferralForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegistration.resx">
+      <DependentUpon>formRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosis1.resx">
+      <DependentUpon>Diagnosis1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
