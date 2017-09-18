@@ -39,6 +39,7 @@
             this.comboBoxServices = new System.Windows.Forms.ComboBox();
             this.buttonDone = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.dataGridViewAppointments.RowHeadersVisible = false;
             this.dataGridViewAppointments.RowTemplate.Height = 24;
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAppointments.Size = new System.Drawing.Size(697, 614);
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(578, 601);
             this.dataGridViewAppointments.TabIndex = 15;
             this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
             this.dataGridViewAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellContentClick);
@@ -107,24 +108,24 @@
             this.dataGridViewPatients.AllowUserToDeleteRows = false;
             this.dataGridViewPatients.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatients.Location = new System.Drawing.Point(715, 32);
+            this.dataGridViewPatients.Location = new System.Drawing.Point(596, 32);
             this.dataGridViewPatients.Name = "dataGridViewPatients";
             this.dataGridViewPatients.ReadOnly = true;
             this.dataGridViewPatients.RowHeadersVisible = false;
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(671, 804);
+            this.dataGridViewPatients.Size = new System.Drawing.Size(542, 660);
             this.dataGridViewPatients.TabIndex = 21;
             this.dataGridViewPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatients_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(711, 10);
+            this.label1.Location = new System.Drawing.Point(601, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 19);
+            this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Patients";
+            this.label1.Text = "Registered Patients";
             // 
             // label2
             // 
@@ -164,7 +165,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(535, 652);
+            this.button2.Location = new System.Drawing.Point(416, 639);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 53);
             this.button2.TabIndex = 31;
@@ -172,11 +173,26 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(272, 639);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 53);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // formAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 741);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.comboBoxServices);
@@ -193,6 +209,7 @@
             this.Name = "formAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointments";
+            this.Load += new System.EventHandler(this.formAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.ResumeLayout(false);
@@ -213,5 +230,6 @@
         private System.Windows.Forms.ComboBox comboBoxServices;
         private System.Windows.Forms.Button buttonDone;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

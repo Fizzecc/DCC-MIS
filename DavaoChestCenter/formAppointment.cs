@@ -47,7 +47,7 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using (var com = new MySqlCommand("SELECT * FROM users WHERE type = 'Patient'", con))
+                using (var com = new MySqlCommand("SELECT * FROM registration", con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {
@@ -56,7 +56,7 @@ namespace DavaoChestCenter
                         dataGridViewPatients.DataSource = dt;
                         dt.Dispose();
                         
-                        dataGridViewPatients.Columns["id"].Visible = false;
+                        dataGridViewPatients.Columns["registration_id"].Visible = false;
                     }
                 }
                 con.Close();
@@ -216,6 +216,45 @@ namespace DavaoChestCenter
         {
             Form test = new formRegistration();
             test.Show();
+        }
+
+        private void formAppointment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM appointmentv", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewAppointments.DataSource = dt;
+                        dt.Dispose();
+
+                        dataGridViewAppointments.Columns["id"].Visible = false;
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT * FROM registration", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewPatients.DataSource = dt;
+                        dt.Dispose();
+
+                        dataGridViewPatients.Columns["registration_id"].Visible = false;
+                    }
+                }
+                con.Close();
+            }
         }
     }
 

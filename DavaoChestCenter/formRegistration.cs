@@ -62,9 +62,9 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @blank)", con))
+                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @exam_reason, @hist_treatment, @specimen_type, @specimen_date1, @specimen_date2, @test_request, @prepared_by, @staff_position, @lab_crea, @lab_sgpt, @lab_FBS, @lab_acid, @chest_XrayResult, @sputum_month, @sputum_due, @sputum_examDate, @sputum_result, @sputum_appearance, @doctors_order)", con))
                 {
-                    com.Parameters.AddWithValue("@patient_Lname", txtFname.Text);
+                    com.Parameters.AddWithValue("@patient_Lname", txtLname.Text);
                     com.Parameters.AddWithValue("@patient_Fname", txtFname.Text);
                     com.Parameters.AddWithValue("@patient_Mname", txtMname.Text);
                     com.Parameters.AddWithValue("@appointmentDate", dateTimeAppDate.Value.ToString("yyyy-MM-dd"));
@@ -84,6 +84,11 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@contact_num2", txtTcontact.Text);
                     com.Parameters.AddWithValue("@pulmonaries", txtPulm.Text);
                     com.Parameters.AddWithValue("@extra_pulmonaries", txtEpulm.Text);
+                    com.Parameters.AddWithValue("@specimen_date1", dateTimePickerSpecimen1.Value.ToString("yyyy-MM-dd"));
+                    com.Parameters.AddWithValue("@specimen_date2", dateTimePickerSpecimen2.Value.ToString("yyyy-MM-dd"));
+                    com.Parameters.AddWithValue("@prepared_by", txtPrepared.Text);
+                    com.Parameters.AddWithValue("@staff_position", txtPosition.Text);
+
 
                     //alcohol
                     if (radButtonAlcoholicYes.Checked)
@@ -138,7 +143,7 @@ namespace DavaoChestCenter
 
                     if (radButtonSmokeNo.Checked)
                     {
-                        com.Parameters.AddWithValue("@smoke", "radButtonSmokeNo.Text");
+                        com.Parameters.AddWithValue("@smoke", radButtonSmokeNo.Text);
                         com.Parameters.AddWithValue("@smoke_day", "");
                         com.Parameters.AddWithValue("@start_smoking", "");
                         com.Parameters.AddWithValue("@stop_smoking", "");
@@ -192,7 +197,73 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@patient_status", radButtonMarried.Text);
                     }
 
-                    com.Parameters.AddWithValue("@blank", "");
+                    //exam reason
+                    if (radButtDiagnosis.Checked)
+                    {
+                        com.Parameters.AddWithValue("@exam_reason", radButtDiagnosis.Text);
+                    }
+                    if (radButtBaseline.Checked)
+                    {
+                        com.Parameters.AddWithValue("@exam_reason", radButtBaseline.Text);
+                    }
+                    if (radButtonFollow.Checked)
+                    {
+                        com.Parameters.AddWithValue("@exam_reason", radButtonFollow.Text);
+                    }
+
+                    //history treatment
+                    if (radButtonHistNew.Checked)
+                    {
+                        com.Parameters.AddWithValue("@hist_treatment", radButtonHistNew.Text);
+                    }
+                    if (radButtonHistRT.Checked)
+                    {
+                        com.Parameters.AddWithValue("@hist_treatment", radButtonHistRT.Text);
+                    }
+
+                    //specimen type
+                    if (radButtonSputum.Checked)
+                    {
+                        com.Parameters.AddWithValue("@specimen_type", radButtonSputum.Text);
+                    }
+                    if (radButtonOthers.Checked)
+                    {
+                        com.Parameters.AddWithValue("@specimen_type", txtOthers.Text);
+                    }
+
+                    //test request
+                    if (radButtonDSSM.Checked)
+                    {
+                        com.Parameters.AddWithValue("@test_request", radButtonDSSM.Text);
+                    }
+                    if (radButtonXpert.Checked)
+                    {
+                        com.Parameters.AddWithValue("@test_request", radButtonXpert.Text);
+                    }
+                    if (radButtonCulture.Checked)
+                    {
+                        com.Parameters.AddWithValue("@test_request", radButtonCulture.Text);
+                    }
+                    if (radButtonDST.Checked)
+                    {
+                        com.Parameters.AddWithValue("@test_request", radButtonDST.Text);
+                    }
+                    if (radButtonUPA.Checked)
+                    {
+                        com.Parameters.AddWithValue("@test_request", radButtonUPA.Text);
+                    }
+
+                    com.Parameters.AddWithValue("@lab_crea", "");
+                    com.Parameters.AddWithValue("@lab_sgpt", "");
+                    com.Parameters.AddWithValue("@lab_FBS", "");
+                    com.Parameters.AddWithValue("@lab_acid", "");
+                    com.Parameters.AddWithValue("@chest_XrayResult", "");
+                    com.Parameters.AddWithValue("@sputum_month", "");
+                    com.Parameters.AddWithValue("@sputum_due", "");
+                    com.Parameters.AddWithValue("@sputum_examDate", "");
+                    com.Parameters.AddWithValue("@sputum_result", "");
+                    com.Parameters.AddWithValue("@sputum_appearance", "");
+                    com.Parameters.AddWithValue("@doctors_order", "");
 
                     DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -253,6 +324,7 @@ namespace DavaoChestCenter
                 checkBoxAB.Enabled = true;
                 checkBoxTB.Enabled = true;
                 txtMonths.Enabled = true;
+                txtMedicines.Enabled = true;
             }
 
             if (radButtonTBNo.Checked)
@@ -261,6 +333,7 @@ namespace DavaoChestCenter
                 checkBoxAB.Enabled = false;
                 checkBoxTB.Enabled = false;
                 txtMonths.Enabled = false;
+                txtMedicines.Enabled = false;
             }
         }
 
