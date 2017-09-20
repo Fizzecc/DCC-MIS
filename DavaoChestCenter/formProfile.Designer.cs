@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,21 +47,6 @@
             this.buttonCreate.Text = "Create Profile";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
-            this.buttonUpdate.FlatAppearance.BorderSize = 0;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(312, 818);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(296, 32);
-            this.buttonUpdate.TabIndex = 12;
-            this.buttonUpdate.Text = "Update Profile";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // dataGridView1
             // 
@@ -86,7 +70,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonCreate);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -104,7 +87,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

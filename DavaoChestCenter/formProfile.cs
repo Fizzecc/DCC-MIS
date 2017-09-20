@@ -31,12 +31,6 @@ namespace DavaoChestCenter
             profile.ShowDialog();
         }
 
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            var update = new formProfileUpdate();
-            update.ShowDialog();
-        }
-
         private void formModule1_Load(object sender, EventArgs e)
         {
             refreshTables();
@@ -47,7 +41,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM staff WHERE id != " + id, con))
+                using (var com = new MySqlCommand("SELECT id, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end FROM staff RIGHT JOIN schedules ON staff.id = schedules.staff_id WHERE id != " + id, con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {
@@ -66,9 +60,17 @@ namespace DavaoChestCenter
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedUser = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString());
-            string fn  = dataGridView1.Rows[e.RowIndex].Cells["firstname"].Value.ToString();
-            string ln = dataGridView1.Rows[e.RowIndex].Cells["lastname"].Value.ToString();
-            patientName = fn + " " + ln;
+            string firstname = dataGridView1.Rows[e.RowIndex].Cells["firstname"].Value.ToString();
+            string middlename = dataGridView1.Rows[e.RowIndex].Cells["middlename"].Value.ToString();
+            string lastname = dataGridView1.Rows[e.RowIndex].Cells["lastname"].Value.ToString();
+            string username = dataGridView1.Rows[e.RowIndex].Cells["username"].Value.ToString();
+            string password = dataGridView1.Rows[e.RowIndex].Cells["password"].Value.ToString();
+            string schedule_days = dataGridView1.Rows[e.RowIndex].Cells["schedule_days"].Value.ToString();
+            string working_time_start = dataGridView1.Rows[e.RowIndex].Cells["working_time_start"].Value.ToString();
+            string working_time_end = dataGridView1.Rows[e.RowIndex].Cells["working_time_end"].Value.ToString();
+
+            var update = new formProfileUpdate(selectedUser, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end);
+            update.ShowDialog();
         }
     }
 }

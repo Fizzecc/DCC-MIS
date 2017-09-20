@@ -26,14 +26,14 @@ namespace DavaoChestCenter
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
-                con.Open();/*
-                using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM users RIGHT JOIN schedules ON users.id = schedules.staff_id", con))
+                con.Open();
+                using (var com = new MySqlCommand("SELECT firstname, middlename, lastname, schedule_days, working_time_start, working_time_end FROM staff RIGHT JOIN schedules ON staff.id = schedules.staff_id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewSchedule.DataSource = dt;
-                }*/
+                }
 
                 using (var com = new MySqlCommand("SELECT generic_name, brand_name, dosage_remaining, expiration_date FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
                 {
@@ -66,7 +66,7 @@ namespace DavaoChestCenter
                 {
                     var label = new Label();
 
-                    label.Text = row.Cells["firstname"].Value.ToString() + " " + row.Cells["lastname"].Value.ToString() + " will work at " + row.Cells["working_time_start"].Value.ToString() + " until " + row.Cells["working_time_end"].Value.ToString();
+                    label.Text = row.Cells["firstname"].Value.ToString() + " " + row.Cells["lastname"].Value.ToString() + " will work at " + row.Cells["working_time_start"].Value.ToString() + " until " + row.Cells["working_time_end"].Value.ToString() + " today";
 
                     label.Size = new Size(600, 20);
 

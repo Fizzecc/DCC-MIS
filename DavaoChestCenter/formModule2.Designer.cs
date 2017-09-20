@@ -120,17 +120,17 @@
             this.dataGridViewProduct.AllowUserToAddRows = false;
             this.dataGridViewProduct.AllowUserToDeleteRows = false;
             this.dataGridViewProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(864, 30);
+            this.dataGridViewProduct.Location = new System.Drawing.Point(853, 30);
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.ReadOnly = true;
             this.dataGridViewProduct.RowHeadersVisible = false;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(453, 430);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(464, 386);
             this.dataGridViewProduct.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(860, 8);
+            this.label2.Location = new System.Drawing.Point(849, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 25;
@@ -156,7 +156,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(860, 463);
+            this.label3.Location = new System.Drawing.Point(849, 419);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 19);
             this.label3.TabIndex = 31;
@@ -167,11 +167,11 @@
             this.dataGridViewRequired.AllowUserToAddRows = false;
             this.dataGridViewRequired.AllowUserToDeleteRows = false;
             this.dataGridViewRequired.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRequired.Location = new System.Drawing.Point(864, 485);
+            this.dataGridViewRequired.Location = new System.Drawing.Point(853, 441);
             this.dataGridViewRequired.Name = "dataGridViewRequired";
             this.dataGridViewRequired.ReadOnly = true;
             this.dataGridViewRequired.RowHeadersVisible = false;
-            this.dataGridViewRequired.Size = new System.Drawing.Size(453, 300);
+            this.dataGridViewRequired.Size = new System.Drawing.Size(464, 255);
             this.dataGridViewRequired.TabIndex = 30;
             // 
             // buttonStockOut

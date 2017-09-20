@@ -178,6 +178,7 @@
             this.dateTimePickerWorkingTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerWorkingTimeEnd.Location = new System.Drawing.Point(343, 196);
             this.dateTimePickerWorkingTimeEnd.Name = "dateTimePickerWorkingTimeEnd";
+            this.dateTimePickerWorkingTimeEnd.ShowUpDown = true;
             this.dateTimePickerWorkingTimeEnd.Size = new System.Drawing.Size(208, 21);
             this.dateTimePickerWorkingTimeEnd.TabIndex = 57;
             // 
@@ -267,6 +268,7 @@
             this.dateTimePickerWorkingTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerWorkingTimeStart.Location = new System.Drawing.Point(343, 150);
             this.dateTimePickerWorkingTimeStart.Name = "dateTimePickerWorkingTimeStart";
+            this.dateTimePickerWorkingTimeStart.ShowUpDown = true;
             this.dateTimePickerWorkingTimeStart.Size = new System.Drawing.Size(208, 21);
             this.dateTimePickerWorkingTimeStart.TabIndex = 48;
             // 
