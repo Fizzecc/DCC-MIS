@@ -29,7 +29,7 @@ namespace DavaoChestCenter
             id = x;
             name = y;
 
-            //autoExpire();
+            autoExpire();
         }
 
         public void autoExpire()
@@ -37,7 +37,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM products RIGHT JOIN inventory ON products.prod_id = inventory.product_id RIGHT JOIN transactions ON transactions.product_id = products.prod_id WHERE expiry_date >= NOW() AND expiry_date <= DATE_ADD(DATE(NOW()), INTERVAL 7 DAY) AND STATUS = 'Normal' GROUP BY transaction_id", con))
+                using (var com = new MySqlCommand("SELECT * FROM inventory WHERE expiration_date >= NOW() AND expiration_date <= DATE_ADD(DATE(NOW()), INTERVAL 7 DAY) AND STATUS = 'Normal'", con))
                 {
                     using (var rdr = com.ExecuteReader())
                     {
@@ -48,14 +48,9 @@ namespace DavaoChestCenter
                     }
                 }
 
-                using (var com2 = new MySqlCommand("UPDATE transactions SET status = 'Expired' WHERE expiry_date <= NOW()", con))
+                using (var com2 = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE expiration_date <= NOW() AND expiration_date IS NOT NULL", con))
                 {
                     com2.ExecuteNonQuery();
-                }
-
-                using (var com3 = new MySqlCommand("UPDATE transactions SET status = 'Expired' WHERE quantity = '0'", con))
-                {
-                    com3.ExecuteNonQuery();
                 }
 
                 con.Close();

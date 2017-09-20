@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxProductDose = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.buttonProductEncode = new System.Windows.Forms.Button();
             this.textBoxProductMinimum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxDoseType = new System.Windows.Forms.ComboBox();
+            this.checkBoxConsumable = new System.Windows.Forms.CheckBox();
+            this.checkBoxConsumableNon = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
-            // textBoxProductDose
-            // 
-            this.textBoxProductDose.Location = new System.Drawing.Point(118, 39);
-            this.textBoxProductDose.Multiline = true;
-            this.textBoxProductDose.Name = "textBoxProductDose";
-            this.textBoxProductDose.Size = new System.Drawing.Size(90, 27);
-            this.textBoxProductDose.TabIndex = 1;
             // 
             // label1
             // 
@@ -54,15 +45,6 @@
             this.label1.Size = new System.Drawing.Size(105, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Generic Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 19);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Dose:";
             // 
             // textBoxProductName
             // 
@@ -79,7 +61,7 @@
             this.buttonProductEncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProductEncode.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonProductEncode.ForeColor = System.Drawing.Color.White;
-            this.buttonProductEncode.Location = new System.Drawing.Point(16, 105);
+            this.buttonProductEncode.Location = new System.Drawing.Point(16, 104);
             this.buttonProductEncode.Name = "buttonProductEncode";
             this.buttonProductEncode.Size = new System.Drawing.Size(260, 33);
             this.buttonProductEncode.TabIndex = 3;
@@ -89,7 +71,7 @@
             // 
             // textBoxProductMinimum
             // 
-            this.textBoxProductMinimum.Location = new System.Drawing.Point(118, 72);
+            this.textBoxProductMinimum.Location = new System.Drawing.Point(118, 39);
             this.textBoxProductMinimum.Multiline = true;
             this.textBoxProductMinimum.Name = "textBoxProductMinimum";
             this.textBoxProductMinimum.Size = new System.Drawing.Size(158, 27);
@@ -98,38 +80,45 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 75);
+            this.label3.Location = new System.Drawing.Point(12, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 19);
             this.label3.TabIndex = 23;
             this.label3.Text = "Minimum #:";
             // 
-            // comboBoxDoseType
+            // checkBoxConsumable
             // 
-            this.comboBoxDoseType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDoseType.FormattingEnabled = true;
-            this.comboBoxDoseType.Items.AddRange(new object[] {
-            "mg",
-            "mL",
-            "g",
-            "L"});
-            this.comboBoxDoseType.Location = new System.Drawing.Point(214, 39);
-            this.comboBoxDoseType.Name = "comboBoxDoseType";
-            this.comboBoxDoseType.Size = new System.Drawing.Size(62, 27);
-            this.comboBoxDoseType.TabIndex = 28;
+            this.checkBoxConsumable.AutoSize = true;
+            this.checkBoxConsumable.Location = new System.Drawing.Point(16, 75);
+            this.checkBoxConsumable.Name = "checkBoxConsumable";
+            this.checkBoxConsumable.Size = new System.Drawing.Size(105, 23);
+            this.checkBoxConsumable.TabIndex = 24;
+            this.checkBoxConsumable.Text = "Consumable";
+            this.checkBoxConsumable.UseVisualStyleBackColor = true;
+            this.checkBoxConsumable.CheckedChanged += new System.EventHandler(this.checkBoxConsumable_CheckedChanged);
+            // 
+            // checkBoxConsumableNon
+            // 
+            this.checkBoxConsumableNon.AutoSize = true;
+            this.checkBoxConsumableNon.Location = new System.Drawing.Point(144, 75);
+            this.checkBoxConsumableNon.Name = "checkBoxConsumableNon";
+            this.checkBoxConsumableNon.Size = new System.Drawing.Size(132, 23);
+            this.checkBoxConsumableNon.TabIndex = 25;
+            this.checkBoxConsumableNon.Text = "Non-consumable";
+            this.checkBoxConsumableNon.UseVisualStyleBackColor = true;
+            this.checkBoxConsumableNon.CheckedChanged += new System.EventHandler(this.checkBoxConsumableNon_CheckedChanged);
             // 
             // formProductNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 143);
-            this.Controls.Add(this.comboBoxDoseType);
+            this.ClientSize = new System.Drawing.Size(288, 149);
+            this.Controls.Add(this.checkBoxConsumableNon);
+            this.Controls.Add(this.checkBoxConsumable);
             this.Controls.Add(this.textBoxProductMinimum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonProductEncode);
-            this.Controls.Add(this.textBoxProductDose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxProductName);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -145,13 +134,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxProductDose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.Button buttonProductEncode;
         private System.Windows.Forms.TextBox textBoxProductMinimum;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxDoseType;
+        private System.Windows.Forms.CheckBox checkBoxConsumable;
+        private System.Windows.Forms.CheckBox checkBoxConsumableNon;
     }
 }

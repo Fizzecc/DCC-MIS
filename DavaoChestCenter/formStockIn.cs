@@ -26,7 +26,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT generic_name, dose, COUNT(*) count, minimum_quantity FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY generic_name HAVING count < minimum_quantity", con))
+                using (var com = new MySqlCommand("SELECT name, minimum_quantity, COUNT(status) count FROM products LEFT JOIN inventory ON products.id = inventory.product_id WHERE status = 'Normal' OR status IS NULL GROUP BY name HAVING count < minimum_quantity", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -39,7 +39,7 @@ namespace DavaoChestCenter
 
         private void dataGridViewRequired_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formTransactionNew transaction = new formTransactionNew(dataGridViewInventory.Rows[e.RowIndex].Cells["generic_name"].Value.ToString(), dataGridViewInventory.Rows[e.RowIndex].Cells["dose"].Value.ToString(), int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["minimum_quantity"].Value.ToString()));
+            formTransactionNew transaction = new formTransactionNew(dataGridViewInventory.Rows[e.RowIndex].Cells["name"].Value.ToString(), int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["minimum_quantity"].Value.ToString()));
             transaction.referenceToMain = this;
             transaction.ShowDialog();
         }

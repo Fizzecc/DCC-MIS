@@ -32,7 +32,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT generic_name, brand_name, dosage_remaining, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
+                using (var com = new MySqlCommand("SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -40,7 +40,7 @@ namespace DavaoChestCenter
                     dataGridViewInventory.DataSource = dt;
                 }
 
-                using (var com = new MySqlCommand("SELECT generic_name, dose, minimum_quantity FROM products", con))
+                using (var com = new MySqlCommand("SELECT name, minimum_quantity FROM products", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -56,7 +56,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT generic_name, minimum_quantity, COUNT(*) count FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY generic_name HAVING count < minimum_quantity", con))
+                using (var com = new MySqlCommand("SELECT name, minimum_quantity, COUNT(status) count FROM products LEFT JOIN inventory ON products.id = inventory.product_id WHERE status = 'Normal' OR status IS NULL GROUP BY name HAVING count < minimum_quantity", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -110,8 +110,8 @@ namespace DavaoChestCenter
         private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
         {
             string commandstring = "";
-            if (checkBoxCascade.Checked) commandstring = "SELECT generic_name, brand_name, dose, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id GROUP BY brand_name HAVING count > 1";
-            else commandstring = "SELECT generic_name, brand_name, dosage_remaining, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
+            else commandstring = "SELECT name, brand_name, manufacturer, dosage, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
 
             using (var con = new MySqlConnection(conClass.connectionString))
             {

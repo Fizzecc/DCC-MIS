@@ -15,7 +15,7 @@ namespace DavaoChestCenter
     {
         Dictionary<int, string> services = new Dictionary<int, string>();
 
-        int id = -1; int selectedUser = -1; int selectedAppointment = -1;
+        int id = -1;
 
         public formAppointment(int x)
         {

@@ -13,7 +13,7 @@ namespace DavaoChestCenter
 {
     public partial class formProfile : Form
     {
-        int id = -1; int selectedUser = -1; string patientName = "";
+        int id = -1; int selectedUser = -1;
         string name = "";
 
         public formProfile(int x, string y)
@@ -70,6 +70,7 @@ namespace DavaoChestCenter
             string working_time_end = dataGridView1.Rows[e.RowIndex].Cells["working_time_end"].Value.ToString();
 
             var update = new formProfileUpdate(selectedUser, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end);
+            update.referenceToMain = this;
             update.ShowDialog();
         }
     }

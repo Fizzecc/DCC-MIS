@@ -15,13 +15,21 @@ namespace DavaoChestCenter
     {
         int selectedProduct = -1;
 
-        public formTransactionEdit(int x, string y)
+        public formTransactionEdit(int x, string y, string z)
         {
             InitializeComponent();
 
             selectedProduct = x;
 
             label1.Text = y;
+
+            if(z == "Non-consumable")
+            {
+                comboBoxProductStatus.Items.Clear();
+                comboBoxProductStatus.Items.Add("Normal");
+                comboBoxProductStatus.Items.Add("Under Repair");
+                comboBoxProductStatus.Items.Add("Damaged");
+            }
 
             comboBoxProductStatus.Text = "Damaged";
         }

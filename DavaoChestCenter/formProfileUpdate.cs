@@ -13,6 +13,8 @@ namespace DavaoChestCenter
 {
     public partial class formProfileUpdate : Form
     {
+        public formProfile referenceToMain { get; set; }
+
         int selectedUser = -1;
 
         public formProfileUpdate()
@@ -73,7 +75,7 @@ namespace DavaoChestCenter
                     com.ExecuteNonQuery();
                 }
 
-                using (var com = new MySqlCommand("UPDATE schedules SET schedule_days = @schedule_days, working_time_start = @working_time_start, working_time_end = @working_time_end WHERE staff_id = @staff_id"))
+                using (var com = new MySqlCommand("UPDATE schedules SET schedule_days = @schedule_days, working_time_start = @working_time_start, working_time_end = @working_time_end WHERE staff_id = @staff_id", con))
                 {
                     string daysWorking = "";
 
@@ -118,6 +120,10 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@working_time_start", dateTimePickerWorkingTimeStart.Value.ToString("HH:mm:ss"));
                     com.Parameters.AddWithValue("@working_time_end", dateTimePickerWorkingTimeEnd.Value.ToString("HH:mm:ss"));
                     com.Parameters.AddWithValue("@staff_id", selectedUser);
+
+                    com.ExecuteNonQuery();
+
+                    referenceToMain.refreshTables();
                 }
                 con.Close();
             }

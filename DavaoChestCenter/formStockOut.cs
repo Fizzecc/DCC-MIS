@@ -24,21 +24,22 @@ namespace DavaoChestCenter
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
-                using (var com = new MySqlCommand("SELECT inventory.id, generic_name, brand_name, dosage_remaining, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal'", con))
+                using (var com = new MySqlCommand("SELECT * FROM inventory WHERE status = 'Normal'", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewInventory.DataSource = dt;
 
-                    dataGridViewInventory.Columns["id"].Visible = false; 
+                    dataGridViewInventory.Columns["id"].Visible = false;
+                    dataGridViewInventory.Columns["product_id"].Visible = false;
                 }
             }
         }
 
         private void dataGridViewInventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var stockout = new formTransactionEdit(int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["id"].Value.ToString()), dataGridViewInventory.Rows[e.RowIndex].Cells["brand_name"].Value.ToString());
+            var stockout = new formTransactionEdit(int.Parse(dataGridViewInventory.Rows[e.RowIndex].Cells["id"].Value.ToString()), dataGridViewInventory.Rows[e.RowIndex].Cells["brand_name"].Value.ToString(), dataGridViewInventory.Rows[e.RowIndex].Cells["dosage"].Value.ToString());
             stockout.ShowDialog();
         }
     }

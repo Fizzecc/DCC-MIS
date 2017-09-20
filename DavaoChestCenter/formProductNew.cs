@@ -18,7 +18,6 @@ namespace DavaoChestCenter
         public formProductNew()
         {
             InitializeComponent();
-            comboBoxDoseType.Text = "mg";
         }
 
         private void buttonProductEncode_Click(object sender, EventArgs e)
@@ -26,13 +25,22 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @generic_name, @dose, @minimum_quantity)", con))
+                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @name, @type, @minimum_quantity)", con))
                 {
                     try
                     {
-                        com.Parameters.AddWithValue("@generic_name", textBoxProductName.Text);
-                        com.Parameters.AddWithValue("@dose", int.Parse(textBoxProductDose.Text) + "/" + comboBoxDoseType.Text);
+                        com.Parameters.AddWithValue("@name", textBoxProductName.Text);
                         com.Parameters.AddWithValue("@minimum_quantity", int.Parse(textBoxProductMinimum.Text));
+
+                        if (checkBoxConsumable.Checked)
+                        {
+                            com.Parameters.AddWithValue("@type", "Consumable");
+                        }
+
+                        if (checkBoxConsumableNon.Checked)
+                        {
+                            com.Parameters.AddWithValue("@type", "Non-consumable");
+                        }
 
                         DialogResult r = MessageBox.Show("Encode product", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -53,6 +61,16 @@ namespace DavaoChestCenter
                 con.Close();
             }
             referenceToMain.renew();
+        }
+
+        private void checkBoxConsumable_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxConsumableNon.Checked = false;
+        }
+
+        private void checkBoxConsumableNon_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxConsumable.Checked = false;
         }
     }
 }
