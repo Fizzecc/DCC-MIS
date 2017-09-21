@@ -40,7 +40,7 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.Columns["id"].Visible = false;
                 }
 
-                using (var com = new MySqlCommand("SELECT attendance.id, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id", con))
+                using (var com = new MySqlCommand("SELECT attendance.id, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE date > DATE_SUB(NOW(), INTERVAL 1 DAY)", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -48,16 +48,6 @@ namespace DavaoChestCenter
                     dataGridViewToday.DataSource = dt;
 
                     dataGridViewToday.Columns["id"].Visible = false;
-                }
-
-                using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id", con))
-                {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewAttendance.DataSource = dt;
-
-                    dataGridViewAttendance.Columns["id"].Visible = false;
                 }
                 con.Close();
             }
@@ -139,20 +129,46 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE DATE(NOW()) BETWEEN @dateTimePicker1 AND @dateTimePicker2", con))
+                if (textBox.Text != "")
                 {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewSchedule.DataSource = dt;
+                    using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2) AND firstname LIKE '%" + textBox.Text + "%' OR lastname LIKE '%" + textBox.Text + "%'", con))
+                    {
+                        com.Parameters.AddWithValue("@dateTimePicker1", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@dateTimePicker2", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
 
-                    dataGridViewSchedule.Columns["id"].Visible = false;
+                        var adp = new MySqlDataAdapter(com);
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewAttendance.DataSource = dt;
+
+                        dataGridViewAttendance.Columns["id"].Visible = false;
+                    }
+                }
+                else
+                {
+                    using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2)", con))
+                    {
+                        com.Parameters.AddWithValue("@dateTimePicker1", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@dateTimePicker2", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
+
+                        var adp = new MySqlDataAdapter(com);
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewAttendance.DataSource = dt;
+
+                        dataGridViewAttendance.Columns["id"].Visible = false;
+                    }
                 }
                 con.Close();
             }
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            sort();
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
         {
             sort();
         }

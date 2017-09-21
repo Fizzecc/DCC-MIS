@@ -37,12 +37,18 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.dataGridViewToday = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewToday)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerCurrent
@@ -96,17 +102,17 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(807, 29);
+            this.dateTimePicker1.Location = new System.Drawing.Point(690, 566);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(250, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(301, 25);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(1063, 29);
+            this.dateTimePicker2.Location = new System.Drawing.Point(688, 616);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(250, 25);
+            this.dateTimePicker2.Size = new System.Drawing.Size(303, 25);
             this.dateTimePicker2.TabIndex = 6;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -123,6 +129,41 @@
             this.dataGridViewAttendance.Size = new System.Drawing.Size(623, 478);
             this.dataGridViewAttendance.TabIndex = 7;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(686, 544);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 19);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "From:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(999, 544);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "By Person:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(686, 594);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 19);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "To:";
+            // 
+            // textBox
+            // 
+            this.textBox.Location = new System.Drawing.Point(1003, 566);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(310, 25);
+            this.textBox.TabIndex = 18;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            // 
             // buttonCheckIn
             // 
             this.buttonCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
@@ -130,9 +171,9 @@
             this.buttonCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCheckIn.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonCheckIn.ForeColor = System.Drawing.Color.White;
-            this.buttonCheckIn.Location = new System.Drawing.Point(16, 818);
+            this.buttonCheckIn.Location = new System.Drawing.Point(6, 268);
             this.buttonCheckIn.Name = "buttonCheckIn";
-            this.buttonCheckIn.Size = new System.Drawing.Size(320, 32);
+            this.buttonCheckIn.Size = new System.Drawing.Size(203, 32);
             this.buttonCheckIn.TabIndex = 12;
             this.buttonCheckIn.Text = "Check In";
             this.buttonCheckIn.UseVisualStyleBackColor = false;
@@ -145,9 +186,9 @@
             this.buttonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCheckOut.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonCheckOut.ForeColor = System.Drawing.Color.White;
-            this.buttonCheckOut.Location = new System.Drawing.Point(353, 818);
+            this.buttonCheckOut.Location = new System.Drawing.Point(214, 268);
             this.buttonCheckOut.Name = "buttonCheckOut";
-            this.buttonCheckOut.Size = new System.Drawing.Size(327, 32);
+            this.buttonCheckOut.Size = new System.Drawing.Size(212, 32);
             this.buttonCheckOut.TabIndex = 13;
             this.buttonCheckOut.Text = "Check Out";
             this.buttonCheckOut.UseVisualStyleBackColor = false;
@@ -158,23 +199,37 @@
             this.dataGridViewToday.AllowUserToAddRows = false;
             this.dataGridViewToday.AllowUserToDeleteRows = false;
             this.dataGridViewToday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewToday.Location = new System.Drawing.Point(16, 544);
+            this.dataGridViewToday.Location = new System.Drawing.Point(6, 22);
             this.dataGridViewToday.Name = "dataGridViewToday";
             this.dataGridViewToday.ReadOnly = true;
             this.dataGridViewToday.RowHeadersVisible = false;
             this.dataGridViewToday.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewToday.Size = new System.Drawing.Size(664, 268);
+            this.dataGridViewToday.Size = new System.Drawing.Size(420, 245);
             this.dataGridViewToday.TabIndex = 14;
             this.dataGridViewToday.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewToday_CellClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridViewToday);
+            this.groupBox1.Controls.Add(this.buttonCheckOut);
+            this.groupBox1.Controls.Add(this.buttonCheckIn);
+            this.groupBox1.Location = new System.Drawing.Point(150, 544);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 306);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Check In and Check Out";
             // 
             // formModule3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
-            this.Controls.Add(this.dataGridViewToday);
-            this.Controls.Add(this.buttonCheckOut);
-            this.Controls.Add(this.buttonCheckIn);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewAttendance);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -191,6 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewToday)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,8 +262,13 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridView dataGridViewAttendance;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.Button buttonCheckOut;
         private System.Windows.Forms.DataGridView dataGridViewToday;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
