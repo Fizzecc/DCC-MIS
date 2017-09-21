@@ -56,6 +56,12 @@
     <Compile Include="Diagnosis2.Designer.cs">
       <DependentUpon>Diagnosis2.cs</DependentUpon>
     </Compile>
+    <Compile Include="formModule3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formModule3.Designer.cs">
+      <DependentUpon>formModule3.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRegistration3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formModule3.resx">
+      <DependentUpon>formModule3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formRegistration3.resx">
       <DependentUpon>formRegistration3.cs</DependentUpon>

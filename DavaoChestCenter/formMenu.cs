@@ -142,5 +142,11 @@ namespace DavaoChestCenter
             Form test = new Diagnosis1();
             test.Show();
         }
+
+        private void buttonModule3_Click(object sender, EventArgs e)
+        {
+            var module3 = new formModule3();
+            showForm(module3);
+        }
     }
 }

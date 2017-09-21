@@ -23,7 +23,7 @@ namespace DavaoChestCenter
 
             id = x;
 
-            refreshTables();
+            //refreshTables();
 
             //gatherServices();
         }
@@ -386,6 +386,27 @@ namespace DavaoChestCenter
         {
             formRegistration reg = new formRegistration();
             reg.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM registration", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewAppointments.DataSource = dt;
+                        dt.Dispose();
+
+                        dataGridViewAppointments.Columns["registration_id"].Visible = false;
+                    }
+                }
+                con.Close();
+            }
         }
     }
 
