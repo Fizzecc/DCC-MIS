@@ -62,6 +62,12 @@
     <Compile Include="formModule3.Designer.cs">
       <DependentUpon>formModule3.cs</DependentUpon>
     </Compile>
+    <Compile Include="formNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNotification.Designer.cs">
+      <DependentUpon>formNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRegistration3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formModule3.resx">
       <DependentUpon>formModule3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNotification.resx">
+      <DependentUpon>formNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formRegistration3.resx">
       <DependentUpon>formRegistration3.cs</DependentUpon>

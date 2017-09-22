@@ -51,8 +51,19 @@ namespace DavaoChestCenter
                 using (var com2 = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE expiration_date <= NOW() AND expiration_date IS NOT NULL", con))
                 {
                     com2.ExecuteNonQuery();
-                }
 
+                    using (var com3 = new MySqlCommand("SELECT * FROM inventory WHERE expiration_date <= NOW() AND expiration_date <= DATE_ADD(DATE(NOW()), INTERVAL 7 DAY) AND STATUS = 'Expired'", con))
+                    {
+                        using (var rdr = com3.ExecuteReader())
+                        {
+                            if (rdr.HasRows)
+                            {
+                                var notify = new formNotification();
+                                notify.ShowDialog();
+                            }
+                        }
+                    }
+                }
                 con.Close();
             }
         }
