@@ -75,7 +75,7 @@
             this.dataGridViewPatients.RowHeadersVisible = false;
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(667, 759);
+            this.dataGridViewPatients.Size = new System.Drawing.Size(667, 610);
             this.dataGridViewPatients.TabIndex = 21;
             // 
             // label1

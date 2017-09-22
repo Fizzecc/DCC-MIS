@@ -23,7 +23,7 @@ namespace DavaoChestCenter
 
             id = x;
 
-            //refreshTables();
+            refreshTables();
 
             //gatherServices();
         }
@@ -33,7 +33,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT * FROM appointments", con))
+                using (var com = new MySqlCommand("SELECT registration_id, appointmentDate, patient_Fname, patient_Mname, patient_Lname FROM registration WHERE appointmentDate >= DATE_SUB(NOW(), INTERVAL 3 DAY)", con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {
@@ -42,7 +42,7 @@ namespace DavaoChestCenter
                         dataGridViewAppointments.DataSource = dt;
                         dt.Dispose();
 
-                        dataGridViewAppointments.Columns["id"].Visible = false;
+                        dataGridViewAppointments.Columns["registration_id"].Visible = false;
                     }
                 }
                 con.Close();
