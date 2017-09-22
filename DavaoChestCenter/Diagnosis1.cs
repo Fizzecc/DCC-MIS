@@ -93,5 +93,11 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form test = new formTest1();
+            test.Show();
+        }
     }
 }
