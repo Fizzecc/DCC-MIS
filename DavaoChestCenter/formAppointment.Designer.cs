@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.SuspendLayout();
@@ -44,13 +45,13 @@
             this.dataGridViewAppointments.AllowUserToDeleteRows = false;
             this.dataGridViewAppointments.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAppointments.Location = new System.Drawing.Point(12, 32);
+            this.dataGridViewAppointments.Location = new System.Drawing.Point(13, 32);
             this.dataGridViewAppointments.Name = "dataGridViewAppointments";
             this.dataGridViewAppointments.ReadOnly = true;
             this.dataGridViewAppointments.RowHeadersVisible = false;
             this.dataGridViewAppointments.RowTemplate.Height = 24;
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAppointments.Size = new System.Drawing.Size(632, 759);
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(632, 610);
             this.dataGridViewAppointments.TabIndex = 15;
             // 
             // labelName
@@ -113,11 +114,22 @@
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(535, 653);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 38);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // formAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.ClientSize = new System.Drawing.Size(1329, 780);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -129,6 +141,7 @@
             this.Name = "formAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointments";
+            this.Load += new System.EventHandler(this.formAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.ResumeLayout(false);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -62,7 +62,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @exam_reason, @hist_treatment, @specimen_type, @specimen_date1, @specimen_date2, @test_request, @prepared_by, @staff_position, @lab_crea, @lab_sgpt, @lab_FBS, @lab_acid, @chest_XrayResult, @sputum_month, @sputum_due, @sputum_examDate, @sputum_result, @sputum_appearance, @doctors_order)", con))
+                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @services, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @exam_reason, @hist_treatment, @specimen_type, @specimen_date1, @specimen_date2, @test_request, @prepared_by, @staff_position, @lab_crea, @lab_sgpt, @lab_FBS, @lab_acid, @chest_XrayResult, @sputum_month, @sputum_due, @sputum_examDate, @sputum_result, @sputum_appearance, @doctors_order, @visual_appearance1, @visual_appearance2, @visual_appearanceXpert, @reading1, @reading2, @readingX, @LabDiag, @LabX, @tbdc_rec, @suggestions)", con))
                 {
                     com.Parameters.AddWithValue("@patient_Lname", txtLname.Text);
                     com.Parameters.AddWithValue("@patient_Fname", txtFname.Text);
@@ -79,7 +79,8 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@CPrelation", txtCPrel.Text);
                     com.Parameters.AddWithValue("@CPcontact", txtCPContact.Text);
                     com.Parameters.AddWithValue("@CPaddress", txtCPAddress.Text);
-                    com.Parameters.AddWithValue("@treatment_partner", txtTreatment.Text);
+                    com.Parameters.AddWithValue("@treatment_partner", comboBoxTreat.SelectedItem.ToString());
+                    com.Parameters.AddWithValue("@services", comboBoxService.SelectedItem.ToString());
                     com.Parameters.AddWithValue("@weight", txtWeight.Text);
                     com.Parameters.AddWithValue("@contact_num2", txtTcontact.Text);
                     com.Parameters.AddWithValue("@pulmonaries", txtPulm.Text);
@@ -263,6 +264,16 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@sputum_examDate", "");
                     com.Parameters.AddWithValue("@sputum_result", "");
                     com.Parameters.AddWithValue("@sputum_appearance", "");
+                    com.Parameters.AddWithValue("@visual_appearance1", "");
+                    com.Parameters.AddWithValue("@visual_appearance2", "");
+                    com.Parameters.AddWithValue("@visual_appearanceXpert", "");
+                    com.Parameters.AddWithValue("@reading1", "");
+                    com.Parameters.AddWithValue("@reading2", "");
+                    com.Parameters.AddWithValue("@readingX", "");
+                    com.Parameters.AddWithValue("@LabDiag", "");
+                    com.Parameters.AddWithValue("@LabX", "");
+                    com.Parameters.AddWithValue("@tbdc_rec", "");
+                    com.Parameters.AddWithValue("@suggestions", "");
                     com.Parameters.AddWithValue("@doctors_order", "");
 
                     DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -368,11 +379,122 @@ namespace DavaoChestCenter
             txtCPrel.Text = "Father";
             txtCPContact.Text = "1337";
             txtCPAddress.Text = "USSR Soviet Russia";
-            txtTreatment.Text = "Dr. Effren Salvado";
+            //txtTreatment.Text = "Dr. Effren Salvado";
             txtWeight.Text = "65";
             txtTcontact.Text = "2673";
             txtPulm.Text = "Cough";
             txtEpulm.Text = "Pimples";
+        }
+
+        private void radButtonSputum_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCough.Checked)
+            {
+                txtPulm.AppendText(checkBoxCough.Text + ", ");
+            }
+        }
+
+        private void txtPulm_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBoxFever_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxFever.Checked)
+            {
+                txtPulm.AppendText(checkBoxFever.Text + ", ");
+            }
+        }
+
+        private void checkBoxSputum_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSputum.Checked)
+            {
+                txtPulm.AppendText(checkBoxSputum.Text + ", ");
+            }
+        }
+
+        private void checkBoxWeight_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxWeight.Checked)
+            {
+                txtPulm.AppendText(checkBoxWeight.Text + ", ");
+            }
+        }
+
+        private void checkBoxHemo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHemo.Checked)
+            {
+                txtPulm.AppendText(checkBoxHemo.Text + ", ");
+            }
+        }
+
+        private void checkBoxChest_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxChest.Checked)
+            {
+                txtPulm.AppendText(checkBoxChest.Text + ", ");
+            }
+        }
+
+        private void checkBoxDypsnea_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDypsnea.Checked)
+            {
+                txtPulm.AppendText(checkBoxDypsnea.Text + ", ");
+            }
+        }
+
+        private void checkBoxChills_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxChills.Checked)
+            {
+                txtPulm.AppendText(checkBoxChills.Text + ", ");
+            }
+        }
+
+        private void checkBoxFatigue_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxFatigue.Checked)
+            {
+                txtPulm.AppendText(checkBoxFatigue.Text + ", ");
+            }
+        }
+
+        private void checkBoxMalaise_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMalaise.Checked)
+            {
+                txtPulm.AppendText(checkBoxMalaise.Text + ", ");
+            }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            txtPulm.Text = "";
+            checkBoxCough.Checked = false;
+            checkBoxFever.Checked = false;
+            checkBoxSputum.Checked = false;
+            checkBoxWeight.Checked = false;
+            checkBoxHemo.Checked = false;
+            checkBoxChest.Checked = false;
+            checkBoxDypsnea.Checked = false;
+            checkBoxChills.Checked = false;
+            checkBoxFatigue.Checked = false;
+            checkBoxMalaise.Checked = false;
+
         }
     }
 }
