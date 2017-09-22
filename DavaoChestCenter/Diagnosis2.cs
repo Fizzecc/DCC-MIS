@@ -23,7 +23,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("UPDATE registration SET lab_crea = @lab_crea, lab_sgpt = @lab_sgpt, lab_FBS = @lab_FBS, lab_acid = @lab_acid, chest_XrayResult = @chest_XrayResult, sputum_month = @sputum_month, sputum_due = @sputum_due, sputum_examDate = @sputum_examDate, sputum_result = @sputum_result, sputum_appearance = @sputum_appearance, doctors_order = @doctors_order WHERE registration_id = @registration_id", con))
+                using (var com = new MySqlCommand("UPDATE registration SET lab_crea = @lab_crea, lab_sgpt = @lab_sgpt, lab_FBS = @lab_FBS, lab_acid = @lab_acid, chest_XrayResult = @chest_XrayResult, sputum_month = @sputum_month, sputum_due = @sputum_due, sputum_examDate = @sputum_examDate, sputum_result = @sputum_result, sputum_appearance = @sputum_appearance, doctors_order = @doctors_order, visual_appearance1 = @visual_appearance1, visual_appearance2 = @visual_appearance2, visual_appearanceXpert = @visual_appearanceXpert, reading1 = @reading1, reading2 = @reading2, readingX = @readingX, LabDiag = @LabDiag, LabX = @LabX, tbdc_rec = @tbdc_rec, suggestions = @suggestions WHERE registration_id = @registration_id", con))
                 {
                     com.Parameters.AddWithValue("@registration_id", txtID.Text);
                     com.Parameters.AddWithValue("@lab_crea", txtCREA.Text);
@@ -37,7 +37,30 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@sputum_result", txtResult.Text);
                     com.Parameters.AddWithValue("@sputum_appearance", txtAppearance.Text);
                     com.Parameters.AddWithValue("@doctors_order", txtDoctor.Text);
+                    com.Parameters.AddWithValue("@visual_appearance1", txtVisual1.Text);
+                    com.Parameters.AddWithValue("@visual_appearance2", txtVisual2.Text);
+                    com.Parameters.AddWithValue("@visual_appearanceXpert", txtVisualX.Text);
+                    com.Parameters.AddWithValue("@reading1", txtreading1.Text);
+                    com.Parameters.AddWithValue("@reading2", txtreading2.Text);
+                    com.Parameters.AddWithValue("@readingX", txtReadingX.Text);
+                    com.Parameters.AddWithValue("@LabDiag", txtLabDiag.Text);
+                    com.Parameters.AddWithValue("@LabX", txtLabX.Text);
+                    com.Parameters.AddWithValue("@suggestions", txtSug.Text);
 
+                    if (radButtonAnti.Checked)
+                    {
+                        com.Parameters.AddWithValue("@tbdc_rec", radButtonAnti.Text);
+                    }
+
+                    if (radButtonNoAnti.Checked)
+                    {
+                        com.Parameters.AddWithValue("@tbdc_rec", radButtonNoAnti.Text);
+                    }
+
+                    if (radButonStop.Checked)
+                    {
+                        com.Parameters.AddWithValue("@tbdc_rec", radButonStop.Text);
+                    }
 
 
                     DialogResult r = MessageBox.Show("Apply Laboratory Results?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -54,6 +77,195 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+        }
+
+        private void checkBoxStopSMK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxStopSMK.Checked)
+            {
+                txtSug.AppendText(checkBoxStopSMK.Text + ", ");
+            }
+        }
+
+        private void checkBoxBsugar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxBsugar.Checked)
+            {
+                txtSug.AppendText(checkBoxBsugar.Text + ", ");
+            }
+        }
+
+        private void checkBoxHousehold_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHousehold.Checked)
+            {
+                txtSug.AppendText(checkBoxHousehold.Text + ", ");
+            }
+        }
+
+        private void checkBoxClearance_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxClearance.Checked)
+            {
+                txtSug.AppendText(checkBoxClearance.Text + ", ");
+            }
+        }
+
+        private void checkBoxStable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxStable.Checked)
+            {
+                txtSug.AppendText(checkBoxStable.Text + ", ");
+            }
+        }
+
+        private void checkBoxObserve_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxObserve.Checked)
+            {
+                txtSug.AppendText(checkBoxStable.Text + ", ");
+            }
+        }
+
+        private void checkBoxSugSGPT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSugSGPT.Checked)
+            {
+                txtSug.AppendText(checkBoxSugSGPT.Text + ", ");
+            }
+        }
+
+        private void checkBoxBiopsy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxBiopsy.Checked)
+            {
+                txtSug.AppendText(checkBoxBiopsy.Text + ", ");
+            }
+        }
+
+        private void checkBoxChestCT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxChestCT.Checked)
+            {
+                txtSug.AppendText(checkBoxChestCT.Text + ", ");
+            }
+        }
+
+        private void checkBoxSputum_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSputum.Checked)
+            {
+                txtSug.AppendText(checkBoxChestCT.Text + ", ");
+            }
+        }
+
+        private void checkBoxGen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxGen.Checked)
+            {
+                txtSug.AppendText(checkBoxGen.Text + ", ");
+            }
+        }
+
+        private void checkBoxConsent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxConsent.Checked)
+            {
+                txtSug.AppendText(checkBoxConsent.Text + ", ");
+            }
+        }
+
+        private void checkBoxRx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxRx.Checked)
+            {
+                txtSug.AppendText(checkBoxRx.Text + ", ");
+            }
+        }
+
+        private void checkBoxFind_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxFind.Checked)
+            {
+                txtSug.AppendText(checkBoxFind.Text + ", ");
+            }
+        }
+
+        private void checkBoxDSSM_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDSSM.Checked)
+            {
+                txtSug.AppendText(checkBoxDSSM.Text + ", ");
+            }
+        }
+
+        private void checkBoxCXR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCXR.Checked)
+            {
+                txtSug.AppendText(checkBoxCXR.Text + ", ");
+            }
+        }
+
+        private void checkBoxPMDT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPMDT.Checked)
+            {
+                txtSug.AppendText(checkBoxPMDT.Text + ", ");
+            }
+        }
+
+        private void checkBoxPresent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPresent.Checked)
+            {
+                txtSug.AppendText(checkBoxPresent.Text + ", ");
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtSug.Text = "";
+            checkBoxStopSMK.Checked = false;
+            checkBoxBsugar.Checked = false;
+            checkBoxHousehold.Checked = false;
+            checkBoxClearance.Checked = false;
+            checkBoxStable.Checked = false;
+            checkBoxObserve.Checked = false;
+            checkBoxSugSGPT.Checked = false;
+            checkBoxBiopsy.Checked = false;
+            checkBoxChestCT.Checked = false;
+            checkBoxSputum.Checked = false;
+            checkBoxGen.Checked = false;
+            checkBoxConsent.Checked = false;
+            checkBoxRx.Checked = false;
+            checkBoxFind.Checked = false;
+            checkBoxDSSM.Checked = false;
+            checkBoxCXR.Checked = false;
+            checkBoxPMDT.Checked = false;
+            checkBoxPresent.Checked = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtCREA.Text = "55";
+            txtSGPT.Text = "34";
+            txtPBS.Text = "17";
+            txtURIC.Text = "5";
+            txtChest.Text = "Uhh";
+            txtMonth.Text = "2";
+            txtResult.Text = "wow";
+            txtAppearance.Text = "Yellowish Slimey Color";
+            txtDoctor.Text = "Go home and rest :)";
+            txtVisual1.Text = "awfafa";
+            txtVisual2.Text = "covfefe";
+            txtVisualX.Text = "ho ho ho";
+            txtreading1.Text = "iz good";
+            txtreading2.Text = "iz well";
+            txtReadingX.Text = "hmm?";
+            txtLabDiag.Text = "ayy";
+            txtLabX.Text = "noo";
+            txtSug.Text = "Cough";
         }
     }
 }

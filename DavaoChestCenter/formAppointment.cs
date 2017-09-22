@@ -47,6 +47,24 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM registration", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridViewPatients.DataSource = dt;
+                        dt.Dispose();
+
+                        dataGridViewPatients.Columns["registration_id"].Visible = false;
+                    }
+                }
+                con.Close();
+            }
         }
         /*
         private void gatherServices()
@@ -383,6 +401,12 @@ namespace DavaoChestCenter
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            formRegistration reg = new formRegistration();
+            reg.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             formRegistration reg = new formRegistration();
             reg.Show();
