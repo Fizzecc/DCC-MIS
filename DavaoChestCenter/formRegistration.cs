@@ -13,14 +13,43 @@ namespace DavaoChestCenter
 {
     public partial class formRegistration : Form
     {
+        Dictionary<int, string> services = new Dictionary<int, string>();
+
         public formRegistration()
         {
             InitializeComponent();
+
+            gatherServices();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gatherServices()
         {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM services", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        while (rdr.HasRows)
+                        {
+                            if (rdr.Read())
+                            {
+                                services.Add(rdr.GetInt32(0), rdr.GetString(3));
 
+                                comboBoxService.DataSource = new BindingSource(services, null);
+                                comboBoxService.DisplayMember = "Value";
+                                comboBoxService.ValueMember = "Key";
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

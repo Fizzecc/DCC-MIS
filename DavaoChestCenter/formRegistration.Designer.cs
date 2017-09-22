@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBoxService = new System.Windows.Forms.ComboBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCPAddress = new System.Windows.Forms.TextBox();
             this.txtCPContact = new System.Windows.Forms.TextBox();
@@ -70,6 +72,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtPulm = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radButtonHyperNo = new System.Windows.Forms.RadioButton();
@@ -128,6 +131,8 @@
             this.radButtonSmokeYes = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboBoxTreat = new System.Windows.Forms.ComboBox();
+            this.label48 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.radButtonHistRT = new System.Windows.Forms.RadioButton();
             this.radButtonHistNew = new System.Windows.Forms.RadioButton();
@@ -163,11 +168,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnFill = new System.Windows.Forms.Button();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.comboBoxService = new System.Windows.Forms.ComboBox();
-            this.comboBoxTreat = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -216,6 +216,25 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Page 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxService
+            // 
+            this.comboBoxService.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxService.FormattingEnabled = true;
+            this.comboBoxService.Location = new System.Drawing.Point(391, 11);
+            this.comboBoxService.Name = "comboBoxService";
+            this.comboBoxService.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxService.TabIndex = 5;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(338, 16);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(45, 13);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "Service:";
             // 
             // groupBox2
             // 
@@ -639,6 +658,20 @@
             this.tabPage2.Text = "Page 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(484, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // txtPulm
             // 
             this.txtPulm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -677,7 +710,7 @@
             this.radButtonHyperYes.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonHyperYes.Location = new System.Drawing.Point(82, 9);
             this.radButtonHyperYes.Name = "radButtonHyperYes";
-            this.radButtonHyperYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonHyperYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonHyperYes.TabIndex = 126;
             this.radButtonHyperYes.TabStop = true;
             this.radButtonHyperYes.Text = "Yes";
@@ -711,7 +744,7 @@
             this.radButtonDiabYes.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonDiabYes.Location = new System.Drawing.Point(77, 346);
             this.radButtonDiabYes.Name = "radButtonDiabYes";
-            this.radButtonDiabYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonDiabYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonDiabYes.TabIndex = 123;
             this.radButtonDiabYes.TabStop = true;
             this.radButtonDiabYes.Text = "Yes";
@@ -1007,7 +1040,7 @@
             this.radButtonAlcoholicYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAlcoholicYes.Location = new System.Drawing.Point(71, 26);
             this.radButtonAlcoholicYes.Name = "radButtonAlcoholicYes";
-            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonAlcoholicYes.TabIndex = 1;
             this.radButtonAlcoholicYes.TabStop = true;
             this.radButtonAlcoholicYes.Text = "Yes";
@@ -1062,7 +1095,7 @@
             this.checkBoxAB.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxAB.Location = new System.Drawing.Point(267, 53);
             this.checkBoxAB.Name = "checkBoxAB";
-            this.checkBoxAB.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxAB.Size = new System.Drawing.Size(93, 17);
             this.checkBoxAB.TabIndex = 10;
             this.checkBoxAB.Text = "AB Treatment";
             this.checkBoxAB.UseVisualStyleBackColor = true;
@@ -1140,7 +1173,7 @@
             this.radButtonTBYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonTBYes.Location = new System.Drawing.Point(86, 26);
             this.radButtonTBYes.Name = "radButtonTBYes";
-            this.radButtonTBYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonTBYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonTBYes.TabIndex = 1;
             this.radButtonTBYes.TabStop = true;
             this.radButtonTBYes.Text = "Yes";
@@ -1249,7 +1282,7 @@
             this.radButtonSmokeYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonSmokeYes.Location = new System.Drawing.Point(65, 26);
             this.radButtonSmokeYes.Name = "radButtonSmokeYes";
-            this.radButtonSmokeYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonSmokeYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonSmokeYes.TabIndex = 1;
             this.radButtonSmokeYes.TabStop = true;
             this.radButtonSmokeYes.Text = "Yes";
@@ -1289,6 +1322,36 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Page 4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxTreat
+            // 
+            this.comboBoxTreat.FormattingEnabled = true;
+            this.comboBoxTreat.Items.AddRange(new object[] {
+            "",
+            "Uy",
+            "Marcos",
+            "Aneola",
+            "Bernardo",
+            "Penita",
+            "Estera",
+            "Lacanilaq",
+            "Bernardino",
+            "Relinoso",
+            "Nobleza"});
+            this.comboBoxTreat.Location = new System.Drawing.Point(171, 276);
+            this.comboBoxTreat.Name = "comboBoxTreat";
+            this.comboBoxTreat.Size = new System.Drawing.Size(176, 21);
+            this.comboBoxTreat.TabIndex = 28;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(172, 257);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(89, 13);
+            this.label48.TabIndex = 27;
+            this.label48.Text = "Treatment Staff:";
             // 
             // panel6
             // 
@@ -1353,7 +1416,7 @@
             this.radButtonUPA.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonUPA.Location = new System.Drawing.Point(119, 44);
             this.radButtonUPA.Name = "radButtonUPA";
-            this.radButtonUPA.Size = new System.Drawing.Size(46, 17);
+            this.radButtonUPA.Size = new System.Drawing.Size(45, 17);
             this.radButtonUPA.TabIndex = 16;
             this.radButtonUPA.TabStop = true;
             this.radButtonUPA.Text = "UPA";
@@ -1672,73 +1735,6 @@
             this.btnFill.Text = "Auto-Fill";
             this.btnFill.UseVisualStyleBackColor = false;
             this.btnFill.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(338, 16);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(45, 13);
-            this.label47.TabIndex = 4;
-            this.label47.Text = "Service:";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(172, 257);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(89, 13);
-            this.label48.TabIndex = 27;
-            this.label48.Text = "Treatment Staff:";
-            // 
-            // comboBoxService
-            // 
-            this.comboBoxService.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxService.FormattingEnabled = true;
-            this.comboBoxService.Items.AddRange(new object[] {
-            "",
-            "X-Ray",
-            "Sputum Test"});
-            this.comboBoxService.Location = new System.Drawing.Point(391, 11);
-            this.comboBoxService.Name = "comboBoxService";
-            this.comboBoxService.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxService.TabIndex = 5;
-            // 
-            // comboBoxTreat
-            // 
-            this.comboBoxTreat.FormattingEnabled = true;
-            this.comboBoxTreat.Items.AddRange(new object[] {
-            "",
-            "Uy",
-            "Marcos",
-            "Aneola",
-            "Bernardo",
-            "Penita",
-            "Estera",
-            "Lacanilaq",
-            "Bernardino",
-            "Relinoso",
-            "Nobleza"});
-            this.comboBoxTreat.Location = new System.Drawing.Point(171, 276);
-            this.comboBoxTreat.Name = "comboBoxTreat";
-            this.comboBoxTreat.Size = new System.Drawing.Size(176, 21);
-            this.comboBoxTreat.TabIndex = 28;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(484, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // formRegistration
             // 

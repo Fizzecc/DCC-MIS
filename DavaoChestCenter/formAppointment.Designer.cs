@@ -142,7 +142,6 @@
             this.Name = "formAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointments";
-            this.Load += new System.EventHandler(this.formAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.ResumeLayout(false);
