@@ -18,6 +18,8 @@ namespace DavaoChestCenter
             InitializeComponent();
 
             renew();
+
+            comboBoxSort.Text = "All Items";
         }
 
         public void renew()
@@ -40,12 +42,70 @@ namespace DavaoChestCenter
                     dataGridViewInventory.DataSource = dt;
                 }
 
-                using (var com = new MySqlCommand("SELECT name, minimum_quantity FROM products", con))
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Normal' AND dosage != 'Non-consumable'", con))
                 {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewProduct.DataSource = dt;
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelNormal.Text = "Normal: " + rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Returned'", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelReturned.Text = "Returned: " + rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Damaged' AND dosage != 'Non-consumable'", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelDamaged.Text = "Damaged: " + rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Normal' AND dosage = 'Non-consumable'", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelNonNormal.Text = "Normal: " + rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Under Repair'", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelNonUnderRepair.Text = "Under Repair: " + rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Damaged' AND dosage = 'Non-consumable'", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            labelNonDamaged.Text = "Damaged: " + rdr.GetInt32(0);
+                        }
+                    }
                 }
                 con.Close();
             }
@@ -58,11 +118,6 @@ namespace DavaoChestCenter
                 con.Open();
                 using (var com = new MySqlCommand("SELECT name, minimum_quantity, COUNT(status) count FROM products LEFT JOIN inventory ON products.id = inventory.product_id WHERE status = 'Normal' OR status IS NULL GROUP BY name HAVING count < minimum_quantity", con))
                 {
-                    var adp = new MySqlDataAdapter(com);
-                    var dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridViewRequired.DataSource = dt;
-
                     using (var rdr = com.ExecuteReader())
                     {
                         if (rdr.HasRows)
@@ -107,22 +162,133 @@ namespace DavaoChestCenter
             transaction.ShowDialog();
         }
 
-        private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
+        public string commandChange()
         {
-            string commandstring = "";
-            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
-            else commandstring = "SELECT name, brand_name, manufacturer, dosage, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+            string command = "";
 
+            if (checkBoxCascade.Checked)
+            {
+                if (textBoxSearch.Text != "")
+                {
+                    if (comboBoxSort.Text == "All Items")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY inventory.id";
+                    if (comboBoxSort.Text == "Generic Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY name";
+                    if (comboBoxSort.Text == "Brand Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY brand_name";
+                    if (comboBoxSort.Text == "Expiration Date")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY expiration_date";
+                }
+                else
+                {
+                    if (comboBoxSort.Text == "All Items")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY inventory.id";
+                    if (comboBoxSort.Text == "Generic Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY name";
+                    if (comboBoxSort.Text == "Brand Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY brand_name";
+                    if (comboBoxSort.Text == "Expiration Date")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal'  GROUP BY name HAVING count >= 1 ORDER BY expiration_date";
+                }
+            }
+            else
+            {
+                if (textBoxSearch.Text != "")
+                {
+                    if (comboBoxSort.Text == "All Items")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY inventory.id";
+                    if (comboBoxSort.Text == "Generic Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY name";
+                    if (comboBoxSort.Text == "Brand Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY brand_name";
+                    if (comboBoxSort.Text == "Expiration Date")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY expiration_date";
+                }
+                else
+                {
+                    if (comboBoxSort.Text == "All Items")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY inventory.id";
+                    if (comboBoxSort.Text == "Generic Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY name";
+                    if (comboBoxSort.Text == "Brand Name")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY brand_name";
+                    if (comboBoxSort.Text == "Expiration Date")
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY expiration_date";
+                }
+            }
+
+            return command;
+        }
+
+        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
-                using (var com = new MySqlCommand(commandstring, con))
+                con.Open();
+                using (var com = new MySqlCommand(commandChange(), con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewInventory.DataSource = dt;
+                    
                 }
+                textBoxSearch.Text = "";
+
+                con.Close();
             }
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand(commandChange(), con))
+                {
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
+
+                }
+                con.Close();
+            }
+        }
+
+        private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand(commandChange(), con))
+                {
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
+
+                }
+                con.Close();
+            }
+        }
+        /*
+private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
+{
+string commandstring = "";
+if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1";
+else commandstring = "SELECT name, brand_name, manufacturer, dosage, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+
+using (var con = new MySqlConnection(conClass.connectionString))
+{
+using (var com = new MySqlCommand(commandstring, con))
+{
+var adp = new MySqlDataAdapter(com);
+var dt = new DataTable();
+adp.Fill(dt);
+dataGridViewInventory.DataSource = dt;
+}
+}
+}*/
     }
 }

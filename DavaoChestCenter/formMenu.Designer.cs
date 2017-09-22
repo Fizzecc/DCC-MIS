@@ -181,6 +181,7 @@
             this.buttonModule3.Text = "Staff Attendance";
             this.buttonModule3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonModule3.UseVisualStyleBackColor = false;
+            this.buttonModule3.Click += new System.EventHandler(this.buttonModule3_Click);
             // 
             // label2
             // 

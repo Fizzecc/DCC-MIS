@@ -43,6 +43,9 @@
             this.textBoxOther = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxExtra = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -149,6 +152,8 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.Controls.Add(this.comboBoxExtra);
+            this.flowLayoutPanel.Controls.Add(this.textBox1);
             this.flowLayoutPanel.Location = new System.Drawing.Point(16, 202);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(320, 151);
@@ -181,6 +186,23 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Other Products Required:";
             // 
+            // comboBoxExtra
+            // 
+            this.comboBoxExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxExtra.FormattingEnabled = true;
+            this.comboBoxExtra.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxExtra.Name = "comboBoxExtra";
+            this.comboBoxExtra.Size = new System.Drawing.Size(203, 27);
+            this.comboBoxExtra.TabIndex = 28;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(212, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(41, 27);
+            this.textBox1.TabIndex = 34;
+            // 
             // formServiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -208,6 +230,8 @@
             this.Name = "formServiceAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Service";
+            this.flowLayoutPanel.ResumeLayout(false);
+            this.flowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +254,7 @@
         private System.Windows.Forms.TextBox textBoxOther;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxExtra;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -32,7 +32,7 @@ namespace DavaoChestCenter
                         dataGridView1.DataSource = dt;
                         dt.Dispose();
 
-                        dataGridView1.Columns["registration_id"].Visible = false;
+                        dataGridView1.Columns["registration_id"].Visible = true;
                     }
                 }
                 con.Close();

@@ -39,7 +39,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("UPDATE transactions SET status = @status WHERE id = @id", con))
+                using (var com = new MySqlCommand("UPDATE inventory SET status = @status WHERE id = @id", con))
                 {
                     com.Parameters.AddWithValue("@status", comboBoxProductStatus.Text);
                     com.Parameters.AddWithValue("@id", selectedProduct);

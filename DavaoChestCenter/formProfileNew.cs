@@ -59,13 +59,15 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using(var com = new MySqlCommand("INSERT INTO staff VALUES(null, @firstname, @middlename, @lastname, @username, @password)", con))
+                using(var com = new MySqlCommand("INSERT INTO staff VALUES(null, @firstname, @middlename, @lastname, @username, @password, @address, @contact)", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
                     com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                    com.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                    com.Parameters.AddWithValue("@contact", textBoxContact.Text);
 
                     DialogResult r = MessageBox.Show("Create new staff", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 

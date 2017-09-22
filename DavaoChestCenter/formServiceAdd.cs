@@ -45,6 +45,10 @@ namespace DavaoChestCenter
                                 comboBoxItems.DataSource = new BindingSource(products, null);
                                 comboBoxItems.DisplayMember = "Value";
                                 comboBoxItems.ValueMember = "Key";
+
+                                comboBoxExtra.DataSource = new BindingSource(products, null);
+                                comboBoxExtra.DisplayMember = "Value";
+                                comboBoxExtra.ValueMember = "Key";
                             }
                             else
                             {
