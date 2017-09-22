@@ -31,8 +31,11 @@ namespace DavaoChestCenter
 
             selectedUser = x;
 
-            textBoxNameFirst.Text = firstname; textBoxNameMiddle.Text = middlename; textBoxNameLast.Text = lastname;
-            textBoxUsername.Text = username; textBoxPassword.Text = password;
+            textBoxNameFirst.Text = firstname;
+            textBoxNameMiddle.Text = middlename;
+            textBoxNameLast.Text = lastname;
+            textBoxUsername.Text = username;
+            textBoxPassword.Text = password;
             dateTimePickerWorkingTimeStart.Value = DateTime.Parse(working_time_start);
             dateTimePickerWorkingTimeEnd.Value = DateTime.Parse(working_time_end);
 
