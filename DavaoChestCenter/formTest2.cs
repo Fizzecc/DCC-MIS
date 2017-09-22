@@ -20,7 +20,19 @@ namespace DavaoChestCenter
             InitializeComponent();
         }
 
-        private void test2_Load(object sender, EventArgs e)
+        public formTest2(int x,
+            string firstname, string middlename, string lastname,
+            string username, string password)
+        {
+            InitializeComponent();
+            txtFname.Text = firstname;
+            txtMname.Text = middlename;
+            txtLname.Text = lastname;
+            txtUser.Text = username;
+            txtPass.Text = password;
+        }
+
+            private void test2_Load(object sender, EventArgs e)
         {
 
         }

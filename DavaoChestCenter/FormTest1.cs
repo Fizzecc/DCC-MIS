@@ -22,7 +22,24 @@ namespace DavaoChestCenter
 
         private void test1_Load(object sender, EventArgs e)
         {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
 
+                using (var com = new MySqlCommand("SELECT * FROM staff", con))
+                {
+                    using (var adp = new MySqlDataAdapter(com))
+                    {
+                        var dt = new DataTable();
+                        adp.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                        dt.Dispose();
+
+                        //dataGridView1.Columns["_id"].Visible = false;
+                    }
+                }
+                con.Close();
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
