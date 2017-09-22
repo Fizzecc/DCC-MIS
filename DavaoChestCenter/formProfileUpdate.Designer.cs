@@ -51,6 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNameFirst = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxContact = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonUpdate
@@ -60,9 +65,9 @@
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(16, 201);
+            this.buttonUpdate.Location = new System.Drawing.Point(16, 300);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(312, 32);
+            this.buttonUpdate.Size = new System.Drawing.Size(309, 32);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -181,7 +186,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 171);
+            this.label6.Location = new System.Drawing.Point(12, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 70;
@@ -189,24 +194,24 @@
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(116, 135);
+            this.textBoxUsername.Location = new System.Drawing.Point(116, 234);
             this.textBoxUsername.Multiline = true;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(212, 27);
+            this.textBoxUsername.Size = new System.Drawing.Size(209, 27);
             this.textBoxUsername.TabIndex = 67;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(116, 168);
+            this.textBoxPassword.Location = new System.Drawing.Point(116, 267);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(212, 27);
+            this.textBoxPassword.Size = new System.Drawing.Size(209, 27);
             this.textBoxPassword.TabIndex = 69;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 138);
+            this.label7.Location = new System.Drawing.Point(12, 237);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 19);
             this.label7.TabIndex = 68;
@@ -215,7 +220,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(62, 105);
+            this.label10.Location = new System.Drawing.Point(63, 200);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(233, 19);
             this.label10.TabIndex = 66;
@@ -272,11 +277,59 @@
             this.textBoxNameFirst.Size = new System.Drawing.Size(212, 27);
             this.textBoxNameFirst.TabIndex = 59;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 19);
+            this.label5.TabIndex = 86;
+            this.label5.Text = "Contact #:";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(117, 137);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(209, 27);
+            this.textBoxAddress.TabIndex = 83;
+            // 
+            // textBoxContact
+            // 
+            this.textBoxContact.Location = new System.Drawing.Point(117, 170);
+            this.textBoxContact.Multiline = true;
+            this.textBoxContact.Name = "textBoxContact";
+            this.textBoxContact.Size = new System.Drawing.Size(209, 27);
+            this.textBoxContact.TabIndex = 85;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 19);
+            this.label8.TabIndex = 84;
+            this.label8.Text = "Address:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(63, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(233, 19);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "____________________________";
+            // 
             // formProfileUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 247);
+            this.ClientSize = new System.Drawing.Size(568, 344);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.textBoxContact);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dateTimePickerWorkingTimeEnd);
             this.Controls.Add(this.checkBoxSunday);
@@ -338,5 +391,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxNameFirst;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.TextBox textBoxContact;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label4;
     }
 }

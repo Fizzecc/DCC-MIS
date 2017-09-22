@@ -25,7 +25,8 @@ namespace DavaoChestCenter
         public formProfileUpdate(int x,
             string firstname, string middlename, string lastname,
             string username, string password,
-            string schedule_days, string working_time_start, string working_time_end)
+            string schedule_days, string working_time_start, string working_time_end,
+            string address, string contact)
         {
             InitializeComponent();
 
@@ -63,13 +64,15 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("UPDATE staff SET firstname = @firstname, middlename = @middlename, lastname = @lastname, username = @username, password = @password WHERE id = @id", con))
+                using (var com = new MySqlCommand("UPDATE staff SET firstname = @firstname, middlename = @middlename, lastname = @lastname, username = @username, password = @password, contact = @contact, address = @address WHERE id = @id", con))
                 {
                     com.Parameters.AddWithValue("@firstname", textBoxNameFirst.Text);
                     com.Parameters.AddWithValue("@middlename", textBoxNameMiddle.Text);
                     com.Parameters.AddWithValue("@lastname", textBoxNameLast.Text);
                     com.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     com.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                    com.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                    com.Parameters.AddWithValue("@contact", textBoxContact.Text);
                     com.Parameters.AddWithValue("@id", selectedUser);
 
                     com.ExecuteNonQuery();

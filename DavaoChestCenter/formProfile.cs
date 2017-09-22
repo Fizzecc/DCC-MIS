@@ -41,7 +41,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT id, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end FROM staff RIGHT JOIN schedules ON staff.id = schedules.staff_id WHERE id != " + id, con))
+                using (var com = new MySqlCommand("SELECT id, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end, address, contact FROM staff RIGHT JOIN schedules ON staff.id = schedules.staff_id WHERE id != " + id, con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {
@@ -68,8 +68,10 @@ namespace DavaoChestCenter
             string schedule_days = dataGridView1.Rows[e.RowIndex].Cells["schedule_days"].Value.ToString();
             string working_time_start = dataGridView1.Rows[e.RowIndex].Cells["working_time_start"].Value.ToString();
             string working_time_end = dataGridView1.Rows[e.RowIndex].Cells["working_time_end"].Value.ToString();
+            string address = dataGridView1.Rows[e.RowIndex].Cells["address"].Value.ToString();
+            string contact = dataGridView1.Rows[e.RowIndex].Cells["contact"].Value.ToString();
 
-            var update = new formProfileUpdate(selectedUser, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end);
+            var update = new formProfileUpdate(selectedUser, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end, address, contact);
             update.referenceToMain = this;
             update.ShowDialog();
         }
