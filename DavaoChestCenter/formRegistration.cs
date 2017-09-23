@@ -105,11 +105,14 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@CPLname", txtCPLname.Text);
                     com.Parameters.AddWithValue("@CPFname", txtCPFname.Text);
                     com.Parameters.AddWithValue("@CPMname", txtCPMname.Text);
+                    com.Parameters.AddWithValue("@weight", txtWeight.Text);
                     com.Parameters.AddWithValue("@CPrelation", txtCPrel.Text);
                     com.Parameters.AddWithValue("@CPcontact", txtCPContact.Text);
                     com.Parameters.AddWithValue("@CPaddress", txtCPAddress.Text);
-                    com.Parameters.AddWithValue("@treatment_partner", comboBoxTreat.SelectedItem.ToString());
                     com.Parameters.AddWithValue("@services", comboBoxService.SelectedItem.ToString());
+
+                    /*
+                    com.Parameters.AddWithValue("@treatment_partner", comboBoxTreat.SelectedItem.ToString());
                     com.Parameters.AddWithValue("@weight", txtWeight.Text);
                     com.Parameters.AddWithValue("@contact_num2", txtTcontact.Text);
                     com.Parameters.AddWithValue("@pulmonaries", txtPulm.Text);
@@ -202,6 +205,7 @@ namespace DavaoChestCenter
                     {
                         com.Parameters.AddWithValue("@hypertensive", radButtonHyperNo.Text);
                     }
+                    */
 
                     //Gender
 
@@ -228,6 +232,7 @@ namespace DavaoChestCenter
                     }
 
                     //exam reason
+                    /*
                     if (radButtDiagnosis.Checked)
                     {
                         com.Parameters.AddWithValue("@exam_reason", radButtDiagnosis.Text);
@@ -282,7 +287,34 @@ namespace DavaoChestCenter
                     {
                         com.Parameters.AddWithValue("@test_request", radButtonUPA.Text);
                     }
+                    */
 
+                    com.Parameters.AddWithValue("@treatment_partner", "");
+                    com.Parameters.AddWithValue("@contact_num2", "");
+                    com.Parameters.AddWithValue("@pulmonaries", "");
+                    com.Parameters.AddWithValue("@extra_pulmonaries", "");
+                    com.Parameters.AddWithValue("@diabetic", "");
+                    com.Parameters.AddWithValue("@hypertensive", "");
+                    com.Parameters.AddWithValue("@smoke", "");
+                    com.Parameters.AddWithValue("@smoke_day", "");
+                    com.Parameters.AddWithValue("@start_smoking", "");
+                    com.Parameters.AddWithValue("@stop_smoking", "");
+                    com.Parameters.AddWithValue("@prev_tb", "");
+                    com.Parameters.AddWithValue("@tb_months", "");
+                    com.Parameters.AddWithValue("@tb_date", "");
+                    com.Parameters.AddWithValue("@medicines", "");
+                    com.Parameters.AddWithValue("@medicine_under", "");
+                    com.Parameters.AddWithValue("@alcoholic", "");
+                    com.Parameters.AddWithValue("@alcoholic_start", "");
+                    com.Parameters.AddWithValue("@alcoholic_stop", "");
+                    com.Parameters.AddWithValue("@exam_reason", "");
+                    com.Parameters.AddWithValue("@hist_treatment", "");
+                    com.Parameters.AddWithValue("@specimen_type", "");
+                    com.Parameters.AddWithValue("@specimen_date1", "");
+                    com.Parameters.AddWithValue("@specimen_date2", "");
+                    com.Parameters.AddWithValue("@test_request", "");
+                    com.Parameters.AddWithValue("@prepared_by", "");
+                    com.Parameters.AddWithValue("@staff_position", "");
                     com.Parameters.AddWithValue("@lab_crea", "");
                     com.Parameters.AddWithValue("@lab_sgpt", "");
                     com.Parameters.AddWithValue("@lab_FBS", "");
@@ -320,8 +352,10 @@ namespace DavaoChestCenter
             }
         }
 
+
         private void formRegistration_Load(object sender, EventArgs e)
         {
+            /*
             txtTimesSmoke.Enabled = false;
             dateTimeSMKstart.Enabled = false;
             dateTimeSMKstop.Enabled = false;
@@ -332,10 +366,12 @@ namespace DavaoChestCenter
             dateTimeDRNKstart.Enabled = false;
             dateTimeDRNKstop.Enabled = false;
             txtMonths.Enabled = false;
+            */
         }
 
         private void radButtonSmokeYes_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (radButtonSmokeYes.Checked)
             {
                 txtTimesSmoke.Enabled = true;
@@ -349,6 +385,7 @@ namespace DavaoChestCenter
                 dateTimeSMKstart.Enabled = false;
                 dateTimeSMKstop.Enabled = false;
             }
+            */
         }
 
         private void radButtonSmokeNo_CheckedChanged(object sender, EventArgs e)
@@ -358,6 +395,7 @@ namespace DavaoChestCenter
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (radButtonTBYes.Checked)
             {
                 dateTimeTBTreat.Enabled = true;
@@ -375,10 +413,12 @@ namespace DavaoChestCenter
                 txtMonths.Enabled = false;
                 txtMedicines.Enabled = false;
             }
+            */
         }
 
         private void radButtonAlcoholicYes_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (radButtonAlcoholicYes.Checked)
             {
                 dateTimeDRNKstart.Enabled = true;
@@ -390,6 +430,7 @@ namespace DavaoChestCenter
                 dateTimeDRNKstart.Enabled = false;
                 dateTimeDRNKstop.Enabled = false;
             }
+            */
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -409,10 +450,12 @@ namespace DavaoChestCenter
             txtCPContact.Text = "1337";
             txtCPAddress.Text = "USSR Soviet Russia";
             //txtTreatment.Text = "Dr. Effren Salvado";
+            /*
             txtWeight.Text = "65";
             txtTcontact.Text = "2673";
             txtPulm.Text = "Cough";
             txtEpulm.Text = "Pimples";
+            */
         }
 
         private void radButtonSputum_CheckedChanged(object sender, EventArgs e)
@@ -425,6 +468,7 @@ namespace DavaoChestCenter
 
         }
 
+        /*
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxCough.Checked)
@@ -525,5 +569,6 @@ namespace DavaoChestCenter
             checkBoxMalaise.Checked = false;
 
         }
+        */
     }
 }

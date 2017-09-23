@@ -16,6 +16,7 @@ namespace DavaoChestCenter
         Dictionary<int, string> services = new Dictionary<int, string>();
 
         int id = -1;
+        int selectID;
 
         public formAppointment(int x)
         {
@@ -431,6 +432,18 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+        }
+
+        private void dataGridViewPatients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectID = int.Parse(dataGridViewPatients.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
+            string firstname = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Fname"].Value.ToString();
+            string middlename = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Mname"].Value.ToString();
+            string lastname = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
+
+            var records = new formMedRecords(selectID, firstname, middlename, lastname);
+            records.ref_To_Main = this;
+            records.ShowDialog();
         }
     }
 
