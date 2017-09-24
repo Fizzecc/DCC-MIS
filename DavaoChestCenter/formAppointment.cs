@@ -34,7 +34,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT registration_id, appointmentDate, patient_Fname, patient_Mname, patient_Lname FROM registration WHERE appointmentDate >= DATE_SUB(NOW(), INTERVAL 3 DAY)", con))
+                using (var com = new MySqlCommand("SELECT registration_id, appointmentDate, patient_Fname, patient_Mname, patient_Lname FROM registration WHERE appointmentDate >= DATE_SUB(NOW(), INTERVAL 7 DAY)", con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {

@@ -115,6 +115,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.btnService = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -315,7 +316,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(40, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "SGPT/ALAT";
             // 
@@ -972,7 +973,7 @@
             this.radButonStop.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButonStop.Location = new System.Drawing.Point(26, 73);
             this.radButonStop.Name = "radButonStop";
-            this.radButonStop.Size = new System.Drawing.Size(143, 17);
+            this.radButonStop.Size = new System.Drawing.Size(142, 17);
             this.radButonStop.TabIndex = 3;
             this.radButonStop.TabStop = true;
             this.radButonStop.Text = "Stop Anti-TB Treatment";
@@ -984,7 +985,7 @@
             this.radButtonNoAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonNoAnti.Location = new System.Drawing.Point(26, 50);
             this.radButtonNoAnti.Name = "radButtonNoAnti";
-            this.radButtonNoAnti.Size = new System.Drawing.Size(134, 17);
+            this.radButtonNoAnti.Size = new System.Drawing.Size(133, 17);
             this.radButtonNoAnti.TabIndex = 2;
             this.radButtonNoAnti.TabStop = true;
             this.radButtonNoAnti.Text = "No Anti-TB Treatment";
@@ -996,7 +997,7 @@
             this.radButtonAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAnti.Location = new System.Drawing.Point(26, 27);
             this.radButtonAnti.Name = "radButtonAnti";
-            this.radButtonAnti.Size = new System.Drawing.Size(116, 17);
+            this.radButtonAnti.Size = new System.Drawing.Size(115, 17);
             this.radButtonAnti.TabIndex = 1;
             this.radButtonAnti.TabStop = true;
             this.radButtonAnti.Text = "Anti-TB Treatment";
@@ -1070,11 +1071,26 @@
             this.label31.TabIndex = 35;
             this.label31.Text = "Selected Patient ID: ";
             // 
+            // btnService
+            // 
+            this.btnService.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnService.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnService.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnService.Location = new System.Drawing.Point(188, 425);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(103, 37);
+            this.btnService.TabIndex = 38;
+            this.btnService.Text = "Service";
+            this.btnService.UseVisualStyleBackColor = false;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
+            // 
             // Diagnosis2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 468);
+            this.Controls.Add(this.btnService);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label31);
@@ -1194,5 +1210,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button btnService;
     }
 }

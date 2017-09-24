@@ -275,5 +275,127 @@ namespace DavaoChestCenter
             txtLabX.Text = "noo";
             txtSug.Text = "Cough";
         }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+
+                int selectedService = -1;
+
+                using (var com = new MySqlCommand("SELECT service_id FROM registration WHERE registration_id = @registration_id", con))
+                {
+                    com.Parameters.AddWithValue("@registration_id", lblID.Text);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            selectedService = rdr.GetInt32(0);
+                        }
+                    }
+                }
+
+                Boolean main = true; Boolean other = true;
+
+                string product_id = "-1", product_quantity = "-1";
+                string[] other_products_id = { }, other_products_quantity = { };
+
+
+                using (var com = new MySqlCommand("SELECT product_id, product_quantity, other_products_id, other_products_quantity FROM services WHERE service_id = @service_id", con))
+                {
+                    com.Parameters.AddWithValue("@service_id", selectedService);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            product_id = rdr.GetString(0);
+                            product_quantity = rdr.GetString(1);
+
+                            other_products_id = rdr.GetString(2).Split('/');
+                            other_products_quantity = rdr.GetString(3).Split('/');
+                        }
+                    }
+                }
+                using (var com = new MySqlCommand("SELECT COUNT(status) count FROM inventory WHERE product_id = @product_id AND status = 'Normal'", con))
+                {
+                    com.Parameters.AddWithValue("@product_id", product_id);
+
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            if (rdr.GetInt32(0) <= int.Parse(product_quantity))
+                            {
+                                main = false;
+                                MessageBox.Show("Product ID: " + product_id + " out of stock");
+                            }
+                        }
+                    }
+                }
+
+                int count = 0;
+
+                foreach (string x in other_products_id)
+                {
+                    using (var com = new MySqlCommand("SELECT COUNT(status) count FROM inventory WHERE product_id = @product_id AND status = 'Normal'", con))
+                    {
+                        com.Parameters.AddWithValue("@product_id", x);
+
+                        using (var rdr = com.ExecuteReader())
+                        {
+                            if (rdr.Read())
+                            {
+                                if (rdr.GetInt32(0) <= int.Parse(other_products_quantity[count]))
+                                {
+                                    other = false;
+                                    MessageBox.Show("Product ID: " + x + " out of stock");
+                                }
+                            }
+                        }
+                    }
+                    count++;
+                }
+
+                count = 0;
+
+                if (main && other)
+                {
+                    for (int i = 0; i < int.Parse(product_quantity); i++)
+                    {
+                        using (var com = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE product_id = @product_id AND status = 'Normal' ORDER BY id, expiration_date ASC LIMIT 1", con))
+                        {
+                            com.Parameters.AddWithValue("@product_id", product_id);
+
+                            com.ExecuteNonQuery();
+                        }
+                    }
+
+                    foreach (string x in other_products_id)
+                    {
+                        for (int i = 0; i < int.Parse(other_products_quantity[count]); i++)
+                        {
+                            using (var com = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE product_id = @product_id AND status = 'Normal' ORDER BY id, expiration_date ASC LIMIT 1", con))
+                            {
+                                com.Parameters.AddWithValue("@product_id", x);
+
+                                com.ExecuteNonQuery();
+                            }
+                        }
+                        count++;
+                    }
+
+                    MessageBox.Show("Service successful");
+                }
+                else
+                {
+                    MessageBox.Show("More products required");
+                }
+
+                con.Close();
+            }
+        }
     }
 }
