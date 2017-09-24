@@ -62,6 +62,7 @@ namespace DavaoChestCenter
                         dt.Dispose();
 
                         dataGridViewPatients.Columns["registration_id"].Visible = false;
+                        dataGridViewPatients.Columns["service_id"].Visible = false;
                     }
                 }
                 con.Close();
