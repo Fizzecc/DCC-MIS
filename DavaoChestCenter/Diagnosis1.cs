@@ -13,6 +13,7 @@ namespace DavaoChestCenter
 {
     public partial class Diagnosis1 : Form
     {
+        int selectID;
         public Diagnosis1()
         {
             InitializeComponent();
@@ -98,6 +99,18 @@ namespace DavaoChestCenter
         {
             Form test = new formTest1();
             test.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectID = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
+            string firstname = dataGridView1.Rows[e.RowIndex].Cells["patient_Fname"].Value.ToString();
+            string middlename = dataGridView1.Rows[e.RowIndex].Cells["patient_Mname"].Value.ToString();
+            string lastname = dataGridView1.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
+
+            var diag = new Diagnosis2(selectID, firstname, middlename, lastname);
+            diag.ref_To_Main = this;
+            diag.ShowDialog();
         }
     }
 }

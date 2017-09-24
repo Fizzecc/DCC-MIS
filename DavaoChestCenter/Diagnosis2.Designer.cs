@@ -66,52 +66,55 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtVisual1 = new System.Windows.Forms.TextBox();
-            this.txtVisual2 = new System.Windows.Forms.TextBox();
-            this.txtreading1 = new System.Windows.Forms.TextBox();
-            this.txtreading2 = new System.Windows.Forms.TextBox();
-            this.txtLabDiag = new System.Windows.Forms.TextBox();
-            this.txtReadingX = new System.Windows.Forms.TextBox();
+            this.txtLabX = new System.Windows.Forms.TextBox();
             this.txtVisualX = new System.Windows.Forms.TextBox();
+            this.txtReadingX = new System.Windows.Forms.TextBox();
+            this.txtLabDiag = new System.Windows.Forms.TextBox();
+            this.txtreading2 = new System.Windows.Forms.TextBox();
+            this.txtreading1 = new System.Windows.Forms.TextBox();
+            this.txtVisual2 = new System.Windows.Forms.TextBox();
+            this.txtVisual1 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label29 = new System.Windows.Forms.Label();
-            this.radButtonAnti = new System.Windows.Forms.RadioButton();
-            this.radButtonNoAnti = new System.Windows.Forms.RadioButton();
-            this.radButonStop = new System.Windows.Forms.RadioButton();
-            this.label30 = new System.Windows.Forms.Label();
-            this.checkBoxStopSMK = new System.Windows.Forms.CheckBox();
-            this.checkBoxBsugar = new System.Windows.Forms.CheckBox();
-            this.checkBoxHousehold = new System.Windows.Forms.CheckBox();
-            this.checkBoxObserve = new System.Windows.Forms.CheckBox();
-            this.checkBoxStable = new System.Windows.Forms.CheckBox();
-            this.checkBoxClearance = new System.Windows.Forms.CheckBox();
-            this.checkBoxConsent = new System.Windows.Forms.CheckBox();
-            this.checkBoxGen = new System.Windows.Forms.CheckBox();
-            this.checkBoxSputum = new System.Windows.Forms.CheckBox();
-            this.checkBoxChestCT = new System.Windows.Forms.CheckBox();
-            this.checkBoxBiopsy = new System.Windows.Forms.CheckBox();
-            this.checkBoxSugSGPT = new System.Windows.Forms.CheckBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.txtSug = new System.Windows.Forms.TextBox();
             this.checkBoxPresent = new System.Windows.Forms.CheckBox();
             this.checkBoxPMDT = new System.Windows.Forms.CheckBox();
             this.checkBoxCXR = new System.Windows.Forms.CheckBox();
             this.checkBoxDSSM = new System.Windows.Forms.CheckBox();
             this.checkBoxFind = new System.Windows.Forms.CheckBox();
             this.checkBoxRx = new System.Windows.Forms.CheckBox();
-            this.txtLabX = new System.Windows.Forms.TextBox();
-            this.txtSug = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.checkBoxConsent = new System.Windows.Forms.CheckBox();
+            this.checkBoxGen = new System.Windows.Forms.CheckBox();
+            this.checkBoxSputum = new System.Windows.Forms.CheckBox();
+            this.checkBoxChestCT = new System.Windows.Forms.CheckBox();
+            this.checkBoxBiopsy = new System.Windows.Forms.CheckBox();
+            this.checkBoxSugSGPT = new System.Windows.Forms.CheckBox();
+            this.checkBoxObserve = new System.Windows.Forms.CheckBox();
+            this.checkBoxStable = new System.Windows.Forms.CheckBox();
+            this.checkBoxClearance = new System.Windows.Forms.CheckBox();
+            this.checkBoxHousehold = new System.Windows.Forms.CheckBox();
+            this.checkBoxBsugar = new System.Windows.Forms.CheckBox();
+            this.checkBoxStopSMK = new System.Windows.Forms.CheckBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.radButonStop = new System.Windows.Forms.RadioButton();
+            this.radButtonNoAnti = new System.Windows.Forms.RadioButton();
+            this.radButtonAnti = new System.Windows.Forms.RadioButton();
+            this.label29 = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -514,20 +517,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Month";
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubmit.Location = new System.Drawing.Point(452, 425);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(103, 37);
-            this.btnSubmit.TabIndex = 4;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -565,75 +554,72 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Laboratory Tests";
             // 
-            // label19
+            // txtLabX
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(30, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(57, 13);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Specimen";
+            this.txtLabX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLabX.Location = new System.Drawing.Point(390, 179);
+            this.txtLabX.Multiline = true;
+            this.txtLabX.Name = "txtLabX";
+            this.txtLabX.Size = new System.Drawing.Size(127, 23);
+            this.txtLabX.TabIndex = 15;
             // 
-            // label20
+            // txtVisualX
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(222, 36);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(102, 13);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Smear Microscopy";
+            this.txtVisualX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisualX.Location = new System.Drawing.Point(394, 93);
+            this.txtVisualX.Name = "txtVisualX";
+            this.txtVisualX.Size = new System.Drawing.Size(118, 22);
+            this.txtVisualX.TabIndex = 14;
             // 
-            // label21
+            // txtReadingX
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(204, 56);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "1";
+            this.txtReadingX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReadingX.Location = new System.Drawing.Point(390, 138);
+            this.txtReadingX.Multiline = true;
+            this.txtReadingX.Name = "txtReadingX";
+            this.txtReadingX.Size = new System.Drawing.Size(127, 23);
+            this.txtReadingX.TabIndex = 13;
             // 
-            // label22
+            // txtLabDiag
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(328, 56);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "2";
+            this.txtLabDiag.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLabDiag.Location = new System.Drawing.Point(162, 182);
+            this.txtLabDiag.Multiline = true;
+            this.txtLabDiag.Name = "txtLabDiag";
+            this.txtLabDiag.Size = new System.Drawing.Size(217, 20);
+            this.txtLabDiag.TabIndex = 12;
             // 
-            // label25
+            // txtreading2
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(30, 96);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(103, 13);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "Visual Appearance";
+            this.txtreading2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreading2.Location = new System.Drawing.Point(279, 139);
+            this.txtreading2.Name = "txtreading2";
+            this.txtreading2.Size = new System.Drawing.Size(100, 22);
+            this.txtreading2.TabIndex = 11;
             // 
-            // label26
+            // txtreading1
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(30, 142);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(50, 13);
-            this.label26.TabIndex = 5;
-            this.label26.Text = "Reading";
+            this.txtreading1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreading1.Location = new System.Drawing.Point(162, 139);
+            this.txtreading1.Name = "txtreading1";
+            this.txtreading1.Size = new System.Drawing.Size(100, 22);
+            this.txtreading1.TabIndex = 10;
             // 
-            // label27
+            // txtVisual2
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(30, 185);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(118, 13);
-            this.label27.TabIndex = 6;
-            this.label27.Text = "Laboratory Diagnosis";
+            this.txtVisual2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisual2.Location = new System.Drawing.Point(279, 93);
+            this.txtVisual2.Name = "txtVisual2";
+            this.txtVisual2.Size = new System.Drawing.Size(100, 22);
+            this.txtVisual2.TabIndex = 9;
+            // 
+            // txtVisual1
+            // 
+            this.txtVisual1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisual1.Location = new System.Drawing.Point(162, 93);
+            this.txtVisual1.Name = "txtVisual1";
+            this.txtVisual1.Size = new System.Drawing.Size(100, 22);
+            this.txtVisual1.TabIndex = 8;
             // 
             // label28
             // 
@@ -645,63 +631,75 @@
             this.label28.TabIndex = 7;
             this.label28.Text = "Xpert MTB/RIF";
             // 
-            // txtVisual1
+            // label27
             // 
-            this.txtVisual1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisual1.Location = new System.Drawing.Point(162, 93);
-            this.txtVisual1.Name = "txtVisual1";
-            this.txtVisual1.Size = new System.Drawing.Size(100, 22);
-            this.txtVisual1.TabIndex = 8;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(30, 185);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(118, 13);
+            this.label27.TabIndex = 6;
+            this.label27.Text = "Laboratory Diagnosis";
             // 
-            // txtVisual2
+            // label26
             // 
-            this.txtVisual2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisual2.Location = new System.Drawing.Point(279, 93);
-            this.txtVisual2.Name = "txtVisual2";
-            this.txtVisual2.Size = new System.Drawing.Size(100, 22);
-            this.txtVisual2.TabIndex = 9;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(30, 142);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(50, 13);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Reading";
             // 
-            // txtreading1
+            // label25
             // 
-            this.txtreading1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreading1.Location = new System.Drawing.Point(162, 139);
-            this.txtreading1.Name = "txtreading1";
-            this.txtreading1.Size = new System.Drawing.Size(100, 22);
-            this.txtreading1.TabIndex = 10;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(30, 96);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(103, 13);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Visual Appearance";
             // 
-            // txtreading2
+            // label22
             // 
-            this.txtreading2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreading2.Location = new System.Drawing.Point(279, 139);
-            this.txtreading2.Name = "txtreading2";
-            this.txtreading2.Size = new System.Drawing.Size(100, 22);
-            this.txtreading2.TabIndex = 11;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(328, 56);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(13, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "2";
             // 
-            // txtLabDiag
+            // label21
             // 
-            this.txtLabDiag.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLabDiag.Location = new System.Drawing.Point(162, 182);
-            this.txtLabDiag.Multiline = true;
-            this.txtLabDiag.Name = "txtLabDiag";
-            this.txtLabDiag.Size = new System.Drawing.Size(217, 20);
-            this.txtLabDiag.TabIndex = 12;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(204, 56);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "1";
             // 
-            // txtReadingX
+            // label20
             // 
-            this.txtReadingX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReadingX.Location = new System.Drawing.Point(390, 138);
-            this.txtReadingX.Multiline = true;
-            this.txtReadingX.Name = "txtReadingX";
-            this.txtReadingX.Size = new System.Drawing.Size(127, 23);
-            this.txtReadingX.TabIndex = 13;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(222, 36);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(102, 13);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Smear Microscopy";
             // 
-            // txtVisualX
+            // label19
             // 
-            this.txtVisualX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisualX.Location = new System.Drawing.Point(394, 93);
-            this.txtVisualX.Name = "txtVisualX";
-            this.txtVisualX.Size = new System.Drawing.Size(118, 22);
-            this.txtVisualX.TabIndex = 14;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(30, 56);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Specimen";
             // 
             // tabPage4
             // 
@@ -738,193 +736,27 @@
             this.tabPage4.Text = "Others:";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label29
+            // btnReset
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(13, 11);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(135, 13);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "TBDC recommendations:";
+            this.btnReset.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.Location = new System.Drawing.Point(437, 278);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(103, 37);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // radButtonAnti
+            // txtSug
             // 
-            this.radButtonAnti.AutoSize = true;
-            this.radButtonAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButtonAnti.Location = new System.Drawing.Point(26, 27);
-            this.radButtonAnti.Name = "radButtonAnti";
-            this.radButtonAnti.Size = new System.Drawing.Size(116, 17);
-            this.radButtonAnti.TabIndex = 1;
-            this.radButtonAnti.TabStop = true;
-            this.radButtonAnti.Text = "Anti-TB Treatment";
-            this.radButtonAnti.UseVisualStyleBackColor = true;
-            // 
-            // radButtonNoAnti
-            // 
-            this.radButtonNoAnti.AutoSize = true;
-            this.radButtonNoAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButtonNoAnti.Location = new System.Drawing.Point(26, 50);
-            this.radButtonNoAnti.Name = "radButtonNoAnti";
-            this.radButtonNoAnti.Size = new System.Drawing.Size(134, 17);
-            this.radButtonNoAnti.TabIndex = 2;
-            this.radButtonNoAnti.TabStop = true;
-            this.radButtonNoAnti.Text = "No Anti-TB Treatment";
-            this.radButtonNoAnti.UseVisualStyleBackColor = true;
-            // 
-            // radButonStop
-            // 
-            this.radButonStop.AutoSize = true;
-            this.radButonStop.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButonStop.Location = new System.Drawing.Point(26, 73);
-            this.radButonStop.Name = "radButonStop";
-            this.radButonStop.Size = new System.Drawing.Size(143, 17);
-            this.radButonStop.TabIndex = 3;
-            this.radButonStop.TabStop = true;
-            this.radButonStop.Text = "Stop Anti-TB Treatment";
-            this.radButonStop.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(15, 111);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(74, 13);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "Suggestions:";
-            // 
-            // checkBoxStopSMK
-            // 
-            this.checkBoxStopSMK.AutoSize = true;
-            this.checkBoxStopSMK.Location = new System.Drawing.Point(27, 131);
-            this.checkBoxStopSMK.Name = "checkBoxStopSMK";
-            this.checkBoxStopSMK.Size = new System.Drawing.Size(168, 17);
-            this.checkBoxStopSMK.TabIndex = 5;
-            this.checkBoxStopSMK.Text = "Stop Smoking/Liquor Drinking";
-            this.checkBoxStopSMK.UseVisualStyleBackColor = true;
-            this.checkBoxStopSMK.CheckedChanged += new System.EventHandler(this.checkBoxStopSMK_CheckedChanged);
-            // 
-            // checkBoxBsugar
-            // 
-            this.checkBoxBsugar.AutoSize = true;
-            this.checkBoxBsugar.Location = new System.Drawing.Point(27, 154);
-            this.checkBoxBsugar.Name = "checkBoxBsugar";
-            this.checkBoxBsugar.Size = new System.Drawing.Size(165, 17);
-            this.checkBoxBsugar.TabIndex = 6;
-            this.checkBoxBsugar.Text = "Optimized blood sugar control";
-            this.checkBoxBsugar.UseVisualStyleBackColor = true;
-            this.checkBoxBsugar.CheckedChanged += new System.EventHandler(this.checkBoxBsugar_CheckedChanged);
-            // 
-            // checkBoxHousehold
-            // 
-            this.checkBoxHousehold.AutoSize = true;
-            this.checkBoxHousehold.Location = new System.Drawing.Point(27, 177);
-            this.checkBoxHousehold.Name = "checkBoxHousehold";
-            this.checkBoxHousehold.Size = new System.Drawing.Size(156, 17);
-            this.checkBoxHousehold.TabIndex = 7;
-            this.checkBoxHousehold.Text = "Screen household contacts";
-            this.checkBoxHousehold.UseVisualStyleBackColor = true;
-            this.checkBoxHousehold.CheckedChanged += new System.EventHandler(this.checkBoxHousehold_CheckedChanged);
-            // 
-            // checkBoxObserve
-            // 
-            this.checkBoxObserve.AutoSize = true;
-            this.checkBoxObserve.Location = new System.Drawing.Point(27, 246);
-            this.checkBoxObserve.Name = "checkBoxObserve";
-            this.checkBoxObserve.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxObserve.TabIndex = 10;
-            this.checkBoxObserve.Text = "Observe/Monitor";
-            this.checkBoxObserve.UseVisualStyleBackColor = true;
-            this.checkBoxObserve.CheckedChanged += new System.EventHandler(this.checkBoxObserve_CheckedChanged);
-            // 
-            // checkBoxStable
-            // 
-            this.checkBoxStable.AutoSize = true;
-            this.checkBoxStable.Location = new System.Drawing.Point(27, 223);
-            this.checkBoxStable.Name = "checkBoxStable";
-            this.checkBoxStable.Size = new System.Drawing.Size(91, 17);
-            this.checkBoxStable.TabIndex = 9;
-            this.checkBoxStable.Text = "Stable lesions";
-            this.checkBoxStable.UseVisualStyleBackColor = true;
-            this.checkBoxStable.CheckedChanged += new System.EventHandler(this.checkBoxStable_CheckedChanged);
-            // 
-            // checkBoxClearance
-            // 
-            this.checkBoxClearance.AutoSize = true;
-            this.checkBoxClearance.Location = new System.Drawing.Point(27, 200);
-            this.checkBoxClearance.Name = "checkBoxClearance";
-            this.checkBoxClearance.Size = new System.Drawing.Size(162, 17);
-            this.checkBoxClearance.TabIndex = 8;
-            this.checkBoxClearance.Text = "Can Issue medical clearance";
-            this.checkBoxClearance.UseVisualStyleBackColor = true;
-            this.checkBoxClearance.CheckedChanged += new System.EventHandler(this.checkBoxClearance_CheckedChanged);
-            // 
-            // checkBoxConsent
-            // 
-            this.checkBoxConsent.AutoSize = true;
-            this.checkBoxConsent.Location = new System.Drawing.Point(201, 246);
-            this.checkBoxConsent.Name = "checkBoxConsent";
-            this.checkBoxConsent.Size = new System.Drawing.Size(143, 17);
-            this.checkBoxConsent.TabIndex = 16;
-            this.checkBoxConsent.Text = "Secure consent for PICT";
-            this.checkBoxConsent.UseVisualStyleBackColor = true;
-            this.checkBoxConsent.CheckedChanged += new System.EventHandler(this.checkBoxConsent_CheckedChanged);
-            // 
-            // checkBoxGen
-            // 
-            this.checkBoxGen.AutoSize = true;
-            this.checkBoxGen.Location = new System.Drawing.Point(201, 223);
-            this.checkBoxGen.Name = "checkBoxGen";
-            this.checkBoxGen.Size = new System.Drawing.Size(116, 17);
-            this.checkBoxGen.TabIndex = 15;
-            this.checkBoxGen.Text = "Suggest Gen Xpert";
-            this.checkBoxGen.UseVisualStyleBackColor = true;
-            this.checkBoxGen.CheckedChanged += new System.EventHandler(this.checkBoxGen_CheckedChanged);
-            // 
-            // checkBoxSputum
-            // 
-            this.checkBoxSputum.AutoSize = true;
-            this.checkBoxSputum.Location = new System.Drawing.Point(201, 200);
-            this.checkBoxSputum.Name = "checkBoxSputum";
-            this.checkBoxSputum.Size = new System.Drawing.Size(175, 17);
-            this.checkBoxSputum.TabIndex = 14;
-            this.checkBoxSputum.Text = "Suggest Sputum GS/CS NKOH";
-            this.checkBoxSputum.UseVisualStyleBackColor = true;
-            this.checkBoxSputum.CheckedChanged += new System.EventHandler(this.checkBoxSputum_CheckedChanged);
-            // 
-            // checkBoxChestCT
-            // 
-            this.checkBoxChestCT.AutoSize = true;
-            this.checkBoxChestCT.Location = new System.Drawing.Point(201, 177);
-            this.checkBoxChestCT.Name = "checkBoxChestCT";
-            this.checkBoxChestCT.Size = new System.Drawing.Size(140, 17);
-            this.checkBoxChestCT.TabIndex = 13;
-            this.checkBoxChestCT.Text = "Suggest Chest CT Scan";
-            this.checkBoxChestCT.UseVisualStyleBackColor = true;
-            this.checkBoxChestCT.CheckedChanged += new System.EventHandler(this.checkBoxChestCT_CheckedChanged);
-            // 
-            // checkBoxBiopsy
-            // 
-            this.checkBoxBiopsy.AutoSize = true;
-            this.checkBoxBiopsy.Location = new System.Drawing.Point(201, 154);
-            this.checkBoxBiopsy.Name = "checkBoxBiopsy";
-            this.checkBoxBiopsy.Size = new System.Drawing.Size(150, 17);
-            this.checkBoxBiopsy.TabIndex = 12;
-            this.checkBoxBiopsy.Text = "Suggest CT guided biopsy";
-            this.checkBoxBiopsy.UseVisualStyleBackColor = true;
-            this.checkBoxBiopsy.CheckedChanged += new System.EventHandler(this.checkBoxBiopsy_CheckedChanged);
-            // 
-            // checkBoxSugSGPT
-            // 
-            this.checkBoxSugSGPT.AutoSize = true;
-            this.checkBoxSugSGPT.Location = new System.Drawing.Point(201, 131);
-            this.checkBoxSugSGPT.Name = "checkBoxSugSGPT";
-            this.checkBoxSugSGPT.Size = new System.Drawing.Size(149, 17);
-            this.checkBoxSugSGPT.TabIndex = 11;
-            this.checkBoxSugSGPT.Text = "Suggest SGPT/Creatinine";
-            this.checkBoxSugSGPT.UseVisualStyleBackColor = true;
-            this.checkBoxSugSGPT.CheckedChanged += new System.EventHandler(this.checkBoxSugSGPT_CheckedChanged);
+            this.txtSug.Location = new System.Drawing.Point(196, 14);
+            this.txtSug.Multiline = true;
+            this.txtSug.Name = "txtSug";
+            this.txtSug.Size = new System.Drawing.Size(342, 97);
+            this.txtSug.TabIndex = 23;
             // 
             // checkBoxPresent
             // 
@@ -992,36 +824,207 @@
             this.checkBoxRx.UseVisualStyleBackColor = true;
             this.checkBoxRx.CheckedChanged += new System.EventHandler(this.checkBoxRx_CheckedChanged);
             // 
-            // txtLabX
+            // checkBoxConsent
             // 
-            this.txtLabX.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLabX.Location = new System.Drawing.Point(390, 179);
-            this.txtLabX.Multiline = true;
-            this.txtLabX.Name = "txtLabX";
-            this.txtLabX.Size = new System.Drawing.Size(127, 23);
-            this.txtLabX.TabIndex = 15;
+            this.checkBoxConsent.AutoSize = true;
+            this.checkBoxConsent.Location = new System.Drawing.Point(201, 246);
+            this.checkBoxConsent.Name = "checkBoxConsent";
+            this.checkBoxConsent.Size = new System.Drawing.Size(143, 17);
+            this.checkBoxConsent.TabIndex = 16;
+            this.checkBoxConsent.Text = "Secure consent for PICT";
+            this.checkBoxConsent.UseVisualStyleBackColor = true;
+            this.checkBoxConsent.CheckedChanged += new System.EventHandler(this.checkBoxConsent_CheckedChanged);
             // 
-            // txtSug
+            // checkBoxGen
             // 
-            this.txtSug.Location = new System.Drawing.Point(196, 14);
-            this.txtSug.Multiline = true;
-            this.txtSug.Name = "txtSug";
-            this.txtSug.Size = new System.Drawing.Size(342, 97);
-            this.txtSug.TabIndex = 23;
+            this.checkBoxGen.AutoSize = true;
+            this.checkBoxGen.Location = new System.Drawing.Point(201, 223);
+            this.checkBoxGen.Name = "checkBoxGen";
+            this.checkBoxGen.Size = new System.Drawing.Size(116, 17);
+            this.checkBoxGen.TabIndex = 15;
+            this.checkBoxGen.Text = "Suggest Gen Xpert";
+            this.checkBoxGen.UseVisualStyleBackColor = true;
+            this.checkBoxGen.CheckedChanged += new System.EventHandler(this.checkBoxGen_CheckedChanged);
             // 
-            // btnReset
+            // checkBoxSputum
             // 
-            this.btnReset.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReset.Location = new System.Drawing.Point(437, 278);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(103, 37);
-            this.btnReset.TabIndex = 5;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.checkBoxSputum.AutoSize = true;
+            this.checkBoxSputum.Location = new System.Drawing.Point(201, 200);
+            this.checkBoxSputum.Name = "checkBoxSputum";
+            this.checkBoxSputum.Size = new System.Drawing.Size(175, 17);
+            this.checkBoxSputum.TabIndex = 14;
+            this.checkBoxSputum.Text = "Suggest Sputum GS/CS NKOH";
+            this.checkBoxSputum.UseVisualStyleBackColor = true;
+            this.checkBoxSputum.CheckedChanged += new System.EventHandler(this.checkBoxSputum_CheckedChanged);
+            // 
+            // checkBoxChestCT
+            // 
+            this.checkBoxChestCT.AutoSize = true;
+            this.checkBoxChestCT.Location = new System.Drawing.Point(201, 177);
+            this.checkBoxChestCT.Name = "checkBoxChestCT";
+            this.checkBoxChestCT.Size = new System.Drawing.Size(140, 17);
+            this.checkBoxChestCT.TabIndex = 13;
+            this.checkBoxChestCT.Text = "Suggest Chest CT Scan";
+            this.checkBoxChestCT.UseVisualStyleBackColor = true;
+            this.checkBoxChestCT.CheckedChanged += new System.EventHandler(this.checkBoxChestCT_CheckedChanged);
+            // 
+            // checkBoxBiopsy
+            // 
+            this.checkBoxBiopsy.AutoSize = true;
+            this.checkBoxBiopsy.Location = new System.Drawing.Point(201, 154);
+            this.checkBoxBiopsy.Name = "checkBoxBiopsy";
+            this.checkBoxBiopsy.Size = new System.Drawing.Size(150, 17);
+            this.checkBoxBiopsy.TabIndex = 12;
+            this.checkBoxBiopsy.Text = "Suggest CT guided biopsy";
+            this.checkBoxBiopsy.UseVisualStyleBackColor = true;
+            this.checkBoxBiopsy.CheckedChanged += new System.EventHandler(this.checkBoxBiopsy_CheckedChanged);
+            // 
+            // checkBoxSugSGPT
+            // 
+            this.checkBoxSugSGPT.AutoSize = true;
+            this.checkBoxSugSGPT.Location = new System.Drawing.Point(201, 131);
+            this.checkBoxSugSGPT.Name = "checkBoxSugSGPT";
+            this.checkBoxSugSGPT.Size = new System.Drawing.Size(149, 17);
+            this.checkBoxSugSGPT.TabIndex = 11;
+            this.checkBoxSugSGPT.Text = "Suggest SGPT/Creatinine";
+            this.checkBoxSugSGPT.UseVisualStyleBackColor = true;
+            this.checkBoxSugSGPT.CheckedChanged += new System.EventHandler(this.checkBoxSugSGPT_CheckedChanged);
+            // 
+            // checkBoxObserve
+            // 
+            this.checkBoxObserve.AutoSize = true;
+            this.checkBoxObserve.Location = new System.Drawing.Point(27, 246);
+            this.checkBoxObserve.Name = "checkBoxObserve";
+            this.checkBoxObserve.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxObserve.TabIndex = 10;
+            this.checkBoxObserve.Text = "Observe/Monitor";
+            this.checkBoxObserve.UseVisualStyleBackColor = true;
+            this.checkBoxObserve.CheckedChanged += new System.EventHandler(this.checkBoxObserve_CheckedChanged);
+            // 
+            // checkBoxStable
+            // 
+            this.checkBoxStable.AutoSize = true;
+            this.checkBoxStable.Location = new System.Drawing.Point(27, 223);
+            this.checkBoxStable.Name = "checkBoxStable";
+            this.checkBoxStable.Size = new System.Drawing.Size(91, 17);
+            this.checkBoxStable.TabIndex = 9;
+            this.checkBoxStable.Text = "Stable lesions";
+            this.checkBoxStable.UseVisualStyleBackColor = true;
+            this.checkBoxStable.CheckedChanged += new System.EventHandler(this.checkBoxStable_CheckedChanged);
+            // 
+            // checkBoxClearance
+            // 
+            this.checkBoxClearance.AutoSize = true;
+            this.checkBoxClearance.Location = new System.Drawing.Point(27, 200);
+            this.checkBoxClearance.Name = "checkBoxClearance";
+            this.checkBoxClearance.Size = new System.Drawing.Size(162, 17);
+            this.checkBoxClearance.TabIndex = 8;
+            this.checkBoxClearance.Text = "Can Issue medical clearance";
+            this.checkBoxClearance.UseVisualStyleBackColor = true;
+            this.checkBoxClearance.CheckedChanged += new System.EventHandler(this.checkBoxClearance_CheckedChanged);
+            // 
+            // checkBoxHousehold
+            // 
+            this.checkBoxHousehold.AutoSize = true;
+            this.checkBoxHousehold.Location = new System.Drawing.Point(27, 177);
+            this.checkBoxHousehold.Name = "checkBoxHousehold";
+            this.checkBoxHousehold.Size = new System.Drawing.Size(156, 17);
+            this.checkBoxHousehold.TabIndex = 7;
+            this.checkBoxHousehold.Text = "Screen household contacts";
+            this.checkBoxHousehold.UseVisualStyleBackColor = true;
+            this.checkBoxHousehold.CheckedChanged += new System.EventHandler(this.checkBoxHousehold_CheckedChanged);
+            // 
+            // checkBoxBsugar
+            // 
+            this.checkBoxBsugar.AutoSize = true;
+            this.checkBoxBsugar.Location = new System.Drawing.Point(27, 154);
+            this.checkBoxBsugar.Name = "checkBoxBsugar";
+            this.checkBoxBsugar.Size = new System.Drawing.Size(165, 17);
+            this.checkBoxBsugar.TabIndex = 6;
+            this.checkBoxBsugar.Text = "Optimized blood sugar control";
+            this.checkBoxBsugar.UseVisualStyleBackColor = true;
+            this.checkBoxBsugar.CheckedChanged += new System.EventHandler(this.checkBoxBsugar_CheckedChanged);
+            // 
+            // checkBoxStopSMK
+            // 
+            this.checkBoxStopSMK.AutoSize = true;
+            this.checkBoxStopSMK.Location = new System.Drawing.Point(27, 131);
+            this.checkBoxStopSMK.Name = "checkBoxStopSMK";
+            this.checkBoxStopSMK.Size = new System.Drawing.Size(168, 17);
+            this.checkBoxStopSMK.TabIndex = 5;
+            this.checkBoxStopSMK.Text = "Stop Smoking/Liquor Drinking";
+            this.checkBoxStopSMK.UseVisualStyleBackColor = true;
+            this.checkBoxStopSMK.CheckedChanged += new System.EventHandler(this.checkBoxStopSMK_CheckedChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(15, 111);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(74, 13);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Suggestions:";
+            // 
+            // radButonStop
+            // 
+            this.radButonStop.AutoSize = true;
+            this.radButonStop.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButonStop.Location = new System.Drawing.Point(26, 73);
+            this.radButonStop.Name = "radButonStop";
+            this.radButonStop.Size = new System.Drawing.Size(143, 17);
+            this.radButonStop.TabIndex = 3;
+            this.radButonStop.TabStop = true;
+            this.radButonStop.Text = "Stop Anti-TB Treatment";
+            this.radButonStop.UseVisualStyleBackColor = true;
+            // 
+            // radButtonNoAnti
+            // 
+            this.radButtonNoAnti.AutoSize = true;
+            this.radButtonNoAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButtonNoAnti.Location = new System.Drawing.Point(26, 50);
+            this.radButtonNoAnti.Name = "radButtonNoAnti";
+            this.radButtonNoAnti.Size = new System.Drawing.Size(134, 17);
+            this.radButtonNoAnti.TabIndex = 2;
+            this.radButtonNoAnti.TabStop = true;
+            this.radButtonNoAnti.Text = "No Anti-TB Treatment";
+            this.radButtonNoAnti.UseVisualStyleBackColor = true;
+            // 
+            // radButtonAnti
+            // 
+            this.radButtonAnti.AutoSize = true;
+            this.radButtonAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButtonAnti.Location = new System.Drawing.Point(26, 27);
+            this.radButtonAnti.Name = "radButtonAnti";
+            this.radButtonAnti.Size = new System.Drawing.Size(116, 17);
+            this.radButtonAnti.TabIndex = 1;
+            this.radButtonAnti.TabStop = true;
+            this.radButtonAnti.Text = "Anti-TB Treatment";
+            this.radButtonAnti.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(13, 11);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(135, 13);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "TBDC recommendations:";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSubmit.Location = new System.Drawing.Point(452, 425);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(103, 37);
+            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // button1
             // 
@@ -1037,11 +1040,44 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(117, 431);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(22, 13);
+            this.lblID.TabIndex = 37;
+            this.lblID.Text = ". . .";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(12, 446);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(22, 13);
+            this.lblName.TabIndex = 36;
+            this.lblName.Text = ". . .";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(8, 431);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(110, 13);
+            this.label31.TabIndex = 35;
+            this.label31.Text = "Selected Patient ID: ";
+            // 
             // Diagnosis2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 468);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tabControl1);
@@ -1065,6 +1101,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1154,5 +1191,8 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox txtSug;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label31;
     }
 }

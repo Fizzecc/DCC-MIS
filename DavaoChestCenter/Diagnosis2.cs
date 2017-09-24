@@ -13,9 +13,17 @@ namespace DavaoChestCenter
 {
     public partial class Diagnosis2 : Form
     {
+        public Diagnosis1 ref_To_Main { get; set; }
         public Diagnosis2()
         {
             InitializeComponent();
+        }
+
+        public Diagnosis2(int selectedID, string firstname, string middlename, string lastname)
+        {
+            InitializeComponent();
+            lblID.Text = selectedID.ToString();
+            lblName.Text = lastname + ", " + firstname + " " + middlename;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -25,7 +33,7 @@ namespace DavaoChestCenter
                 con.Open();
                 using (var com = new MySqlCommand("UPDATE registration SET lab_crea = @lab_crea, lab_sgpt = @lab_sgpt, lab_FBS = @lab_FBS, lab_acid = @lab_acid, chest_XrayResult = @chest_XrayResult, sputum_month = @sputum_month, sputum_due = @sputum_due, sputum_examDate = @sputum_examDate, sputum_result = @sputum_result, sputum_appearance = @sputum_appearance, doctors_order = @doctors_order, visual_appearance1 = @visual_appearance1, visual_appearance2 = @visual_appearance2, visual_appearanceXpert = @visual_appearanceXpert, reading1 = @reading1, reading2 = @reading2, readingX = @readingX, LabDiag = @LabDiag, LabX = @LabX, tbdc_rec = @tbdc_rec, suggestions = @suggestions WHERE registration_id = @registration_id", con))
                 {
-                    com.Parameters.AddWithValue("@registration_id", txtID.Text);
+                    com.Parameters.AddWithValue("@registration_id", lblID.Text);
                     com.Parameters.AddWithValue("@lab_crea", txtCREA.Text);
                     com.Parameters.AddWithValue("@lab_sgpt", txtSGPT.Text);
                     com.Parameters.AddWithValue("@lab_FBS", txtPBS.Text);
