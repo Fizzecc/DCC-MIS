@@ -95,12 +95,6 @@ namespace DavaoChestCenter
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form test = new formTest1();
-            test.Show();
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectID = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());

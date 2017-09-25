@@ -152,8 +152,8 @@ namespace DavaoChestCenter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form test = new Diagnosis1();
-            test.Show();
+            var diagnosis = new Diagnosis1();
+            showForm(diagnosis);
         }
 
         private void buttonModule3_Click(object sender, EventArgs e)

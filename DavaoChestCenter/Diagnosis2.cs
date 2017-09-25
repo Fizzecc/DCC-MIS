@@ -338,25 +338,28 @@ namespace DavaoChestCenter
 
                 int count = 0;
 
-                foreach (string x in other_products_id)
+                if (other_products_id[0] != "")
                 {
-                    using (var com = new MySqlCommand("SELECT COUNT(status) count FROM inventory WHERE product_id = @product_id AND status = 'Normal'", con))
+                    foreach (string x in other_products_id)
                     {
-                        com.Parameters.AddWithValue("@product_id", x);
-
-                        using (var rdr = com.ExecuteReader())
+                        using (var com = new MySqlCommand("SELECT COUNT(status) count FROM inventory WHERE product_id = @product_id AND status = 'Normal'", con))
                         {
-                            if (rdr.Read())
+                            com.Parameters.AddWithValue("@product_id", x);
+
+                            using (var rdr = com.ExecuteReader())
                             {
-                                if (rdr.GetInt32(0) <= int.Parse(other_products_quantity[count]))
+                                if (rdr.Read())
                                 {
-                                    other = false;
-                                    MessageBox.Show("Product ID: " + x + " out of stock");
+                                    if (rdr.GetInt32(0) <= int.Parse(other_products_quantity[count]))
+                                    {
+                                        other = false;
+                                        MessageBox.Show("Product ID: " + x + " out of stock");
+                                    }
                                 }
                             }
                         }
+                        count++;
                     }
-                    count++;
                 }
 
                 count = 0;

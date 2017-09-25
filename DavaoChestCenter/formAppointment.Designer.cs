@@ -51,7 +51,7 @@
             this.dataGridViewAppointments.RowHeadersVisible = false;
             this.dataGridViewAppointments.RowTemplate.Height = 24;
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAppointments.Size = new System.Drawing.Size(632, 610);
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(423, 653);
             this.dataGridViewAppointments.TabIndex = 15;
             // 
             // labelName
@@ -69,20 +69,20 @@
             this.dataGridViewPatients.AllowUserToDeleteRows = false;
             this.dataGridViewPatients.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatients.Location = new System.Drawing.Point(650, 32);
+            this.dataGridViewPatients.Location = new System.Drawing.Point(442, 32);
             this.dataGridViewPatients.Name = "dataGridViewPatients";
             this.dataGridViewPatients.ReadOnly = true;
             this.dataGridViewPatients.RowHeadersVisible = false;
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(667, 610);
+            this.dataGridViewPatients.Size = new System.Drawing.Size(875, 653);
             this.dataGridViewPatients.TabIndex = 21;
             this.dataGridViewPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatients_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(650, 10);
+            this.label1.Location = new System.Drawing.Point(438, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 22;
@@ -118,7 +118,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(535, 653);
+            this.button3.Location = new System.Drawing.Point(442, 691);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 38);
             this.button3.TabIndex = 33;

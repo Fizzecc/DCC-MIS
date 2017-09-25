@@ -190,18 +190,6 @@
     <Compile Include="Diagnosis1.Designer.cs">
       <DependentUpon>Diagnosis1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formTest1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTest1.Designer.cs">
-      <DependentUpon>formTest1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formTest2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTest2.Designer.cs">
-      <DependentUpon>formTest2.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Diagnosis2.resx">
       <DependentUpon>Diagnosis2.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,12 +268,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Diagnosis1.resx">
       <DependentUpon>Diagnosis1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formTest1.resx">
-      <DependentUpon>formTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formTest2.resx">
-      <DependentUpon>formTest2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
