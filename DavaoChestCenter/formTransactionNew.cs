@@ -21,7 +21,6 @@ namespace DavaoChestCenter
         public formTransactionNew()
         {
             InitializeComponent();
-            comboBoxDoseType.Text = "mg";
             gatherProducts();
         }
         
@@ -30,7 +29,7 @@ namespace DavaoChestCenter
             InitializeComponent();
             gatherProducts();
 
-            comboBoxProducts.Text = x; comboBoxProducts.Enabled = false;
+            comboBoxProducts.Text = x;
             textBoxProductQuantity.Text = z.ToString();
         }
         
@@ -47,7 +46,7 @@ namespace DavaoChestCenter
                         {
                             if (rdr.Read())
                             {
-                                products.Add(rdr.GetInt32(0), rdr.GetString(1));
+                                products.Add(rdr.GetInt32(0), rdr.GetString(1) + " " + rdr.GetString(3));
 
                                 comboBoxProducts.DataSource = new BindingSource(products, null);
                                 comboBoxProducts.DisplayMember = "Value";
@@ -77,16 +76,9 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
                         com.Parameters.AddWithValue("@brand_name", textBoxNameBrand.Text);
                         com.Parameters.AddWithValue("@manufacturer", textBoxManufacturer.Text);
-                        if (textBoxProductDose.Enabled)
-                        {
-                            com.Parameters.AddWithValue("@dose", int.Parse(textBoxProductDose.Text) + "/" + comboBoxDoseType.Text);
-                            com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
-                        }
-                        else
-                        {
-                            com.Parameters.AddWithValue("@dose", "Non-consumable");
-                            com.Parameters.AddWithValue("@expiration_date", "2099-01-01");
-                        }
+                        string[] word = ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Value.Split(' ');
+                        com.Parameters.AddWithValue("@dose", word[1]);
+                        com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
                         com.Parameters.AddWithValue("@batch", textBoxBatch.Text);
 
                         com.ExecuteNonQuery();
@@ -106,13 +98,13 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
-
+        /*
         private void comboBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT type FROM products WHERE id = @id", con))
+                using (var com = new MySqlCommand("SELECT type, dosage FROM products WHERE id = @id", con))
                 {
                     com.Parameters.AddWithValue("@id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
 
@@ -122,12 +114,12 @@ namespace DavaoChestCenter
                         {
                             if (rdr.GetString(0) == "Non-consumable")
                             {
-                                textBoxProductDose.Enabled = false; comboBoxDoseType.Enabled = false;
+                                comboBoxDosage.Text = "Non-consumable";
                                 dateTimePickerDateExpiry.Enabled = false;
                             }
                             else
                             {
-                                textBoxProductDose.Enabled = true; comboBoxDoseType.Enabled = true;
+                                comboBoxDosage.Text = rdr.GetString(1);
                                 dateTimePickerDateExpiry.Enabled = true;
                             }
                         }
@@ -135,6 +127,6 @@ namespace DavaoChestCenter
                 }
                 con.Close();
             }
+            */
         }
     }
-}

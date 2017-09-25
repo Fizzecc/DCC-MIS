@@ -25,12 +25,14 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @name, @type, @minimum_quantity)", con))
+                using (var com = new MySqlCommand("INSERT INTO products VALUES(null, @name, @type, @dosage, @minimum_quantity)", con))
                 {
                     try
                     {
                         com.Parameters.AddWithValue("@name", textBoxProductName.Text);
                         com.Parameters.AddWithValue("@minimum_quantity", int.Parse(textBoxProductMinimum.Text));
+                        com.Parameters.AddWithValue("@dosage", int.Parse(textBoxDosage.Text) + "/" + comboBoxDoseType.Text);
+
 
                         if (checkBoxConsumable.Checked)
                         {

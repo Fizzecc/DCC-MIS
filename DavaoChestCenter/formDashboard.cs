@@ -33,7 +33,7 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.DataSource = dt;
                 }
 
-                using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
+                using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -46,8 +46,8 @@ namespace DavaoChestCenter
         private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
         {
             string commandstring = "";
-            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
-            else commandstring = "SELECT name, brand_name, manufacturer, dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
+            else commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
 
             using (var con = new MySqlConnection(conClass.connectionString))
             {

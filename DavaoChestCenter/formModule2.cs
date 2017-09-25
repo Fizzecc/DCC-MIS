@@ -34,7 +34,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
+                using (var com = new MySqlCommand("SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -171,24 +171,24 @@ namespace DavaoChestCenter
                 if (textBoxSearch.Text != "")
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY expiration_date";
                 }
                 else
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY expiration_date";
                 }
             }
             else
@@ -196,24 +196,24 @@ namespace DavaoChestCenter
                 if (textBoxSearch.Text != "")
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' ORDER BY expiration_date";
                 }
                 else
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, manufacturer, expiration_date, batch, status FROM inventory INNER JOIN products ON inventory.product_id = products.id ORDER BY expiration_date";
                 }
             }
 
