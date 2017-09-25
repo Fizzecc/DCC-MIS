@@ -56,6 +56,12 @@
     <Compile Include="Diagnosis2.Designer.cs">
       <DependentUpon>Diagnosis2.cs</DependentUpon>
     </Compile>
+    <Compile Include="formService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formService.Designer.cs">
+      <DependentUpon>formService.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMedRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="formNotification.Designer.cs">
       <DependentUpon>formNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formServiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formServiceEdit.Designer.cs">
+      <DependentUpon>formServiceEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="formStockIn.cs">
       <SubType>Form</SubType>
@@ -193,6 +205,9 @@
     <EmbeddedResource Include="Diagnosis2.resx">
       <DependentUpon>Diagnosis2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formService.resx">
+      <DependentUpon>formService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formAppointment.resx">
       <DependentUpon>formAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formNotification.resx">
       <DependentUpon>formNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formServiceEdit.resx">
+      <DependentUpon>formServiceEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formStockIn.resx">
       <DependentUpon>formStockIn.cs</DependentUpon>

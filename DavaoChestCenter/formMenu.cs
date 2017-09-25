@@ -161,5 +161,11 @@ namespace DavaoChestCenter
             var module3 = new formModule3();
             showForm(module3);
         }
+
+        private void buttonServices_Click(object sender, EventArgs e)
+        {
+            var service = new formService();
+            showForm(service);
+        }
     }
 }

@@ -45,9 +45,7 @@
             this.textBoxOther = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -205,24 +203,11 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Other Products Required:";
             // 
-            // dataGridViewInventory
-            // 
-            this.dataGridViewInventory.AllowUserToAddRows = false;
-            this.dataGridViewInventory.AllowUserToDeleteRows = false;
-            this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInventory.Location = new System.Drawing.Point(342, 6);
-            this.dataGridViewInventory.Name = "dataGridViewInventory";
-            this.dataGridViewInventory.ReadOnly = true;
-            this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(594, 386);
-            this.dataGridViewInventory.TabIndex = 35;
-            // 
             // formServiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 397);
-            this.Controls.Add(this.dataGridViewInventory);
+            this.ClientSize = new System.Drawing.Size(350, 397);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxOther);
             this.Controls.Add(this.label6);
@@ -247,7 +232,6 @@
             this.Text = "New Service";
             this.flowLayoutPanel.ResumeLayout(false);
             this.flowLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +256,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxExtra;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridViewInventory;
     }
 }

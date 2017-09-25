@@ -31,7 +31,6 @@
             this.buttonProductNew = new System.Windows.Forms.Button();
             this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonServiceNew = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTransactionNew = new System.Windows.Forms.Button();
@@ -94,23 +93,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Inventory";
             // 
-            // buttonServiceNew
-            // 
-            this.buttonServiceNew.BackColor = System.Drawing.Color.Transparent;
-            this.buttonServiceNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.buttonServiceNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonServiceNew.FlatAppearance.BorderSize = 0;
-            this.buttonServiceNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonServiceNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonServiceNew.Location = new System.Drawing.Point(1128, 580);
-            this.buttonServiceNew.Name = "buttonServiceNew";
-            this.buttonServiceNew.Size = new System.Drawing.Size(76, 148);
-            this.buttonServiceNew.TabIndex = 12;
-            this.buttonServiceNew.Text = "Add New Service";
-            this.buttonServiceNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonServiceNew.UseVisualStyleBackColor = false;
-            this.buttonServiceNew.Click += new System.EventHandler(this.button1_Click);
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
@@ -159,7 +141,7 @@
             this.buttonStockOut.FlatAppearance.BorderSize = 0;
             this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonStockOut.Location = new System.Drawing.Point(1234, 598);
+            this.buttonStockOut.Location = new System.Drawing.Point(1128, 589);
             this.buttonStockOut.Name = "buttonStockOut";
             this.buttonStockOut.Size = new System.Drawing.Size(77, 97);
             this.buttonStockOut.TabIndex = 32;
@@ -326,7 +308,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.buttonProductNew);
-            this.Controls.Add(this.buttonServiceNew);
             this.Controls.Add(this.buttonTransactionNew);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -352,7 +333,6 @@
         private System.Windows.Forms.Button buttonProductNew;
         private System.Windows.Forms.DataGridView dataGridViewInventory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonServiceNew;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTransactionNew;

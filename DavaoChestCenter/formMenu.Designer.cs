@@ -36,6 +36,7 @@
             this.buttonProfile = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonServices = new System.Windows.Forms.Button();
             this.buttonModule2 = new System.Windows.Forms.Button();
             this.buttonModule3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,9 +104,10 @@
             this.flowLayoutPanelModule1.Controls.Add(this.buttonProfile);
             this.flowLayoutPanelModule1.Controls.Add(this.button1);
             this.flowLayoutPanelModule1.Controls.Add(this.button2);
+            this.flowLayoutPanelModule1.Controls.Add(this.buttonServices);
             this.flowLayoutPanelModule1.Location = new System.Drawing.Point(3, 73);
             this.flowLayoutPanelModule1.Name = "flowLayoutPanelModule1";
-            this.flowLayoutPanelModule1.Size = new System.Drawing.Size(252, 103);
+            this.flowLayoutPanelModule1.Size = new System.Drawing.Size(252, 147);
             this.flowLayoutPanelModule1.TabIndex = 3;
             // 
             // buttonProfile
@@ -153,13 +155,28 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // buttonServices
+            // 
+            this.buttonServices.BackColor = System.Drawing.Color.DimGray;
+            this.buttonServices.FlatAppearance.BorderSize = 0;
+            this.buttonServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonServices.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonServices.Location = new System.Drawing.Point(3, 108);
+            this.buttonServices.Name = "buttonServices";
+            this.buttonServices.Size = new System.Drawing.Size(252, 29);
+            this.buttonServices.TabIndex = 4;
+            this.buttonServices.Text = "Services";
+            this.buttonServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonServices.UseVisualStyleBackColor = false;
+            this.buttonServices.Click += new System.EventHandler(this.buttonServices_Click);
+            // 
             // buttonModule2
             // 
             this.buttonModule2.BackColor = System.Drawing.Color.DimGray;
             this.buttonModule2.FlatAppearance.BorderSize = 0;
             this.buttonModule2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModule2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonModule2.Location = new System.Drawing.Point(3, 182);
+            this.buttonModule2.Location = new System.Drawing.Point(3, 226);
             this.buttonModule2.Name = "buttonModule2";
             this.buttonModule2.Size = new System.Drawing.Size(252, 29);
             this.buttonModule2.TabIndex = 1;
@@ -174,7 +191,7 @@
             this.buttonModule3.FlatAppearance.BorderSize = 0;
             this.buttonModule3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModule3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonModule3.Location = new System.Drawing.Point(3, 217);
+            this.buttonModule3.Location = new System.Drawing.Point(3, 261);
             this.buttonModule3.Name = "buttonModule3";
             this.buttonModule3.Size = new System.Drawing.Size(252, 29);
             this.buttonModule3.TabIndex = 5;
@@ -239,5 +256,6 @@
         private System.Windows.Forms.Button buttonDashboard;
         private System.Windows.Forms.Button buttonModule3;
         public System.Windows.Forms.Panel panelForm;
+        private System.Windows.Forms.Button buttonServices;
     }
 }
