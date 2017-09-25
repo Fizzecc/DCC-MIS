@@ -121,6 +121,7 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@tb_months", "");
                         com.Parameters.AddWithValue("@tb_date", "");
                         com.Parameters.AddWithValue("@medicines", "");
+                        com.Parameters.AddWithValue("@medicine_under", "");
                     }
 
                     if (radButtonAlcoholicYes.Checked)
@@ -296,12 +297,13 @@ namespace DavaoChestCenter
         {
             if (radButtonSputum.Checked)
             {
-                radButtonSputum.Enabled = false;
+                radButtonSputum.Enabled = true;
             }
 
             if (radButtonOthers.Checked)
             {
                 radButtonOthers.Enabled = true;
+                radButtonSputum.Enabled = false;
             }
         }
     }
