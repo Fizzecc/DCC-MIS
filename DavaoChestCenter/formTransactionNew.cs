@@ -29,6 +29,8 @@ namespace DavaoChestCenter
             InitializeComponent();
             gatherProducts();
 
+            comboBoxProducts.Enabled = false;
+
             comboBoxProducts.Text = x;
             textBoxProductQuantity.Text = z.ToString();
         }
@@ -78,7 +80,15 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@manufacturer", textBoxManufacturer.Text);
                         string[] word = ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Value.Split(' ');
                         com.Parameters.AddWithValue("@dose", word[1]);
-                        com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
+
+                        if (word[1] == "Non-consumable")
+                        {
+                            com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("2099-01-01"));
+                        }
+                        else
+                        {
+                            com.Parameters.AddWithValue("@expiration_date", dateTimePickerDateExpiry.Value.ToString("yyyy-MM-dd"));
+                        }
                         com.Parameters.AddWithValue("@batch", textBoxBatch.Text);
 
                         com.ExecuteNonQuery();
@@ -98,35 +108,49 @@ namespace DavaoChestCenter
                 con.Close();
             }
         }
-        /*
+
         private void comboBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var con = new MySqlConnection(conClass.connectionString))
-            {
-                con.Open();
-                using (var com = new MySqlCommand("SELECT type, dosage FROM products WHERE id = @id", con))
-                {
-                    com.Parameters.AddWithValue("@id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
+            string[] word = comboBoxProducts.Text.Split(' ');
 
-                    using (var rdr = com.ExecuteReader())
-                    {
-                        if (rdr.Read())
-                        {
-                            if (rdr.GetString(0) == "Non-consumable")
-                            {
-                                comboBoxDosage.Text = "Non-consumable";
-                                dateTimePickerDateExpiry.Enabled = false;
-                            }
-                            else
-                            {
-                                comboBoxDosage.Text = rdr.GetString(1);
-                                dateTimePickerDateExpiry.Enabled = true;
-                            }
-                        }
-                    }
-                }
-                con.Close();
+            if (word[1] == "Non-consumable")
+            {
+                dateTimePickerDateExpiry.Enabled = false;
             }
-            */
+            else
+            {
+                dateTimePickerDateExpiry.Enabled = true;
+            }
         }
+        /*
+private void comboBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
+{
+   using (var con = new MySqlConnection(conClass.connectionString))
+   {
+       con.Open();
+       using (var com = new MySqlCommand("SELECT type, dosage FROM products WHERE id = @id", con))
+       {
+           com.Parameters.AddWithValue("@id", ((KeyValuePair<int, string>)comboBoxProducts.SelectedItem).Key);
+
+           using (var rdr = com.ExecuteReader())
+           {
+               if (rdr.Read())
+               {
+                   if (rdr.GetString(0) == "Non-consumable")
+                   {
+                       comboBoxDosage.Text = "Non-consumable";
+                       dateTimePickerDateExpiry.Enabled = false;
+                   }
+                   else
+                   {
+                       comboBoxDosage.Text = rdr.GetString(1);
+                       dateTimePickerDateExpiry.Enabled = true;
+                   }
+               }
+           }
+       }
+       con.Close();
+   }
+   */
+    }
     }

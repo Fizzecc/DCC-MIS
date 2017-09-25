@@ -60,11 +60,13 @@
             // 
             // comboBoxProducts
             // 
+            this.comboBoxProducts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProducts.FormattingEnabled = true;
             this.comboBoxProducts.Location = new System.Drawing.Point(130, 12);
             this.comboBoxProducts.Name = "comboBoxProducts";
             this.comboBoxProducts.Size = new System.Drawing.Size(216, 27);
             this.comboBoxProducts.TabIndex = 0;
+            this.comboBoxProducts.SelectedIndexChanged += new System.EventHandler(this.comboBoxProducts_SelectedIndexChanged);
             // 
             // label4
             // 

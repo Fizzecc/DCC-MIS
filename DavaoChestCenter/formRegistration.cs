@@ -109,7 +109,7 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@CPrelation", txtCPrel.Text);
                     com.Parameters.AddWithValue("@CPcontact", txtCPContact.Text);
                     com.Parameters.AddWithValue("@CPaddress", txtCPAddress.Text);
-                    com.Parameters.AddWithValue("@services", comboBoxService.SelectedItem.ToString());
+                    com.Parameters.AddWithValue("@services", ((KeyValuePair<int, string>)comboBoxService.SelectedItem).Key);
 
                     /*
                     com.Parameters.AddWithValue("@treatment_partner", comboBoxTreat.SelectedItem.ToString());

@@ -284,7 +284,7 @@ namespace DavaoChestCenter
 
                 int selectedService = -1;
 
-                using (var com = new MySqlCommand("SELECT service_id FROM registration WHERE registration_id = @registration_id", con))
+                using (var com = new MySqlCommand("SELECT services FROM registration WHERE registration_id = @registration_id", con))
                 {
                     com.Parameters.AddWithValue("@registration_id", lblID.Text);
 

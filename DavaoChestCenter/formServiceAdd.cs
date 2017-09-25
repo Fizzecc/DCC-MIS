@@ -42,7 +42,7 @@ namespace DavaoChestCenter
                         {
                             if (rdr.Read())
                             {
-                                products.Add(rdr.GetInt32(0), rdr.GetString(1));
+                                products.Add(rdr.GetInt32(0), rdr.GetString(1) + " " + rdr.GetString(3));
 
                                 comboBoxItems.DataSource = new BindingSource(products, null);
                                 comboBoxItems.DisplayMember = "Value";
