@@ -91,8 +91,9 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("INSERT INTO registration VALUES(null, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @services, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @exam_reason, @hist_treatment, @specimen_type, @specimen_date1, @specimen_date2, @test_request, @prepared_by, @staff_position, @lab_crea, @lab_sgpt, @lab_FBS, @lab_acid, @chest_XrayResult, @sputum_month, @sputum_due, @sputum_examDate, @sputum_result, @sputum_appearance, @doctors_order, @visual_appearance1, @visual_appearance2, @visual_appearanceXpert, @reading1, @reading2, @readingX, @LabDiag, @LabX, @tbdc_rec, @suggestions)", con))
+                using (var com = new MySqlCommand("INSERT INTO registration (registration_id, service_id, patient_Lname, patient_Fname, patient_Mname, patient_status, patient_gender, appointmentDate, age, address, contact_num1, ref_Phys, occupation, CPLname, CPFname, CPMname, CPrelation, CPcontact, CPaddress, treatment_partner, weight, contact_num2, pulmonaries, extra_pulmonaries, diabetic, hypertensive, smoke, smoke_day, start_smoking, stop_smoking, prev_tb, tb_months, tb_date, medicines, medicine_under, alcoholic, alcoholic_start, alcoholic_stop, exam_reason, hist_treatment, specimen_type, specimen_date1, speciman_date2, test_request, prepared_by, staff_position, lab_crea, lab_sgpt, lab_FBS, lab_acid, chest_XrayResult, sputum_month, sputum_due, sputum_examDate, sputum_result, sputum_appearance, doctors_order, visual_appearance1, visual_appearance2, visual_appearanceXpert, reading1, reading2, readingX, LabDiag, LabX, tbdc_rec, suggestions) VALUES (null, @service_id, @patient_Lname, @patient_Fname, @patient_Mname, @patient_status, @patient_gender, @services, @appointmentDate, @age, @address, @contact_num1, @ref_Phys, @occupation, @CPLname, @CPFname, @CPMname, @CPrelation, @CPcontact, @CPaddress, @treatment_partner, @weight, @contact_num2, @pulmonaries, @extra_pulmonaries, @diabetic, @hypertensive, @smoke, @smoke_day, @start_smoking, @stop_smoking, @prev_tb, @tb_months, @tb_date, @medicines, @medicine_under, @alcoholic, @alcoholic_start, @alcoholic_stop, @exam_reason, @hist_treatment, @specimen_type, @specimen_date1, @specimen_date2, @test_request, @prepared_by, @staff_position, @lab_crea, @lab_sgpt, @lab_FBS, @lab_acid, @chest_XrayResult, @sputum_month, @sputum_due, @sputum_examDate, @sputum_result, @sputum_appearance, @doctors_order, @visual_appearance1, @visual_appearance2, @visual_appearanceXpert, @reading1, @reading2, @readingX, @LabDiag, @LabX, @tbdc_rec, @suggestions)", con))
                 {
+                    com.Parameters.AddWithValue("@service_id", ((KeyValuePair<int, string>)comboBoxService.SelectedItem).Key);
                     com.Parameters.AddWithValue("@patient_Lname", txtLname.Text);
                     com.Parameters.AddWithValue("@patient_Fname", txtFname.Text);
                     com.Parameters.AddWithValue("@patient_Mname", txtMname.Text);
@@ -109,7 +110,6 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@CPrelation", txtCPrel.Text);
                     com.Parameters.AddWithValue("@CPcontact", txtCPContact.Text);
                     com.Parameters.AddWithValue("@CPaddress", txtCPAddress.Text);
-                    com.Parameters.AddWithValue("@services", comboBoxService.SelectedItem.ToString());
 
                     /*
                     com.Parameters.AddWithValue("@treatment_partner", comboBoxTreat.SelectedItem.ToString());
@@ -311,7 +311,7 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@hist_treatment", "");
                     com.Parameters.AddWithValue("@specimen_type", "");
                     com.Parameters.AddWithValue("@specimen_date1", "");
-                    com.Parameters.AddWithValue("@specimen_date2", "");
+                    com.Parameters.AddWithValue("@speciman_date2", "");
                     com.Parameters.AddWithValue("@test_request", "");
                     com.Parameters.AddWithValue("@prepared_by", "");
                     com.Parameters.AddWithValue("@staff_position", "");
