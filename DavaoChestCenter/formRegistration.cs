@@ -22,6 +22,105 @@ namespace DavaoChestCenter
             gatherServices();
         }
 
+        private Boolean validate()
+        {
+            if(txtLname.Text == "")
+            {
+                MessageBox.Show("Invalid Last name");
+                return false;
+            }
+            if (txtFname.Text == "")
+            {
+                MessageBox.Show("Invalid First name");
+                return false;
+            }
+            if (txtMname.Text == "")
+            {
+                MessageBox.Show("Invalid Middle name");
+                return false;
+            }
+            if (radButtonSingle.Checked == false && radButtonMarried.Checked == false)
+            {
+                MessageBox.Show("Invalid Civil Status. Please choose one");
+                return false;
+            }
+            if (radButtonMale.Checked == false && radButtonFemale.Checked == false)
+            {
+                MessageBox.Show("Invalid Gender. Please choose one.");
+                return false;
+            }
+            if (comboBoxService.SelectedItem.ToString() == "")
+            {
+                MessageBox.Show("Invalid Service. Please Select one");
+                return false;
+            }
+            if (txtAge.Text == "")
+            {
+                MessageBox.Show("Invalid Age.");
+                return false;
+            }
+            if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Invalid Address");
+                return false;
+            }
+            if (txtContact.Text == "")
+            {
+                MessageBox.Show("Invalid Contact");
+                return false;
+            }
+            if (txtPhys.Text == "")
+            {
+                MessageBox.Show("Invalid Referring Physician");
+                return false;
+            }
+            if (txtOccupation.Text == "")
+            {
+                MessageBox.Show("Invalid Occupation");
+                return false;
+            }
+            if (txtCPLname.Text == "")
+            {
+                MessageBox.Show("Invalid Last name");
+                return false;
+            }
+            if (txtCPFname.Text == "")
+            {
+                MessageBox.Show("Invalid Last name");
+                return false;
+            }
+            if (txtCPMname.Text == "")
+            {
+                MessageBox.Show("Invalid Last name");
+                return false;
+            }
+            if (txtCPrel.Text == "")
+            {
+                MessageBox.Show("Invalid Last name");
+                return false;
+            }
+            if (txtCPContact.Text == "")
+            {
+                MessageBox.Show("Invalid Contact");
+                return false;
+            }
+            if (txtCPAddress.Text == "")
+            {
+                MessageBox.Show("Invalid Address");
+                return false;
+            }
+            if (txtWeight.Text == "")
+            {
+                MessageBox.Show("Invalid Weight");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
+        }
+
         private void gatherServices()
         {
             using (var con = new MySqlConnection(conClass.connectionString))
@@ -339,7 +438,7 @@ namespace DavaoChestCenter
 
                     DialogResult r = MessageBox.Show("Appointment Added", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-                    if (r == DialogResult.OK)
+                    if (r == DialogResult.OK && validate())
                     {
                        com.ExecuteNonQuery();
                     }

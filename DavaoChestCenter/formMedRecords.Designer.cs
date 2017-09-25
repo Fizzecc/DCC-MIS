@@ -42,7 +42,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtExpilm = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.checkBoxMalaise = new System.Windows.Forms.CheckBox();
             this.checkBoxFatigue = new System.Windows.Forms.CheckBox();
             this.checkBoxChills = new System.Windows.Forms.CheckBox();
@@ -125,6 +124,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.checkBoxEPulm = new System.Windows.Forms.CheckBox();
+            this.radButtPulm = new System.Windows.Forms.RadioButton();
+            this.radButtEpulm = new System.Windows.Forms.RadioButton();
+            this.radButtBoth = new System.Windows.Forms.RadioButton();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -140,6 +144,7 @@
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,10 +184,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel7);
+            this.tabPage1.Controls.Add(this.radButtBoth);
+            this.tabPage1.Controls.Add(this.radButtEpulm);
+            this.tabPage1.Controls.Add(this.radButtPulm);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.radButtonDiabNo);
-            this.tabPage1.Controls.Add(this.radButtonDiabYes);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -198,7 +204,7 @@
             this.panel2.Controls.Add(this.radButtonHypeNo);
             this.panel2.Controls.Add(this.radButtonHypeYes);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(112, 259);
+            this.panel2.Location = new System.Drawing.Point(112, 286);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(109, 53);
             this.panel2.TabIndex = 19;
@@ -221,7 +227,7 @@
             this.radButtonHypeYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonHypeYes.Location = new System.Drawing.Point(17, 25);
             this.radButtonHypeYes.Name = "radButtonHypeYes";
-            this.radButtonHypeYes.Size = new System.Drawing.Size(40, 17);
+            this.radButtonHypeYes.Size = new System.Drawing.Size(41, 17);
             this.radButtonHypeYes.TabIndex = 17;
             this.radButtonHypeYes.TabStop = true;
             this.radButtonHypeYes.Text = "Yes";
@@ -242,7 +248,7 @@
             // 
             this.radButtonDiabNo.AutoSize = true;
             this.radButtonDiabNo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButtonDiabNo.Location = new System.Drawing.Point(59, 284);
+            this.radButtonDiabNo.Location = new System.Drawing.Point(50, 23);
             this.radButtonDiabNo.Name = "radButtonDiabNo";
             this.radButtonDiabNo.Size = new System.Drawing.Size(40, 17);
             this.radButtonDiabNo.TabIndex = 16;
@@ -254,9 +260,9 @@
             // 
             this.radButtonDiabYes.AutoSize = true;
             this.radButtonDiabYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButtonDiabYes.Location = new System.Drawing.Point(17, 283);
+            this.radButtonDiabYes.Location = new System.Drawing.Point(8, 22);
             this.radButtonDiabYes.Name = "radButtonDiabYes";
-            this.radButtonDiabYes.Size = new System.Drawing.Size(40, 17);
+            this.radButtonDiabYes.Size = new System.Drawing.Size(41, 17);
             this.radButtonDiabYes.TabIndex = 15;
             this.radButtonDiabYes.TabStop = true;
             this.radButtonDiabYes.Text = "Yes";
@@ -266,7 +272,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 266);
+            this.label3.Location = new System.Drawing.Point(6, 5);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -275,9 +281,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxEPulm);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtExpilm);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.checkBoxMalaise);
             this.groupBox1.Controls.Add(this.checkBoxFatigue);
             this.groupBox1.Controls.Add(this.checkBoxChills);
@@ -290,7 +296,7 @@
             this.groupBox1.Controls.Add(this.checkBoxCough);
             this.groupBox1.Controls.Add(this.txtPulm);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 9);
+            this.groupBox1.Location = new System.Drawing.Point(8, 36);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -301,14 +307,17 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(473, 204);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(422, 204);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 33);
+            this.button1.Size = new System.Drawing.Size(139, 33);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Reset Pulmonaries";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // txtExpilm
             // 
@@ -319,17 +328,6 @@
             this.txtExpilm.Name = "txtExpilm";
             this.txtExpilm.Size = new System.Drawing.Size(178, 84);
             this.txtExpilm.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(380, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Extra Pulmonaries:";
             // 
             // checkBoxMalaise
             // 
@@ -342,6 +340,7 @@
             this.checkBoxMalaise.TabIndex = 10;
             this.checkBoxMalaise.Text = "Body Malaise";
             this.checkBoxMalaise.UseVisualStyleBackColor = true;
+            this.checkBoxMalaise.CheckedChanged += new System.EventHandler(this.checkBoxMalaise_CheckedChanged);
             // 
             // checkBoxFatigue
             // 
@@ -354,6 +353,7 @@
             this.checkBoxFatigue.TabIndex = 9;
             this.checkBoxFatigue.Text = "Fatigue";
             this.checkBoxFatigue.UseVisualStyleBackColor = true;
+            this.checkBoxFatigue.CheckedChanged += new System.EventHandler(this.checkBoxFatigue_CheckedChanged);
             // 
             // checkBoxChills
             // 
@@ -366,6 +366,7 @@
             this.checkBoxChills.TabIndex = 8;
             this.checkBoxChills.Text = "Chills";
             this.checkBoxChills.UseVisualStyleBackColor = true;
+            this.checkBoxChills.CheckedChanged += new System.EventHandler(this.checkBoxChills_CheckedChanged);
             // 
             // checkBoxDyspnea
             // 
@@ -378,6 +379,7 @@
             this.checkBoxDyspnea.TabIndex = 7;
             this.checkBoxDyspnea.Text = "Dyspnea";
             this.checkBoxDyspnea.UseVisualStyleBackColor = true;
+            this.checkBoxDyspnea.CheckedChanged += new System.EventHandler(this.checkBoxDyspnea_CheckedChanged);
             // 
             // checkBoxChest
             // 
@@ -390,6 +392,7 @@
             this.checkBoxChest.TabIndex = 6;
             this.checkBoxChest.Text = "Chest/ Back pains";
             this.checkBoxChest.UseVisualStyleBackColor = true;
+            this.checkBoxChest.CheckedChanged += new System.EventHandler(this.checkBoxChest_CheckedChanged);
             // 
             // checkBoxHemo
             // 
@@ -402,6 +405,7 @@
             this.checkBoxHemo.TabIndex = 5;
             this.checkBoxHemo.Text = "Hemoptysis/ Blood Streaked Sputum";
             this.checkBoxHemo.UseVisualStyleBackColor = true;
+            this.checkBoxHemo.CheckedChanged += new System.EventHandler(this.checkBoxHemo_CheckedChanged);
             // 
             // checkBoxWeight
             // 
@@ -414,6 +418,7 @@
             this.checkBoxWeight.TabIndex = 4;
             this.checkBoxWeight.Text = "Weight Loss";
             this.checkBoxWeight.UseVisualStyleBackColor = true;
+            this.checkBoxWeight.CheckedChanged += new System.EventHandler(this.checkBoxWeight_CheckedChanged);
             // 
             // checkBoxSputum
             // 
@@ -426,6 +431,7 @@
             this.checkBoxSputum.TabIndex = 3;
             this.checkBoxSputum.Text = "Sputum Expectoration";
             this.checkBoxSputum.UseVisualStyleBackColor = true;
+            this.checkBoxSputum.CheckedChanged += new System.EventHandler(this.checkBoxSputum_CheckedChanged);
             // 
             // checkBoxFever
             // 
@@ -438,6 +444,7 @@
             this.checkBoxFever.TabIndex = 2;
             this.checkBoxFever.Text = "Fever";
             this.checkBoxFever.UseVisualStyleBackColor = true;
+            this.checkBoxFever.CheckedChanged += new System.EventHandler(this.checkBoxFever_CheckedChanged);
             // 
             // checkBoxCough
             // 
@@ -450,13 +457,16 @@
             this.checkBoxCough.TabIndex = 1;
             this.checkBoxCough.Text = "Cough two or more weeks";
             this.checkBoxCough.UseVisualStyleBackColor = true;
+            this.checkBoxCough.CheckedChanged += new System.EventHandler(this.checkBoxCough_CheckedChanged);
             // 
             // txtPulm
             // 
+            this.txtPulm.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPulm.Location = new System.Drawing.Point(10, 20);
             this.txtPulm.Margin = new System.Windows.Forms.Padding(2);
             this.txtPulm.Multiline = true;
             this.txtPulm.Name = "txtPulm";
+            this.txtPulm.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtPulm.Size = new System.Drawing.Size(551, 47);
             this.txtPulm.TabIndex = 0;
             // 
@@ -547,7 +557,7 @@
             this.radButtonAlcoholicYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAlcoholicYes.Location = new System.Drawing.Point(79, 28);
             this.radButtonAlcoholicYes.Name = "radButtonAlcoholicYes";
-            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(40, 17);
+            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(41, 17);
             this.radButtonAlcoholicYes.TabIndex = 18;
             this.radButtonAlcoholicYes.TabStop = true;
             this.radButtonAlcoholicYes.Text = "Yes";
@@ -612,7 +622,7 @@
             this.radButtonTBYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonTBYes.Location = new System.Drawing.Point(70, 2);
             this.radButtonTBYes.Name = "radButtonTBYes";
-            this.radButtonTBYes.Size = new System.Drawing.Size(40, 17);
+            this.radButtonTBYes.Size = new System.Drawing.Size(41, 17);
             this.radButtonTBYes.TabIndex = 18;
             this.radButtonTBYes.TabStop = true;
             this.radButtonTBYes.Text = "Yes";
@@ -657,7 +667,7 @@
             this.radButtonAB.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAB.Location = new System.Drawing.Point(293, 58);
             this.radButtonAB.Name = "radButtonAB";
-            this.radButtonAB.Size = new System.Drawing.Size(92, 17);
+            this.radButtonAB.Size = new System.Drawing.Size(93, 17);
             this.radButtonAB.TabIndex = 25;
             this.radButtonAB.TabStop = true;
             this.radButtonAB.Text = "AB Treatment";
@@ -806,7 +816,7 @@
             this.radButtonSmokeYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonSmokeYes.Location = new System.Drawing.Point(72, 29);
             this.radButtonSmokeYes.Name = "radButtonSmokeYes";
-            this.radButtonSmokeYes.Size = new System.Drawing.Size(40, 17);
+            this.radButtonSmokeYes.Size = new System.Drawing.Size(41, 17);
             this.radButtonSmokeYes.TabIndex = 18;
             this.radButtonSmokeYes.TabStop = true;
             this.radButtonSmokeYes.Text = "Yes";
@@ -1043,7 +1053,7 @@
             this.radButtonUPA.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonUPA.Location = new System.Drawing.Point(111, 46);
             this.radButtonUPA.Name = "radButtonUPA";
-            this.radButtonUPA.Size = new System.Drawing.Size(45, 17);
+            this.radButtonUPA.Size = new System.Drawing.Size(46, 17);
             this.radButtonUPA.TabIndex = 13;
             this.radButtonUPA.TabStop = true;
             this.radButtonUPA.Text = "UPA";
@@ -1267,6 +1277,67 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // checkBoxEPulm
+            // 
+            this.checkBoxEPulm.AutoSize = true;
+            this.checkBoxEPulm.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxEPulm.Location = new System.Drawing.Point(385, 82);
+            this.checkBoxEPulm.Name = "checkBoxEPulm";
+            this.checkBoxEPulm.Size = new System.Drawing.Size(123, 17);
+            this.checkBoxEPulm.TabIndex = 13;
+            this.checkBoxEPulm.Text = "Extra Pulmonaries: ";
+            this.checkBoxEPulm.UseVisualStyleBackColor = true;
+            this.checkBoxEPulm.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // radButtPulm
+            // 
+            this.radButtPulm.AutoSize = true;
+            this.radButtPulm.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButtPulm.Location = new System.Drawing.Point(17, 14);
+            this.radButtPulm.Name = "radButtPulm";
+            this.radButtPulm.Size = new System.Drawing.Size(88, 17);
+            this.radButtPulm.TabIndex = 20;
+            this.radButtPulm.TabStop = true;
+            this.radButtPulm.Text = "Pulmonaries";
+            this.radButtPulm.UseVisualStyleBackColor = true;
+            this.radButtPulm.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radButtEpulm
+            // 
+            this.radButtEpulm.AutoSize = true;
+            this.radButtEpulm.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButtEpulm.Location = new System.Drawing.Point(105, 14);
+            this.radButtEpulm.Name = "radButtEpulm";
+            this.radButtEpulm.Size = new System.Drawing.Size(116, 17);
+            this.radButtEpulm.TabIndex = 21;
+            this.radButtEpulm.TabStop = true;
+            this.radButtEpulm.Text = "Extra Pulmonaries";
+            this.radButtEpulm.UseVisualStyleBackColor = true;
+            this.radButtEpulm.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radButtBoth
+            // 
+            this.radButtBoth.AutoSize = true;
+            this.radButtBoth.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radButtBoth.Location = new System.Drawing.Point(224, 15);
+            this.radButtBoth.Name = "radButtBoth";
+            this.radButtBoth.Size = new System.Drawing.Size(50, 17);
+            this.radButtBoth.TabIndex = 22;
+            this.radButtBoth.TabStop = true;
+            this.radButtBoth.Text = "Both";
+            this.radButtBoth.UseVisualStyleBackColor = true;
+            this.radButtBoth.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.radButtonDiabNo);
+            this.panel7.Controls.Add(this.radButtonDiabYes);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Location = new System.Drawing.Point(9, 288);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(96, 50);
+            this.panel7.TabIndex = 23;
+            // 
             // formMedRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
@@ -1312,6 +1383,8 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1333,7 +1406,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtExpilm;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBoxMalaise;
         private System.Windows.Forms.CheckBox checkBoxFatigue;
         private System.Windows.Forms.CheckBox checkBoxChills;
@@ -1416,5 +1488,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.CheckBox checkBoxEPulm;
+        private System.Windows.Forms.RadioButton radButtBoth;
+        private System.Windows.Forms.RadioButton radButtEpulm;
+        private System.Windows.Forms.RadioButton radButtPulm;
+        private System.Windows.Forms.Panel panel7;
     }
 }
