@@ -32,8 +32,6 @@
             this.textBoxOther = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBoxExtra = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonServiceCreate = new System.Windows.Forms.Button();
@@ -45,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxServiceName = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -64,6 +61,7 @@
             this.textBoxOther.Name = "textBoxOther";
             this.textBoxOther.Size = new System.Drawing.Size(41, 27);
             this.textBoxOther.TabIndex = 48;
+            this.textBoxOther.TextChanged += new System.EventHandler(this.textBoxOther_TextChanged);
             // 
             // label6
             // 
@@ -77,29 +75,10 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Controls.Add(this.comboBoxExtra);
-            this.flowLayoutPanel.Controls.Add(this.textBox1);
             this.flowLayoutPanel.Location = new System.Drawing.Point(16, 202);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(320, 151);
             this.flowLayoutPanel.TabIndex = 46;
-            // 
-            // comboBoxExtra
-            // 
-            this.comboBoxExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxExtra.FormattingEnabled = true;
-            this.comboBoxExtra.Location = new System.Drawing.Point(3, 3);
-            this.comboBoxExtra.Name = "comboBoxExtra";
-            this.comboBoxExtra.Size = new System.Drawing.Size(203, 27);
-            this.comboBoxExtra.TabIndex = 28;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(212, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 27);
-            this.textBox1.TabIndex = 34;
             // 
             // textBoxQuantity
             // 
@@ -129,8 +108,9 @@
             this.buttonServiceCreate.Name = "buttonServiceCreate";
             this.buttonServiceCreate.Size = new System.Drawing.Size(320, 33);
             this.buttonServiceCreate.TabIndex = 43;
-            this.buttonServiceCreate.Text = "Create Service";
+            this.buttonServiceCreate.Text = "Edit Service";
             this.buttonServiceCreate.UseVisualStyleBackColor = false;
+            this.buttonServiceCreate.Click += new System.EventHandler(this.buttonServiceCreate_Click);
             // 
             // comboBoxItems
             // 
@@ -222,14 +202,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxServiceName);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formServiceEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formServiceEdit";
-            this.flowLayoutPanel.ResumeLayout(false);
-            this.flowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +219,6 @@
         private System.Windows.Forms.TextBox textBoxOther;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private System.Windows.Forms.ComboBox comboBoxExtra;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonServiceCreate;

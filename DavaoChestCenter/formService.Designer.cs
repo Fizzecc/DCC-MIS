@@ -47,6 +47,7 @@
             this.dataGridViewServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewServices.Size = new System.Drawing.Size(1305, 800);
             this.dataGridViewServices.TabIndex = 15;
+            this.dataGridViewServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewServices_CellClick);
             // 
             // buttonCreate
             // 

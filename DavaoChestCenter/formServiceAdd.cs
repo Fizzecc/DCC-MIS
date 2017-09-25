@@ -79,14 +79,7 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@service_details", textBoxServiceDetails.Text);
                         com.Parameters.AddWithValue("@other_products_id", otherProductsContainer);
                         com.Parameters.AddWithValue("@other_products_quantity", otherProductsQuantityContainer);
-
-                        if (textBoxOther.Text != "")
-                        {
-                            for (int i = 0; i < int.Parse(textBoxOther.Text); i++)
-                            {
-
-                            }
-                        }
+                        
 
                         DialogResult r = MessageBox.Show("Create service", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
