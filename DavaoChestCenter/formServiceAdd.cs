@@ -25,6 +25,8 @@ namespace DavaoChestCenter
         {
             InitializeComponent();
             gatherProducts();
+
+            refreshTable();
         }
 
         private void gatherProducts()
@@ -56,6 +58,22 @@ namespace DavaoChestCenter
                             }
                         }
                     }
+                }
+                con.Close();
+            }
+        }
+
+        public void refreshTable()
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT service_name, service_type, service_details, name, type FROM services INNER JOIN products on services.product_id = products.id;", con))
+                {
+                    var adp = new MySqlDataAdapter(com);
+                    var dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridViewInventory.DataSource = dt;
                 }
                 con.Close();
             }

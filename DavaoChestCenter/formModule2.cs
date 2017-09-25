@@ -182,13 +182,13 @@ namespace DavaoChestCenter
                 else
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY name";
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY name HAVING count >= 1 ORDER BY brand_name";
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal'  GROUP BY name HAVING count >= 1 ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, dosage, manufacturer, expiration_date, batch, status, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY expiration_date";
                 }
             }
             else

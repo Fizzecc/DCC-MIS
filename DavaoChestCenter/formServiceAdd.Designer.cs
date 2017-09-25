@@ -40,12 +40,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxExtra = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxOther = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxExtra = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -159,6 +161,23 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(320, 151);
             this.flowLayoutPanel.TabIndex = 31;
             // 
+            // comboBoxExtra
+            // 
+            this.comboBoxExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxExtra.FormattingEnabled = true;
+            this.comboBoxExtra.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxExtra.Name = "comboBoxExtra";
+            this.comboBoxExtra.Size = new System.Drawing.Size(203, 27);
+            this.comboBoxExtra.TabIndex = 28;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(212, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(41, 27);
+            this.textBox1.TabIndex = 34;
+            // 
             // textBoxOther
             // 
             this.textBoxOther.Location = new System.Drawing.Point(295, 169);
@@ -186,28 +205,24 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Other Products Required:";
             // 
-            // comboBoxExtra
+            // dataGridViewInventory
             // 
-            this.comboBoxExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxExtra.FormattingEnabled = true;
-            this.comboBoxExtra.Location = new System.Drawing.Point(3, 3);
-            this.comboBoxExtra.Name = "comboBoxExtra";
-            this.comboBoxExtra.Size = new System.Drawing.Size(203, 27);
-            this.comboBoxExtra.TabIndex = 28;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(212, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 27);
-            this.textBox1.TabIndex = 34;
+            this.dataGridViewInventory.AllowUserToAddRows = false;
+            this.dataGridViewInventory.AllowUserToDeleteRows = false;
+            this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInventory.Location = new System.Drawing.Point(342, 6);
+            this.dataGridViewInventory.Name = "dataGridViewInventory";
+            this.dataGridViewInventory.ReadOnly = true;
+            this.dataGridViewInventory.RowHeadersVisible = false;
+            this.dataGridViewInventory.Size = new System.Drawing.Size(594, 386);
+            this.dataGridViewInventory.TabIndex = 35;
             // 
             // formServiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 399);
+            this.ClientSize = new System.Drawing.Size(948, 397);
+            this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxOther);
             this.Controls.Add(this.label6);
@@ -232,6 +247,7 @@
             this.Text = "New Service";
             this.flowLayoutPanel.ResumeLayout(false);
             this.flowLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +272,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxExtra;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridViewInventory;
     }
 }
