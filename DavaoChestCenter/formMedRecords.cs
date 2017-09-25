@@ -142,11 +142,142 @@ namespace DavaoChestCenter
             }
         }
 
-        public formMedRecords(int selectedID, string firstname, string middlename, string lastname)
+        public formMedRecords(int selectedID, string firstname, string middlename, string lastname, string pulmonaries,
+            string extra_pulmonaries, string diabetic, string hypertensive, string smoke, string smoke_day,
+            string start_smoking, string stop_smoking, string prev_tb, string tb_months, string tb_date,
+            string medicines, string medicine_under, string alcoholic, string alcohol_start, string alcohol_stop,
+            string exam_reason, string hist_treatment, string specimen_type, string specimen_date1, string speciman_date2,
+            string test_request, string prepared_by, string staff_position, string treatment_partner)
         {
             InitializeComponent();
             lblID.Text = selectedID.ToString();
             lblName.Text = lastname + ", " + firstname + " " + middlename;
+            txtPulm.Text = pulmonaries;
+            txtExpilm.Text = extra_pulmonaries;
+
+            if(diabetic == "Yes")
+            {
+                radButtonDiabYes.Checked = true;
+            }
+            if (diabetic == "No")
+            {
+                radButtonDiabNo.Checked = true;
+            }
+            if(hypertensive == "Yes")
+            {
+                radButtonHypeYes.Checked = true;
+            }
+            if(hypertensive == "No")
+            {
+                radButtonHypeNo.Checked = true;
+            }
+            if(smoke == "Yes")
+            {
+                radButtonSmokeYes.Checked = true;
+                txtTimesSmoke.Enabled = true;
+                dateTimeSMKstart.Enabled = true;
+                dateTimeSMKstop.Enabled = true;
+                txtTimesSmoke.Text = smoke_day;
+            }
+            if(smoke == "No")
+            {
+                radButtonSmokeNo.Checked = true;
+                txtTimesSmoke.Enabled = false;
+                dateTimeSMKstart.Enabled = false;
+                dateTimeSMKstop.Enabled = false;
+            }
+            if(prev_tb == "Yes")
+            {
+                radButtonTBYes.Checked = true;
+                txtMonths.Enabled = true;
+                dateTimeTBTreat.Enabled = true;
+                txtMedicines.Enabled = true;
+                radButtonTB.Enabled = true;
+                radButtonAB.Enabled = true;
+                txtMonths.Text = tb_months;
+                txtMedicines.Text = medicine_under;
+                if (medicines == "AB Treatment")
+                {
+                    radButtonAB.Checked = true;
+                }
+                if(medicines == "TB Treatment")
+                {
+                    radButtonTB.Checked = true;
+                }
+            }
+            if(prev_tb == "No")
+            {
+                radButtonTBNo.Checked = true;
+                txtMonths.Enabled = false;
+                dateTimeTBTreat.Enabled = false;
+                txtMedicines.Enabled = false;
+                radButtonTB.Enabled = false;
+                radButtonAB.Enabled = false;
+            }
+            if(alcoholic == "Yes")
+            {
+                radButtonAlcoholicYes.Checked = true;
+                dateTimeDRNKstart.Enabled = true;
+                dateTimeDRNKstop.Enabled = true;
+            }
+            if(alcoholic == "No")
+            {
+                radButtonAlcoholicNo.Checked = true;
+                dateTimeDRNKstart.Enabled = false;
+                dateTimeDRNKstop.Enabled = false;
+            }
+            if(exam_reason == "Diagnosis")
+            {
+                radButtonDiagnosis.Checked = true;
+            }
+            if(exam_reason == "Baseline")
+            {
+                radButtonBaseline.Checked = true;
+            }
+            if(exam_reason == "Follow")
+            {
+                radButtonFollow.Checked = true;
+            }
+            if(hist_treatment == "New")
+            {
+                radButtonHistNew.Checked = true;
+            }
+            if(hist_treatment == "Retreatment")
+            {
+                radButtonHistRT.Checked = true;
+            }
+            if(specimen_type == "Sputum")
+            {
+                radButtonSputum.Checked = true;
+            }
+            if(specimen_type != "Sputum")
+            {
+                radButtonOthers.Checked = true;
+                txtOthers.Text = specimen_type;
+            }
+            if(test_request == "DSSM")
+            {
+                radButtonDSSM.Checked = true;
+            }
+            if(test_request == "Xpert")
+            {
+                radButtonXpert.Checked = true;
+            }
+            if(test_request == "Culture")
+            {
+                radButtonCulture.Checked = true;
+            }
+            if(test_request == "DST")
+            {
+                radButtonDST.Checked = true;
+            }
+            if(test_request == "UPA")
+            {
+                radButtonUPA.Checked = true;
+            }
+            txtPrepared.Text = prepared_by;
+            txtPosition.Text = staff_position;
+
         }
 
 

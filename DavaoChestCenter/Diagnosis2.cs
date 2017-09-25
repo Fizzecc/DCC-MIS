@@ -19,6 +19,106 @@ namespace DavaoChestCenter
             InitializeComponent();
         }
 
+        public Boolean validate()
+        {
+            if(txtCREA.Text == "")
+            {
+                MessageBox.Show("Invalid CREA");
+                return false;
+            }
+            if(txtSGPT.Text == "")
+            {
+                MessageBox.Show("Invalid SGPT");
+                return false;
+            }
+            if(txtPBS.Text == "")
+            {
+                MessageBox.Show("Invalid PBS");
+                return false;
+            }
+            if(txtURIC.Text == "")
+            {
+                MessageBox.Show("Invalid URIC Acid");
+                return false;
+            }
+            if(txtChest.Text == "")
+            {
+                MessageBox.Show("Invalid Chest Result");
+                return false;
+            }
+            if(txtMonth.Text == "")
+            {
+                MessageBox.Show("Invalid Sputum Months");
+                return false;
+            }
+            if(txtResult.Text == "")
+            {
+                MessageBox.Show("Invalid Sputum Result");
+                return false;
+            }
+            if(txtAppearance.Text == "")
+            {
+                MessageBox.Show("Invalid Appearance");
+                return false;
+            }
+            if(txtDoctor.Text == "")
+            {
+                MessageBox.Show("Invalid Doctor's order");
+                return false;
+            }
+            if(txtVisual1.Text == "")
+            {
+                MessageBox.Show("Invalid Visual Appearance 1");
+                return false;
+            }
+            if(txtVisual2.Text == "")
+            {
+                MessageBox.Show("Invalid Visual Appearance 2");
+                return false;
+            }
+            if(txtVisualX.Text == "")
+            {
+                MessageBox.Show("Invalid Visual Xpert");
+                return false;
+            }
+            if(txtreading1.Text == "")
+            {
+                MessageBox.Show("Invalid Reading 1");
+                return false;
+            }
+            if(txtreading2.Text == "")
+            {
+                MessageBox.Show("Invalid Reading 2");
+                return false;
+            }
+            if(txtReadingX.Text == "")
+            {
+                MessageBox.Show("Invalid Reading Xpert");
+                return false;
+            }
+            if(txtLabDiag.Text == "")
+            {
+                MessageBox.Show("Invalid Laboratory Diagnosis");
+                return false;
+            }
+            if(txtLabX.Text == "")
+            {
+                MessageBox.Show("Invalid Laboratory Xpert");
+                return false;
+            }
+            if(radButtonAnti.Checked == false && radButtonNoAnti.Checked == false && radButonStop.Checked == false)
+            {
+                MessageBox.Show("Invalid TBDC Recommendations. Please Choose one");
+                return false;
+            }
+            if(txtSug.Text == "")
+            {
+                MessageBox.Show("Invalid Suggestions. Please Choose one.");
+                return false;
+            }
+            return true;
+        }
+
         public Diagnosis2(int selectedID, string firstname, string middlename, string lastname)
         {
             InitializeComponent();
@@ -73,7 +173,7 @@ namespace DavaoChestCenter
 
                     DialogResult r = MessageBox.Show("Apply Laboratory Results?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-                    if (r == DialogResult.OK)
+                    if (r == DialogResult.OK && validate())
                     {
                         com.ExecuteNonQuery();
                     }

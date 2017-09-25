@@ -50,8 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtDoctor = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -164,8 +162,6 @@
             this.tabPage1.Controls.Add(this.txtChest);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.txtID);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -211,7 +207,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 36);
+            this.groupBox1.Location = new System.Drawing.Point(6, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(536, 164);
             this.groupBox1.TabIndex = 2;
@@ -316,7 +312,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(40, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "SGPT/ALAT";
             // 
@@ -359,23 +355,6 @@
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lab Tests";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(74, 8);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Patient ID:";
             // 
             // tabPage2
             // 
@@ -973,7 +952,7 @@
             this.radButonStop.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButonStop.Location = new System.Drawing.Point(26, 73);
             this.radButonStop.Name = "radButonStop";
-            this.radButonStop.Size = new System.Drawing.Size(142, 17);
+            this.radButonStop.Size = new System.Drawing.Size(143, 17);
             this.radButonStop.TabIndex = 3;
             this.radButonStop.TabStop = true;
             this.radButonStop.Text = "Stop Anti-TB Treatment";
@@ -985,7 +964,7 @@
             this.radButtonNoAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonNoAnti.Location = new System.Drawing.Point(26, 50);
             this.radButtonNoAnti.Name = "radButtonNoAnti";
-            this.radButtonNoAnti.Size = new System.Drawing.Size(133, 17);
+            this.radButtonNoAnti.Size = new System.Drawing.Size(134, 17);
             this.radButtonNoAnti.TabIndex = 2;
             this.radButtonNoAnti.TabStop = true;
             this.radButtonNoAnti.Text = "No Anti-TB Treatment";
@@ -997,7 +976,7 @@
             this.radButtonAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAnti.Location = new System.Drawing.Point(26, 27);
             this.radButtonAnti.Name = "radButtonAnti";
-            this.radButtonAnti.Size = new System.Drawing.Size(115, 17);
+            this.radButtonAnti.Size = new System.Drawing.Size(116, 17);
             this.radButtonAnti.TabIndex = 1;
             this.radButtonAnti.TabStop = true;
             this.radButtonAnti.Text = "Anti-TB Treatment";
@@ -1143,8 +1122,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtDoctor;
         private System.Windows.Forms.Label label23;
