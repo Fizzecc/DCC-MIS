@@ -441,7 +441,37 @@ namespace DavaoChestCenter
             string middlename = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Mname"].Value.ToString();
             string lastname = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
 
-            var records = new formMedRecords(selectID, firstname, middlename, lastname);
+            string pulmonaries = dataGridViewPatients.Rows[e.RowIndex].Cells["pulmonaries"].Value.ToString();
+            string extra_pulmonaries = dataGridViewPatients.Rows[e.RowIndex].Cells["extra_pulmonaries"].Value.ToString();
+            string diabetic = dataGridViewPatients.Rows[e.RowIndex].Cells["diabetic"].Value.ToString();
+            string hypertensive = dataGridViewPatients.Rows[e.RowIndex].Cells["hypertensive"].Value.ToString();
+            string smoke = dataGridViewPatients.Rows[e.RowIndex].Cells["smoke"].Value.ToString();
+            string smoke_day = dataGridViewPatients.Rows[e.RowIndex].Cells["smoke_day"].Value.ToString();
+            string start_smoking = dataGridViewPatients.Rows[e.RowIndex].Cells["start_smoking"].Value.ToString();
+            string stop_smoking = dataGridViewPatients.Rows[e.RowIndex].Cells["stop_smoking"].Value.ToString();
+            string prev_tb = dataGridViewPatients.Rows[e.RowIndex].Cells["prev_tb"].Value.ToString();
+            string tb_months = dataGridViewPatients.Rows[e.RowIndex].Cells["tb_months"].Value.ToString();
+            string tb_date = dataGridViewPatients.Rows[e.RowIndex].Cells["tb_date"].Value.ToString();
+            string medicines = dataGridViewPatients.Rows[e.RowIndex].Cells["medicines"].Value.ToString();
+            string medicine_under = dataGridViewPatients.Rows[e.RowIndex].Cells["medicine_under"].Value.ToString();
+            string alcoholic = dataGridViewPatients.Rows[e.RowIndex].Cells["alcoholic"].Value.ToString();
+            string alcohol_start = dataGridViewPatients.Rows[e.RowIndex].Cells["alcohol_start"].Value.ToString();
+            string alcohol_stop = dataGridViewPatients.Rows[e.RowIndex].Cells["alcohol_stop"].Value.ToString();
+            string exam_reason = dataGridViewPatients.Rows[e.RowIndex].Cells["exam_reason"].Value.ToString();
+            string hist_treatment = dataGridViewPatients.Rows[e.RowIndex].Cells["hist_treatment"].Value.ToString();
+            string specimen_type = dataGridViewPatients.Rows[e.RowIndex].Cells["specimen_type"].Value.ToString();
+            string specimen_date1 = dataGridViewPatients.Rows[e.RowIndex].Cells["specimen_date1"].Value.ToString();
+            string speciman_date2 = dataGridViewPatients.Rows[e.RowIndex].Cells["speciman_date2"].Value.ToString();
+            string test_request = dataGridViewPatients.Rows[e.RowIndex].Cells["test_request"].Value.ToString();
+            string prepared_by = dataGridViewPatients.Rows[e.RowIndex].Cells["prepared_by"].Value.ToString();
+            string staff_position = dataGridViewPatients.Rows[e.RowIndex].Cells["staff_position"].Value.ToString();
+            string treatment_partner = dataGridViewPatients.Rows[e.RowIndex].Cells["treatment_partner"].Value.ToString();
+
+
+            var records = new formMedRecords(selectID, firstname, middlename, lastname, pulmonaries, extra_pulmonaries,
+                diabetic, hypertensive, smoke, smoke_day, start_smoking, stop_smoking, prev_tb, tb_months, tb_date,
+                medicines, medicine_under, alcoholic, alcohol_start, alcohol_stop, exam_reason, hist_treatment,
+                specimen_type, specimen_date1, speciman_date2, test_request, prepared_by, staff_position, treatment_partner);
             records.ref_To_Main = this;
             records.ShowDialog();
         }
