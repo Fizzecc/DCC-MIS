@@ -17,6 +17,16 @@ namespace DavaoChestCenter
         public formMedRecords()
         {
             InitializeComponent();
+            //radButtonDiabYes.Checked = true;
+            radButtonDiabNo.Checked = true;
+            //radButtonSmokeYes.Checked = true;
+            radButtonSmokeNo.Checked = true;
+            //radButtonTBYes.Checked = true;
+            //radButtonAB.Checked = true;
+            radButtonTB.Checked = true;
+            //radButtonAlcoholicYes.Checked = true;
+            radButtonAlcoholicNo.Checked = true;
+
         }
 
         public Boolean validate()
@@ -572,7 +582,7 @@ namespace DavaoChestCenter
             if (radButtonOthers.Checked)
             {
                 radButtonOthers.Enabled = true;
-                radButtonSputum.Enabled = false;
+                //radButtonSputum.Enabled = false;
             }
         }
 
