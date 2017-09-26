@@ -475,6 +475,14 @@ namespace DavaoChestCenter
             records.ref_To_Main = this;
             records.ShowDialog();
         }
+
+        private void dataGridViewAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedID = int.Parse(dataGridViewAppointments.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
+            string name = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Fname"].Value.ToString() + " " + dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
+            var update = new formAppointmentUpdate(selectedID, name);
+            update.ShowDialog();
+        }
     }
 
 }

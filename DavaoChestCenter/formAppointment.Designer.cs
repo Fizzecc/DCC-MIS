@@ -53,6 +53,7 @@
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAppointments.Size = new System.Drawing.Size(423, 653);
             this.dataGridViewAppointments.TabIndex = 15;
+            this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
             // 
             // labelName
             // 
@@ -118,11 +119,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(442, 691);
+            this.button3.Location = new System.Drawing.Point(13, 691);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 38);
+            this.button3.Size = new System.Drawing.Size(178, 38);
             this.button3.TabIndex = 33;
-            this.button3.Text = "button3";
+            this.button3.Text = "Create Appointment";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
