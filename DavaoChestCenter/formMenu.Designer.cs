@@ -102,9 +102,9 @@
             // flowLayoutPanelModule1
             // 
             this.flowLayoutPanelModule1.Controls.Add(this.buttonProfile);
-            this.flowLayoutPanelModule1.Controls.Add(this.button1);
             this.flowLayoutPanelModule1.Controls.Add(this.button2);
             this.flowLayoutPanelModule1.Controls.Add(this.buttonServices);
+            this.flowLayoutPanelModule1.Controls.Add(this.button1);
             this.flowLayoutPanelModule1.Location = new System.Drawing.Point(3, 73);
             this.flowLayoutPanelModule1.Name = "flowLayoutPanelModule1";
             this.flowLayoutPanelModule1.Size = new System.Drawing.Size(252, 147);
@@ -131,7 +131,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Location = new System.Drawing.Point(3, 38);
+            this.button1.Location = new System.Drawing.Point(3, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 29);
             this.button1.TabIndex = 2;
@@ -146,7 +146,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.Location = new System.Drawing.Point(3, 73);
+            this.button2.Location = new System.Drawing.Point(3, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 29);
             this.button2.TabIndex = 3;
@@ -161,7 +161,7 @@
             this.buttonServices.FlatAppearance.BorderSize = 0;
             this.buttonServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonServices.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonServices.Location = new System.Drawing.Point(3, 108);
+            this.buttonServices.Location = new System.Drawing.Point(3, 73);
             this.buttonServices.Name = "buttonServices";
             this.buttonServices.Size = new System.Drawing.Size(252, 29);
             this.buttonServices.TabIndex = 4;
