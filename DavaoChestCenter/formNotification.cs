@@ -27,10 +27,17 @@ namespace DavaoChestCenter
                         var dt = new DataTable();
                         adp.Fill(dt);
                         dataGridViewItems.DataSource = dt;
+
+                        dataGridViewItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridViewItems.AutoResizeColumns();
+                        dataGridViewItems.AllowUserToResizeColumns = true;
+                        dataGridViewItems.AllowUserToOrderColumns = true;
+
                         dt.Dispose();
 
                         dataGridViewItems.Columns["id"].Visible = false;
                         dataGridViewItems.Columns["product_id"].Visible = false;
+
                     }
                 }
                 con.Close();

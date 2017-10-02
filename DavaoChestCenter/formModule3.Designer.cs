@@ -40,11 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.dataGridViewToday = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewToday)).BeginInit();
@@ -156,14 +157,6 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "To:";
             // 
-            // textBox
-            // 
-            this.textBox.Location = new System.Drawing.Point(1003, 566);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(310, 25);
-            this.textBox.TabIndex = 18;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            // 
             // buttonCheckIn
             // 
             this.buttonCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
@@ -220,13 +213,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Check In and Check Out";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1003, 566);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(310, 27);
+            this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1003, 600);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(86, 23);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Everyone";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // formModule3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -265,10 +280,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.Button buttonCheckOut;
         private System.Windows.Forms.DataGridView dataGridViewToday;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

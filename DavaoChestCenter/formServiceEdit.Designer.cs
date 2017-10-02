@@ -43,12 +43,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxServiceName = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 172);
+            this.label7.Location = new System.Drawing.Point(12, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 19);
             this.label7.TabIndex = 49;
@@ -56,7 +58,7 @@
             // 
             // textBoxOther
             // 
-            this.textBoxOther.Location = new System.Drawing.Point(295, 169);
+            this.textBoxOther.Location = new System.Drawing.Point(295, 202);
             this.textBoxOther.Multiline = true;
             this.textBoxOther.Name = "textBoxOther";
             this.textBoxOther.Size = new System.Drawing.Size(41, 27);
@@ -66,7 +68,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(265, 172);
+            this.label6.Location = new System.Drawing.Point(265, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 19);
             this.label6.TabIndex = 47;
@@ -75,9 +77,9 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(16, 202);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(16, 235);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(320, 151);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(320, 118);
             this.flowLayoutPanel.TabIndex = 46;
             // 
             // textBoxQuantity
@@ -181,11 +183,30 @@
             this.textBoxServiceName.Size = new System.Drawing.Size(203, 27);
             this.textBoxServiceName.TabIndex = 35;
             // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(133, 169);
+            this.textBoxPrice.Multiline = true;
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(203, 27);
+            this.textBoxPrice.TabIndex = 51;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 172);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Price:";
+            // 
             // formServiceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 397);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxOther);
             this.Controls.Add(this.label6);
@@ -230,5 +251,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxServiceName;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Label label8;
     }
 }

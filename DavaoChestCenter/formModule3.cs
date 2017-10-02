@@ -23,6 +23,8 @@ namespace DavaoChestCenter
             InitializeComponent();
 
             refreshTable();
+
+            gatherPeople();
         }
 
         public void refreshTable()
@@ -104,6 +106,8 @@ namespace DavaoChestCenter
                         com.ExecuteNonQuery();
 
                         refreshTable();
+
+                        sort();
                     }
                     con.Close();
                 }
@@ -111,6 +115,36 @@ namespace DavaoChestCenter
             else
             {
                 MessageBox.Show("select schedule first");
+            }
+        }
+
+        private void gatherPeople()
+        {
+            using (var con = new MySqlConnection(conClass.connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand("SELECT * FROM staff", con))
+                {
+                    using (var rdr = com.ExecuteReader())
+                    {
+                        while (rdr.HasRows)
+                        {
+                            if (rdr.Read())
+                            {
+                                staff.Add(rdr.GetInt32(0), rdr.GetString(1) + " " + rdr.GetString(3));
+
+                                comboBox1.DataSource = new BindingSource(staff, null);
+                                comboBox1.DisplayMember = "Value";
+                                comboBox1.ValueMember = "Key";
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                con.Close();
             }
         }
 
@@ -129,12 +163,13 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                if (textBox.Text != "")
+                if (checkBox1.Checked == false)
                 {
-                    using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2) AND firstname LIKE '%" + textBox.Text + "%' OR lastname LIKE '%" + textBox.Text + "%'", con))
+                    using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2) AND staff.id = @staff_id", con))
                     {
                         com.Parameters.AddWithValue("@dateTimePicker1", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
                         com.Parameters.AddWithValue("@dateTimePicker2", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
+                        com.Parameters.AddWithValue("@staff_id", ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key);
 
                         var adp = new MySqlDataAdapter(com);
                         var dt = new DataTable();
@@ -169,6 +204,16 @@ namespace DavaoChestCenter
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            sort();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sort();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             sort();
         }

@@ -63,7 +63,8 @@ namespace DavaoChestCenter
         public formServiceEdit(int id, 
             string name, string type, string details,
             string product, string quantity,
-            string other_products, string other_products_quantity)
+            string other_products, string other_products_quantity,
+            string price)
         {
             InitializeComponent();
             
@@ -77,6 +78,7 @@ namespace DavaoChestCenter
             textBoxQuantity.Text = quantity;
             otherProductsContainer = other_products;
             otherProductsQuantityContainer = other_products_quantity;
+            textBoxPrice.Text = price;
 
             textBoxOther.Text = otherProductsContainer.Split('/').Length.ToString();
 
@@ -174,7 +176,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("UPDATE services SET product_id = @product_id, product_quantity = @product_quantity, service_name = @service_name, service_type = @service_type, service_details = @service_details, other_products_id = @other_products_id, other_products_quantity = @other_products_quantity WHERE service_id = @service_id", con))
+                using (var com = new MySqlCommand("UPDATE services SET product_id = @product_id, product_quantity = @product_quantity, service_name = @service_name, service_type = @service_type, service_details = @service_details, other_products_id = @other_products_id, other_products_quantity = @other_products_quantity, price = @price WHERE service_id = @service_id", con))
                 {
                     com.Parameters.AddWithValue("@service_id", selectedService);
 
@@ -187,6 +189,8 @@ namespace DavaoChestCenter
                     com.Parameters.AddWithValue("@service_details", textBoxServiceDetails.Text);
                     com.Parameters.AddWithValue("@other_products_id", otherProductsContainer);
                     com.Parameters.AddWithValue("@other_products_quantity", otherProductsQuantityContainer);
+
+                    com.Parameters.AddWithValue("@price", textBoxPrice.Text);
 
                     com.ExecuteNonQuery();
                 }

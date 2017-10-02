@@ -21,6 +21,8 @@ namespace DavaoChestCenter
 
         string otherProductsContainer = ""; string otherProductsQuantityContainer = "";
 
+        public formService referenceToMain { get; set; }
+
         public formServiceAdd()
         {
             InitializeComponent();
@@ -68,7 +70,7 @@ namespace DavaoChestCenter
                 using (MySqlConnection con = new MySqlConnection(conClass.connectionString))
                 {
                     con.Open();
-                    using (MySqlCommand com = new MySqlCommand("INSERT INTO services VALUES(null, @product_id, @product_quantity, @service_name, @service_type, @service_details, @other_products_id, @other_products_quantity)", con))
+                    using (MySqlCommand com = new MySqlCommand("INSERT INTO services VALUES(null, @product_id, @product_quantity, @service_name, @service_type, @service_details, @other_products_id, @other_products_quantity, @price)", con))
                     {
                         com.Parameters.AddWithValue("@product_id", ((KeyValuePair<int, string>)comboBoxItems.SelectedItem).Key);
 
@@ -79,13 +81,16 @@ namespace DavaoChestCenter
                         com.Parameters.AddWithValue("@service_details", textBoxServiceDetails.Text);
                         com.Parameters.AddWithValue("@other_products_id", otherProductsContainer);
                         com.Parameters.AddWithValue("@other_products_quantity", otherProductsQuantityContainer);
-                        
+
+                        com.Parameters.AddWithValue("@price", textBoxPrice.Text);
+
 
                         DialogResult r = MessageBox.Show("Create service", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                         if (r == DialogResult.OK)
                         {
                             com.ExecuteNonQuery();
+                            referenceToMain.refreshTable();
                         }
                         else
                         {
@@ -95,9 +100,9 @@ namespace DavaoChestCenter
                     con.Close();
                 }
             }
-            catch
+            catch (Exception ee)
             {
-                MessageBox.Show("You have entered an invalid number!");
+                MessageBox.Show("Invalid number!");
             }
         }
 

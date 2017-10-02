@@ -27,7 +27,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT service_id, service_name, service_type, service_details, name, type, product_quantity, products.dosage, other_products_id, other_products_quantity FROM services INNER JOIN products on services.product_id = products.id;", con))
+                using (var com = new MySqlCommand("SELECT service_id, service_name, service_type, service_details, name, type, product_quantity, products.dosage, other_products_id, other_products_quantity, price FROM services INNER JOIN products on services.product_id = products.id;", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -41,6 +41,7 @@ namespace DavaoChestCenter
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             var create = new formServiceAdd();
+            create.referenceToMain = this;
             create.ShowDialog();
         }
 
@@ -54,8 +55,9 @@ namespace DavaoChestCenter
             string quantity = dataGridViewServices.Rows[e.RowIndex].Cells["product_quantity"].Value.ToString();
             string other_products = dataGridViewServices.Rows[e.RowIndex].Cells["other_products_id"].Value.ToString();
             string other_products_quantity = dataGridViewServices.Rows[e.RowIndex].Cells["other_products_quantity"].Value.ToString();
-            
-            var edit = new formServiceEdit(selectedService, name, type, details, product, quantity, other_products, other_products_quantity);
+            string price = dataGridViewServices.Rows[e.RowIndex].Cells["price"].Value.ToString();
+
+            var edit = new formServiceEdit(selectedService, name, type, details, product, quantity, other_products, other_products_quantity, price);
             edit.referenceToMain = this;
             edit.ShowDialog();
         }

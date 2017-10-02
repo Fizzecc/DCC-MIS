@@ -45,6 +45,8 @@
             this.textBoxOther = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,9 +156,9 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.Controls.Add(this.comboBoxExtra);
             this.flowLayoutPanel.Controls.Add(this.textBox1);
-            this.flowLayoutPanel.Location = new System.Drawing.Point(16, 202);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(16, 234);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(320, 151);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(320, 119);
             this.flowLayoutPanel.TabIndex = 31;
             // 
             // comboBoxExtra
@@ -178,7 +180,7 @@
             // 
             // textBoxOther
             // 
-            this.textBoxOther.Location = new System.Drawing.Point(295, 169);
+            this.textBoxOther.Location = new System.Drawing.Point(295, 201);
             this.textBoxOther.Multiline = true;
             this.textBoxOther.Name = "textBoxOther";
             this.textBoxOther.Size = new System.Drawing.Size(41, 27);
@@ -188,7 +190,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(265, 172);
+            this.label6.Location = new System.Drawing.Point(265, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 19);
             this.label6.TabIndex = 32;
@@ -197,17 +199,36 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 172);
+            this.label7.Location = new System.Drawing.Point(12, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 19);
             this.label7.TabIndex = 34;
             this.label7.Text = "Other Products Required:";
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(133, 168);
+            this.textBoxPrice.Multiline = true;
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(203, 27);
+            this.textBoxPrice.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Price:";
             // 
             // formServiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 397);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxOther);
             this.Controls.Add(this.label6);
@@ -256,5 +277,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxExtra;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Label label8;
     }
 }
