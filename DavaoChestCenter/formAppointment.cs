@@ -16,7 +16,6 @@ namespace DavaoChestCenter
         Dictionary<int, string> services = new Dictionary<int, string>();
 
         int id = -1;
-        int selectID;
 
         public formAppointment(int x)
         {
@@ -34,7 +33,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT registration_id, appointmentDate, patient_Fname, patient_Mname, patient_Lname FROM registration WHERE appointmentDate >= DATE_SUB(NOW(), INTERVAL 7 DAY)", con))
+                using (var com = new MySqlCommand("SELECT registration_id, appointmentDate, patient_Fname, patient_Mname, patient_Lname, patient_status, patient_gender, services, age, address, contact_num1, ref_Phys, occupation, CPLname, CPFname, CPMname, CPrelation, CPcontact, CPaddress, weight FROM registration WHERE appointmentDate >= DATE_SUB(NOW(), INTERVAL 7 DAY)", con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {
@@ -44,6 +43,25 @@ namespace DavaoChestCenter
                         dt.Dispose();
 
                         dataGridViewAppointments.Columns["registration_id"].Visible = false;
+                        dataGridViewAppointments.Columns["appointmentDate"].HeaderText = "Appointment Date";
+                        dataGridViewAppointments.Columns["patient_Fname"].HeaderText = "First Name";
+                        dataGridViewAppointments.Columns["patient_Mname"].HeaderText = "Middle Name";
+                        dataGridViewAppointments.Columns["patient_Lname"].HeaderText = "Last Name";
+                        dataGridViewAppointments.Columns["patient_status"].HeaderText = "Civil Status";
+                        dataGridViewAppointments.Columns["patient_gender"].HeaderText = "Gender";
+                        dataGridViewAppointments.Columns["services"].HeaderText = "Services";
+                        dataGridViewAppointments.Columns["appointmentDate"].HeaderText = "Appointment Date";
+                        dataGridViewAppointments.Columns["age"].HeaderText = "Age";
+                        dataGridViewAppointments.Columns["address"].HeaderText = "Address";
+                        dataGridViewAppointments.Columns["contact_num1"].HeaderText = "Contact Number";
+                        dataGridViewAppointments.Columns["ref_Phys"].HeaderText = "Referral Physician";
+                        dataGridViewAppointments.Columns["occupation"].HeaderText = "Occupation";
+                        dataGridViewAppointments.Columns["CPLname"].HeaderText = "Contact Person's Last Name";
+                        dataGridViewAppointments.Columns["CPFname"].HeaderText = "Contact Person's Full Name";
+                        dataGridViewAppointments.Columns["CPMname"].HeaderText = "Contact Person's Middle Name";
+                        dataGridViewAppointments.Columns["CPrelation"].HeaderText = "Contact Person's relation";
+                        dataGridViewAppointments.Columns["CPaddress"].HeaderText = "Contact Person's address";
+                        dataGridViewAppointments.Columns["weight"].HeaderText = "Weight";
                     }
                 }
                 con.Close();
@@ -62,6 +80,70 @@ namespace DavaoChestCenter
                         dt.Dispose();
 
                         dataGridViewPatients.Columns["registration_id"].Visible = false;
+
+                        dataGridViewPatients.Columns["appointmentDate"].HeaderText = "Appointment Date";
+                        dataGridViewPatients.Columns["patient_Fname"].HeaderText = "First Name";
+                        dataGridViewPatients.Columns["patient_Mname"].HeaderText = "Middle Name";
+                        dataGridViewPatients.Columns["patient_Lname"].HeaderText = "Last Name";
+                        dataGridViewPatients.Columns["patient_status"].HeaderText = "Status";
+                        dataGridViewPatients.Columns["patient_gender"].HeaderText = "Gender";
+                        dataGridViewPatients.Columns["services"].HeaderText = "Services";
+                        dataGridViewPatients.Columns["age"].HeaderText = "Age";
+                        dataGridViewPatients.Columns["address"].HeaderText = "Address";
+                        dataGridViewPatients.Columns["contact_num1"].HeaderText = "Contact Number";
+                        dataGridViewPatients.Columns["ref_Phys"].HeaderText = "Referring Physician";
+                        dataGridViewPatients.Columns["occupation"].HeaderText = "Occupation";
+                        dataGridViewPatients.Columns["CPLname"].HeaderText = "Contact Person Last Name";
+                        dataGridViewPatients.Columns["CPFname"].HeaderText = "Contact Person First Name";
+                        dataGridViewPatients.Columns["CPMname"].HeaderText = "Contact Person Middle Name";
+                        dataGridViewPatients.Columns["CPrelation"].HeaderText = "Contact Person Relation";
+                        dataGridViewPatients.Columns["CPcontact"].HeaderText = "Contact Person's Number";
+                        dataGridViewPatients.Columns["CPaddress"].HeaderText = "Contact Person's Address";
+                        dataGridViewPatients.Columns["weight"].HeaderText = "Weight";
+                        dataGridViewPatients.Columns["treatment_partner"].HeaderText = "Treatment Partner";
+                        dataGridViewPatients.Columns["pulmonaries"].HeaderText = "Pulmonaries";
+                        dataGridViewPatients.Columns["extra_pulmonaries"].HeaderText = "Extra_Pulmonaries";
+                        dataGridViewPatients.Columns["diabetic"].HeaderText = "Diabetic";
+                        dataGridViewPatients.Columns["hypertensive"].HeaderText = "Hypertensive";
+                        dataGridViewPatients.Columns["smoke"].HeaderText = "smoke";
+                        dataGridViewPatients.Columns["smoke_day"].HeaderText = "Times Smoking per day";
+                        dataGridViewPatients.Columns["start_smoking"].HeaderText = "Started Smoking";
+                        dataGridViewPatients.Columns["stop_smoking"].HeaderText = "Stopped Smoking";
+                        dataGridViewPatients.Columns["prev_tb"].HeaderText = "Previous TB";
+                        dataGridViewPatients.Columns["tb_months"].HeaderText = "Number of Months";
+                        dataGridViewPatients.Columns["medicines"].HeaderText = "Medicines";
+                        dataGridViewPatients.Columns["medicine_under"].HeaderText = "Medicines Taking";
+                        dataGridViewPatients.Columns["alcoholic"].HeaderText = "Alcoholic";
+                        dataGridViewPatients.Columns["alcohol_start"].HeaderText = "Started Drinking";
+                        dataGridViewPatients.Columns["alcohol_stop"].HeaderText = "Stopped Drinking";
+                        dataGridViewPatients.Columns["lab_crea"].HeaderText = "CREA";
+                        dataGridViewPatients.Columns["lab_sgpt"].HeaderText = "SGPT";
+                        dataGridViewPatients.Columns["lab_acid"].HeaderText = "ACID";
+                        dataGridViewPatients.Columns["chest_XrayResult"].HeaderText = "X-Ray Result";
+                        dataGridViewPatients.Columns["sputum_month"].HeaderText = "Sputum Month";
+                        dataGridViewPatients.Columns["sputum_due"].HeaderText = "Sputum Due";
+                        dataGridViewPatients.Columns["sputum_examDate"].HeaderText = "Sputum Exam Date";
+                        dataGridViewPatients.Columns["sputum_result"].HeaderText = "Sputum Result";
+                        dataGridViewPatients.Columns["sputum_appearance"].HeaderText = "Sputum Appearance";
+                        dataGridViewPatients.Columns["doctors_order"].HeaderText = "Doctor's Order";
+                        dataGridViewPatients.Columns["exam_reason"].HeaderText = "Reason for Examination";
+                        dataGridViewPatients.Columns["hist_treatment"].HeaderText = "History Treatment";
+                        dataGridViewPatients.Columns["specimen_type"].HeaderText = "Specimen Type";
+                        dataGridViewPatients.Columns["specimen_date1"].HeaderText = "Specimen Date 1";
+                        dataGridViewPatients.Columns["speciman_date2"].HeaderText = "Specimen Date 2";
+                        dataGridViewPatients.Columns["test_request"].HeaderText = "Test Request";
+                        dataGridViewPatients.Columns["prepared_by"].HeaderText = "Prepared By";
+                        dataGridViewPatients.Columns["staff_position"].HeaderText = "Staff Position";
+                        dataGridViewPatients.Columns["visual_appearance1"].HeaderText = "Visual Appearance 1";
+                        dataGridViewPatients.Columns["visual_appearance2"].HeaderText = "Visual Appearance 2";
+                        dataGridViewPatients.Columns["visual_appearanceXpert"].HeaderText = "Visual Appearance Xpert";
+                        dataGridViewPatients.Columns["reading1"].HeaderText = "Reading 1";
+                        dataGridViewPatients.Columns["reading2"].HeaderText = "Reading 2";
+                        dataGridViewPatients.Columns["readingX"].HeaderText = "Reading Xpert";
+                        dataGridViewPatients.Columns["LabDiag"].HeaderText = "Laboratory Diagnosis";
+                        dataGridViewPatients.Columns["LabX"].HeaderText = "Laboratory Xpert";
+                        dataGridViewPatients.Columns["tbdc_rec"].HeaderText = "TBDC Recording";
+                        dataGridViewPatients.Columns["suggestions"].HeaderText = "Suggestions";
                     }
                 }
                 con.Close();
@@ -436,7 +518,7 @@ namespace DavaoChestCenter
 
         private void dataGridViewPatients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectID = int.Parse(dataGridViewPatients.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
+            int selectIDpatients = int.Parse(dataGridViewPatients.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
             string firstname = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Fname"].Value.ToString();
             string middlename = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Mname"].Value.ToString();
             string lastname = dataGridViewPatients.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
@@ -468,12 +550,69 @@ namespace DavaoChestCenter
             string treatment_partner = dataGridViewPatients.Rows[e.RowIndex].Cells["treatment_partner"].Value.ToString();
 
 
-            var records = new formMedRecords(selectID, firstname, middlename, lastname, pulmonaries, extra_pulmonaries,
+            var records = new formMedRecords(selectIDpatients, firstname, middlename, lastname, pulmonaries, extra_pulmonaries,
                 diabetic, hypertensive, smoke, smoke_day, start_smoking, stop_smoking, prev_tb, tb_months, tb_date,
                 medicines, medicine_under, alcoholic, alcohol_start, alcohol_stop, exam_reason, hist_treatment,
                 specimen_type, specimen_date1, speciman_date2, test_request, prepared_by, staff_position, treatment_partner);
             records.ref_To_Main = this;
             records.ShowDialog();
+        }
+
+        private void formAppointment_Load(object sender, EventArgs e)
+        {
+            dataGridViewAppointments.BorderStyle = BorderStyle.None;
+            dataGridViewAppointments.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridViewAppointments.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewAppointments.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridViewAppointments.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewAppointments.BackgroundColor = Color.White;
+
+            dataGridViewAppointments.EnableHeadersVisualStyles = false;
+            dataGridViewAppointments.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewAppointments.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridViewAppointments.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dataGridViewPatients.BorderStyle = BorderStyle.None;
+            dataGridViewPatients.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridViewPatients.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewPatients.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridViewPatients.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewPatients.BackgroundColor = Color.White;
+
+            dataGridViewPatients.EnableHeadersVisualStyles = false;
+            dataGridViewPatients.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewPatients.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridViewPatients.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void dataGridViewAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectIDappointment = int.Parse(dataGridViewAppointments.Rows[e.RowIndex].Cells["registration_id"].Value.ToString());
+            string firstname = dataGridViewAppointments.Rows[e.RowIndex].Cells["patient_Fname"].Value.ToString();
+            string middlename = dataGridViewAppointments.Rows[e.RowIndex].Cells["patient_Mname"].Value.ToString();
+            string lastname = dataGridViewAppointments.Rows[e.RowIndex].Cells["patient_Lname"].Value.ToString();
+            string patient_status = dataGridViewAppointments.Rows[e.RowIndex].Cells["patient_status"].Value.ToString();
+            string patient_gender = dataGridViewAppointments.Rows[e.RowIndex].Cells["patient_gender"].Value.ToString();
+            string services = dataGridViewAppointments.Rows[e.RowIndex].Cells["services"].Value.ToString();
+            //string  = dataGridViewPatients.Rows[e.RowIndex].Cells["appointmentDate"].Value.ToString();
+            string age = dataGridViewAppointments.Rows[e.RowIndex].Cells["age"].Value.ToString();
+            string address = dataGridViewAppointments.Rows[e.RowIndex].Cells["address"].Value.ToString();
+            string contact_num1 = dataGridViewAppointments.Rows[e.RowIndex].Cells["contact_num1"].Value.ToString();
+            string ref_Phys = dataGridViewAppointments.Rows[e.RowIndex].Cells["ref_Phys"].Value.ToString();
+            string occupation = dataGridViewAppointments.Rows[e.RowIndex].Cells["occupation"].Value.ToString();
+            string CPLname = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPLname"].Value.ToString();
+            string CPFname = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPFname"].Value.ToString();
+            string CPMname = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPMname"].Value.ToString();
+            string CPaddress = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPaddress"].Value.ToString();
+            string CPrelation = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPrelation"].Value.ToString();
+            string CPcontact = dataGridViewAppointments.Rows[e.RowIndex].Cells["CPcontact"].Value.ToString();
+            string weight = dataGridViewAppointments.Rows[e.RowIndex].Cells["weight"].Value.ToString();
+
+            var reg = new formRegistration(selectIDappointment, firstname, middlename, lastname, patient_status,
+                patient_gender, services, age, address, contact_num1, ref_Phys, occupation, CPLname, CPFname,
+                CPMname, CPaddress, CPrelation, CPcontact, weight);
+            reg.ref_To_Main = this;
+            reg.ShowDialog();
         }
     }
 

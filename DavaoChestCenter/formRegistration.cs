@@ -14,12 +14,52 @@ namespace DavaoChestCenter
     public partial class formRegistration : Form
     {
         Dictionary<int, string> services = new Dictionary<int, string>();
-
+        public formAppointment ref_To_Main { get; set; }
         public formRegistration()
         {
             InitializeComponent();
 
             gatherServices();
+        }
+
+        public formRegistration(int selectIDappointment, string firstname,  string middlename, 
+            string lastname, string patient_status, string patient_gender, string services, string age, 
+            string address, string contact_num1, string ref_Phys, string occupation, string CPLname, 
+            string CPFname, string CPMname, string CPaddress, string CPrelation, string CPcontact, string weight)
+        {
+            InitializeComponent();
+            txtFname.Text = firstname;
+            txtMname.Text = middlename;
+            txtLname.Text = lastname;
+            txtAge.Text = age;
+            txtAddress.Text = address;
+            txtContact.Text = contact_num1;
+            txtPhys.Text = ref_Phys;
+            txtOccupation.Text = occupation;
+            txtCPLname.Text = CPLname;
+            txtCPFname.Text = CPFname;
+            txtCPMname.Text = CPMname;
+            txtCPrel.Text = CPrelation;
+            txtCPContact.Text = CPcontact;
+            txtCPAddress.Text = CPaddress;
+            txtWeight.Text = weight;
+
+            if(patient_status == "Single")
+            {
+                radButtonSingle.Checked = true;
+            }
+            if(patient_status == "Married")
+            {
+                radButtonMarried.Checked = true;
+            }
+            if(patient_gender == "Male")
+            {
+                radButtonMale.Checked = true;
+            }
+            if(patient_gender == "Female")
+            {
+                radButtonFemale.Checked = true;
+            }
         }
 
         private Boolean validate()
