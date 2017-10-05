@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.buttonModule1 = new System.Windows.Forms.Button();
             this.flowLayoutPanelModule1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonProfile = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonServices = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonModule2 = new System.Windows.Forms.Button();
             this.buttonModule3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -120,25 +121,10 @@
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(252, 29);
             this.buttonProfile.TabIndex = 1;
-            this.buttonProfile.Text = "Profiles";
+            this.buttonProfile.Text = "Staff Profiles";
             this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonProfile.UseVisualStyleBackColor = false;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Location = new System.Drawing.Point(3, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Diagnosis";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -169,6 +155,21 @@
             this.buttonServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonServices.UseVisualStyleBackColor = false;
             this.buttonServices.Click += new System.EventHandler(this.buttonServices_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Location = new System.Drawing.Point(3, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Diagnosis";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonModule2
             // 
@@ -229,6 +230,7 @@
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "formMenu";

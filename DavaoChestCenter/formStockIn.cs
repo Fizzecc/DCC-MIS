@@ -26,7 +26,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT name, products.dosage, minimum_quantity, SUM(CASE WHEN status = 'Normal' THEN 1 ELSE 0 END) AS count FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY name , products.dosage HAVING count < minimum_quantity", con))
+                using (var com = new MySqlCommand("SELECT name, products.dosage, minimum_quantity, SUM(CASE WHEN status = 'Normal' THEN 1 ELSE 0 END) AS Count FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY name , products.dosage HAVING Count < minimum_quantity", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -47,6 +47,10 @@ namespace DavaoChestCenter
                     dataGridViewInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
                     dataGridViewInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
                     dataGridViewInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+                    dataGridViewInventory.Columns["name"].HeaderText = "Name";
+                    dataGridViewInventory.Columns["dosage"].HeaderText = "Dosage";
+                    dataGridViewInventory.Columns["minimum_quantity"].HeaderText = "Minimum Quantity";
                 }
                 con.Close();
             }

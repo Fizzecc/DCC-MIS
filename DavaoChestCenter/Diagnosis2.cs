@@ -468,7 +468,25 @@ namespace DavaoChestCenter
                             if (rdr.GetInt32(0) <= int.Parse(product_quantity))
                             {
                                 main = false;
-                                MessageBox.Show("Product ID: " + product_id + " out of stock");
+                                using (var con2 = new MySqlConnection(conClass.connectionString))
+                                {
+                                    con2.Open();
+                                    using (var com2 = new MySqlCommand("SELECT name, dosage FROM products WHERE id = @id", con2))
+                                    {
+                                        com2.Parameters.AddWithValue("@id", product_id);
+                                        using (var rdr2 = com2.ExecuteReader())
+                                        {
+                                            if (rdr2.Read())
+                                            {
+                                                if (rdr2.HasRows)
+                                                {
+                                                    MessageBox.Show(rdr2.GetString(0) + " " + rdr2.GetString(1) + " is out of stock");
+                                                }
+                                            }
+                                        }
+                                    }
+                                    con2.Close();
+                                }
                             }
                         }
                     }
@@ -491,7 +509,25 @@ namespace DavaoChestCenter
                                     if (rdr.GetInt32(0) <= int.Parse(other_products_quantity[count]))
                                     {
                                         other = false;
-                                        MessageBox.Show("Product ID: " + x + " out of stock");
+                                        using (var con2 = new MySqlConnection(conClass.connectionString))
+                                        {
+                                            con2.Open();
+                                            using (var com2 = new MySqlCommand("SELECT name, dosage FROM products WHERE id = @id", con2))
+                                            {
+                                                com2.Parameters.AddWithValue("@id", x);
+                                                using (var rdr2 = com2.ExecuteReader())
+                                                {
+                                                    if (rdr2.Read())
+                                                    {
+                                                        if (rdr2.HasRows)
+                                                        {
+                                                            MessageBox.Show(rdr2.GetString(0) + " " + rdr2.GetString(1) + " is out of stock");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            con2.Close();
+                                        }
                                     }
                                 }
                             }
@@ -528,7 +564,25 @@ namespace DavaoChestCenter
                         count++;
                     }
 
-                    MessageBox.Show("Service successful");
+                    using (var con2 = new MySqlConnection(conClass.connectionString))
+                    {
+                        con2.Open();
+                        using (var com2 = new MySqlCommand("SELECT price FROM services WHERE service_id = @service_id", con2))
+                        {
+                            com2.Parameters.AddWithValue("@service_id", selectedService);
+                            using (var rdr2 = com2.ExecuteReader())
+                            {
+                                if (rdr2.Read())
+                                {
+                                    if (rdr2.HasRows)
+                                    {
+                                        MessageBox.Show("Service successful\nTotal Bill is:\n PHP: " + rdr2.GetString(0));
+                                    }
+                                }
+                            }
+                        }
+                        con2.Close();
+                    }
                 }
                 else
                 {

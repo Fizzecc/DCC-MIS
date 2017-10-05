@@ -113,6 +113,7 @@
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

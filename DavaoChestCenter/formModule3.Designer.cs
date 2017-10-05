@@ -166,7 +166,7 @@
             this.buttonCheckIn.ForeColor = System.Drawing.Color.White;
             this.buttonCheckIn.Location = new System.Drawing.Point(6, 268);
             this.buttonCheckIn.Name = "buttonCheckIn";
-            this.buttonCheckIn.Size = new System.Drawing.Size(203, 32);
+            this.buttonCheckIn.Size = new System.Drawing.Size(326, 32);
             this.buttonCheckIn.TabIndex = 12;
             this.buttonCheckIn.Text = "Check In";
             this.buttonCheckIn.UseVisualStyleBackColor = false;
@@ -179,9 +179,9 @@
             this.buttonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCheckOut.Font = new System.Drawing.Font("Tw Cen MT", 16F);
             this.buttonCheckOut.ForeColor = System.Drawing.Color.White;
-            this.buttonCheckOut.Location = new System.Drawing.Point(214, 268);
+            this.buttonCheckOut.Location = new System.Drawing.Point(331, 268);
             this.buttonCheckOut.Name = "buttonCheckOut";
-            this.buttonCheckOut.Size = new System.Drawing.Size(212, 32);
+            this.buttonCheckOut.Size = new System.Drawing.Size(327, 32);
             this.buttonCheckOut.TabIndex = 13;
             this.buttonCheckOut.Text = "Check Out";
             this.buttonCheckOut.UseVisualStyleBackColor = false;
@@ -197,7 +197,7 @@
             this.dataGridViewToday.ReadOnly = true;
             this.dataGridViewToday.RowHeadersVisible = false;
             this.dataGridViewToday.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewToday.Size = new System.Drawing.Size(420, 245);
+            this.dataGridViewToday.Size = new System.Drawing.Size(652, 245);
             this.dataGridViewToday.TabIndex = 14;
             this.dataGridViewToday.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewToday_CellClick);
             // 
@@ -208,7 +208,7 @@
             this.groupBox1.Controls.Add(this.buttonCheckIn);
             this.groupBox1.Location = new System.Drawing.Point(16, 544);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 306);
+            this.groupBox1.Size = new System.Drawing.Size(664, 306);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Check In and Check Out";

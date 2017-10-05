@@ -55,6 +55,13 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
                     dataGridViewSchedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
                     dataGridViewSchedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+                    dataGridViewSchedule.Columns["firstname"].HeaderText = "First Name";
+                    dataGridViewSchedule.Columns["middlename"].HeaderText = "Middle Name";
+                    dataGridViewSchedule.Columns["lastname"].HeaderText = "Last Name";
+                    dataGridViewSchedule.Columns["schedule_days"].HeaderText = "Working Days";
+                    dataGridViewSchedule.Columns["working_time_start"].HeaderText = "Working Time Start";
+                    dataGridViewSchedule.Columns["working_time_end"].HeaderText = "Working Time End";
                 }
 
                 using (var com = new MySqlCommand("SELECT attendance.id, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE date > DATE_SUB(NOW(), INTERVAL 1 DAY)", con))
@@ -78,6 +85,11 @@ namespace DavaoChestCenter
                     dataGridViewToday.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
                     dataGridViewToday.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
                     dataGridViewToday.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+                    dataGridViewToday.Columns["firstname"].HeaderText = "First Name";
+                    dataGridViewToday.Columns["lastname"].HeaderText = "Last Name";
+                    dataGridViewToday.Columns["time_start"].HeaderText = "Time Start";
+                    dataGridViewToday.Columns["time_end"].HeaderText = "Time End";
 
                     dataGridViewToday.Columns["id"].Visible = false;
                 }
@@ -222,6 +234,12 @@ namespace DavaoChestCenter
                         dataGridViewAttendance.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
                         
                         dataGridViewAttendance.Columns["id"].Visible = false;
+
+                        dataGridViewAttendance.Columns["date"].HeaderText = "Date";
+                        dataGridViewAttendance.Columns["firstname"].HeaderText = "First Name";
+                        dataGridViewAttendance.Columns["lastname"].HeaderText = "Last Name";
+                        dataGridViewAttendance.Columns["time_start"].HeaderText = "Time Start";
+                        dataGridViewAttendance.Columns["time_end"].HeaderText = "Time End";
                     }
                 }
                 else

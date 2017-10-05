@@ -312,7 +312,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(40, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "SGPT/ALAT";
             // 
@@ -952,7 +952,7 @@
             this.radButonStop.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButonStop.Location = new System.Drawing.Point(26, 73);
             this.radButonStop.Name = "radButonStop";
-            this.radButonStop.Size = new System.Drawing.Size(143, 17);
+            this.radButonStop.Size = new System.Drawing.Size(142, 17);
             this.radButonStop.TabIndex = 3;
             this.radButonStop.TabStop = true;
             this.radButonStop.Text = "Stop Anti-TB Treatment";
@@ -964,7 +964,7 @@
             this.radButtonNoAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonNoAnti.Location = new System.Drawing.Point(26, 50);
             this.radButtonNoAnti.Name = "radButtonNoAnti";
-            this.radButtonNoAnti.Size = new System.Drawing.Size(134, 17);
+            this.radButtonNoAnti.Size = new System.Drawing.Size(133, 17);
             this.radButtonNoAnti.TabIndex = 2;
             this.radButtonNoAnti.TabStop = true;
             this.radButtonNoAnti.Text = "No Anti-TB Treatment";
@@ -976,7 +976,7 @@
             this.radButtonAnti.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAnti.Location = new System.Drawing.Point(26, 27);
             this.radButtonAnti.Name = "radButtonAnti";
-            this.radButtonAnti.Size = new System.Drawing.Size(116, 17);
+            this.radButtonAnti.Size = new System.Drawing.Size(115, 17);
             this.radButtonAnti.TabIndex = 1;
             this.radButtonAnti.TabStop = true;
             this.radButtonAnti.Text = "Anti-TB Treatment";
@@ -1012,7 +1012,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(343, 425);
+            this.button1.Location = new System.Drawing.Point(234, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 37);
             this.button1.TabIndex = 5;
@@ -1056,7 +1056,7 @@
             this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnService.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnService.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnService.Location = new System.Drawing.Point(188, 425);
+            this.btnService.Location = new System.Drawing.Point(343, 425);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(103, 37);
             this.btnService.TabIndex = 38;

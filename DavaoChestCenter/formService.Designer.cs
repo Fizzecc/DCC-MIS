@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewServices = new System.Windows.Forms.DataGridView();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.dataGridViewContainer = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContainer)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +45,14 @@
             this.dataGridViewServices.AllowUserToAddRows = false;
             this.dataGridViewServices.AllowUserToDeleteRows = false;
             this.dataGridViewServices.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewServices.Location = new System.Drawing.Point(1, 44);
             this.dataGridViewServices.Name = "dataGridViewServices";
@@ -102,36 +99,6 @@
             this.labelName.TabIndex = 20;
             this.labelName.Text = "Services";
             // 
-            // buttonPrint
-            // 
-            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonPrint.FlatAppearance.BorderSize = 0;
-            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
-            this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(312, 818);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(294, 32);
-            this.buttonPrint.TabIndex = 17;
-            this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = false;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
-            // 
-            // dataGridViewContainer
-            // 
-            this.dataGridViewContainer.AllowUserToAddRows = false;
-            this.dataGridViewContainer.AllowUserToDeleteRows = false;
-            this.dataGridViewContainer.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewContainer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewContainer.Location = new System.Drawing.Point(612, 818);
-            this.dataGridViewContainer.Name = "dataGridViewContainer";
-            this.dataGridViewContainer.ReadOnly = true;
-            this.dataGridViewContainer.RowHeadersVisible = false;
-            this.dataGridViewContainer.RowTemplate.Height = 24;
-            this.dataGridViewContainer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewContainer.Size = new System.Drawing.Size(30, 37);
-            this.dataGridViewContainer.TabIndex = 18;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -158,8 +125,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridViewContainer);
-            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.dataGridViewServices);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -171,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContainer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -184,8 +148,6 @@
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Button buttonPrint;
-        private System.Windows.Forms.DataGridView dataGridViewContainer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
     }

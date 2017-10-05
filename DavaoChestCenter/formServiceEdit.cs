@@ -161,6 +161,8 @@ namespace DavaoChestCenter
                             }
 
                         };
+                        text.Text = "1";
+
                         flowLayoutPanel.Controls.Add(combo); flowLayoutPanel.Controls.Add(text);
                     }
                 }

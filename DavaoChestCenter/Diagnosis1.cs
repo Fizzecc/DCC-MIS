@@ -33,7 +33,7 @@ namespace DavaoChestCenter
                         dataGridView1.DataSource = dt;
                         dt.Dispose();
 
-                        dataGridView1.Columns["registration_id"].Visible = true;
+                        dataGridView1.Columns["registration_id"].Visible = false;
                         dataGridView1.Columns["registration_id"].HeaderText = "Patient ID";
                         dataGridView1.Columns["appointmentDate"].HeaderText = "Appointment Date";
                         dataGridView1.Columns["patient_Fname"].HeaderText = "First Name";

@@ -38,7 +38,7 @@ namespace DavaoChestCenter
                         dataGridViewItems.Columns["manufacturer"].HeaderText = "Manufacturer";
                         dataGridViewItems.Columns["dosage"].HeaderText = "Dosage";
                         dataGridViewItems.Columns["expiration_date"].HeaderText = "Expiration Date";
-                        dataGridViewItems.Columns["batch"].HeaderText = "Batch";
+                        dataGridViewItems.Columns["batch"].HeaderText = "Batch Code";
                         dataGridViewItems.Columns["status"].HeaderText = "Status";
                     }
                 }

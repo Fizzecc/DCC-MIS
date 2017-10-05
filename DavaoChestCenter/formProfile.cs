@@ -74,8 +74,8 @@ namespace DavaoChestCenter
                         dataGridView1.Columns["schedule_days"].HeaderText = "Schedule Days";
                         dataGridView1.Columns["working_time_start"].HeaderText = "Start Working Time";
                         dataGridView1.Columns["working_time_end"].HeaderText = "End Working Time";
-                        dataGridView1.Columns["address"].HeaderText = "address";
-                        dataGridView1.Columns["contact"].HeaderText = "contact";
+                        dataGridView1.Columns["address"].HeaderText = "Address";
+                        dataGridView1.Columns["contact"].HeaderText = "Contact";
                     }
                 }
                 con.Close();

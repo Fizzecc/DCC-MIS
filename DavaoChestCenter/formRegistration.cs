@@ -14,6 +14,7 @@ namespace DavaoChestCenter
     public partial class formRegistration : Form
     {
         Dictionary<int, string> services = new Dictionary<int, string>();
+
         public formAppointment ref_To_Main { get; set; }
         public formRegistration()
         {
@@ -60,6 +61,7 @@ namespace DavaoChestCenter
             {
                 radButtonFemale.Checked = true;
             }
+            gatherServices();
         }
 
         private Boolean validate()

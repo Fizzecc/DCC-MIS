@@ -55,6 +55,14 @@ namespace DavaoChestCenter
 
                     dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridViewInventory.AutoResizeColumns();
+
+                    dataGridViewInventory.Columns["name"].HeaderText = "Name";
+                    dataGridViewInventory.Columns["brand_name"].HeaderText = "Brand Name";
+                    dataGridViewInventory.Columns["dosage"].HeaderText = "Dosage";
+                    dataGridViewInventory.Columns["manufacturer"].HeaderText = "Manufacturer";
+                    dataGridViewInventory.Columns["expiration_date"].HeaderText = "Expiration Date";
+                    dataGridViewInventory.Columns["batch"].HeaderText = "Batch Code";
+                    dataGridViewInventory.Columns["status"].HeaderText = "Status";
                 }
 
                 using (var com = new MySqlCommand("SELECT COUNT(status) FROM inventory WHERE status = 'Normal' AND dosage != 'Non-consumable'", con))
@@ -181,24 +189,24 @@ namespace DavaoChestCenter
                 if (textBoxSearch.Text != "")
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE name LIKE '%" + textBoxSearch.Text + "%' OR brand_name LIKE '%" + textBoxSearch.Text + "%' AND status = 'Normal' GROUP BY status HAVING count >= 1 ORDER BY expiration_date";
                 }
                 else
                 {
                     if (comboBoxSort.Text == "All Items")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY inventory.id";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY inventory.id";
                     if (comboBoxSort.Text == "Generic Name")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY name";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY name";
                     if (comboBoxSort.Text == "Brand Name")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY brand_name";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY brand_name";
                     if (comboBoxSort.Text == "Expiration Date")
-                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY expiration_date";
+                        command = "SELECT name, brand_name, inventory.dosage, batch, status, COUNT(*) Count, minimum_quantity FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count >= 1 ORDER BY expiration_date";
                 }
             }
             else

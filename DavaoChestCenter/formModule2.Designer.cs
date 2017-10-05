@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonProductNew = new System.Windows.Forms.Button();
             this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonTransactionNew = new System.Windows.Forms.Button();
-            this.buttonStockOut = new System.Windows.Forms.Button();
             this.labelNormal = new System.Windows.Forms.Label();
             this.labelReturned = new System.Windows.Forms.Label();
             this.labelDamaged = new System.Windows.Forms.Label();
@@ -49,28 +46,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBoxCascade = new System.Windows.Forms.CheckBox();
+            this.buttonStockOut = new System.Windows.Forms.Button();
+            this.buttonProductNew = new System.Windows.Forms.Button();
+            this.buttonTransactionNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonProductNew
-            // 
-            this.buttonProductNew.BackColor = System.Drawing.Color.Transparent;
-            this.buttonProductNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.lab_microscope;
-            this.buttonProductNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonProductNew.FlatAppearance.BorderSize = 0;
-            this.buttonProductNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProductNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonProductNew.Location = new System.Drawing.Point(1128, 426);
-            this.buttonProductNew.Name = "buttonProductNew";
-            this.buttonProductNew.Size = new System.Drawing.Size(76, 148);
-            this.buttonProductNew.TabIndex = 5;
-            this.buttonProductNew.Text = "Encode Product";
-            this.buttonProductNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonProductNew.UseVisualStyleBackColor = false;
-            this.buttonProductNew.Click += new System.EventHandler(this.buttonProductNew_Click);
             // 
             // dataGridViewInventory
             // 
@@ -118,39 +101,6 @@
             this.label2.Size = new System.Drawing.Size(140, 19);
             this.label2.TabIndex = 25;
             this.label2.Text = "Item Status Summary";
-            // 
-            // buttonTransactionNew
-            // 
-            this.buttonTransactionNew.BackColor = System.Drawing.Color.Transparent;
-            this.buttonTransactionNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.verified_list_of_exercises_of_a_gymnast_on_a_clipboard;
-            this.buttonTransactionNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonTransactionNew.FlatAppearance.BorderSize = 0;
-            this.buttonTransactionNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTransactionNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonTransactionNew.Location = new System.Drawing.Point(1232, 444);
-            this.buttonTransactionNew.Name = "buttonTransactionNew";
-            this.buttonTransactionNew.Size = new System.Drawing.Size(79, 130);
-            this.buttonTransactionNew.TabIndex = 26;
-            this.buttonTransactionNew.Text = "Encode Transaction";
-            this.buttonTransactionNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonTransactionNew.UseVisualStyleBackColor = false;
-            this.buttonTransactionNew.Click += new System.EventHandler(this.buttonTransactionNew_Click);
-            // 
-            // buttonStockOut
-            // 
-            this.buttonStockOut.BackColor = System.Drawing.Color.Transparent;
-            this.buttonStockOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonStockOut.FlatAppearance.BorderSize = 0;
-            this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
-            this.buttonStockOut.Location = new System.Drawing.Point(1128, 589);
-            this.buttonStockOut.Name = "buttonStockOut";
-            this.buttonStockOut.Size = new System.Drawing.Size(77, 97);
-            this.buttonStockOut.TabIndex = 32;
-            this.buttonStockOut.Text = "Perform Stockout";
-            this.buttonStockOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonStockOut.UseVisualStyleBackColor = false;
-            this.buttonStockOut.Click += new System.EventHandler(this.buttonStockOut_Click);
             // 
             // labelNormal
             // 
@@ -296,6 +246,57 @@
             this.checkBoxCascade.UseVisualStyleBackColor = true;
             this.checkBoxCascade.CheckedChanged += new System.EventHandler(this.checkBoxCascade_CheckedChanged);
             // 
+            // buttonStockOut
+            // 
+            this.buttonStockOut.BackColor = System.Drawing.Color.Transparent;
+            this.buttonStockOut.BackgroundImage = global::DavaoChestCenter.Properties.Resources.barcode;
+            this.buttonStockOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonStockOut.FlatAppearance.BorderSize = 0;
+            this.buttonStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStockOut.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonStockOut.Location = new System.Drawing.Point(1168, 673);
+            this.buttonStockOut.Name = "buttonStockOut";
+            this.buttonStockOut.Size = new System.Drawing.Size(105, 128);
+            this.buttonStockOut.TabIndex = 32;
+            this.buttonStockOut.Text = "Perform Stockout";
+            this.buttonStockOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStockOut.UseVisualStyleBackColor = false;
+            this.buttonStockOut.Click += new System.EventHandler(this.buttonStockOut_Click);
+            // 
+            // buttonProductNew
+            // 
+            this.buttonProductNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProductNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.shopping_cart_with_product_inside;
+            this.buttonProductNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonProductNew.FlatAppearance.BorderSize = 0;
+            this.buttonProductNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProductNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonProductNew.Location = new System.Drawing.Point(1168, 409);
+            this.buttonProductNew.Name = "buttonProductNew";
+            this.buttonProductNew.Size = new System.Drawing.Size(104, 157);
+            this.buttonProductNew.TabIndex = 5;
+            this.buttonProductNew.Text = "Encode Product";
+            this.buttonProductNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonProductNew.UseVisualStyleBackColor = false;
+            this.buttonProductNew.Click += new System.EventHandler(this.buttonProductNew_Click);
+            // 
+            // buttonTransactionNew
+            // 
+            this.buttonTransactionNew.BackColor = System.Drawing.Color.Transparent;
+            this.buttonTransactionNew.BackgroundImage = global::DavaoChestCenter.Properties.Resources.barcode__1_;
+            this.buttonTransactionNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonTransactionNew.FlatAppearance.BorderSize = 0;
+            this.buttonTransactionNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTransactionNew.Font = new System.Drawing.Font("Tw Cen MT", 10F);
+            this.buttonTransactionNew.Location = new System.Drawing.Point(1170, 536);
+            this.buttonTransactionNew.Name = "buttonTransactionNew";
+            this.buttonTransactionNew.Size = new System.Drawing.Size(100, 153);
+            this.buttonTransactionNew.TabIndex = 26;
+            this.buttonTransactionNew.Text = "Encode Transaction";
+            this.buttonTransactionNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonTransactionNew.UseVisualStyleBackColor = false;
+            this.buttonTransactionNew.Click += new System.EventHandler(this.buttonTransactionNew_Click);
+            // 
             // formModule2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -305,12 +306,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.buttonProductNew);
             this.Controls.Add(this.buttonTransactionNew);
+            this.Controls.Add(this.buttonStockOut);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -39,8 +39,8 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.Columns["middlename"].HeaderText = "Middle Name";
                     dataGridViewSchedule.Columns["lastname"].HeaderText = "Last Name";
                     dataGridViewSchedule.Columns["schedule_days"].HeaderText = "Working Days";
-                    dataGridViewSchedule.Columns["working_time_start"].HeaderText = "Check In";
-                    dataGridViewSchedule.Columns["working_time_end"].HeaderText = "Check Out";
+                    dataGridViewSchedule.Columns["working_time_start"].HeaderText = "Working Time Start";
+                    dataGridViewSchedule.Columns["working_time_end"].HeaderText = "Working Time End";
                     
                     dataGridViewSchedule.BorderStyle = BorderStyle.None;
                     dataGridViewSchedule.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
@@ -56,7 +56,7 @@ namespace DavaoChestCenter
 
                 }
 
-                using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
+                using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal'", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
@@ -65,6 +65,13 @@ namespace DavaoChestCenter
                     
                     dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridViewInventory.AutoResizeColumns();
+
+                    dataGridViewInventory.Columns["name"].HeaderText = "Name";
+                    dataGridViewInventory.Columns["brand_name"].HeaderText = "Brand Name";
+                    dataGridViewInventory.Columns["manufacturer"].HeaderText = "Manufacturer";
+                    dataGridViewInventory.Columns["dosage"].HeaderText = "Dosage";
+                    dataGridViewInventory.Columns["expiration_date"].HeaderText = "Expiration Date";
+                    dataGridViewInventory.Columns["status"].HeaderText = "Status";
 
                     dataGridViewInventory.BorderStyle = BorderStyle.None;
                     dataGridViewInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
@@ -84,8 +91,8 @@ namespace DavaoChestCenter
         private void checkBoxCascade_CheckedChanged(object sender, EventArgs e)
         {
             string commandstring = "";
-            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, COUNT(*) count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
-            else commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id";
+            if (checkBoxCascade.Checked) commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, COUNT(*) Count FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal' GROUP BY brand_name HAVING count > 1";
+            else commandstring = "SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id WHERE status = 'Normal'";
 
             using (var con = new MySqlConnection(conClass.connectionString))
             {
@@ -95,6 +102,7 @@ namespace DavaoChestCenter
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewInventory.DataSource = dt;
+
                 }
             }
         }
