@@ -119,11 +119,49 @@ namespace DavaoChestCenter
             return true;
         }
 
-        public Diagnosis2(int selectedID, string firstname, string middlename, string lastname)
+        public Diagnosis2(int selectID, string firstname, string middlename, string lastname, string lab_crea,
+            string lab_sgpt, string lab_FBS, string lab_acid, string chest_XrayResult, string sputum_month,
+            string sputum_due, string sputum_examDate, string sputum_result, string sputum_appearance,
+            string doctors_order, string exam_reason, string hist_treatment, string specimen_type, string specimen_date1,
+            string speciman_date2, string test_request, string prepared_by, string staff_position, string visual_appearance1,
+            string visual_appearance2, string visual_appearanceXpert, string reading1, string reading2,
+            string readingX, string LabDiag, string LabX, string tbdc_rec, string suggestions)
         {
             InitializeComponent();
-            lblID.Text = selectedID.ToString();
+            lblID.Text = selectID.ToString();
             lblName.Text = lastname + ", " + firstname + " " + middlename;
+
+            txtCREA.Text = lab_crea;
+            txtSGPT.Text = lab_sgpt;
+            txtPBS.Text = lab_FBS;
+            txtURIC.Text = lab_acid;
+            txtChest.Text = chest_XrayResult;
+            txtMonth.Text = sputum_month;
+            txtResult.Text = sputum_result;
+            txtAppearance.Text = sputum_appearance;
+            txtDoctor.Text = doctors_order;
+            txtVisual1.Text = visual_appearance1;
+            txtVisual2.Text = visual_appearance2;
+            txtVisualX.Text = visual_appearanceXpert;
+            txtreading1.Text = reading1;
+            txtreading2.Text = reading2;
+            txtReadingX.Text = readingX;
+            txtLabDiag.Text = LabDiag;
+            txtLabX.Text = LabX;
+            txtSug.Text = suggestions;
+            if(tbdc_rec == "Anti-TB Treatment")
+            {
+                radButtonAnti.Checked = true;
+            }
+            if(tbdc_rec == "No Anti-TB Treatment")
+            {
+                radButtonNoAnti.Checked = true;
+            }
+            if(tbdc_rec == "Stop Anti-TB Treatment")
+            {
+                radButonStop.Checked = true;
+            }
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

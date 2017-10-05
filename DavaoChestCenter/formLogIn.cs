@@ -86,6 +86,6 @@ namespace DavaoChestCenter
 
     public class conClass
     {
-        public static readonly string connectionString = "Server=localhost;Port=3306;Database=chest;Uid=root;Pwd=root;"; //chest lang db name pls
+        public static readonly string connectionString = "Server=localhost;Port=3306;Database=chest2;Uid=root;Pwd=root;"; //chest lang db name pls
     }
 }

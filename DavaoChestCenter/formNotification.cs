@@ -34,17 +34,31 @@ namespace DavaoChestCenter
 
                         dataGridViewItems.Columns["id"].Visible = false;
                         dataGridViewItems.Columns["product_id"].Visible = false;
-                        dataGridViewItems.Columns["status"].Visible = false;
-
                         dataGridViewItems.Columns["brand_name"].HeaderText = "Brand Name";
                         dataGridViewItems.Columns["manufacturer"].HeaderText = "Manufacturer";
                         dataGridViewItems.Columns["dosage"].HeaderText = "Dosage";
                         dataGridViewItems.Columns["expiration_date"].HeaderText = "Expiration Date";
-                        dataGridViewItems.Columns["batch"].HeaderText = "Batch Number/Code";
+                        dataGridViewItems.Columns["batch"].HeaderText = "Batch";
+                        dataGridViewItems.Columns["status"].HeaderText = "Status";
                     }
                 }
                 con.Close();
             }
+        }
+
+        private void formNotification_Load(object sender, EventArgs e)
+        {
+            dataGridViewItems.BorderStyle = BorderStyle.None;
+            dataGridViewItems.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridViewItems.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewItems.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridViewItems.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewItems.BackgroundColor = Color.White;
+
+            dataGridViewItems.EnableHeadersVisualStyles = false;
+            dataGridViewItems.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewItems.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridViewItems.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

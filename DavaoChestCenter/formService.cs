@@ -34,6 +34,18 @@ namespace DavaoChestCenter
                     adp.Fill(dt);
                     dataGridViewServices.DataSource = dt;
 
+                    dataGridViewServices.Columns["service_id"].HeaderText = "Service ID";
+                    dataGridViewServices.Columns["service_name"].HeaderText = "Service Name";
+                    dataGridViewServices.Columns["service_type"].HeaderText = "Service Type";
+                    dataGridViewServices.Columns["service_details"].HeaderText = "Service Details";
+                    dataGridViewServices.Columns["name"].HeaderText = "Name";
+                    dataGridViewServices.Columns["type"].HeaderText = "Type";
+                    dataGridViewServices.Columns["product_quantity"].HeaderText = "Product Quantity";
+                    dataGridViewServices.Columns["dosage"].HeaderText = "Dosage";
+                    dataGridViewServices.Columns["other_products_id"].HeaderText = "Other Product ID";
+                    dataGridViewServices.Columns["other_products_quantity"].HeaderText = "Other Product Quantity";
+
+
                     dataGridViewServices.Columns["service_id"].Visible = false;
                     dataGridViewServices.Columns["other_products_id"].Visible = false;
                     dataGridViewServices.Columns["other_products_quantity"].Visible = false;
@@ -77,6 +89,21 @@ namespace DavaoChestCenter
             var edit = new formServiceEdit(selectedService, name, type, details, product, quantity, other_products, other_products_quantity, price);
             edit.referenceToMain = this;
             edit.ShowDialog();
+        }
+
+        private void formService_Load(object sender, EventArgs e)
+        {
+            dataGridViewServices.BorderStyle = BorderStyle.None;
+            dataGridViewServices.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridViewServices.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewServices.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridViewServices.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewServices.BackgroundColor = Color.White;
+
+            dataGridViewServices.EnableHeadersVisualStyles = false;
+            dataGridViewServices.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewServices.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridViewServices.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)

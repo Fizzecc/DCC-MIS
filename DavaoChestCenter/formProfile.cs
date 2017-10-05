@@ -34,6 +34,17 @@ namespace DavaoChestCenter
         private void formModule1_Load(object sender, EventArgs e)
         {
             refreshTables();
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         public void refreshTables()
@@ -51,9 +62,16 @@ namespace DavaoChestCenter
                         dt.Dispose();
 
                         dataGridView1.Columns["id"].Visible = false;
-
-                        dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        dataGridView1.AutoResizeColumns();
+                        dataGridView1.Columns["firstname"].HeaderText = "First Name";
+                        dataGridView1.Columns["middlename"].HeaderText = "Middle Name";
+                        dataGridView1.Columns["lastname"].HeaderText = "Last Name";
+                        dataGridView1.Columns["username"].HeaderText = "Username";
+                        dataGridView1.Columns["password"].HeaderText = "Password";
+                        dataGridView1.Columns["schedule_days"].HeaderText = "Schedule Days";
+                        dataGridView1.Columns["working_time_start"].HeaderText = "Start Working Time";
+                        dataGridView1.Columns["working_time_end"].HeaderText = "End Working Time";
+                        dataGridView1.Columns["address"].HeaderText = "address";
+                        dataGridView1.Columns["contact"].HeaderText = "contact";
                     }
                 }
                 con.Close();
