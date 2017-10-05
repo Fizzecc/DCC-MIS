@@ -59,13 +59,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAppointments.Location = new System.Drawing.Point(13, 74);
+            this.dataGridViewAppointments.Location = new System.Drawing.Point(1, 46);
             this.dataGridViewAppointments.Name = "dataGridViewAppointments";
             this.dataGridViewAppointments.ReadOnly = true;
             this.dataGridViewAppointments.RowHeadersVisible = false;
             this.dataGridViewAppointments.RowTemplate.Height = 24;
             this.dataGridViewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAppointments.Size = new System.Drawing.Size(398, 611);
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(638, 611);
             this.dataGridViewAppointments.TabIndex = 15;
             this.dataGridViewAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointments_CellClick);
             // 
@@ -74,7 +74,7 @@
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(122, 8);
+            this.labelName.Location = new System.Drawing.Point(225, 9);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(152, 32);
             this.labelName.TabIndex = 20;
@@ -94,13 +94,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatients.Location = new System.Drawing.Point(426, 74);
+            this.dataGridViewPatients.Location = new System.Drawing.Point(645, 46);
             this.dataGridViewPatients.Name = "dataGridViewPatients";
             this.dataGridViewPatients.ReadOnly = true;
             this.dataGridViewPatients.RowHeadersVisible = false;
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(875, 611);
+            this.dataGridViewPatients.Size = new System.Drawing.Size(683, 611);
             this.dataGridViewPatients.TabIndex = 21;
             this.dataGridViewPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatients_CellClick);
             // 
@@ -139,7 +139,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(13, 691);
+            this.button3.Location = new System.Drawing.Point(1, 663);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 38);
             this.button3.TabIndex = 33;
@@ -151,18 +151,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.Controls.Add(this.labelName);
-            this.panel1.Location = new System.Drawing.Point(13, 28);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 46);
+            this.panel1.Size = new System.Drawing.Size(641, 46);
             this.panel1.TabIndex = 34;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(426, 28);
+            this.panel2.Location = new System.Drawing.Point(645, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(875, 46);
+            this.panel2.Size = new System.Drawing.Size(683, 46);
             this.panel2.TabIndex = 35;
             // 
             // label2
@@ -170,7 +170,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(342, 8);
+            this.label2.Location = new System.Drawing.Point(237, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 32);
             this.label2.TabIndex = 20;

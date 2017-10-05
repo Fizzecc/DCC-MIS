@@ -36,6 +36,21 @@ namespace DavaoChestCenter
 
                     dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridViewInventory.AutoResizeColumns();
+                    
+                    dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewInventory.AutoResizeColumns();
+
+                    dataGridViewInventory.BorderStyle = BorderStyle.None;
+                    dataGridViewInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                    dataGridViewInventory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                    dataGridViewInventory.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                    dataGridViewInventory.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                    dataGridViewInventory.BackgroundColor = Color.White;
+
+                    dataGridViewInventory.EnableHeadersVisualStyles = false;
+                    dataGridViewInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                    dataGridViewInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                    dataGridViewInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
                 }
             }
         }

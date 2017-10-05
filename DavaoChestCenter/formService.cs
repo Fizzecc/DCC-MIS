@@ -44,8 +44,7 @@ namespace DavaoChestCenter
                     dataGridViewServices.Columns["dosage"].HeaderText = "Dosage";
                     dataGridViewServices.Columns["other_products_id"].HeaderText = "Other Product ID";
                     dataGridViewServices.Columns["other_products_quantity"].HeaderText = "Other Product Quantity";
-
-
+                    
                     dataGridViewServices.Columns["service_id"].Visible = false;
                     dataGridViewServices.Columns["other_products_id"].Visible = false;
                     dataGridViewServices.Columns["other_products_quantity"].Visible = false;

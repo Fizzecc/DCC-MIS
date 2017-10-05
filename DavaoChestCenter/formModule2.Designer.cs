@@ -82,6 +82,7 @@
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
             this.dataGridViewInventory.RowHeadersVisible = false;
+            this.dataGridViewInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewInventory.Size = new System.Drawing.Size(1106, 820);
             this.dataGridViewInventory.TabIndex = 6;
             // 

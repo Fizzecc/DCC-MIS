@@ -43,6 +43,18 @@ namespace DavaoChestCenter
 
                     dataGridViewSchedule.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridViewSchedule.AutoResizeColumns();
+
+                    dataGridViewSchedule.BorderStyle = BorderStyle.None;
+                    dataGridViewSchedule.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                    dataGridViewSchedule.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                    dataGridViewSchedule.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                    dataGridViewSchedule.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                    dataGridViewSchedule.BackgroundColor = Color.White;
+
+                    dataGridViewSchedule.EnableHeadersVisualStyles = false;
+                    dataGridViewSchedule.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                    dataGridViewSchedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                    dataGridViewSchedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
                 }
 
                 using (var com = new MySqlCommand("SELECT attendance.id, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE date > DATE_SUB(NOW(), INTERVAL 1 DAY)", con))
@@ -51,8 +63,21 @@ namespace DavaoChestCenter
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewToday.DataSource = dt;
+
                     dataGridViewToday.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridViewToday.AutoResizeColumns();
+
+                    dataGridViewToday.BorderStyle = BorderStyle.None;
+                    dataGridViewToday.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                    dataGridViewToday.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                    dataGridViewToday.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                    dataGridViewToday.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                    dataGridViewToday.BackgroundColor = Color.White;
+
+                    dataGridViewToday.EnableHeadersVisualStyles = false;
+                    dataGridViewToday.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                    dataGridViewToday.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                    dataGridViewToday.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
                     dataGridViewToday.Columns["id"].Visible = false;
                 }
@@ -179,10 +204,23 @@ namespace DavaoChestCenter
                         var adp = new MySqlDataAdapter(com);
                         var dt = new DataTable();
                         adp.Fill(dt);
+
                         dataGridViewAttendance.DataSource = dt;
                         dataGridViewAttendance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         dataGridViewAttendance.AutoResizeColumns();
+                        
+                        dataGridViewAttendance.BorderStyle = BorderStyle.None;
+                        dataGridViewAttendance.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                        dataGridViewAttendance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                        dataGridViewAttendance.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                        dataGridViewAttendance.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                        dataGridViewAttendance.BackgroundColor = Color.White;
 
+                        dataGridViewAttendance.EnableHeadersVisualStyles = false;
+                        dataGridViewAttendance.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                        dataGridViewAttendance.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                        dataGridViewAttendance.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                        
                         dataGridViewAttendance.Columns["id"].Visible = false;
                     }
                 }

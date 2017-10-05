@@ -42,6 +42,18 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.Columns["working_time_start"].HeaderText = "Check In";
                     dataGridViewSchedule.Columns["working_time_end"].HeaderText = "Check Out";
                     
+                    dataGridViewSchedule.BorderStyle = BorderStyle.None;
+                    dataGridViewSchedule.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                    dataGridViewSchedule.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                    dataGridViewSchedule.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                    dataGridViewSchedule.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                    dataGridViewSchedule.BackgroundColor = Color.White;
+
+                    dataGridViewSchedule.EnableHeadersVisualStyles = false;
+                    dataGridViewSchedule.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                    dataGridViewSchedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                    dataGridViewSchedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
                 }
 
                 using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))
@@ -50,6 +62,21 @@ namespace DavaoChestCenter
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewInventory.DataSource = dt;
+                    
+                    dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewInventory.AutoResizeColumns();
+
+                    dataGridViewInventory.BorderStyle = BorderStyle.None;
+                    dataGridViewInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                    dataGridViewInventory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                    dataGridViewInventory.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+                    dataGridViewInventory.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                    dataGridViewInventory.BackgroundColor = Color.White;
+
+                    dataGridViewInventory.EnableHeadersVisualStyles = false;
+                    dataGridViewInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                    dataGridViewInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                    dataGridViewInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
                 }
                 con.Close();
             }
