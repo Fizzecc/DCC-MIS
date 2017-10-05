@@ -33,6 +33,9 @@ namespace DavaoChestCenter
 
                     dataGridViewInventory.Columns["id"].Visible = false;
                     dataGridViewInventory.Columns["product_id"].Visible = false;
+
+                    dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewInventory.AutoResizeColumns();
                 }
             }
         }

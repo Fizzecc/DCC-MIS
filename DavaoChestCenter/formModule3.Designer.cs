@@ -76,7 +76,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1024, 9);
+            this.label1.Location = new System.Drawing.Point(1039, 4);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(293, 19);
@@ -206,7 +206,7 @@
             this.groupBox1.Controls.Add(this.dataGridViewToday);
             this.groupBox1.Controls.Add(this.buttonCheckOut);
             this.groupBox1.Controls.Add(this.buttonCheckIn);
-            this.groupBox1.Location = new System.Drawing.Point(150, 544);
+            this.groupBox1.Location = new System.Drawing.Point(16, 544);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(435, 306);
             this.groupBox1.TabIndex = 19;

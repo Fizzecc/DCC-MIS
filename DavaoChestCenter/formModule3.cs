@@ -40,6 +40,9 @@ namespace DavaoChestCenter
                     dataGridViewSchedule.DataSource = dt;
 
                     dataGridViewSchedule.Columns["id"].Visible = false;
+
+                    dataGridViewSchedule.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewSchedule.AutoResizeColumns();
                 }
 
                 using (var com = new MySqlCommand("SELECT attendance.id, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE date > DATE_SUB(NOW(), INTERVAL 1 DAY)", con))
@@ -48,6 +51,8 @@ namespace DavaoChestCenter
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewToday.DataSource = dt;
+                    dataGridViewToday.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewToday.AutoResizeColumns();
 
                     dataGridViewToday.Columns["id"].Visible = false;
                 }
@@ -175,6 +180,8 @@ namespace DavaoChestCenter
                         var dt = new DataTable();
                         adp.Fill(dt);
                         dataGridViewAttendance.DataSource = dt;
+                        dataGridViewAttendance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridViewAttendance.AutoResizeColumns();
 
                         dataGridViewAttendance.Columns["id"].Visible = false;
                     }

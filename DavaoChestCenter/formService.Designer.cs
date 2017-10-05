@@ -30,7 +30,10 @@
         {
             this.dataGridViewServices = new System.Windows.Forms.DataGridView();
             this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.dataGridViewContainer = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContainer)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewServices
@@ -64,11 +67,43 @@
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonPrint.FlatAppearance.BorderSize = 0;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonPrint.ForeColor = System.Drawing.Color.White;
+            this.buttonPrint.Location = new System.Drawing.Point(312, 818);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(294, 32);
+            this.buttonPrint.TabIndex = 17;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // dataGridViewContainer
+            // 
+            this.dataGridViewContainer.AllowUserToAddRows = false;
+            this.dataGridViewContainer.AllowUserToDeleteRows = false;
+            this.dataGridViewContainer.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewContainer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContainer.Location = new System.Drawing.Point(612, 818);
+            this.dataGridViewContainer.Name = "dataGridViewContainer";
+            this.dataGridViewContainer.ReadOnly = true;
+            this.dataGridViewContainer.RowHeadersVisible = false;
+            this.dataGridViewContainer.RowTemplate.Height = 24;
+            this.dataGridViewContainer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewContainer.Size = new System.Drawing.Size(30, 37);
+            this.dataGridViewContainer.TabIndex = 18;
+            // 
             // formService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.Controls.Add(this.dataGridViewContainer);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.dataGridViewServices);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -77,6 +112,7 @@
             this.Name = "formService";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContainer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,5 +121,7 @@
 
         private System.Windows.Forms.DataGridView dataGridViewServices;
         private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.DataGridView dataGridViewContainer;
     }
 }

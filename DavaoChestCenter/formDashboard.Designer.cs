@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.checkBoxCascade = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
+            this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,21 +58,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Staff Schedule:";
             // 
-            // dataGridViewInventory
-            // 
-            this.dataGridViewInventory.AllowUserToAddRows = false;
-            this.dataGridViewInventory.AllowUserToDeleteRows = false;
-            this.dataGridViewInventory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInventory.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewInventory.Location = new System.Drawing.Point(16, 67);
-            this.dataGridViewInventory.Name = "dataGridViewInventory";
-            this.dataGridViewInventory.ReadOnly = true;
-            this.dataGridViewInventory.RowHeadersVisible = false;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(631, 478);
-            this.dataGridViewInventory.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -79,19 +66,6 @@
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Inventory";
-            // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.AllowUserToAddRows = false;
-            this.dataGridViewSchedule.AllowUserToDeleteRows = false;
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(653, 67);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.ReadOnly = true;
-            this.dataGridViewSchedule.RowHeadersVisible = false;
-            this.dataGridViewSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(664, 478);
-            this.dataGridViewSchedule.TabIndex = 0;
             // 
             // checkBoxCascade
             // 
@@ -104,14 +78,66 @@
             this.checkBoxCascade.UseVisualStyleBackColor = true;
             this.checkBoxCascade.CheckedChanged += new System.EventHandler(this.checkBoxCascade_CheckedChanged);
             // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.AllowUserToAddRows = false;
+            this.dataGridViewSchedule.AllowUserToDeleteRows = false;
+            this.dataGridViewSchedule.AllowUserToResizeRows = false;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewSchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewSchedule.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.EnableHeadersVisualStyles = false;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(653, 67);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.ReadOnly = true;
+            this.dataGridViewSchedule.RowHeadersVisible = false;
+            this.dataGridViewSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(664, 478);
+            this.dataGridViewSchedule.TabIndex = 36;
+            // 
+            // dataGridViewInventory
+            // 
+            this.dataGridViewInventory.AllowUserToAddRows = false;
+            this.dataGridViewInventory.AllowUserToDeleteRows = false;
+            this.dataGridViewInventory.AllowUserToResizeRows = false;
+            this.dataGridViewInventory.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInventory.EnableHeadersVisualStyles = false;
+            this.dataGridViewInventory.Location = new System.Drawing.Point(12, 67);
+            this.dataGridViewInventory.Name = "dataGridViewInventory";
+            this.dataGridViewInventory.ReadOnly = true;
+            this.dataGridViewInventory.RowHeadersVisible = false;
+            this.dataGridViewInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewInventory.Size = new System.Drawing.Size(635, 478);
+            this.dataGridViewInventory.TabIndex = 37;
+            // 
             // formDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.checkBoxCascade);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridViewInventory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewSchedule);
@@ -122,8 +148,8 @@
             this.Name = "formDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,9 +158,9 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridViewInventory;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridViewSchedule;
         private System.Windows.Forms.CheckBox checkBoxCascade;
+        private System.Windows.Forms.DataGridView dataGridViewSchedule;
+        private System.Windows.Forms.DataGridView dataGridViewInventory;
     }
 }

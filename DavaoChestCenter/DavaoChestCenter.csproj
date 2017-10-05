@@ -196,6 +196,7 @@
     <Compile Include="Diagnosis1.Designer.cs">
       <DependentUpon>Diagnosis1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.cs" />
     <EmbeddedResource Include="Diagnosis2.resx">
       <DependentUpon>Diagnosis2.cs</DependentUpon>
     </EmbeddedResource>

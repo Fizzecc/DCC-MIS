@@ -30,6 +30,7 @@
         {
             this.buttonCreate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,11 +65,27 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonPrint.FlatAppearance.BorderSize = 0;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Tw Cen MT", 16F);
+            this.buttonPrint.ForeColor = System.Drawing.Color.White;
+            this.buttonPrint.Location = new System.Drawing.Point(312, 818);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(294, 32);
+            this.buttonPrint.TabIndex = 15;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // formProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCreate);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
@@ -88,5 +105,6 @@
 
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

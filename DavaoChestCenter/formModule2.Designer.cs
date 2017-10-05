@@ -31,7 +31,7 @@
             this.buttonProductNew = new System.Windows.Forms.Button();
             this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTransactionNew = new System.Windows.Forms.Button();
             this.buttonStockOut = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.dataGridViewInventory.AllowUserToAddRows = false;
             this.dataGridViewInventory.AllowUserToDeleteRows = false;
             this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInventory.EnableHeadersVisualStyles = false;
             this.dataGridViewInventory.Location = new System.Drawing.Point(12, 30);
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.ReadOnly = true;
@@ -93,20 +94,20 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Inventory";
             // 
-            // buttonRefresh
+            // buttonPrint
             // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
-            this.buttonRefresh.FlatAppearance.BorderSize = 0;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Tw Cen MT", 12F);
-            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            this.buttonRefresh.Location = new System.Drawing.Point(1128, 395);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(189, 25);
-            this.buttonRefresh.TabIndex = 23;
-            this.buttonRefresh.Text = "Refresh Tables";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonPrint.FlatAppearance.BorderSize = 0;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            this.buttonPrint.ForeColor = System.Drawing.Color.White;
+            this.buttonPrint.Location = new System.Drawing.Point(1128, 395);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(189, 25);
+            this.buttonPrint.TabIndex = 23;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label2
             // 
@@ -301,7 +302,7 @@
             this.ClientSize = new System.Drawing.Size(1329, 862);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.buttonRefresh);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonStockOut);
             this.Controls.Add(this.label2);
@@ -333,7 +334,7 @@
         private System.Windows.Forms.Button buttonProductNew;
         private System.Windows.Forms.DataGridView dataGridViewInventory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTransactionNew;
         private System.Windows.Forms.Button buttonStockOut;

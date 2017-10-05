@@ -26,12 +26,15 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT name, products.dosage, minimum_quantity, COUNT(status) count FROM products LEFT JOIN inventory ON products.id = inventory.product_id WHERE status = 'Normal' OR status IS NULL GROUP BY name, dosage HAVING count < minimum_quantity", con))
+                using (var com = new MySqlCommand("SELECT name, products.dosage, minimum_quantity, SUM(CASE WHEN status = 'Normal' THEN 1 ELSE 0 END) AS count FROM products LEFT JOIN inventory ON products.id = inventory.product_id GROUP BY name , products.dosage HAVING count < minimum_quantity", con))
                 {
                     var adp = new MySqlDataAdapter(com);
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewInventory.DataSource = dt;
+
+                    dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewInventory.AutoResizeColumns();
                 }
                 con.Close();
             }

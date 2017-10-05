@@ -51,6 +51,9 @@ namespace DavaoChestCenter
                         dt.Dispose();
 
                         dataGridView1.Columns["id"].Visible = false;
+
+                        dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridView1.AutoResizeColumns();
                     }
                 }
                 con.Close();
@@ -74,6 +77,12 @@ namespace DavaoChestCenter
             var update = new formProfileUpdate(selectedUser, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end, address, contact);
             update.referenceToMain = this;
             update.ShowDialog();
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            ClsPrint _ClsPrint = new ClsPrint(dataGridView1, "Staff Profiles");
+            _ClsPrint.PrintForm();
         }
     }
 }

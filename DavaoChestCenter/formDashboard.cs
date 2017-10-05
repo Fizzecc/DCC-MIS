@@ -31,6 +31,17 @@ namespace DavaoChestCenter
                     var dt = new DataTable();
                     adp.Fill(dt);
                     dataGridViewSchedule.DataSource = dt;
+
+                    dataGridViewSchedule.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridViewSchedule.AutoResizeColumns();
+                    
+                    dataGridViewSchedule.Columns["firstname"].HeaderText = "First Name";
+                    dataGridViewSchedule.Columns["middlename"].HeaderText = "Middle Name";
+                    dataGridViewSchedule.Columns["lastname"].HeaderText = "Last Name";
+                    dataGridViewSchedule.Columns["schedule_days"].HeaderText = "Working Days";
+                    dataGridViewSchedule.Columns["working_time_start"].HeaderText = "Check In";
+                    dataGridViewSchedule.Columns["working_time_end"].HeaderText = "Check Out";
+                    
                 }
 
                 using (var com = new MySqlCommand("SELECT name, brand_name, manufacturer, inventory.dosage, expiration_date, status FROM inventory INNER JOIN products ON inventory.product_id = products.id", con))

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
@@ -47,14 +48,27 @@
             // 
             this.dataGridViewItems.AllowUserToAddRows = false;
             this.dataGridViewItems.AllowUserToDeleteRows = false;
+            this.dataGridViewItems.AllowUserToResizeRows = false;
+            this.dataGridViewItems.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(159)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItems.EnableHeadersVisualStyles = false;
             this.dataGridViewItems.Location = new System.Drawing.Point(17, 31);
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.RowHeadersVisible = false;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewItems.Size = new System.Drawing.Size(883, 506);
-            this.dataGridViewItems.TabIndex = 1;
+            this.dataGridViewItems.TabIndex = 37;
             // 
             // formNotification
             // 
@@ -65,7 +79,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tw Cen MT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formNotification";
