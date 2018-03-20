@@ -42,9 +42,12 @@
             this.buttonModule3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.flowLayoutPanelModule1.SuspendLayout();
+            this.panelForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -215,11 +218,22 @@
             // 
             // panelForm
             // 
+            this.panelForm.Controls.Add(this.pictureBox1);
             this.panelForm.Location = new System.Drawing.Point(257, 0);
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(1329, 862);
             this.panelForm.TabIndex = 24;
             this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::DavaoChestCenter.Properties.Resources.Untitled_1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1329, 862);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // formMenu
             // 
@@ -241,6 +255,8 @@
             this.panelMenu.PerformLayout();
             this.flowLayoutPanelMenu.ResumeLayout(false);
             this.flowLayoutPanelModule1.ResumeLayout(false);
+            this.panelForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +275,6 @@
         private System.Windows.Forms.Button buttonModule3;
         public System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Button buttonServices;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

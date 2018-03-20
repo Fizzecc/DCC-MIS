@@ -56,7 +56,7 @@ namespace DavaoChestCenter
             using (var con = new MySqlConnection(conClass.connectionString))
             {
                 con.Open();
-                using (var com = new MySqlCommand("SELECT id, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end, address, contact FROM staff RIGHT JOIN schedules ON staff.id = schedules.staff_id WHERE id != " + id, con))
+                using (var com = new MySqlCommand("SELECT id, firstname, middlename, lastname, username, password, schedule_days, working_time_start, working_time_end, address, contact FROM staff LEFT JOIN schedules ON staff.id = schedules.staff_id WHERE id != " + id, con))
                 {
                     using (var adp = new MySqlDataAdapter(com))
                     {

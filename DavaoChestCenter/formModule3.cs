@@ -244,7 +244,7 @@ namespace DavaoChestCenter
                 }
                 else
                 {
-                    using (var com = new MySqlCommand("SELECT attendance.id, date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2)", con))
+                    using (var com = new MySqlCommand("SELECT date, firstname, lastname, time_start, time_end FROM attendance LEFT JOIN staff ON attendance.person = staff.id WHERE (date BETWEEN @dateTimePicker1 AND @dateTimePicker2)", con))
                     {
                         com.Parameters.AddWithValue("@dateTimePicker1", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
                         com.Parameters.AddWithValue("@dateTimePicker2", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
@@ -253,8 +253,6 @@ namespace DavaoChestCenter
                         var dt = new DataTable();
                         adp.Fill(dt);
                         dataGridViewAttendance.DataSource = dt;
-
-                        dataGridViewAttendance.Columns["id"].Visible = false;
                     }
                 }
                 con.Close();
@@ -279,6 +277,12 @@ namespace DavaoChestCenter
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             sort();
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            ClsPrint _ClsPrint = new ClsPrint(dataGridViewAttendance, "Attendance");
+            _ClsPrint.PrintForm();
         }
     }
 }

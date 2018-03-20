@@ -46,6 +46,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewToday)).BeginInit();
@@ -226,7 +227,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1003, 600);
+            this.checkBox1.Location = new System.Drawing.Point(1003, 593);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(86, 23);
             this.checkBox1.TabIndex = 21;
@@ -234,11 +235,27 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(156)))), ((int)(((byte)(78)))));
+            this.buttonPrint.FlatAppearance.BorderSize = 0;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Tw Cen MT", 12F);
+            this.buttonPrint.ForeColor = System.Drawing.Color.White;
+            this.buttonPrint.Location = new System.Drawing.Point(1003, 618);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(310, 25);
+            this.buttonPrint.TabIndex = 24;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // formModule3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 862);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
@@ -286,5 +303,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

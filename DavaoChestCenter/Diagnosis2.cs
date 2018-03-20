@@ -21,97 +21,97 @@ namespace DavaoChestCenter
 
         public Boolean validate()
         {
-            if(txtCREA.Text == "")
+            if (txtCREA.Text == "")
             {
                 MessageBox.Show("Invalid CREA");
                 return false;
             }
-            if(txtSGPT.Text == "")
+            if (txtSGPT.Text == "")
             {
                 MessageBox.Show("Invalid SGPT");
                 return false;
             }
-            if(txtPBS.Text == "")
+            if (txtPBS.Text == "")
             {
                 MessageBox.Show("Invalid PBS");
                 return false;
             }
-            if(txtURIC.Text == "")
+            if (txtURIC.Text == "")
             {
                 MessageBox.Show("Invalid URIC Acid");
                 return false;
             }
-            if(txtChest.Text == "")
+            if (txtChest.Text == "")
             {
                 MessageBox.Show("Invalid Chest Result");
                 return false;
             }
-            if(txtMonth.Text == "")
+            if (txtMonth.Text == "")
             {
                 MessageBox.Show("Invalid Sputum Months");
                 return false;
             }
-            if(txtResult.Text == "")
+            if (txtResult.Text == "")
             {
                 MessageBox.Show("Invalid Sputum Result");
                 return false;
             }
-            if(txtAppearance.Text == "")
+            if (txtAppearance.Text == "")
             {
                 MessageBox.Show("Invalid Appearance");
                 return false;
             }
-            if(txtDoctor.Text == "")
+            if (txtDoctor.Text == "")
             {
                 MessageBox.Show("Invalid Doctor's order");
                 return false;
             }
-            if(txtVisual1.Text == "")
+            if (txtVisual1.Text == "")
             {
                 MessageBox.Show("Invalid Visual Appearance 1");
                 return false;
             }
-            if(txtVisual2.Text == "")
+            if (txtVisual2.Text == "")
             {
                 MessageBox.Show("Invalid Visual Appearance 2");
                 return false;
             }
-            if(txtVisualX.Text == "")
+            if (txtVisualX.Text == "")
             {
                 MessageBox.Show("Invalid Visual Xpert");
                 return false;
             }
-            if(txtreading1.Text == "")
+            if (txtreading1.Text == "")
             {
                 MessageBox.Show("Invalid Reading 1");
                 return false;
             }
-            if(txtreading2.Text == "")
+            if (txtreading2.Text == "")
             {
                 MessageBox.Show("Invalid Reading 2");
                 return false;
             }
-            if(txtReadingX.Text == "")
+            if (txtReadingX.Text == "")
             {
                 MessageBox.Show("Invalid Reading Xpert");
                 return false;
             }
-            if(txtLabDiag.Text == "")
+            if (txtLabDiag.Text == "")
             {
                 MessageBox.Show("Invalid Laboratory Diagnosis");
                 return false;
             }
-            if(txtLabX.Text == "")
+            if (txtLabX.Text == "")
             {
                 MessageBox.Show("Invalid Laboratory Xpert");
                 return false;
             }
-            if(radButtonAnti.Checked == false && radButtonNoAnti.Checked == false && radButonStop.Checked == false)
+            if (radButtonAnti.Checked == false && radButtonNoAnti.Checked == false && radButonStop.Checked == false)
             {
                 MessageBox.Show("Invalid TBDC Recommendations. Please Choose one");
                 return false;
             }
-            if(txtSug.Text == "")
+            if (txtSug.Text == "")
             {
                 MessageBox.Show("Invalid Suggestions. Please Choose one.");
                 return false;
@@ -149,15 +149,15 @@ namespace DavaoChestCenter
             txtLabDiag.Text = LabDiag;
             txtLabX.Text = LabX;
             txtSug.Text = suggestions;
-            if(tbdc_rec == "Anti-TB Treatment")
+            if (tbdc_rec == "Anti-TB Treatment")
             {
                 radButtonAnti.Checked = true;
             }
-            if(tbdc_rec == "No Anti-TB Treatment")
+            if (tbdc_rec == "No Anti-TB Treatment")
             {
                 radButtonNoAnti.Checked = true;
             }
-            if(tbdc_rec == "Stop Anti-TB Treatment")
+            if (tbdc_rec == "Stop Anti-TB Treatment")
             {
                 radButonStop.Checked = true;
             }
@@ -549,19 +549,21 @@ namespace DavaoChestCenter
                             com.ExecuteNonQuery();
                         }
                     }
-
-                    foreach (string x in other_products_id)
+                    if (other_products_id[0] != "")
                     {
-                        for (int i = 0; i < int.Parse(other_products_quantity[count]); i++)
+                        foreach (string x in other_products_id)
                         {
-                            using (var com = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE product_id = @product_id AND status = 'Normal' ORDER BY id, expiration_date ASC LIMIT 1", con))
+                            for (int i = 0; i < int.Parse(other_products_quantity[count]); i++)
                             {
-                                com.Parameters.AddWithValue("@product_id", x);
+                                using (var com = new MySqlCommand("UPDATE inventory SET status = 'Expired' WHERE product_id = @product_id AND status = 'Normal' ORDER BY id, expiration_date ASC LIMIT 1", con))
+                                {
+                                    com.Parameters.AddWithValue("@product_id", x);
 
-                                com.ExecuteNonQuery();
+                                    com.ExecuteNonQuery();
+                                }
                             }
+                            count++;
                         }
-                        count++;
                     }
 
                     using (var con2 = new MySqlConnection(conClass.connectionString))

@@ -125,6 +125,8 @@ namespace DavaoChestCenter
                 panelForm.Controls.Add(form);
                 form.Show();
             }
+
+            pictureBox1.Visible = false;
         }
 
         private void buttonProfile_Click(object sender, EventArgs e)

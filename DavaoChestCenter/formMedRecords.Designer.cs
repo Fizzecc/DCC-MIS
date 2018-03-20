@@ -44,6 +44,7 @@
             this.radButtonHypeYes = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtExpilm = new System.Windows.Forms.TextBox();
             this.checkBoxMalaise = new System.Windows.Forms.CheckBox();
@@ -94,7 +95,6 @@
             this.radButtonHistRT = new System.Windows.Forms.RadioButton();
             this.radButtonHistNew = new System.Windows.Forms.RadioButton();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtPosition = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtPrepared = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -227,7 +227,7 @@
             this.radButtonDiabYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonDiabYes.Location = new System.Drawing.Point(8, 22);
             this.radButtonDiabYes.Name = "radButtonDiabYes";
-            this.radButtonDiabYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonDiabYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonDiabYes.TabIndex = 15;
             this.radButtonDiabYes.TabStop = true;
             this.radButtonDiabYes.Text = "Yes";
@@ -311,7 +311,7 @@
             this.radButtonHypeYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonHypeYes.Location = new System.Drawing.Point(17, 25);
             this.radButtonHypeYes.Name = "radButtonHypeYes";
-            this.radButtonHypeYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonHypeYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonHypeYes.TabIndex = 17;
             this.radButtonHypeYes.TabStop = true;
             this.radButtonHypeYes.Text = "Yes";
@@ -353,6 +353,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pulmonaries";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(382, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Extra Pulmonaries:";
             // 
             // button1
             // 
@@ -607,7 +617,7 @@
             this.radButtonAlcoholicYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAlcoholicYes.Location = new System.Drawing.Point(79, 28);
             this.radButtonAlcoholicYes.Name = "radButtonAlcoholicYes";
-            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonAlcoholicYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonAlcoholicYes.TabIndex = 18;
             this.radButtonAlcoholicYes.TabStop = true;
             this.radButtonAlcoholicYes.Text = "Yes";
@@ -672,7 +682,7 @@
             this.radButtonTBYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonTBYes.Location = new System.Drawing.Point(70, 2);
             this.radButtonTBYes.Name = "radButtonTBYes";
-            this.radButtonTBYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonTBYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonTBYes.TabIndex = 18;
             this.radButtonTBYes.TabStop = true;
             this.radButtonTBYes.Text = "Yes";
@@ -717,7 +727,7 @@
             this.radButtonAB.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonAB.Location = new System.Drawing.Point(293, 58);
             this.radButtonAB.Name = "radButtonAB";
-            this.radButtonAB.Size = new System.Drawing.Size(93, 17);
+            this.radButtonAB.Size = new System.Drawing.Size(92, 17);
             this.radButtonAB.TabIndex = 25;
             this.radButtonAB.TabStop = true;
             this.radButtonAB.Text = "AB Treatment";
@@ -866,7 +876,7 @@
             this.radButtonSmokeYes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonSmokeYes.Location = new System.Drawing.Point(72, 29);
             this.radButtonSmokeYes.Name = "radButtonSmokeYes";
-            this.radButtonSmokeYes.Size = new System.Drawing.Size(41, 17);
+            this.radButtonSmokeYes.Size = new System.Drawing.Size(40, 17);
             this.radButtonSmokeYes.TabIndex = 18;
             this.radButtonSmokeYes.TabStop = true;
             this.radButtonSmokeYes.Text = "Yes";
@@ -886,8 +896,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.comboBoxPosition);
             this.tabPage3.Controls.Add(this.panel6);
-            this.tabPage3.Controls.Add(this.txtPosition);
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.txtPrepared);
             this.tabPage3.Controls.Add(this.label25);
@@ -952,14 +962,6 @@
             this.label23.TabIndex = 23;
             this.label23.Text = "History of Treatment: ";
             // 
-            // txtPosition
-            // 
-            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(383, 321);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(177, 22);
-            this.txtPosition.TabIndex = 30;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -993,10 +995,13 @@
             this.comboBoxStaff.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStaff.FormattingEnabled = true;
             this.comboBoxStaff.Items.AddRange(new object[] {
-            "",
-            "Mr Krabs",
-            "Spongebob",
-            "Squidward"});
+            "Romulo Uy",
+            "Merwin Marcos",
+            "Cyrus Estera",
+            "Jerome Nobleza",
+            "Ma Lourdes Lacanillas",
+            "Alice Arneola",
+            "Mina Angelica Bernardino"});
             this.comboBoxStaff.Location = new System.Drawing.Point(192, 277);
             this.comboBoxStaff.Name = "comboBoxStaff";
             this.comboBoxStaff.Size = new System.Drawing.Size(177, 21);
@@ -1103,7 +1108,7 @@
             this.radButtonUPA.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radButtonUPA.Location = new System.Drawing.Point(111, 46);
             this.radButtonUPA.Name = "radButtonUPA";
-            this.radButtonUPA.Size = new System.Drawing.Size(46, 17);
+            this.radButtonUPA.Size = new System.Drawing.Size(45, 17);
             this.radButtonUPA.TabIndex = 13;
             this.radButtonUPA.TabStop = true;
             this.radButtonUPA.Text = "UPA";
@@ -1327,15 +1332,17 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label2
+            // comboBoxPosition
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(382, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Extra Pulmonaries:";
+            this.comboBoxPosition.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.Items.AddRange(new object[] {
+            "Radiologist",
+            "Pulmonologist"});
+            this.comboBoxPosition.Location = new System.Drawing.Point(383, 321);
+            this.comboBoxPosition.Name = "comboBoxPosition";
+            this.comboBoxPosition.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxPosition.TabIndex = 32;
             // 
             // formMedRecords
             // 
@@ -1448,7 +1455,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeSMKstop;
         private System.Windows.Forms.DateTimePicker dateTimeSMKstart;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtPrepared;
         private System.Windows.Forms.Label label25;
@@ -1492,5 +1498,6 @@
         private System.Windows.Forms.RadioButton radButtPulm;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxPosition;
     }
 }

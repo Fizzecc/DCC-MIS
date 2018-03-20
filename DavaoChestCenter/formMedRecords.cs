@@ -21,11 +21,13 @@ namespace DavaoChestCenter
 
         public Boolean validate()
         {
+            /*
             if(comboBoxStaff.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Invalid Treatment Staff");
                 return false;
             }
+            */
             if (txtPulm.Text == "")
             {
                 MessageBox.Show("Invalid Pulmonary. Please choose one.");
@@ -131,7 +133,7 @@ namespace DavaoChestCenter
                 MessageBox.Show("Invalid 'Prepared by'.");
                 return false;
             }
-            if(txtPosition.Text == "")
+            if(comboBoxPosition.Text == "")
             {
                 MessageBox.Show("Invalid Position.");
                 return false;
@@ -276,7 +278,7 @@ namespace DavaoChestCenter
                 radButtonUPA.Checked = true;
             }
             txtPrepared.Text = prepared_by;
-            txtPosition.Text = staff_position;
+            comboBoxPosition.Text = staff_position;
 
         }
 
@@ -290,10 +292,10 @@ namespace DavaoChestCenter
                 using (var com = new MySqlCommand("UPDATE registration SET treatment_partner = @treatment_partner, pulmonaries = @pulmonaries, extra_pulmonaries = @extra_pulmonaries, diabetic = @diabetic, hypertensive = @hypertensive, smoke = @smoke, smoke_day = @smoke_day, start_smoking = @start_smoking, stop_smoking = @stop_smoking, prev_tb = @prev_tb, tb_months = @tb_months, tb_date = @tb_date, medicines = @medicines, medicine_under = @medicine_under, alcoholic = @alcoholic, alcohol_start = @alcohol_start, alcohol_stop = @alcohol_stop, exam_reason = @exam_reason, hist_treatment = @hist_treatment, specimen_type = @specimen_type, specimen_date1 = @specimen_date1, speciman_date2 = @speciman_date2, test_request = @test_request, prepared_by = @prepared_by, staff_position = @staff_position WHERE registration_id = @registration_id", con))
                 {
                     com.Parameters.AddWithValue("@registration_id", lblID.Text);
-                    com.Parameters.AddWithValue("@treatment_partner", comboBoxStaff.SelectedItem.ToString());
+                    com.Parameters.AddWithValue("@treatment_partner", "Emmanuel");
                     //com.Parameters.AddWithValue("@smoke_day", lblID.Text);
                     com.Parameters.AddWithValue("@prepared_by", txtPrepared.Text);
-                    com.Parameters.AddWithValue("@staff_position", txtPosition.Text);
+                    com.Parameters.AddWithValue("@staff_position", comboBoxPosition.Text);
                     com.Parameters.AddWithValue("@specimen_date1", dateTimePickerSpecimen1.Value.ToString("yyyy-MM-dd"));
                     com.Parameters.AddWithValue("@speciman_date2", dateTimePickerSpecimen2.Value.ToString("yyyy-MM-dd"));
 
@@ -571,8 +573,9 @@ namespace DavaoChestCenter
 
             if (radButtonOthers.Checked)
             {
-                radButtonOthers.Enabled = true;
-                radButtonSputum.Enabled = false;
+                //radButtonOthers.Enabled = true;
+                //radButtonSputum.Enabled = false;
+                txtOthers.Enabled = true;
             }
         }
 

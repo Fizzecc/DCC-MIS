@@ -74,7 +74,6 @@ namespace DavaoChestCenter
                     if (r == DialogResult.OK && validate())
                     {
                         com.ExecuteNonQuery();
-                        referenceToMain.refreshTables();
                     }
                     else
                     {
@@ -172,6 +171,9 @@ namespace DavaoChestCenter
                         }
                     }
                 }
+                
+                referenceToMain.refreshTables();
+
                 con.Close();
             }
         }

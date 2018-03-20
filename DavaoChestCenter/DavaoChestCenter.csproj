@@ -328,6 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Graphicloads-Medical-Health-Medicine-box-2.ico" />
+    <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
